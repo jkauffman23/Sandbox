@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+        <labels>
+		<locale name="en">
+ 		</locale>
+	</labels>
+
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1-2" name="processInformation.queueName" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3-4" name="originatorName" styleClass="twohundred" readonly="true"/>
+			<textArea row ="2" col="1-4" name="processInformation.comment" readonly="false" styleClass="comment" />
+			<!--<output row="3" col="1-4" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false" />-->
+			<output row="3" col="1-4" name="previousComments" readonly="true" styleClass="comment" escapeXml="false" link="javascript:openPreviousCommentsWindow('$contextPath$', '$seqId$')"/>			
+		</properties>
+		
+		<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="docDetail" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="type" choiceList="choice.invoiceTypes" readonly="true" validation="required" />
+			<dropDown row="1" col="2" name="subType" choiceList="choice.subTypes.doc" readonly="false" validation="required" styleClass="onefifty"/>
+			<dropDown row="1" col="3" name="tbdString1" choiceList="choice.legal.entity" readonly="false" validation="required"  styleClass="onefifty" />
+			<date row="2" col="1" name="date" readonly="false" validation="required" styleClass="date" />
+			<date row="2" col="2" name="tbdDate1" readonly="false" styleClass="date"/>
+			<date row="2" col="3" name="tbdDate2" readonly="false" styleClass="date"/>
+			<dropDown row="3" col="1" name="sensitivity" choiceList="choice.sensitivity" readonly="false" validation="required"  styleClass="onefifty" defaultValue="1" />
+			<checkbox row="3" col="3" name="tbdBoolean1" readonly="false" />
+			<textArea row="4" col="1-5" name="voucherComments" readonly="false" styleClass="comment" />
+		</properties>		
+
+		<actions>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="false" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>	
+		</actions>
+	</section>
+	
+	
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1-3" name="vendor.name" validation="required" lookupType="lookup.vendorCode" readonly="true" inputReadonly="true" styleClass="fulllookup"/>
+			<invisibleLookup row="1" col="4" name="vendorId" lookupType="lookup.vendorCode" readonly="true" validation="required" styleclass="thirypercent" />
+			<text row="2" col="1-3" name="vendor.name2" readonly="true" styleClass="sixhundred"/>
+			<text row="3" col="1-3" name="vendor.address1" readonly="true" styleClass="sixhundred"/>
+			<text row="4" col="1-3" name="vendor.address2" readonly="true" styleClass="sixhundred"/>
+			<text row="5" col="1-3" name="vendor.address3" readonly="true" styleClass="sixhundred"/>
+			<text row="6" col="1-3" name="vendor.city" readonly="true" styleClass="sixhundred" />
+			<text row="5" col="4" name="vendor.state" readonly="true"/>
+			<text row="6" col="4" name="vendor.postalCode" readonly="true"/>
+
+	    </properties>
+	</section>
+
+		
+	<section name="sourceInformation" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<date row="1" col="1" name="scanDate" readonly="true" styleClass="date"/>
+			<text row="1" col="2" name="scanType" readonly="true" styleClass="twofifty"/>
+			<text row="1" col="3" name="seqId" readonly="true" styleClass="onefifty"/>
+			<text row="2" col="1" name="scanSource" readonly="true" styleClass="onefifty"/>
+			<text row="2" col="2" name="scanVendorName" readonly="true" styleClass="twofifty"/>
+			<text row="2" col="3" name="batchNumber" readonly="true" styleClass="onefifty"/> 		
+			<text row="3" col="1" name="scanSite" readonly="true" styleClass="onefifty"/>
+			<text row="3" col="3" name="scanBy" readonly="true" styleClass="onefifty"/>
+		</properties>
+	</section>
+	
+	
+
+	<hiddenFields>
+		<hidden name="postingERPId"/>
+		<hidden name="vendorERPId"/>
+        <hidden name="newBatchNumber"/>
+        <hidden name="paymentTermERPId"/>
+		<hidden name="paymentTypeERPId"/>
+        <hidden name="vendor.status" defaultValue="V"/>
+		<hidden name="alternateVendor"/>
+		<hidden name="costObjectTypeId1" defaultValue="COS1"/>
+		<hidden name="uploadRef"/>
+		<hidden name="requester.userName"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+		<hidden name="netAmount"/>
+		<hidden name="processInformation.failReason"/>
+    </hiddenFields>
+
+	<processors>
+    </processors>
+</propertyTemplate>

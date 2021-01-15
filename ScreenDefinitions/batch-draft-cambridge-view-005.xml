@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="batch-draft-view-005" template="batch-ach-cambridge-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+			<label name="forward" value="Submit to Review" />
+			<label name="batch" value="Funds Payment - ACH" />
+		</locale>
+	</labels>
+
+	<section-overrides>	
+	
+	</section-overrides>
+	
+	<property-overrides>
+	</property-overrides>
+
+	<lineItem-overrides> 
+	</lineItem-overrides>
+
+	<action-overrides>
+	<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnBatch.Exception">
+			</reason>
+			<reason name="Terminate" commentsRequired="true" note="message.Batch.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+	<validations>
+		<validation name="validation.duplicateInvoiceCheck" messageType="warning" note="message.duplicateBatchValidation"/>
+		<validation name="validation.lineItemAmount"/>
+		<validation name="validation.paymentBatchValidation"/>
+		<validation name="validation.negativePayments"/>
+		<validation name="validation.swiftBankRoutingNumberValidation"/>
+	</validations>
+</view>

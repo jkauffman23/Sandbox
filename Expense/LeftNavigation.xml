@@ -1,0 +1,29 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+
+<!-- Version 6.8  2016.07.15 -->
+		<initpage href="/filenet/search.do?searchName=InboxSearchExpense"/>
+        
+		<action href="/filenet/search.do?searchName=InboxSearchExpense" target="right" image="/images/ico-inbox-w16.png" name="action.myExpDrafts" searchName="InboxSearchExpense"/>
+				                
+        <section name="section.requests" collapsed="true">
+            <action href="/filenet/upload.do?view=upload-exp-view.xml" target="right" image="/images/ico-new-exp-w29.png" name="action.newexpvoucher" />
+            <action href="/filenet/upload.do?view=upload-cash-view.xml" target="right" image="/images/ico-new-cash-w29.png" name="action.exp.newcashadvance"/>
+			<action href="/filenet/upload.do?view=upload-travel-request-view.xml" target="right" image="/images/ico-new-travel-w29.png" name="action.exp.newtravelrequest"/>			
+        </section>
+		
+  
+        <section name="section.expensequeues" roles="MP_Administrator4, MP_Administrator3, MP_Administrator2, MP_Administrator1" collapsed="true" >
+				<action href="/filenet/search.do?searchName=InAPReviewExpense" target="right" image="/images/ico-folder-w29.png" name="action.expenseInAPReview" searchName="InAPReviewExpense"/>
+     			<action href="/filenet/search.do?searchName=InPostingExpense" target="right" image="/images/ico-folder-w29.png" name="action.expenseInPosting" searchName="InPostingExpense"/> 
+				<action href="/filenet/search.do?searchName=InExceptionExpense" target="right" image="/images/ico-folder-w29.png" name="action.expenseInException" searchName="InExceptionExpense"/>
+		</section>
+			
+
+        <section name="section.tools" collapsed="true">
+            <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignSelf"/>
+            <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignDelegate"/>
+            <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-w16.png" name="action.preferences"/>
+        </section>
+		
+                
+</navigation>

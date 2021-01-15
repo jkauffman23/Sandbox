@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="template-readonly-view" template="template-tpl.xml" readonly="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+			<label name="number" value="Template Code"/>
+		</locale>
+	</labels>
+
+	<section-overrides>	
+	</section-overrides>
+	
+	<property-overrides>
+	
+	</property-overrides>
+
+	<lineItem-overrides> 
+			
+	</lineItem-overrides>
+
+	<action-overrides>
+		<iconAction name="launch" icon="/images/ico-tax-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this, 'launchOverrideEditWorkflow','')" visible="true" alwaysActive="true" visibleRoles="MP_Auditor4"/>
+			
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+				<subReason name="Duplicate invoice"/>
+				<subReason name="Incomplete documentation"/>
+				<subReason name="Not a Genuine Invoice"/>
+				<subReason name="Other"/>
+			</reason>
+			<reason name="Terminate" commentsRequired="true" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+		<validation name="validation.approvercheck" messageType="warning" />
+    </validations>
+</view>

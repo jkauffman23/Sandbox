@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THIS FILE -->
+
+	<locale name="en">
+
+		
+		
+	<!--  Left Navigation -->
+	
+		<label name="action.journal-upload-001" value="New AP Entry" />
+		<label name="action.journal-upload-002" value="Not Used" />
+		<label name="action.journal-upload-003" value="Not Used" />	
+		<label name="action.journal.draft"  value="Journal Draft"/>
+        <label name="action.journal.review"  value="Journal Review"/>
+        <label name="action.journal.posted" value="Journal Posted"/>
+		<label name="action.journal.confirm" value="Journal Confirmed"/>
+		<label name="action.journal.error" value="Journal Error"/>
+		<label name="section.journal.status" value="Journal Workflow"/>
+		<label name="action.myinbox.journal" value="Journal InBox"/>
+		<label name="number" value="Number"/>
+		<label name="section.unposted.journal" value="Posting Status"/>
+		<label name="action.journal.waiting.posting" value="Waiting Journaling"/>
+		<label name="tbdString17" value="Journal Export Label"/>
+		<label name="action.journal-upload-002" value="New Payments Entry"/>
+		<label name="journalHeader001" value="Journal - AP Expense Entry" />
+		<label name="journalHeader002" value="Journal - Payments Cash Entry"/>
+		<label name="paymentBatch" value="Payment Batch No"/>
+		<label name="paymentBatchDescription" value="Pay Batch Desc"/>
+		<label name="paymentSeqId" value="Pay Batch Ref"/>
+		<label name="glOffset.code.ap" value="AP GL Code" />
+		<label name="glOffset.code.cash" value="Ledger Offset Account"/>
+		<label name="glOffset.description.ap" value="Ledger Description"/>
+		<label name="getBatchLines" value="Get Payment Lines"/>
+		<label name="updateReleaseJournal" value="Update" />
+		<label name="updateJournal" value="Save"/>
+		
+		
+	<!--  Screen Changes  -->
+	
+		<label name="journalHeader" value="Journal Header" />
+		<label name="lineItems" value="Lines"/>
+		<label name="tbdDate1" value="Date"/>
+		<label name="getLines" value="Get Journal Lines"/>
+		<label name="balanceJournal" value="Update Balance"/>
+		<label name="balanceJournalTitle"  value="Add Journal Offsetting Balance" />
+		
+		
+		<label name="itemDescription" value="Memo" />
+		<label name="lineTotal" value="Credit/Debit"/>
+		<label name="message.unbalancedJournalEntry" value="The total line items must balance to zero" />
+		<label name="netAmount" value="Total Line Value"/>
+		<label name="voucherComments" value="Comments"/>
+		<label name="glOffset.code" value="Ledger Offset Account" />
+		<label name="glOffset.description" value="Ledger Description" />
+		<label name="glExportLabel" value="Ledger Export Label" />
+		
+		<label name="message.returnJournal.Exception" value="Reject to Journal Errors Queue"/>
+		<label name="message.journal.terminate" value="Terminate this Batch and Release all lines"/>
+		<label name="getLinesTitle" value="Get Journal Lines"/>
+		
+	
+	</locale>
+</labels>
+
+

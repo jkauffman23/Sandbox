@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- THIS FILE IS USED TO UPDATE VERSION OF THE CLIENT'S SYSTEM. 
+		PRODUCT VERSION AND CONFIGURATION VERSION -->
+
+	<locale name="en">
+	
+		<label name="productVersion" value="7.2.6"/>
+		<label name="configVersion" value=" P1"/>
+          	  
+	</locale>
+</labels>
+

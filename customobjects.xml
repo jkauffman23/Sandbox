@@ -1,0 +1,4 @@
+<customObjects>
+    <customObject reader="com.custom.persistence.DocumentExtReader" persister="com.custom.persistence.DocumentExtPersister"/>
+	<customObject reader="com.custom.persistence.OneTimeVendorReader" persister="com.custom.persistence.OneTimeVendorPersister"/>
+</customObjects>

@@ -1,0 +1,10 @@
+
+
+		<list name="choice.batchSubTypes">
+			<choice value="BATCH001" label="Corp Check"/>
+			<choice value="BATCH002" label="Corp ACH"/>
+			<choice value="BATCH003" label="Corp Wire"/>
+			<choice value="BATCH004" label="Funds Check"/>
+			<choice value="BATCH005" label="Corp ACH"/>
+			<choice value="BATCH006" label="Funds Wire"/>
+		</list>

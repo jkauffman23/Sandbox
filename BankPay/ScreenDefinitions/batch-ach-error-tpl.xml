@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+     <labels>
+		<locale name="en">
+			<label name="voucherComments" value="Comments"/>
+			
+		</locale>
+	</labels>
+
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1" name="processInformation.queueName" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="2" name="originatorName" readonly="true" styleClass="threehundred"/>
+			<textArea row ="2" col="1-2" name="processInformation.comment" readonly="false" styleClass="comment" allowTabIndex="false"/>
+			<output row="3" col="1-2" name="previousComments" readonly="true" styleClass="comment" escapeXml="false" />
+		</properties>
+		<actions>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="batch" visible="true" collapsible="false" collapsed="false">
+		<properties>
+		
+		<dropDown row="1" col="1" name="subType" choiceList="choice.batchSubTypes" readonly="true" styleClass="threehundred"/>
+		<text row="1" col="2" name="type" readonly="true" styleClass="threehundred"/>
+		<text row="2" col="1" name="paymentBatchDescription"  validation="required" readonly="true" styleClass="threehundred" />
+		<text row="2" col="2" name="number" validation="required noSpecialCharacters"  readonly="true" styleClass="threehundred"/>
+		<date row="3" col="1" name="paymentsDueDate" readonly="false" styleClass="date" validation="required" />
+		<checkbox row="3" col="2" name="paymentsConsolidate" readonly="false"  />
+		<currency row="4" col="1" name="grossAmount" readonly="true" styleClass="currency" />
+<lookup row="4" col="2" name="tbdString12" lookupType="lookup.organization.batch" inputReadonly="true" readonly="false" styleClass="threehundred" validation="required"/>
+		<textArea row="5" col="1-2" name="voucherComments" styleClass="seventypercent" />
+	</properties>
+		
+		
+	<actions>	
+			<!--iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/-->
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true" />
+		</actions>
+	</section>
+	
+	<section name="batchPaymentMode" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="paymentModeId" lookupType="lookup.paymentMode.batch"  validation="required" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="2" name="paymentMode.description" readonly="true" styleClass="threehundred" />
+			<text row="2" col="1" name="paymentMode.paymentType.code" readonly="true" styleClass="threehundred" />	    <!-- From PYM Table -->
+			<text row="2" col="2" name="companyCode" readonly="true" styleClass="threehundred" />  						<!--From PYM table -->
+
+			<text row="3" col="1" name="paymentsBankName" readonly="true" styleClass="threehundred" />					<!-- From PYM BankName -->
+			<text row="3" col="1" name="currencyId" readonly="true" styleClass="threehundred" />
+			
+			<text row="4" col="1" name="tbdString8" readonly="true" styleClass="threehundred" />	    <!-- From PYM Table -->
+			<text row="4" col="2" name="tbdString9" readonly="true" styleClass="threehundred" />	    <!-- From PYM Table -->
+			<text row="5" col="1" name="bankRoutingNo" readonly="true" styleClass="threehundred" />		   				<!-- from PYM paymentMode.bankRoutingNumber -->
+			<text row="5" col="2" name="bankAccountNo" readonly="true" styleClass="threehundred" />		   				<!-- from paymentMode.bankAccountNumber -->
+
+	    </properties>
+	</section>
+	
+		
+	<section name="lineItems" visible="true" collapsible="true" collapsed="false"  type="PAYMENT" >
+
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<text row="1" col="1" name="seqId" labelKey="dol.seqId" readonly="true" styleClass="eighty" />
+			<currency row="1" col="2" name="lineTotal" readonly="true" styleClass="currency eighty"/>
+			<text row="1" col="3" name="paymentsNumber" readonly="true" styleClass="onethirty" />			
+			<text row="1" col="4" name="paymentsVendorName"  readonly="true" styleClass="threehundred" />
+			<text row="1" col="5" name="paymentsVendorId" readonly="true" styleClass="eighty"/>
+			<text row="1" col="6" name="paymentsVendorBankName" readonly="true" styleClass="twohundred" />
+			<text row="1" col="7" name="paymentsVendorBankAcctNo" readonly="true" styleClass="onehundred" />
+			<text row="1" col="8" name="paymentsVendorBankRoutingNo" readonly="true" styleClass="onehundred"/>
+			<date row="1" col="9" name="paymentsDueDate" readonly="true" stylClass="onehundred"/>
+			<date row="1" col="10" name="paymentsDate" readonly="true" stylClass="onehundred"/>
+			<checkbox row="1" col="11" name="paymentsSeparateCheck" readonly="true" />
+			<text row="1" col="12" name="paymentsSourceSeqId" readonly="true"  />
+
+			
+			<lineItemHidden row="0" col="0" name="paymentsAddr1" />
+			<lineItemHidden row="0" col="0" name="paymentsNumberInvoices"/>	
+			<lineItemHidden row="0" col="0" name="paymentsAddr2" />
+			<lineItemHidden row="0" col="0" name="paymentsAddr3" />
+			<lineItemHidden row="0" col="0" name="paymentsAddr4" />
+			<lineItemHidden row="0" col="0" name="paymentsCity"  />
+			<lineItemHidden row="0" col="0" name="paymentsState" />
+			<lineItemHidden row="0" col="0" name="paymentsPostalCode" />
+			<lineItemHidden row="0" col="0" name="paymentsCountry" />
+			<lineItemHidden row="0" col="0" name="paymentsCheckStubMessage" />
+			<lineItemHidden row="0" col="0" name="paymentsCurrencyId" />
+			<lineItemHidden row="0" col="0" name="paymentsAcctType" />
+			<lineItemHidden row="0" col="0" name="paymentsPayRef" />
+			<lineItemHidden row="0" col="0" name="paymentsPoId"/>
+			<lineItemHidden row="0" col="0" name="paymentsDiscountAmount" />
+			<lineItemHidden row="0" col="0" name="paymentsNetAmount" />
+			<lineItemHidden row="0" col="0" name="paymentsEmail" />
+			<lineItemHidden row="0" col="0" name="paymentsVendorSwift" />
+			<lineItemHidden row="0" col="0" name="paymentsVendorIBAN" />
+			<lineItemHidden row="0" col="0" name="accountERPId" />
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+		</lineItemProperties>
+		
+		<actions>				
+			<button name="getLines" command="generatePaymentLines" readonly="false" type="submit" isAnchored="false" title="getLinesTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+		
+	<hiddenFields>
+		<hidden name="tbdString18"/>
+		<hidden name="postingERPId" />
+		<hidden name="vendorERPId" />
+		<hidden name="paymentTermERPId" />
+		<hidden name="paymentTypeERPId" />
+		<hidden name="paymentModeERPId" />
+		<hidden name="paymentBatch"/>
+       	<hidden name="vendor.status"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="requesterId"/>
+		<hidden name="scanSource"/>
+		<hidden name="AFENumber"/>
+		<hidden name="requester.userName"/>
+		<hidden name="paymentModeInterfaceJob"/>
+
+		</hiddenFields>
+	<processors>
+		<!-- processor name="com.miriasystems.processors.NetAmountProcessor"/ -->
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+		<processor name="com.custom.processors.PaymentModeInterfaceJobProcessor"/>
+	
+    </processors>
+</propertyTemplate>

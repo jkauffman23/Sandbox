@@ -1,0 +1,7 @@
+<templateRoutingConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<properties>
+<property name="templateRoutingNumRows" value="5"/>
+<property name="templateRoutingDefaultApproval" value="0.00|1.00|100.00|5000.00|1000000.00"/>
+<property name="templateRoutingApprovalCurrency" value="USD"/>
+</properties>
+</templateRoutingConfiguration>

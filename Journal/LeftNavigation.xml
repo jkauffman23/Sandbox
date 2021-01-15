@@ -1,0 +1,36 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+        
+		
+		<initpage href="/filenet/search.do?searchName=InboxSearchJournal"/>
+		
+		<action href="/filenet/search.do?searchName=InboxSearchJournal" target="right" image="/images/ico-inbox-w16.png" name="action.myinbox" searchName="InboxSearchJournal"/>
+          	
+		<section name="section.upload.journal" collapsed="false"  >
+
+				<action href="/filenet/upload.do?view=journal-upload-view-001.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.journal-upload-001" /> 
+				<action href="/filenet/upload.do?view=journal-upload-view-002.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.journal-upload-002" /> 				
+		</section>
+		
+		<section name="section.unposted.journal" collapsed="false"  >
+
+				<action href="/filenet/search.do?searchName=journalInvoiceWaitingPosting" target="right" image="/images/ico-folder-w16.png" name="action.journal.waiting.posting"  searchName="journalInvoiceWaitingPosting"/>
+				
+		</section>
+		
+			
+ 		<section name="section.journal.status" collapsed="false" >	
+				<action href="/filenet/search.do?searchName=JournalDraftSearch" target="right" image="/images/ico-folder-w16.png" name="action.journal.draft"  searchName="JournalDraftSearch"/>
+                <action href="/filenet/search.do?searchName=JournalReviewSearch" target="right" image="/images/ico-folder-w16.png" name="action.journal.review"  searchName="JournalReviewSearch"/>
+                <action href="/filenet/search.do?searchName=JournalStagingSearch" target="right" image="/images/ico-folder-w16.png" name="action.journal.posted" searchName="JournalStagingSearch"/>
+				<action href="/filenet/search.do?searchName=JournalConfirmationSearch" target="right" image="/images/ico-folder-w16.png" name="action.journal.confirm" searchName="JournalConfirmationSearch"/>
+				<action href="/filenet/search.do?searchName=JournalErrorSearch" target="right" image="/images/ico-folder-w16.png" name="action.journal.error" searchName="JournalErrorSearch"/>
+				
+        </section>
+         
+
+        <section name="section.tools" collapsed="true" >
+                <action href="/protected/preferences.do" target="right" image="/images/ico-config-w16.png" name="action.preferences" />
+				<action href="/restricted/passwordreset.do" target="right" image="/images/ico-wrench-c16.png" name="Reset Password"/>
+        </section>
+
+</navigation>

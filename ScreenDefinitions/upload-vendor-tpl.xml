@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+     <labels>
+	<locale name="en">
+	</locale>
+	</labels>
+	
+	<section name="invoice" visible="false" collapsible="false" collapsed="false">
+		<properties>
+				
+		</properties>
+		<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="false" alwaysActive="true"/>
+		</actions>
+	</section>
+	
+	
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="vendor.name" lookupType="lookup.vendorCode" readonly="true" inputReadonly="true" validation="required" styleClass="fourhundred"/>
+			<invisibleLookup row="1" col="2" name="vendorId" lookupType="lookup.vendorCode" readonly="true"  validation="required" styleClass="fourhundred"/>
+			
+			<text row="2" col="1" name="vendor.name2" readonly="true" styleClass="fourhundred"/>
+			
+			<invisibleLookup row="2" col="2" name="vendorAddress.type" lookupType="lookup.vendorCode"  readonly="true" validation="required" styleClass="fourhundred" />
+			
+			<text row="3" col="1" name="vendor.address1" readonly="true" styleClass="fourhundred"/>
+			<text row="3" col="2" name="vendor.email" readonly="true" styleClass="fourhundred"/>
+			<text row="4" col="1" name="vendor.address2" readonly="true" styleClass="fourhundred"/>
+			<text row="4" col="2" name="vendor.country.name" readonly="true" styleClass="fourhundred"/>
+			<text row="5" col="1" name="vendor.address3" readonly="true" styleClass="fourhundred"/>
+			<text row="5" col="2" name="vendor.contact" readonly="true" styleClass="fourhundred"/>
+			<text row="6" col="1" name="vendor.city" readonly="true" styleClass="fourhundred"/>
+			<text row="6" col="2" name="vendor.state" readonly="true" styleClass="fourhundred"/>
+			<text row="7" col="1" name="vendor.phone" readonly="true" styleClass="fourhundred"/>
+			<text row="7" col="2" name="vendor.postalCode" readonly="true" styleClass="fourhundred"/>
+			
+			
+			
+			
+	    </properties>
+	</section>
+	
+	<section name="vendorAddDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="vendor.taxId" readonly="true" styleClass="fourhundred"/>
+			<text row="2" col="1" name="vendor.bankName" readonly="true" styleClass="fourhundred"/>
+			<text row="3" col="1" name="vendor.bankAccountNumber" readonly="true" styleClass="fourhundred"/>
+			<text row="4" col="1" name="vendor.ten99Code" readonly="true" styleClass="fourhundred"/>
+			<checkbox row="5" col="1" name="vendor.ten99flag" readonly="true" />
+			<text row="6" col="1" name="vendor.payToCode" readonly="true" styleClass="fourhundred"/>
+			<text row="7" col="1" name="paymentTypeId" readonly="true" styleClass="fourhundred"/>
+			<text row="8" col="1" name="vendor.paymentTerm.code" readonly="true" styleClass="fourhundred"/>
+			<text row="9" col="1" name="vendor.currency.code" readonly="true" styleClass="fourhundred"/>
+			
+			<text row="1" col="2" name="vendor.company.code" readonly="true" styleClass="fourhundred"/>
+			<text row="2" col="2" name="vendorERPId" readonly="true" styleClass="fourhundred"/>
+			<checkbox row="3" col="2" name="vendor.payBlock" readonly="true" />
+			<checkbox row="4" col="2" name="vendor.postBlock" readonly="true" />
+			<checkbox row="5" col="2" name="vendor.deleteFlag" readonly="true" />
+			<text row="6" col="2" name="vendor.approvalCode" readonly="true" styleClass="fourhundred"/>
+
+	    </properties>
+	</section>
+	
+	<section name="vendortbd" visible="true" collapsible="true" collapsed="false">
+		<properties>			
+			<date row="1" col="1" name="vendor.tbdDate1" readonly="true" styleClass="date"/>
+			<date row="2" col="1" name="vendor.tbdDate2" readonly="true" styleClass="date"/>
+			<text row="3" col="1" name="vendor.tbdString1" readonly="true" styleClass="fourhundred"/>
+			<text row="4" col="1" name="vendor.tbdString2" readonly="true"  styleClass="fourhundred"/>
+			<text row="5" col="1" name="vendor.tbdString3" readonly="true" styleClass="fourhundred"/>
+			<text row="6" col="1" name="vendor.tbdString4" readonly="true" styleClass="fourhundred"/>
+			
+			<text row="1" col="2" name="vendor.tbdNumber1" readonly="true" styleClass="fourhundred"/>
+			<text row="2" col="2" name="vendor.tbdNumber2" readonly="true" styleClass="fourhundred"/>
+			<text row="3" col="2" name="vendor.tbdCurrency1" readonly="true" styleClass="fourhundred"/>
+			<text row="4" col="2" name="vendor.tbdCurrency2" readonly="true" styleClass="fourhundred"/>
+			<text row="5" col="2" name="vendor.tbdQuantity1" readonly="true" styleClass="fourhundred"/>
+			<text row="6" col="2" name="vendor.tbdQuantity2" readonly="true" styleClass="fourhundred"/>
+
+	    </properties>
+	</section>
+
+	
+	<section name="Address" visible="true" collapsible="true" collapsed="false" >
+		<properties>
+			<text row="1" col="1-2" name="vendorAddress.remitToId" readonly="true" styleClass="fourhundred"/>
+			<text row="2" col="1-2" name="vendorAddress.type" readonly="true" styleClass="fourhundred"/>
+			<text row="3" col="1-2" name="vendorAddress.name" readonly="true" styleClass="fourhundred"/>
+			<text row="4" col="1-2" name="vendorAddress.address1" readonly="true" styleClass="fourhundred"/>
+			<text row="5" col="1-2" name="vendorAddress.address2" readonly="true" styleClass="fourhundred"/>
+			<text row="6" col="1-2" name="vendorAddress.address3" readonly="true" styleClass="fourhundred"/>
+			<text row="7" col="1-2" name="vendorAddress.address4" readonly="true" styleClass="fourhundred"/>
+			<text row="1" col="3-4" name="vendorAddress.city" readonly="true" styleClass="fourhundred"/>
+			<text row="2" col="3-4" name="vendorAddress.state" readonly="true" styleClass="fourhundred"/>
+			<text row="3" col="3-4" name="vendorAddress.postalCode" readonly="true" styleClass="fourhundred"/>
+			<text row="4" col="3-4" name="vendorAddress.contact" readonly="true" styleClass="fourhundred"/>
+			<text row="5" col="3-4" name="vendorAddress.phone" readonly="true" styleClass="fourhundred"/>
+			<text row="6" col="3-4" name="vendorAddress.email" readonly="true" styleClass="fourhundred"/>
+		</properties>
+	</section>
+	
+	<section name="lineItems" visible="false" collapsible="true" collapsed="false">
+
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<lookup row="1" col="1" name="accountCode" lookupType="lookup.accountCode" readonly="false" validation="required" styleClass="twohundred"/>
+			<text row="1" col="2" name="account.description" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3" name="itemDescription" readonly="false" styleClass="twohundred"/>
+			<currency row="1" col="4" name="lineTotal" readonly="false" validation="required, nonZero" styleClass="currency" />
+			<text row="1" col="5" name="tbdString1" labelKey='Capital/Project' readonly="false" styleClass="onehundred"/>			
+			<lineItemHidden row="0" col="0" name="accountERPId"/>
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+		</lineItemProperties>
+		
+		<actions>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<button name="addLineItem" command="addLineItem" type="submit" docType="upload" isAnchored="true" allowTabIndex="true" styleClass="button70"/>
+			<button name="removeLineItem" command="deleteLineItem" type="submit" docType="upload" isAnchored="true"  styleClass="button70"/>
+		</actions>
+	</section>
+	
+
+	<hiddenFields>
+		<hidden name="group"  defaultValue="Vendor"/>
+		<hidden name="type" defaultValue="VENDOR" />
+		<hidden name="postingERPId"  defaultValue="AOPS001"/>
+		<!--hidden name="vendorERPId"/-->
+        <hidden name="newBatchNumber"/>
+        <hidden name="paymentTermERPId"/>
+		<hidden name="paymentTypeERPId"/>
+		<hidden name="alternateVendor"/>
+		<hidden name="uploadRef"/>
+		<hidden name="requester.userName"/>
+		<hidden name="processInformation.failReason"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+		
+	</processors>
+</propertyTemplate>

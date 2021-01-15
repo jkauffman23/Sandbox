@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="journal-draft-view-001" template="journal-001-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="forwardJournal" value="Submit to Review"/>
+		
+		</locale>
+	</labels>
+
+	<section-overrides>	
+		
+	</section-overrides>
+	
+	<property-overrides>
+		
+		<lookup name="companyCode" readonly="false"/>
+
+	</property-overrides>
+
+	<lineItem-overrides> 
+
+		
+	
+	</lineItem-overrides>
+
+	<action-overrides>
+	<button name="forward" visible="false" />
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Terminate" commentsRequired="true" note="message.journal.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+	<validations>
+		<!-- validation name="validation.lineItemAmount" messageType="error" message="message.unbalancedJournalEntry"/ -->
+
+	</validations>
+</view>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quartz version="1.1" xmlns="http://www.quartzscheduler.org/ns/quartz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.quartzscheduler.org/ns/quartz http://www.quartzscheduler.org/ns/quartz/job_scheduling_data_1_1.xsd">
+<!--job>
+		<job-detail>
+			<name>pingDatabase</name>
+			<group>invoiceOutputGroup</group>
+			<job-class>com.miriasystems.jobs.PingDatabaseJob</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+			<job-data-map allows-transient-data="true">
+				<entry>
+					<key>templateName</key>
+					<value>successProcessNotification</value>
+				</entry>
+				<entry>
+					<key>errorTemplate</key>
+					<value>failureProcessNotification</value>
+				</entry>
+				<entry>
+					<key>connections</key>
+					<value>MPDB_USER|ERP_USER|MP_MONITOR</value>
+				</entry>
+				<entry>
+					<key>SQLDefault</key>
+					<value>select getDate()</value>
+				</entry>
+				<entry>
+					<key>MP_MONITOR</key>
+					<value>Select count( * ) from MP_DOCUMENT where PK_DOC_SEQID &lt; 20000</value>
+				</entry>
+
+			</job-data-map>
+		</job-detail>
+		<trigger>
+			<cron>
+				<name>PingDatabaseJob</name>
+				<group>invoiceOutputGroup</group>
+				<job-name>allTrigger</job-name>
+				<job-group>allTriggers</job-group>
+				<cron-expression>0 0/525600 * ? * *</cron-expression>
+			</cron>
+		</trigger>
+	</job-->
+	
+		<job>
+			<job-detail>
+				<name>RetryConductorQueue</name>
+				<group>ManagedPayGroup</group>
+				<job-class>com.miriasystems.jobs.RetryConductorQueueJob</job-class>
+				<volatility>false</volatility>
+				<durability>false</durability>
+				<recover>false</recover>
+				<job-data-map allows-transient-data="true">
+					<entry>
+					<key>maxConductorRetryAttempts</key>
+					<value>5</value>
+					</entry>
+				</job-data-map>
+			</job-detail>
+			<trigger>
+				<cron>
+					<name>RetryConductorQueue</name>
+					<group>ManagedPayGroup</group>
+					<job-name>allTrigger</job-name>
+					<job-group>allTriggers</job-group>
+					<cron-expression>0 0/10 * 1/1 * ? *</cron-expression><!--0 0 * * * ?-->
+				</cron>
+			</trigger>
+	</job>		
+	
+	<job>
+		<job-detail>
+			<name>workSummaryJob</name>
+			<group>ManagedPayGroup</group>
+			<job-class>com.miriasystems.jobs.WorkSummaryEmailJob</job-class>
+			<volatility>false</volatility>
+			<durability>false</durability>
+			<recover>false</recover>
+			<job-data-map allows-transient-data="true">
+				<entry>
+					<key>templateName</key>
+					<value>workSummaryNotification</value>
+				</entry>
+				<entry>
+					<key>maxResults</key>
+					<value>100</value>
+				</entry>
+			</job-data-map>
+		</job-detail>
+		<trigger>
+			<cron>
+				<name>workSummaryJob</name>
+				<group>ManagedPayGroup</group>
+				<job-name>allTrigger</job-name>
+				<job-group>allTriggers</job-group>
+				<cron-expression>0 0 7/9 1/1 * ? *</cron-expression>
+			</cron>
+		</trigger>
+	</job>	
+	
+</quartz>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="ROOTAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxBackupIndex" value="10"/>
+		<param name="maxFileSize" value="100MB"/>
+		<param name="File" value="E:/MiriaSystems/DEV10/ActiveOps/Logs/DEV10_activePay.log"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-d HH:mm:ss,SSS} %c %-5p - %m [%t]%n"/>
+		</layout>
+	</appender>
+
+	<appender name="ManagedPayAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxBackupIndex" value="10"/>
+		<param name="maxFileSize" value="100MB"/>
+		<param name="File" value="E:/MiriaSystems/DEV10/ActiveOps/Logs/DEV10_activePay.log"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-d HH:mm:ss,SSS} %c %-5p - %m [%t]%n"/>
+		</layout>
+	</appender>
+
+	<appender name="WorkflowAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxBackupIndex" value="10"/>
+		<param name="maxFileSize" value="100MB"/>
+		<param name="File" value="E:/MiriaSystems/DEV10/ActiveOps/Logs/DEV10_workflow.log"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-d HH:mm:ss,SSS} %c %-5p - %m [%t]%n"/>
+		</layout>
+	</appender>
+	<appender name="ETLAppender" class="org.apache.log4j.RollingFileAppender">
+		<param name="maxBackupIndex" value="10"/>
+		<param name="maxFileSize" value="100MB"/>
+		<param name="File" value="E:/MiriaSystems/DEV10/ActiveOps/Logs/DEV10_etl.log"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-d HH:mm:ss,SSS} %c %-5p - %m [%t]%n"/>
+		</layout>
+	</appender>
+	
+	
+
+    <category name="org.jboss" additivity="false">
+        <priority value="ERROR"/>
+    </category>
+	<category name="net.sf.ehcache" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="org.apache.struts" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="org.apache.commons.digester" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="org.apache.commons.beanutils" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="org.apache.commons.httpclient" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="org.apache.commons.validator" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="org.apache.struts.util.PropertyMessageResources" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="httpclient.wire" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="filenet.pe" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="filenet_tracing.api.detail" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="filenet_tracing.wsi.detail" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="filenet.vw" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+	<category name="org.hibernate" additivity="false">
+		<priority value="ERROR"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="org.hibernate.SQL" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="org.quartz.scheduler" additivity="false">
+		<priority value="ERROR"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="org.quartz" additivity="false">
+		<priority value="ERROR"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+
+	<category name="org.springframework" additivity="false">
+		<priority value="ERROR"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.filenet" additivity="false">
+		<priority value="ERROR"/>
+	</category>
+    <category name="com.miriasystems.ui.factories.AJAXBeanFactory" additivity="false">
+        <priority value="ERROR"/>
+		<appender-ref ref="ManagedPayAppender"/>
+    </category>
+    <category name="com.miriasystems.ui" additivity="false">
+        <priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+    </category>
+
+	<category name="com.miriasystems.common.ui" additivity="false">
+        <priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+    </category>
+	<category name="com.miriasystems.common.filters" additivity="false">
+        <priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+    </category>
+	<category name="com.miriasystems.notifications.util.ResultSetConverter" additivity="false">
+		<priority value="WARN"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.document" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.scheduler" additivity="false">
+		<priority value="ERROR"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.jobs" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.ldap" additivity="false">
+		<priority value="INFO"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.reporting" additivity="false">
+		<priority value="INFO"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.erp" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.filenet" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.task" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.utils" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.persistence" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.ilog" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.validation" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.ui.providers" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.workperformers" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="WorkflowAppender"/>
+	</category>
+	<category name="com.cabelas.validation" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.cabelas.processors" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.processors" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.ajax" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+
+
+	<category name="com.cabelas.workperformers" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="WorkflowAppender"/>
+	</category>
+	
+	<category name="com.miriasystems.custom.etl" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.custom" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.helper" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+
+	<category name="com.miriasystems.searches" additivity="false">
+		<priority value="ERROR"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.custom" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.custom.etl.provider" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ETLAppender"/>
+	</category>
+	<category name="com.miriasystems.custom.etl.jobs" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ETLAppender"/>
+	</category>
+	
+	<category name="com.miriasystems.servlets" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+	<category name="com.miriasystems.actions" additivity="false">
+		<priority value="DEBUG"/>
+		<appender-ref ref="ManagedPayAppender"/>
+	</category>
+
+	<root>
+		<priority value="ERROR"/>
+		<appender-ref ref="ROOTAppender"/>
+	</root>
+</log4j:configuration>

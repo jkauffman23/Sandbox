@@ -1,0 +1,269 @@
+/*  Custom - Does not include portal customer */
+
+
+p, td, a, span, div, em, textarea, input, select, {										/* Use to set the global font */
+
+}
+
+p, td, a, span, div, em, textarea, input, select, div.comment {
+font-size: 14px;
+
+}
+
+h1 {
+	font-size: 24px;
+    color: #1177be;
+}
+
+h2 {
+
+}
+
+ .odd {																	/* controls row list sizing   */
+	color: #000000;
+	height: 28px;
+}
+
+ .even {																	
+	color: #000000;
+	height: 28px;
+}
+
+.rowov {
+	color: #000000;
+	height: 28px;
+    background-color: #999999;
+}
+
+
+
+div.sectiondiv {																	/* Task Section Header */
+    padding: 4px 5px 6px 5px;
+    cursor: pointer;
+    background-color: #006666;  /*  Orig: #DADADA;  Green:#006666; Blue: 336699  Non-web blue: 3273ad New blue  3399cc */
+    width: 100%;
+    text-align: right;
+	vertical-align: middle;
+    height: 24px;
+}
+
+div.sectiondiv #label {															/* Task Section Header Label */
+	color: #ffffff;
+	float: left;
+	margin: -3px;
+	padding: 0px 5px 20px 5px;
+	font-size: 20px;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+}
+ 
+
+div.sectiondiv  img:hover {														/* Task Section Header Hover  */
+    box-shadow: 0 0 0 2px rgb(227, 230, 236);
+	overflow: hidden;
+	-webkit-transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+	-moz-transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+	
+.showHidealign {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+div.sectiondiv.actions {
+    margin: 0px 15px 0px 0px;
+    vertical-align: top;
+    color: #333333;
+}
+.liLabel {
+	border-color: #FFB4AC;
+	width: 200px;
+	background-color: #FFB4AC;
+}
+
+.iconattach {
+	width: 20px;
+	border: 0px 0px 0px 0px;
+	background-image:url(../images/new_logo_nav.png)
+}
+
+ #lineitemdiv table tr th {
+    background-color: #ffffff;
+	border: none;
+}
+#lineitemdiv table tr.even td {
+	background-color: #ffffff;
+	border: none;
+}
+#lineitemdiv table tr.odd td {
+	background-color: #ededed;
+	border: none;
+}
+#lineitemdiv table {
+	width: 100%;
+}
+#lineitemdiv table tr.totalRow td {
+    background-color: #f3f3f3;
+}
+
+
+
+.commentExp {
+    width: 90%;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+    height: 24px;
+}
+
+#getnext {
+    color: #cccccc;  /*  Org:808080  For Green:  cccccc */
+    vertical-align: bottom;
+ 
+}
+
+.fiveRight {
+    width: 50px;
+	text-align: right;
+}
+
+.onecheckbox {
+    width: 60px;
+}
+
+.labelonly {
+	border: none;
+	width: 200px;
+	color: Red;
+	
+}
+
+
+.freeText {
+	width: 800px;
+	color: black;
+	
+}
+
+.freeTextred {
+	width: 800px;
+	color: red;
+	
+	
+}
+.chkalign {
+	float: right;
+	
+}
+
+
+
+
+
+.showHidealign {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.liLabel {
+	border-color: #FFB4AC;
+	width: 200px;
+	background-color: #FFB4AC;
+}
+
+.iconattach {
+	width: 20px;
+	border: 0px 0px 0px 0px;
+	background-image:url(../images/new_logo_nav.png)
+}
+
+ #lineitemdiv table tr th {
+    background-color: #ffffff;
+	border: none;
+}
+#lineitemdiv table tr.even td {
+	background-color: #ffffff;
+	border: none;
+}
+#lineitemdiv table tr.odd td {
+	background-color: #ededed;
+	
+	border: none;
+}
+#lineitemdiv table {
+	width: 100%;
+}
+#lineitemdiv table tr.totalRow td {
+    background-color: #f3f3f3;
+}
+
+#header .hbar {
+    background-color:#3273ad;
+	position: relative;
+    height:10px;
+    width:100%;
+}
+#construction{
+	color: orange;
+	font-weight: bold;
+    font: 20px/100% Arial, Helvetica, sans-serif;
+}
+
+
+#searchQue{
+	margin: 5px 5px 5px 0px;
+}
+#searchQue table tr th, #search table thead tr th, #result table tr th, #result table thead tr th{
+	 background-color: #C0C0C0;
+	 color: #333333;
+     text-decoration:none;
+     font-weight: normal;
+     font-size: 11px;
+}
+#searchQue table tr td, #searchQue table tbody tr td, #searchQue table tr th,#result table tr td, #result table tbody tr td, #result table tr th {
+	 padding: 1px 3px;
+	 margin: 0px;
+	 border: solid #808080;
+	 border-width: 0px 0px 1px 0px;
+}
+#searchQue table tr.odd, tr.odd, #search table tbody tr.odd,#result table tr.odd, tr.odd, #result table tbody tr.odd {
+	 background-color: transparent;
+
+}
+#searchQue table tr.even, tr.even, #search table tbody tr.even,#result table tr.even, tr.even, #result table tbody tr.even {
+	 background-color: transparent;
+
+}
+
+
+
+/*  MM Added 2017.09.10 */
+
+
+legend{
+    padding: 0;
+    height:26px;
+	width:80%;
+	overflow: hidden;
+    float:left;
+	
+	
+}
+
+fieldset legend {
+    display:block;
+    border: none;
+    float:left;
+	height:16px;
+	padding:5px 40px 6px 3px;
+	font-size:16px;
+	line-height: 15px;
+	font-weight: bold;
+	color:#0b78c4;
+	overflow: hidden;	
+}
+
+
+

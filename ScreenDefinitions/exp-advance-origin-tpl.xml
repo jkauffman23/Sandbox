@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels>
+		<!-- Label overrides for this template -->
+		<locale name="en">
+        </locale>
+	</labels>
+	
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1" name="processInformation.queueName" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="2" name="originatorName" readonly="true"/>
+			<!--<output row="3" col="1-4" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false" />-->
+			<output row="3" col="1-4" name="previousComments" readonly="true" styleClass="comment" escapeXml="false" link="javascript:openPreviousCommentsWindow('$contextPath$', '$seqId$')"/>
+			<text row="3" col="1-2" name="processInformation.failReason" readonly="true" styleClass="fulllookup"/>
+		</properties>
+		<actions>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>	
+		
+	
+	<section name="Cash Advance Details" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="seqId" readonly="true" validation="required"/>
+			<text row="2" col="1" name="originatorName" styleClass="twohundred" readonly="true"/>
+			<text row="2" col="2" name="processCode" readonly="true"/>
+			<date row="3" col="1" name="tbdDate1" styleClass="date"/>
+			<date row="3" col="2" name="tbdDate2" styleClass="date"/>
+			<dropDown row="4" col="1" name="grossAmount" choiceList="choice.advanceAmounts"/>
+			<date row="4" col="2" name="date" validation="required" styleClass="date"/>
+			<text row="5" col="1" stlyeClass="threehundred" name="batchNumber" readonly="true"/>
+			<checkbox row="5" col="2" name="tbdBoolean2" readonly="true"/>
+			<text row="6" col="2-3" name="tbdString6" stlyeClass="twohundred"/>
+			<text row="7" col="1-4" name="voucherComments" styleClass="comment" readonly="true"/>	
+			<textArea row="8" col="1-4" name="processInformation.comment" styleClass="comment" readonly="true" />		
+		</properties>
+		<actions>
+					
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindowSeqId('$contextPath$', '$wobNumber$', '$seqId$', 'nonPo', 'MP_Processor6')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="false" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+		</actions>
+	</section>
+	
+		<section name="Remittance" visible="true" collapsible="true" collapsed="true">
+		<properties>
+		<lookup row="1" col="1-2" name="vendor.name" lookupType="lookup.vendorCode" readonly="true" styleClass="threehundred" />
+		<lookup row="1" col="3" name="vendorId" lookupType="lookup.vendorCode" readonly="true"  styleClass="onefifty"/>		
+		<text row="2" col="1-3" name="vendor.address1" readonly="true" styleClass="sixhundred"/>
+		<text row="3" col="1-3" name="vendor.address2" readonly="true" styleClass="sixhundred"/>
+		<text row="4" col="1-3" name="vendor.city" readonly="true" styleClass="sixhundred" />
+		<text row="1" col="4" name="vendor.state" readonly="true"/>
+		<text row="2" col="4" name="vendor.postalCode" readonly="true"/>
+		</properties>
+	</section>
+	
+
+	<section name="Advance Guidelines" visible="false" collapsible="false" collapsed="false">
+		<properties>
+			<output row="1" col="1-2" name="custom1.tbdComment1" 
+			defaultValue="If you already have a pre-paid card, select it from the credit card look-up.  If an assigned card is not available, enter the card" forceDefault="true" readonly="true" styleClass="sixhundred"/>
+			<output row="2" col="1-2" name="custom1.tbdComment2"
+			defaultValue="Name and the last 8 digits of the card number in the comments field above." forceDefault="true" readonly="true" styleClass="sixhundred"/>
+			<output row="3" col="1-2" name="custom1.tbdComment3" 
+			defaultValue="If you do not have a card then only supply the name you would like on the card and check the box labeled 'Request New Card'. " forceDefault="true" readonly="true" styleClass="sixhundred"/>
+			<output row="4" col="1-2" name="custom1.tbdComment4"
+			defaultValue="Enter your travel details and your request will be forwarded to your manager for approval." forceDefault="true" readonly="true" styleClass="sixhundred"/>	
+			<output row="5" col="1-2" name="custom1.tbdComment6"
+			defaultValue="You will receive a confirmation e-mail once the card administrator has processed your request." forceDefault="true" readonly="true" styleClass="sixhundred"/>		
+	</properties>
+	</section>
+	
+	
+	<section name="lineItems" visible="false" collapsible="false" collapsed="true">
+			<lineItemProperties showTotal="true">
+			<dropDown row="1" col="1" name="tbdString1" labelKey="lineItems.tbdString1" choiceList="choice.expenseLineTypes" styleClass="onehundred" readonly="true"/>
+			<lineItemHidden row="0" col="0" name="accountERPId"/>
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+			<lineItemHidden row="0" col="0" name="costObjectTypeId1" defaultValue="CC" />
+			<lineItemHidden row="0" col="0" name="account.type" defaultValue="E" />
+
+			</lineItemProperties>
+		</section>
+	
+	
+	<hiddenFields>
+		<hidden name="type" defaultValue='CASH'/>
+		<hidden name="tbdBoolean1" defaultValue='1' forceDefault="true"/>
+	    <hidden name="postingERPId"/>
+	    <hidden name="vendorERPId"/>
+		<hidden name="requester.userName"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="AFENumber" defaultValue="pre-paid" forceDefault="true"/>
+		<hidden name="enCryptCC"/>
+
+	</hiddenFields>
+
+    <processors>
+    	
+     </processors>
+
+</propertyTemplate>

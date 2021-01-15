@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="TerminatedInvoices"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Landscape"
+		 pageWidth="792"
+		 pageHeight="612"
+		 columnWidth="732"
+		 columnSpacing="0"
+		 leftMargin="30"
+		 rightMargin="30"
+		 topMargin="20"
+		 bottomMargin="20"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="icon" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="logo" isForPrompting="false" class="java.lang.String"/>
+	<queryString><![CDATA[select * from V_MP_REP_EXCEPTIONS]]></queryString>
+
+	<field name="RPROC_PK" class="java.lang.Integer"/>
+	<field name="RPROC_DOC_SEQID" class="java.lang.Integer"/>
+	<field name="RPROC_USER_ID" class="java.lang.String"/>
+	<field name="RPROC_QUEUE_NAME" class="java.lang.String"/>
+	<field name="RPROC_ENQUEUED_DATE" class="java.sql.Timestamp"/>
+	<field name="RPROC_FINISHED_DATE" class="java.sql.Timestamp"/>
+	<field name="RPROC_FAIL_REASON" class="java.lang.String"/>
+	<field name="RPROC_REJECTION_REASON" class="java.lang.String"/>
+	<field name="RPROC_SUBREJECTION_REASON" class="java.lang.String"/>
+	<field name="RPROC_COMMENT" class="java.lang.String"/>
+	<field name="RPROC_ENTERED_INBOX" class="java.sql.Timestamp"/>
+	<field name="RPROC_DURATION_MS" class="java.lang.Long"/>
+	<field name="RPROC_LASTMODIFIEDDATE" class="java.sql.Timestamp"/>
+	<field name="RPROC_RESPONSE" class="java.lang.String"/>
+	<field name="RDOC_PK" class="java.lang.Integer"/>
+	<field name="RDOC_COMPANY_CODE" class="java.lang.String"/>
+	<field name="RDOC_VENDOR_ID" class="java.lang.String"/>
+	<field name="RDOC_VENDOR_ERP_ID" class="java.lang.String"/>
+	<field name="RDOC_VENDOR_NAME" class="java.lang.String"/>
+	<field name="RDOC_CURRENCY_ID" class="java.lang.String"/>
+	<field name="RDOC_TAX_ID" class="java.lang.String"/>
+	<field name="RDOC_TAX_ERP_ID" class="java.lang.String"/>
+	<field name="RDOC_PAYMENT_TERM_ID" class="java.lang.String"/>
+	<field name="RDOC_PAYMENT_TERM_ERP_ID" class="java.lang.String"/>
+	<field name="RDOC_PAYMENT_TYPE_ID" class="java.lang.String"/>
+	<field name="RDOC_PAYMENT_TYPE_ERP_ID" class="java.lang.String"/>
+	<field name="RDOC_POSTING_ERP_ID" class="java.lang.String"/>
+	<field name="RDOC_ERP_DOC_ID" class="java.lang.String"/>
+	<field name="RDOC_CE_LIBRARY" class="java.lang.String"/>
+	<field name="RDOC_CE_ID" class="java.lang.String"/>
+	<field name="RDOC_WOB_NUMBER" class="java.lang.String"/>
+	<field name="RDOC_NUMBER" class="java.lang.String"/>
+	<field name="RDOC_SHIPPING_DOC_ID" class="java.lang.String"/>
+	<field name="RDOC_TYPE" class="java.lang.String"/>
+	<field name="RDOC_SUBTYPE" class="java.lang.String"/>
+	<field name="RDOC_GROUP" class="java.lang.String"/>
+	<field name="RDOC_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_RECEIVED_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_DUE_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_SCAN_VENDOR_NAME" class="java.lang.String"/>
+	<field name="RDOC_SCAN_VENDOR_ADDR1" class="java.lang.String"/>
+	<field name="RDOC_SCAN_VENDOR_ADDR2" class="java.lang.String"/>
+	<field name="RDOC_SCAN_AMOUNT" class="java.math.BigDecimal"/>
+	<field name="RDOC_ALTERNATE_VENDOR" class="java.lang.Integer"/>
+	<field name="RDOC_STATUS_CODE" class="java.math.BigDecimal"/>
+	<field name="RDOC_PRIORITY" class="java.lang.Integer"/>
+	<field name="RDOC_NUM_ATTACHMENTS" class="java.lang.Integer"/>
+	<field name="RDOC_SENSITIVITY" class="java.lang.Integer"/>
+	<field name="RDOC_DEPARTMENT" class="java.lang.String"/>
+	<field name="RDOC_BUSINESS_UNIT" class="java.lang.String"/>
+	<field name="RDOC_GROSS_AMOUNT" class="java.math.BigDecimal"/>
+	<field name="RDOC_TAX_AMOUNT1" class="java.math.BigDecimal"/>
+	<field name="RDOC_TAX_AMOUNT2" class="java.math.BigDecimal"/>
+	<field name="RDOC_TAX_AMOUNT3" class="java.math.BigDecimal"/>
+	<field name="RDOC_TAX_AMOUNT4" class="java.math.BigDecimal"/>
+	<field name="RDOC_NET_AMOUNT" class="java.math.BigDecimal"/>
+	<field name="RDOC_FREIGHT_AMOUNT1" class="java.math.BigDecimal"/>
+	<field name="RDOC_FREIGHT_AMOUNT2" class="java.math.BigDecimal"/>
+	<field name="RDOC_DISCOUNT_AMOUNT" class="java.math.BigDecimal"/>
+	<field name="RDOC_DISCOUNT_DUE_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_SCAN_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_SCAN_SITE" class="java.lang.String"/>
+	<field name="RDOC_SCAN_BY" class="java.lang.String"/>
+	<field name="RDOC_SCAN_SOURCE" class="java.lang.String"/>
+	<field name="RDOC_SCAN_TYPE" class="java.lang.String"/>
+	<field name="RDOC_BATCH_NUMBER" class="java.lang.String"/>
+	<field name="RDOC_BATCH_ORDINAL" class="java.lang.Integer"/>
+	<field name="RDOC_NEW_BATCH_NUMBER" class="java.lang.String"/>
+	<field name="RDOC_NEW_BATCH_ORDINAL" class="java.lang.Integer"/>
+	<field name="RDOC_REQUESTER_ID" class="java.lang.String"/>
+	<field name="RDOC_REQUESTER_NAME" class="java.lang.String"/>
+	<field name="RDOC_ROUTING_CODE" class="java.lang.String"/>
+	<field name="RDOC_PROCESS_CODE" class="java.lang.String"/>
+	<field name="RDOC_AFE_NUMBER" class="java.lang.String"/>
+	<field name="RDOC_BUYER_ID" class="java.lang.String"/>
+	<field name="RDOC_BUYER_NAME" class="java.lang.String"/>
+	<field name="RDOC_SEPARATE_CHECK" class="java.lang.Integer"/>
+	<field name="RDOC_SPECIAL_HANDLING_CODE" class="java.lang.String"/>
+	<field name="RDOC_CHECK_STUB_MESSAGE" class="java.lang.String"/>
+	<field name="RDOC_VOUCHER_COMMENTS" class="java.lang.String"/>
+	<field name="RDOC_RETENTION_BOX_ID" class="java.lang.String"/>
+	<field name="RDOC_BASELINE_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_CREATE_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_LAST_MODIFIED_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_TBD_DATE1" class="java.sql.Timestamp"/>
+	<field name="RDOC_TBD_DATE2" class="java.sql.Timestamp"/>
+	<field name="RDOC_TBD_NUMBER1" class="java.lang.Integer"/>
+	<field name="RDOC_TBD_NUMBER2" class="java.lang.Integer"/>
+	<field name="RDOC_TBD_CURRENCY1" class="java.math.BigDecimal"/>
+	<field name="RDOC_TBD_CURRENCY2" class="java.math.BigDecimal"/>
+	<field name="RDOC_TBD_QUANTITY1" class="java.math.BigDecimal"/>
+	<field name="RDOC_TBD_QUANTITY2" class="java.math.BigDecimal"/>
+	<field name="RDOC_TBD_STRING1" class="java.lang.String"/>
+	<field name="RDOC_TBD_STRING2" class="java.lang.String"/>
+	<field name="RDOC_TBD_STRING3" class="java.lang.String"/>
+	<field name="RDOC_TBD_STRING4" class="java.lang.String"/>
+	<field name="RDOC_ORIG_POST_DATE" class="java.sql.Timestamp"/>
+	<field name="RDOC_MP_ID" class="java.lang.Integer"/>
+	<field name="RDOC_PAYMENT_TERM_DESC" class="java.lang.String"/>
+	<field name="RDOC_PAYMENT_TYPE_DESC" class="java.lang.String"/>
+	<field name="RDOC_USER_ID" class="java.math.BigDecimal"/>
+	<field name="RDOC_USER_DISPLAY_NAME" class="java.lang.String"/>
+	<field name="RDOC_ACTIVE" class="java.lang.Integer"/>
+	<field name="RDOC_FIRST_ERP_RESPONSE" class="java.sql.Timestamp"/>
+	<field name="RDOC_PO_ID" class="java.lang.String"/>
+	<field name="RDOC_AUTOPAY" class="java.lang.Integer"/>
+	<field name="RDOC_TBD_BOOLEAN1" class="java.lang.Integer"/>
+	<field name="RDOC_TBD_BOOLEAN2" class="java.lang.Integer"/>
+	<field name="DAYS_BEFORE_SOLUTION" class="java.lang.Integer"/>
+	<field name="APPROVER_ID" class="java.lang.String"/>
+
+	<variable name="NumInvoices" class="java.lang.Integer" resetType="Report" calculation="Count">
+		<variableExpression><![CDATA[$F{RDOC_MP_ID}]]></variableExpression>
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="50"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="159"
+						y="5"
+						width="465"
+						height="40"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="30" isBold="true" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Exceptions]]></text>
+				</staticText>
+				<line direction="TopDown">
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="48"
+						width="732"
+						height="0"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="line"/>
+					<graphicElement stretchType="NoStretch" pen="2Point" fill="Solid" />
+				</line>
+				<line direction="TopDown">
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="3"
+						width="732"
+						height="0"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="line"/>
+					<graphicElement stretchType="NoStretch" pen="2Point" fill="Solid" />
+				</line>
+				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" isUsingCache="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="12"
+						width="165"
+						height="30"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="image-2"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch" pen="None" fill="Solid" />
+					<imageExpression class="java.lang.String"><![CDATA[$P{logo}]]></imageExpression>
+				</image>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="9"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="23"  isSplitAllowed="true" >
+				<rectangle radius="0" >
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="0"
+						width="732"
+						height="17"
+						forecolor="#000000"
+						backcolor="#808080"
+						key="rectangle"/>
+					<graphicElement stretchType="NoStretch" pen="None" fill="Solid" />
+				</rectangle>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="0"
+						width="78"
+						height="17"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="12" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Invoice]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="78"
+						y="0"
+						width="170"
+						height="17"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="12" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Fail Reason]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="251"
+						y="0"
+						width="93"
+						height="17"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="12" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Vendor]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="349"
+						y="0"
+						width="116"
+						height="17"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="staticText"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="12" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Approver]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="472"
+						y="1"
+						width="137"
+						height="17"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="staticText-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="12" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Comment]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="614"
+						y="1"
+						width="102"
+						height="17"
+						forecolor="#FFFFFF"
+						backcolor="#FFFFFF"
+						key="staticText-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="12" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Hours until posted]]></text>
+				</staticText>
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="12"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="0"
+						width="78"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{RDOC_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="MM/dd/yyyy" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="78"
+						y="0"
+						width="170"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"
+						stretchType="RelativeToBandHeight"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{RPROC_FAIL_REASON}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="251"
+						y="0"
+						width="93"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{RDOC_VENDOR_NAME}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="349"
+						y="0"
+						width="116"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{APPROVER_ID}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="472"
+						y="1"
+						width="137"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{RPROC_COMMENT}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="614"
+						y="1"
+						width="102"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-8"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{DAYS_BEFORE_SOLUTION}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="14"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="240"
+						y="0"
+						width="174"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of " + " "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="413"
+						y="0"
+						width="36"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="112"
+						y="0"
+						width="63"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="0"
+						width="112"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-4"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Arial" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Generated by ManagedPay on:]]></text>
+				</staticText>
+				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" isUsingCache="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="700"
+						y="1"
+						width="8"
+						height="8"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="image-3"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch" pen="None" fill="Solid" />
+					<imageExpression class="java.lang.String"><![CDATA[$P{icon}]]></imageExpression>
+				</image>
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="16"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="112"
+						y="0"
+						width="63"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-4"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						mode="Transparent"
+						x="0"
+						y="0"
+						width="112"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="staticText-5"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Arial" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<text><![CDATA[Generated by ManagedPay on:]]></text>
+				</staticText>
+				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" isUsingCache="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="649"
+						y="0"
+						width="83"
+						height="15"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="image-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch" pen="None" fill="Solid" />
+					<imageExpression class="java.lang.String"><![CDATA[$P{logo}]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="240"
+						y="0"
+						width="172"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-5"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Page " + $V{PAGE_NUMBER} + " of " + " "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Transparent"
+						x="413"
+						y="0"
+						width="36"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField-6"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="Cp1252" isStrikeThrough="false" />
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="22"  isSplitAllowed="true" >
+				<line direction="TopDown">
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="2"
+						width="732"
+						height="0"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="line-1"/>
+					<graphicElement stretchType="NoStretch" pen="4Point" fill="Solid" />
+				</line>
+			</band>
+		</summary>
+</jasperReport>

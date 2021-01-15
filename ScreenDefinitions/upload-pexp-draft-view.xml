@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<view name="upload-exp-view" template="upload-pexp-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+	
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<validations>
+<validation name="validation.accountCode" messageType="warning" />
+<!--validation name="validation.alternateVendor" messageType="warning" /-->
+<validation name="validation.amortizationValidation" messageType="warning" />
+<validation name="validation.ApprovedAmountValidator" messageType="warning" />
+<validation name="validation.approvercheck" messageType="warning" />
+<validation name="validation.approverlimitcheck" messageType="warning" />
+<validation name="validation.approverSensitivity" messageType="warning" />
+<validation name="validation.approverOrganizationSecurity" messageType="warning" />
+<validation name="validation.ApproverUserValidation" messageType="warning" />
+<validation name="validation.capex" messageType="warning" />
+<validation name="validation.CashAdvanceCardValidation" messageType="warning" />
+<validation name="validation.CashLineItemValidation" messageType="warning"/>
+<validation name="validation.checkAttachment" messageType="warning" />
+<validation name="validation.checkcreditcard" messageType="warning" />
+<validation name="validation.check.originator.approver" messageType="warning" />
+<validation name="validation.check.originator.approver.document" messageType="warning" />
+<validation name="validation.check.requester.approver.document" messageType="warning" />
+<validation name="validation.check.requester.approver" messageType="warning" />
+<!--validation name="validation.checkVendorMismatch" messageType="warning" /-->
+<validation name="validation.costObject1" messageType="warning" />
+<validation name="validation.costObject2" messageType="warning" />
+<validation name="validation.documentAccountCurrency" messageType="warning" />
+<validation name="validation.documentVendorCurrency" messageType="warning" />
+<validation name="validation.Delegate" messageType="warning" />
+<validation name="validation.duedate.check" messageType="warning" />
+<validation name="validation.duplicateInvoiceCheck" note="message.duplicateInvoiceValidation" messageType="warning" />
+<!--validation name="validation.duplicateInvoiceCheckWorkflow" messageType="warning" /-->
+<!--validation name="validation.duplicatePONumber" messageType="warning" /-->
+<validation name="validation.duplicateRemitIdValidation" messageType="warning" />
+<validation name="validation.erpRequiredForPO" messageType="warning" />
+<validation name="validation.ExpenseReportAccountCodeValidation" messageType="warning" />
+<validation name="validation.expenseTypeValidation" messageType="warning" />
+<validation name="validation.facilities" messageType="warning" />
+<validation name="validation.glAccountRoutingValidation" messageType="warning" />
+<validation name="validation.lineItemAmount" messageType="warning" />
+<validation name="validation.lineReceivableMatch" messageType="warning" />
+<validation name="validation.logosCustomerIdvalidator" messageType="warning" />
+<validation name="validation.logostatusvalidator" messageType="warning" />
+<validation name="validation.MainAndSubLineTotal" messageType="warning" />
+<validation name="validation.matchHeaderAmount" messageType="warning" />
+<validation name="validation.matchLineAmount" messageType="warning" />
+<validation name="validation.MileageCheckValidation" messageType="warning" />
+<validation name="validation.MileageLineItemValidation" messageType="warning" />
+<validation name="validation.paymentModeValidation" messageType="warning" />
+<validation name="validation.processorIndexerCheck" messageType="warning" />
+<!--validation name="validation.sendInvoiceToQA" messageType="warning" /-->
+<validation name="validation.shortpay" messageType="warning" />
+<!--validation name="validation.taxAssessment" messageType="warning" /-->
+<!--validation name="validation.tempLineValidation" messageType="warning" /-->
+<validation name="validation.thirdPartyAccount" messageType="warning" />
+<validation name="validation.upload.approvercheck" messageType="warning" />
+<validation name="validation.validPaymentTerm" messageType="warning" />
+<validation name="validation.validPONumber" messageType="warning" />
+<validation name="validation.validPONumber2" messageType="warning" />
+<validation name="validation.validShippingDocumentId" messageType="warning" />
+<validation name="validation.validTaxAmount" messageType="warning" />
+<!--<validation name="validation.validVendor" note="message.validVendorValidation" messageType="warning" /-->
+<validation name="validation.validVendorPayBlock" messageType="warning" />
+<validation name="validation.vendortype.check" messageType="warning" />
+<validation name="validation.zeroDollar" messageType="warning" />
+    </validations>
+    
+</view>

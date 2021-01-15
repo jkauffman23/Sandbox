@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<email-templates loader="FileLoader"  path="E:\MiriaSystems\DEV10\ActiveOps\Common\Templates\">
+	<templates>
+		<template 
+			name="alertNotification" 
+			subject="ActivePay - Alert Notification" 
+			fileName="alertNotification.ftl" 
+			displayName="Alert" 
+			displayOnUI="false" 
+			description="ActivePay Alert"/>
+			
+		<template 
+			name="changePassword" 
+			subject="ActiveOps - Reset Password" 
+			fileName="changePassword.ftl" 
+			displayName="Reset Password" 
+			displayOnUI="false" 
+			description="ActiveOps Reset Password"/>
+
+		<template 
+			name="feedbackInternal" 
+			subject="ActivePay - Requesting Invoice Feedback" 
+			fileName="feedbackInternal.ftl" 
+			displayName="Request Internal Feedback" 
+			displayOnUI="true" 
+			docType="AP"
+			attachImageOption="true"
+			description="Use this template to request feedback about an invoice from an internal user."/>
+			
+		<template 
+			name="feedbackVendor" 
+			subject="ActivePay - Requesting Vendor Feedback" 
+			fileName="feedbackVendor.ftl" 
+			displayName="Request Vendor Feedback" 
+			displayOnUI="true"
+			docType="AP"
+			attachImageOption="true"			
+			description="Use this template to request feedback about the invoice from a vendor."/>
+			
+		<template 
+			name="support" 
+			subject="Mailroom Feedback - " 
+			fileName="supportMiria.ftl" 
+			displayName="Miria Support" 
+			displayOnUI="true" 
+			docType="AP"
+			attachImageOption="true"
+			description="Use this template to report OCR issues including missing or incorrect information.  
+			Please list below the names of fields that had missing or incorrect information from Mailroom."/>
+
+		<template 
+			name="managerWorkSummary" 
+			subject="ActivePay - Public Queue Work Summary" 
+			fileName="managerWorkSummary.ftl" 
+			displayName="Manager Public Queue Work Notification" 
+			displayOnUI="false" 
+			description="Summary of work items in public queues."/>
+
+		<template 
+			name="newAttachment" 
+			subject="ActivePay - New Attachment" 
+			fileName="newAttachment.ftl" 
+			displayName="New Attachment Notification" 
+			displayOnUI="false" 
+			description="This is a new attachment notification."/>
+			
+		<template 
+			name="newTaskNotification" 
+			subject="ActivePay - New Task Notification" 
+			fileName="newTaskNotification.ftl" 
+			displayName="New Task Notification" 
+			displayOnUI="false" 
+			description="This is a new task notification"/>
+
+		<template 
+			name="overdueNotification" 
+			subject="ActivePay - Overdue Notification" 
+			fileName="overdueNotification.ftl" 
+			displayName="Overdue notification" 
+			displayOnUI="false" 
+			description="Overdue notification template."/>
+
+        <template
+			name="reminderNotification" 
+			subject="ActivePay - Reminder Notification" 
+			fileName="reminderNotification.ftl" 
+			displayName="Reminder Notification" 
+			displayOnUI="false" 
+			description="Reminder notification of items that will shortly reach their deadline."/>
+
+		<template 
+			name="rtv" 
+			subject="Invoice Returned to Vendor" 
+			fileName="rtv-email.ftl" 
+			displayName="Return-to-Vendor e-mail" 
+			displayOnUI="true" 
+			docType="AP"
+			attachImageOption="true"
+			description="Use this e-mail template to send a return-to-vendor notification."/>
+
+		<template 
+			name="workSummaryNotification" 
+			subject="ActiveOps - Work Summary Notification" 
+			fileName="workSummaryNotification.ftl" 
+			displayName="Work Summary" 
+			displayOnUI="true" 
+			description="Summary of  all items in a users' inbox."/>
+			
+		<template 
+			name="approvalTaskNotification" 
+			subject="ActivePay - Request Approval Notification" 
+			fileName="approvalTaskNotification.ftl" 
+			displayName="Approval Required" 
+			displayOnUI="false" 
+			description="Notice that request has been sent for approval"/>
+		
+		<template 
+			name="rejectTaskNotification" 
+			subject="ActivePay - Request Rejected" 
+			fileName="rejectTaskNotification.ftl" 
+			displayName="Request Rejected" 
+			displayOnUI="false" 
+			description="Notice that request has been rejected by approver."/>
+		
+			
+		<template 
+			name="taskCompletion" 
+			subject="ActivePay - Request Completed" 
+			fileName="taskCompletion.ftl" 
+			displayName="Request Completed" 
+			displayOnUI="false" 
+			description="Notice that request has been completed."/>
+			
+		<template 
+			name="taskSubmission" 
+			subject="ActivePay - Request Submitted" 
+			fileName="taskSubmission.ftl" 
+			displayName="Request Submitted" 
+			displayOnUI="false" 
+			description="Notice that request has been submitted."/>
+			
+		<template 
+			name="changeNotification" 
+			subject="ActivePay - Change Alert" 
+			fileName="changeNotification.ftl" 
+			displayName="Change Alert" 
+			displayOnUI="false" 
+			description="Use this template to alert a user that their line items have been changed."/>
+					
+		<template 
+			name="newVoucherNotification" 
+			subject="ActivePay - new voucher created" 
+			fileName="newVoucherNotification.ftl" 
+			displayName="New Voucher Notification" 
+			displayOnUI="false" 
+			description="Use this template to alert a user that a voucher was created."/>	
+
+
+		<template 
+			name="successProcessNotification" 
+			subject="ActivePay - Connection Successful" 
+			fileName="successProcessNotification.ftl" 
+			displayName="New Voucher Notification" 
+			displayOnUI="false" 
+			description="Use this template to alert a user that a voucher was created."/>		
+
+		<template 
+			name="failureProcessNotification" 
+			subject="ActivePay - Connection Failure" 
+			fileName="failureProcessNotification.ftl" 
+			displayName="New Voucher Notification" 
+			displayOnUI="false" 
+			description="Use this template to alert a user that a voucher was created."/>					
+			
+			<template 
+			name="AuditLogEmail" 
+			subject="Inbound Non Trade Update Report" 
+			fileName="AuditLogEmail.ftl" 
+			displayName="New NON-TRADE LIST" 
+			displayOnUI="false" 
+			description="Use this template for sending NON_TRADE audit log."/>
+			
+			<template 
+			name="PostedITApproval" 
+			subject="Posted IT Approval" 
+			fileName="postedITApproval.ftl" 
+			displayName="Email Package" 
+			displayOnUI="false" 
+			description="Use this template for sending posted IT Approval."/>
+			
+			<template 
+			name="requestDiscount" 
+			subject="Request to Accept Early Payment" 
+			fileName="requestDiscount-email.ftl" 
+			displayName="Request to Accept Early Payment" 
+			displayOnUI="false" 
+			docType="AP"
+			attachImageOption="true"
+			description="Use this e-mail template to request early payment approval."/>
+			
+			
+			<template 
+			name="remittanceEmail" 
+			subject="Remittance Payment Information" 
+			fileName="remittanceNotice-email.ftl" 
+			displayName="Send Remittance Notification" 
+			displayOnUI="false" 
+			docType="AP"
+			attachImageOption="true"
+			description="Use this e-mail template to notify vendor of remittance payment information."/>
+			
+			<template 
+			name="vendorPaymentNotification" 
+			subject="Vendor Payment Information" 
+			fileName="vendorPaymentNotification.ftl" 
+			displayName="Vendor Payment Notification" 
+			displayOnUI="false" 
+			docType="Batch"
+			attachImageOption="true"
+			description="Use this template to send out Vendor notice during payment batch process"/>
+			
+			<template 
+			name="vendorPaymentNotificationNonConsolidated" 
+			subject="Vendor Payment Information" 
+			fileName="vendorPaymentNotificationNonConsolidated.ftl" 
+			displayName="Vendor Payment Notification" 
+			displayOnUI="false" 
+			docType="Batch"
+			attachImageOption="true"
+			description="Use this template to send out Vendor notice during payment batch process for non consolidated invoices"/>
+			
+			
+			<template 
+			name="bulkUploadResultEmail" 
+			subject="Bulk Upload Results" 
+			fileName="bulkUploadResultEmail.ftl" 
+			displayName="Bulk Upload Results" 
+			displayOnUI="false" 
+			docType="Batch"
+			attachImageOption="true"
+			description="Use this template to send out Bulk Upload Results process"/>
+			
+			<template 
+			name="vendorPONotification" 
+			subject="SEI Purchase Order" 
+			fileName="vendorPONotification.ftl" 
+			displayName="Vendor Purchase Order Notification" 
+			displayOnUI="true" 
+			docType="AP"
+			attachImageOption="false"
+			description="Use this template to send a regular purchase order to a vendor"/>
+			
+			<template 
+			name="vendorBlanketPONotification" 
+			subject="SEI Blanket Purchase Order" 
+			fileName="vendorBlanketPONotification.ftl" 
+			displayName="Vendor Blanket PO Notification" 
+			displayOnUI="true" 
+			docType="AP"
+			attachImageOption="false"
+			description="Use this template to send a blanket purchase order to a vendor"/>
+			
+			<template 
+			name="newTeamTaskNotification" 
+			subject="ActiveAP - New Team Task Notification" 
+			fileName="newTeamTaskNotification.ftl" 
+			displayName="New Team Task Notification" 
+			displayOnUI="false" 
+			description="This is a new team task notification"/>
+			
+			<template 
+			name="journalEmail" 
+			subject="ActiveJournal - Journal Posting" 
+			fileName="journalEmail.ftl" 
+			displayName="Journal Posting Notification" 
+			displayOnUI="false" 
+			description="Journal Posting notification"/>
+			
+			<template 
+			name="journalExport" 
+			subject="ActiveJournal - Journal Posting Data" 
+			fileName="journalExport.ftl" 
+			displayName="Journal Posting Data" 
+			displayOnUI="false" 
+			description="Journal Posting Data"/>
+			
+			<template 
+			name="paymentEmail" 
+			subject="ActivePay - Payments Posting Data" 
+			fileName="paymentEmail.ftl" 
+			displayName="Payments Posting Data" 
+			displayOnUI="false" 
+			description="Payments Posting Data"/>
+			
+			
+			
+	</templates>
+	
+	
+</email-templates>
+

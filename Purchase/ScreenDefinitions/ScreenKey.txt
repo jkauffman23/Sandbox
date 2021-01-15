@@ -1,0 +1,5 @@
+Purchase-001 = Purchase-tpl.xml
+
+Purchase-002 = "Purchase-NonPO-tpl.xml
+
+Purchasea-003 = Purchase-PO-tpl.xml

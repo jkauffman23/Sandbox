@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+     <labels>
+	<locale name="en">
+	</locale>
+	</labels>
+	
+	<section name="templateHeader" visible="true" collapsible="false" collapsed="false">
+		<properties>
+		
+		<text row="1" col="1" name="templateName" validation="required" readonly="false" styleClass="threehundred"/>
+		<dropDown row="1" col="2" name="templateDocType" readonly="false" styleClass="threehundred" choiceList="choice.invoiceTypes.Template" allowTabIndex="false" />
+		<text row="2" col="1" name="number" validation="required" readonly="false" styleClass="threehundred"/>
+		<dropDown row="2" col="2" name="templateSubType" readonly="false" styleClass="threehundred" choiceList="choice.invoiceSubTypes.Template" allowTabIndex="false" />
+		<dropDown row="3" col="1" name="templatePrivateFlag" readonly="false" styleClass="threehundred"  choiceList="choice.PublicPrivate" />
+		<date row="3" col="2" name="templateReviewDate" readonly="false" styleClass="date"/>
+		
+		<lookup row="4" col="1" name="templateOwner" styleClass="threehundred" lookupType="lookup.requester.template" readonly="true" inputReadonly="true" />
+		<textArea row="5" col="1-2" name="templateInstructions" readonly="false" styleClass="sixhundred"/>
+		
+		
+		
+		</properties>
+		<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="templateDetails" visible="false" collapsible="true" collapsed="false">
+		<properties>
+			
+			<!--text row="1" col="2" name="templateOwner" readonly="false" styleClass="threehundred"/-->
+			<dropDown row="1" col="1" name="templateMatchedStatus" readonly="false" styleClass="threehundred" choiceList="choice.Matched" allowTabIndex="false" />
+			
+			
+		</properties>
+	</section>
+	
+	<section name="otherTemplate" visible="false" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="templateApprovalLimit" readonly="false" styleClass="threehundred"/>
+			<text row="1" col="2" name="templateRouting" readonly="false" styleClass="threehundred"/>
+			
+		</properties>
+	</section>
+
+	
+	<section name="templateLineItems" visible="true" collapsible="true" collapsed="false">
+		<lineItemProperties showTotal="false" showTaxTotal="false">
+			<lookup row="1" col="1" name="accountCode" lookupType="lookup.accountCode" readonly="false" inputReadonly="true" validation="required" styleClass="twohundred"/>
+			<text row="1" col="2" name="account.description" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="3" name="templateGLCodePercentage" validation="required" readonly="false" styleClass="onehundred"/>				 
+			<lineItemHidden row="0" col="0" name="accountERPId"/>
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+		</lineItemProperties>
+		<actions>
+				<!-- The following set of actions are standard ActivePay and should be included relatively unmodified from the baseline version in most templates -->
+			<!--iconAction name="addExcelLineItem" icon="/images/ico-add-excel-line-w24.png" width="24" height="24" link="javascript:openGLExcelWindow('$contextPath$', '$seqId$')" visible="true" alwaysActive="false"/-->
+			<iconAction name="RemoveAllItems" icon="/images/ico-del-all-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteAllLineItems','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<!--iconAction name="RemoveMarkedItems" icon="/images/ico-del-match-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommand(this,'deleteMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/-->
+			<!--iconAction name="RemoveUnMarkedItems" icon="/images/ico-del-unmatched-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommand(this,'deleteUnMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/-->
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<!--iconAction name="selectTemplate" icon="/images/ico-gltemplate-w24.png" width="24" height="24" link="javascript:openTemplateWindow('$contextPath$')" alwaysActive="false" /-->
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>	
+
+		</actions>
+	</section>
+
+	<hiddenFields>
+		<hidden name="postingERPId" defaultValue="AOPS001"/>
+		<hidden name="type" defaultValue="TEMPLATE"/>
+		<hidden name="vendorERPId"/>
+        <hidden name="newBatchNumber"/>
+       	<hidden name="paymentTermERPId" defaultValue="AOPS001"/>
+		<hidden name="paymentTypeERPId" defaultValue="AOPS001"/>
+       	<hidden name="vendor.status" defaultValue="1"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="requesterId"/>
+		<hidden name="scanSource" defaultValue="Direct Entry" forceDefault="true"/>
+		<hidden name="scanType" defaultValue="Expense" forceDefault="true"/>
+		<hidden name="requester.userName"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+		<hidden name="processInformation.comment"/>
+	</hiddenFields>
+	<processors>
+		
+    </processors>
+</propertyTemplate>

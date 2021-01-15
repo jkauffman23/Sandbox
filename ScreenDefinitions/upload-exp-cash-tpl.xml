@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels>
+		<!-- Label overrides for this template -->
+		<locale name="en">
+			<label name="forward" value="Submit"/>
+            <label name="tbdString1" value="Credit Card #"/>
+            <label name="tbdString3" value="Employee Name"/>
+            <label name="date" value="Required By"/>
+            <label name="tbdBoolean1" value="Save As Draft"/>
+            <label name="vendor.address1" value="Address"/>
+            <label name="vendor.address2" value="Location"/>
+            <label name="vendor.address3" value="Dept"/>
+            <label name="voucherComments" value="Business Reason"/>
+			<label name="originatorName" value="Submitter"/>
+			<label name="requesterName" value="Claimant"/>
+			<label name="processCode" value="Credit Card"/>
+            <label name="seqId" value="Report #"/>
+			<label name="grossAmount" value="Amount Requested"/>
+			<label name="tbdDate1" value="Travel(From)"/>
+			<label name="tbdDate2" value="Travel(To)"/>
+		</locale>
+	</labels>
+	
+		
+	<section name="Cash Advance Request Draft" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="originatorName" styleClass="twohundred" readonly="true" validation="required"/>
+			<lookup row="1" col="2" name="processCode" lookupType="lookup.prepaidCardDetails" readonly="false"/>
+			<date row="2" col="1" name="tbdDate1" styleClass="date" validation="required"/>
+			<date row="2" col="1" name="tbdDate2" styleClass="date" validation="required"/>
+			<dropDown row="3" col="1" name="grossAmount" choiceList="choice.advanceAmounts" styleClass="twohundred" validation="required, nonZero"/>
+			<date row="3" col="2" name="date" validation="required" styleClass="date" readonly="false"/>
+			<text row="4" col="1" stlyeClass="threehundred" name="batchNumber" readonly="false" validation="required" />
+			<text row="4" col="2-3" name="tbdString6" stlyeClass="twohundred"/>
+			<text row="5" col="1-4" name="voucherComments" readonly="false" styleClass="comment" validation="required"/>	
+			<textArea row="6" col="1-4" name="processInformation.comment" styleClass="comment" defaultValue="" forceDefault="true"/>
+		</properties>
+			
+		<actions>	
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_APPROVER1')" alwaysActive="true" readonly="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="Advance Guidelines" collapsible="false" collapsed="false">
+		<properties>
+			<output row="1" col="1-2" name="custom1.tbdComment1" 
+			defaultValue="If you already have a pre-paid card, select it from the credit card look-up.  If an assigned card is not available, enter the card" forceDefault="true" readonly="true" styleClass="sixhundred"/>
+			<output row="2" col="1-2" name="custom1.tbdComment2"
+			defaultValue="Name and the last 8 digits of the card number in the comments field above." forceDefault="true" readonly="true" styleClass="sixhundred"/>
+			<output row="3" col="1-2" name="custom1.tbdComment3" 
+			defaultValue="If you do not have a card then only supply the name you would like on the card and check the box labeled 'Request New Card'. " forceDefault="true" readonly="true" styleClass="sixhundred"/>
+			<output row="4" col="1-2" name="custom1.tbdComment4" 
+			defaultValue="Enter your travel details and your request will be forwarded to your manager for apprval." forceDefault="true" readonly="true" styleClass="sixhundred"/>	
+			<output row="5" col="1-2" name="custom1.tbdComment6"
+			defaultValue="You will receive a confirmation e-mail once the card administrator has processed your request." forceDefault="true" readonly="true" styleClass="sixhundred"/>		
+	</properties>
+	</section>
+	
+		
+	<section name="lineItems" visible="false" collapsible="false" collapsed="true">
+		<lineItemProperties showTotal="true">
+		<dropDown row="1" col="1" name="tbdString1" labelKey="lineItems.tbdString1" choiceList="choice.expenseLineTypes" styleClass="onehundred" readonly="true"/>
+		<lineItemHidden row="0" col="0" name="accountERPId"/>
+		<lineItemHidden row="0" col="0" name="companyCode"/>
+		<lineItemHidden row="0" col="0" name="costObjectTypeId1" defaultValue="CC" />
+		<lineItemHidden row="0" col="0" name="account.type" defaultValue="E" />
+		<lineItemHidden row="0" col="0" name="code6" defaultValue="Yes" />
+		</lineItemProperties>
+	</section>
+	
+			
+	<hiddenFields>
+		<hidden name="type" defaultValue='CASH'/>
+		<hidden name="tbdBoolean1" defaultValue='1' forceDefault="true"/>
+		<hidden name="postingERPId"/>
+		<hidden name="vendorERPId"/>
+		<hidden name="requester.userName"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="AFENumber" defaultValue="pre-paid" forceDefault="true"/>
+		<hidden name="enCryptCC"/>
+		<hidden name="newBatchOrdinal"/>
+	</hiddenFields>
+
+    <processors>
+    	
+    </processors>
+
+</propertyTemplate>

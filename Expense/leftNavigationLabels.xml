@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en">
+	<locale name="en">
+		<label name="section.mpnavigation" value="Active Expense"/>
+	
+	
+	<!--Expense config-->
+		<label name="action.expenseInProcess" value="In Process" />
+		<label name="action.expenseInApprove" value="Waiting Approval" />
+		<label name="action.expenseInPosting" value="In Posting" />
+		<label name="action.expenseInPostingPaid" value="Paid"/>
+		<label name="action.expenseInPostingCleared" value="Cleared" />
+		<label name="action.expenseInException" value="Exceptions" />
+		<label name="action.expenseInTerminate" value="Terminated" />
+		<label name="action.expenseInAudit" value="Waiting Audit" />
+		<label name="action.expenseInFail" value="Failed Reports" />
+		<label name="action.newtravelrequest" value="Travel Request" />
+		
+		<label name="section.myLibrary" value="Expense Library" />
+		<label name="action.LibraryDrafts" value="Draft Expenses" />
+		<label name="action.expenseInProcess" value="In Process" />
+		<label name="action.LibraryApprovals" value="Waiting Approval" />
+		<label name="action.LibraryWaitPayment" value="Waiting Payment" />
+		<label name="action.LibraryPaid" value="Paid" />
+
+		<label name="action.LibraryTravelReq" value="Travel Requests" />
+	
+	
+		<label name="section.requests" value="Create Reports"/>
+		<label name="action.myExpDrafts" value="Drafts and Approvals" />
+		<label name="action.watson" value="Watson Analytics"/>
+		<label name="action.powerbi" value="Reports"/>
+		<label name="action.myExpApprovals" value="My Approvals"/>
+		<label name="action.myExpReceipts" value="Waiting Receipts"/>
+		<label name="action.expensereceipts" value="Reports in Process"/>
+		<label name="action.expensepostingsearch" value="Posting Complete"/>
+		<label name="action.newexpvoucher" value="Expense Report"/>
+		<label name="action.newpcardvoucher" value="CC Report"/>
+		<label name="action.newcashadvance" value="Cash Advance"/>
+		<label name="action.expenseposting" value="Posting Complete"/>
+		<label name="action.expensevendormaintenance" value="New Account Setup "/>
+		<label name="action.expensepostingfailed" value="Posting Failed"/>
+		<label name="action.expensepayment" value="Expenses Paid"/>
+		<label name="action.upload5" value="Upload Excel Report"/>
+		
+		
+		<label name="action.expensejournal" value="Journal Posting"/>
+		<label name="action.expensefailed" value="Journal Failed"/>
+		<label name="action.expensetax" value="Tax Audit"/>
+		<label name="action.expenseexception" value="Exp Report Exception"/>
+		<label name="action.expensecard" value="Card Assignment"/>
+		<label name="action.expensecash" value="Cash Advance"/>
+		<label name="action.expensesend" value="Dispatch Card"/>
+		<label name="action.expenseclean" value="Confirm Card"/>
+		<label name="action.expenseclose" value="Close Card"/>
+		<label name="action.advancedexpensesearch" value="Credit Card Search"/>
+		<label name="action.searchsave" value="Search and Save"/>
+		<label name="action.indexing" value="Expense Indexing"/>
+		<label name="action.invoicesearch" value="Expense Search"/>
+		<label name="action.expenseInAPReview" value="AP Review"/>
+		
+	
+		<!-- Active Ops Finance Standard Left navigation -->
+		
+		<label name="action.adminmodule" value="Administration"/>
+		<label name="action.advancedinvoicesearch" value="Search"/>
+		<label name="action.approvalqueue" value="Approvals"/>
+		<label name="action.generalexception" value="Expense Exceptions"/>
+		<label name="action.myinboxE" value="Expenses Inbox"/>
+		<label name="action.posting" value="Posting"/>
+		<label name="action.postingfailed" value="Posting Failed"/>
+		
+		<label name="action.tradereceipts" value="Awaiting Docs"/>
+		<label name="action.payment" value="Awaiting Payment"/>
+		<label name="action.preferences" value="Preferences"/>
+		<label name="action.process" value="Process"/>
+		<label name="action.highdollarqa" value="High Dollar QA"/>
+		<label name="action.reporting" value="ManagedPay Reporting"/>
+		<label name="action.reassignDelegate" value="Move Other Work"/>
+		<label name="action.reassignSelf" value="Move My Work"/>
+		<label name="action.rescan" value="Rescan"/>
+		<label name="action.restart" value="Restart"/>
+		<label name="action.supervisor" value="Supervisor"/>
+		<label name="action.voucherreceipt" value="Awaiting Docs"/>
+		<label name="action.reassignwork" value="Reassign Work"/>
+		<label name="action.simsap" value="SimSAP"/>
+			<label name="action.users" value="Users"/>
+		<label name="section.applications" value="Applications"/>
+		
+		<label name="section.search" value="Search"/>
+	
+		<label name="section.tools" value="Tools"/>
+	
+		<label name="section.postingqueues" value="Posting Queues"/>
+		<label name="section.expensequeues" value="Expense Queues"/>
+		<label name="section.templatequeues" value="Template Queues"/>
+		
+		
+	</locale>
+</labels>
+

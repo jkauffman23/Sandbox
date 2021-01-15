@@ -1,0 +1,416 @@
+<validations>
+
+    <!-- Standard ManagedPay validations. These may need to be tweaked per implementation but overall can be used for each. -->
+	
+	<!--ensures the next approver has the appropriate sensitivity to view the document-->
+	<validation name="validation.approverSensitivity" class="com.custom.validation.ApproverSensitivityValidation">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.approverOrganizationSecurity" class="com.miriasystems.validation.impl.ApproverOrganizationSecurityValidation">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.approverDepartmentSecurity" class="com.miriasystems.validation.impl.ApproverDepartmentSecurityValidation">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.glAccountRoutingValidation" class="com.miriasystems.validation.impl.CMAGLAccountValidation">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	
+	<!-- This validation will determine if the attachments are attached. -->
+	<validation name="validation.checkAttachment" class= "com.miriasystems.validation.impl.AttachmentValidator" failOnMissingParameters="true">	
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+
+    <validation name="validation.accountCode" class="com.miriasystems.validation.impl.AccountCodeValidation"
+                failOnMissingParameters="false">
+        <!-- This validation determine if the account code that has been selected exists in the current company code (it either exists in the company code, or exists without company code.
+The validation will further check to see if the account currency matches the document currency, unless the account currency is blank. -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <processors>
+            <!-- These processors will be executed before the validations. Other processors defined in the views will be executed after the validations -->
+        </processors>
+    </validation>
+	
+	<validation name="validation.thirdPartyAccount" class="com.miriasystems.validation.impl.ThirdPartyAccountValidator" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.approvercheck" class="com.miriasystems.validation.impl.ApproverValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.processorIndexerCheck" class="com.miriasystems.validation.impl.ProcessorIndexerValidator" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.zeroDollar" class="com.miriasystems.validation.impl.ZeroDollarValidator" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+
+    <validation name="validation.alternateVendor" class="com.miriasystems.validation.impl.AlternateVendorValidation"
+                failOnMissingParameters="false">
+        <!-- This validationdetermine that if an alternate vendor has been selected, the vendor id on the document is different from the vendor id that is specified in the po. -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+    <validation name="validation.checkVendorMismatch" class="com.miriasystems.validation.impl.VendorMismatchValidation"
+                failOnMissingParameters="true">
+        <!-- This validation will match the vendor name and vendor zip of the document to the vendor name and zip that was scanned. The properties that are passed
+indicate which fields are used to match the document.vendor.name and document.vendor.zip -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="scanVendorName"/>
+            <property name="scanVendorAddress1"/>
+        </properties>
+    </validation>
+
+    <validation name="validation.costObject1" class="com.miriasystems.validation.impl.CostObjectValidation"
+                failOnMissingParameters="true">
+        <!-- Check the validity of CostObjects (erpId, companyCode) -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="costObject1"/>
+        </properties>
+    </validation>
+
+    <validation name="validation.costObject2" class="com.miriasystems.validation.impl.CostObjectValidation"
+                failOnMissingParameters="true">
+        <!-- Check the validity of CostObjects (erpId, companyCode) -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="costObject2"/>
+        </properties>
+    </validation>
+
+    <validation name="validation.documentAccountCurrency"
+                class="com.miriasystems.validation.impl.DocumentAccountCurrencyValidation"
+                failOnMissingParameters="true">
+        <!-- Verifies that account currencies match Document currency -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <processors>
+            <!-- These processors will be executed before the validations. Other processors defined in the views will be executed after the validations -->
+        </processors>
+    </validation>
+
+    <validation name="validation.documentVendorCurrency"
+                class="com.miriasystems.validation.impl.DocumentVendorCurrencyValidation"
+                failOnMissingParameters="false">
+        <!-- This validation checks to see if the document currency code, matches the currency code of the vendor (if present). -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+    
+    <validation name="validation.lineItemAmount" class="com.miriasystems.validation.impl.LineItemAmountValidator"
+                failOnMissingParameters="false">
+        <!-- This validation will determine if sum of the lines equals the doc's "amount" (as specified by the first & only property below) -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="netAmount"/>
+        </properties>
+    </validation>
+
+    <validation name="validation.erpRequiredForPO" class="com.miriasystems.validation.impl.ERPRequiredForPOValidation"
+                failOnMissingParameters="false">
+        <!-- This will determine if a PO has been entered, and if a postingERPId is required. -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="postingERPId"/>
+        </properties>
+    </validation>
+
+
+    <validation name="validation.lineReceivableMatch"
+                class="com.miriasystems.validation.impl.LineReceivablesMatchValidation">
+        <!-- This validation will determine the lines with receivables have actual receivables that are greater than the invoice amount. -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+    <validation name="validation.matchHeaderAmount"
+                class="com.miriasystems.validation.impl.MatchHeaderAmountValidation">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.matchLineAmount"
+                class="com.miriasystems.validation.impl.MatchLineAmountValidation">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+    <validation name="validation.validPaymentTerm" class="com.miriasystems.validation.impl.PaymentTermValidator"
+                failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="paymentTermId"/>
+            <property name="companyCode"/>
+        </properties>
+    </validation>
+
+    <validation name="validation.validPONumber2" class="com.miriasystems.validation.impl.PONumberValidation"
+                failOnMissingParameters="true">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="poId"/>
+        </properties>
+    </validation>
+	
+	<validation name="validation.validPONumber" class="com.miriasystems.validation.impl.POHeaderValidation"
+                failOnMissingParameters="true">
+        <!-- This validation will determine if the value that is passed is a valid PO number.
+		A valid PO is a PO that can be located in the system, and which is not marked for deletion -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="poId"/>
+        </properties>
+    </validation>
+	
+	
+    <validation name="validation.validShippingDocumentId"
+                class="com.miriasystems.validation.impl.ShippingDocumentIdValidation" failOnMissingParameters="true">
+        <!-- This validation will determine if the value that is passed is a valid Shipping Document number.
+A valid shipping document number is a number which can be found in a PO that can be located in the system, and which is not marked for deletion -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="shippingDocumentId"/>
+        </properties>
+    </validation>
+
+    <validation name="validation.validTaxAmount" class="com.miriasystems.validation.impl.TaxAmountValidator"
+                failOnMissingParameters="true">
+        <!-- This validation will determine if the tax amounts that have been entered are valid tax amounts.
+A valid tax amount (total tax; sum of all individual taxes) is valid if it is a number >= 0 but less than the gross invoice amount. -->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+    <validation name="validation.validVendor" class="com.miriasystems.validation.impl.VendorValidation">
+        <!-- This validation will determine if the vendor is valid.
+A valid vendor is a vendor which can be found in the ERP system and which has not been marked for deletion or marked for posting block-->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="vendorId"/>
+            <!--property name="companyCode"/-->
+        </properties>
+    </validation>
+
+    <validation name="validation.validVendorPayBlock" class="com.miriasystems.validation.impl.VendorPayBlockValidation"
+                failOnMissingParameters="false">
+        <!-- This validation will determine if the vendor is payBlocked-->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+	<validation name="validation.duplicateInvoiceCheckWorkflow" class="com.miriasystems.validation.impl.ILogConfiguredDuplicateInvoiceValidation" failOnMissingParameters="false">
+		<!-- This will call the ILOG DuplicateInvoice ruleset to determine if this is a duplicate document. -->
+		<errorBuilder class="com.miriasystems.validation.impl.DuplicateInvoiceErrorBuilder"/>
+        <injections>
+            <bean springName="localJrulesFacade" property="jrulesFacade"/>
+            <bean springName="persistenceRemoteDelegate" property="persistenceFacade"/>
+        </injections>
+	</validation>
+	
+	<validation name="validation.duplicateInvoiceCheck" class="com.miriasystems.validation.impl.ILogConfiguredDuplicateInvoiceValidation" failOnMissingParameters="false">
+		<!-- This will call the ILOG DuplicateInvoice ruleset to determine if this is a duplicate document. -->
+		<errorBuilder class="com.miriasystems.validation.impl.DuplicateInvoiceErrorBuilder"/>
+        <injections>
+            <bean springName="localJrulesFacade" property="jrulesFacade"/>
+            <bean springName="persistenceRemoteDelegate" property="persistenceFacade"/>
+        </injections>
+	</validation>
+	
+	<!--validation name="validation.SEIduplicateInvoiceCheck" class="com.custom.validation.SEIDuplicateInvoiceCheckValidation" failOnMissingParameters="false">
+		<errorBuilder class="com.miriasystems.validation.impl.DuplicateInvoiceErrorBuilder"/>
+        <injections>
+            <bean springName="localJrulesFacade" property="jrulesFacade"/>
+            <bean springName="persistenceRemoteDelegate" property="persistenceFacade"/>
+        </injections>
+	</validation-->
+	
+	<!--<validation name="validation.duplicateInvoiceCheckWorkflow" class="com.custom.validation.SEIDuplicateInvoiceCheckValidation" failOnMissingParameters="false">
+		<errorBuilder class="com.miriasystems.validation.impl.DuplicateInvoiceWorkflowErrorBuilder"/>
+
+        <injections>
+            <bean springName="localJrulesFacade" property="jrulesFacade"/>
+            <bean springName="persistenceRemoteDelegate" property="persistenceFacade"/>
+        </injections>
+	</validation>-->
+	
+    <validation name="validation.shortpay" class="com.custom.validation.ShortPayValidator" failOnMissingParameters="false">
+	<!--If scanAmount <> grossAmount then make specialhandlingCode mandatory-->
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+    <validation name="validation.capex" class="com.custom.validation.CapexCodeValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+    <validation name="validation.facilities" class="com.custom.validation.FacilitiesValidator" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+	<validation name="validation.sendInvoiceToQA" class="com.miriasystems.validation.impl.SendToQAValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+	<validation name="validation.ApprovedAmountValidator" class="com.custom.validation.ApprovedAmountValidator" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	 <validation name="validation.upload.approvercheck" class="com.custom.validation.UploadApprovalValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <!--properties>
+            <property name="userId"/>
+        </properties-->
+    </validation>
+	
+	 <validation name="validation.departmentApprovalValidation" class="com.custom.validation.DepartmentApprovalValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.check.requester.approver" class="com.custom.validation.CheckRequesterToFirstApprover" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.check.originator.approver" class="com.custom.validation.CheckOriginatorToFirstApprover" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+	<validation name="validation.check.requester.approver.document" class="com.custom.validation.CheckRequesterToApproverDocument" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.check.originator.approver.document" class="com.custom.validation.CheckOriginatorToApproverDocument" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	
+	<validation name="validation.approverlimitcheck" class="com.custom.validation.ApproverChecksValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <properties>
+            <property name="userId"/>
+            <property name="limit"/>
+        </properties>
+    </validation>
+	
+	<validation name="validation.duedate.check" class="com.custom.validation.DateValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+	<validation name="validation.vendortype.check" class="com.custom.validation.VendorTypeValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	 <validation name="validation.vendorLineItem" class="com.custom.validation.VendorLineItemValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.MainAndSubLineTotal" class="com.miriasystems.validation.impl.LineMainItemAmtAndSublineItemAmt" failOnMissingParameters="true">
+		<!-- This validation will determine if the tax amounts that have been entered are valid tax amounts.
+              A valid tax amount (total tax; sum of all individual taxes) is valid if it is a number >= 0 but less than the gross invoice amount. -->
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	<validation name="validation.ExpenseReportAccountCodeValidation" class="com.custom.validation.ExpenseReportAccountCodeValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+	<validation name="validation.MileageLineItemValidation" class="com.miriasystems.validation.impl.MileageLineItemValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+
+	<validation name="validation.CashLineItemValidation" class="com.miriasystems.validation.impl.CashLineItemValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+
+	<validation name="validation.MileageCheckValidation" class="com.miriasystems.validation.impl.MileageCheckValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	<validation name="validation.ApproverUserValidation" class="com.custom.validation.ApproverUserValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	<validation name="validation.expenseTypeValidation" class="com.miriasystems.validation.impl.ExpenseTypesValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	   <validation name="validation.logostatusvalidator" class="com.custom.validation.LogoStatusValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+    <validation name="validation.logosCustomerIdvalidator" class="com.custom.validation.LogocustomerIdValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+</validation>
+	<validation name="validation.checkcreditcard" class="com.miriasystems.validation.impl.CheckCreditCardValidation"
+                failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+        <processors>
+	
+	       </processors>
+    </validation>
+	<validation name="validation.CashAdvanceCardValidation" class="com.miriasystems.validation.impl.CashAdvanceCardValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	<validation name="validation.Delegate" class="com.miriasystems.validation.impl.DelegateValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.tempLineValidation" class="com.custom.validation.TempLineValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.taxAssessmentValidation" class="com.custom.validation.TaxAssessmentValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+    
+	<validation name="validation.amortizationValidation" class="com.custom.validation.AmortizationValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.duplicateRemitIdValidation" class="com.custom.validation.DuplicateRemitIdValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+		
+	<validation name="validation.duplicateVendorId" class="com.custom.validation.DuplicateVendorIdValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+	<validation name="validation.paymentModeValidation" class="com.custom.validation.PaymentModeValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+
+	<validation name="validation.duplicatePONumber" class="com.custom.validation.PONumberDuplicateValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.incorrectVendorValidation" class="com.custom.validation.IncorrectVendorValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.paymentBatchValidation" class="com.miriasystems.validation.impl.PaymentBatchValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.newVendorValidation" class="com.custom.validation.NewVendorValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.updateVendorValidation" class="com.custom.validation.UpdateVendorValidation" failOnMissingParameters="false">
+        <errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+    </validation>
+	
+	<validation name="validation.negativePayments" class="com.miriasystems.validation.impl.NegativePaymentsValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.routingNumberValidation" class="com.custom.validation.RoutingNumberValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.swiftBankRoutingNumberValidation" class="com.miriasystems.validation.impl.SwiftRoutingNumberValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.CanadianRoutingNumberValidation" class="com.miriasystems.validation.impl.CanadianRoutingNumberValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+	
+	<validation name="validation.GLPercentageValidation" class="com.miriasystems.validation.impl.GLPercentageValidation" failOnMissingParameters="true">
+		<errorBuilder class="com.miriasystems.validation.GenericErrorBuilder"/>
+	</validation>
+</validations>

@@ -1,0 +1,10 @@
+<plugins dir="Common/lib">
+
+    <jar name="customcode.jar"/>
+
+    <jar name="castor-0.9.7-xml.jar"/>
+    <jar name="commons-logging.jar"/>
+    <jar name="log4j-1.2.8.jar"/>
+    <jar name="hibernate2.jar"/>
+
+</plugins>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THIS FILE -->
+
+	<locale name="en">
+		<label name="number" value="Requisition #"/>
+		<label name="companyCode" value="Company"/>
+		<label name="dueDate" value="Delivery Date"/>
+		<label name="tbdComment1" value="PO Comments"/>
+		<label name="tbdComment2" value="Internal Comments"/>
+		<label name="shipDetails" value ="Shipping Details"/>
+		<label name="tbdString14" value ="Department"/>
+		<label name="tbdString22" value ="Deliver to"/>
+		<label name="tbdString24" value ="Confirmed to"/>
+		<label name="tbdString25" value ="PO Match Method"/>
+		<label name="lineItems" value ="PO Lines"/>
+		<label name="vendor.address1" value ="Vendor Address"/>
+		<label name="vendor.name" value ="Vendor Name"/>
+		<label name="shippingDocumentId" value ="Ship To ID"/>
+		<label name="tbdString23" value ="Shipping Instructions"/>
+		<label name="tbdString1" value ="Amortization Dept"/>
+		<label name="account.description" value ="GL Description"/>
+		<label name="poLine.blanketDescription" value ="Blanket Description"/>
+		<label name="poLine.blankettotal" value ="Blanket Amount"/>
+		<label name="tbdString3" value ="Item Comment 1"/>
+		<label name="tbdString4" value ="Item Comment 2"/>
+		<label name="unitPrice" value ="Unit Price"/>
+		<label name="Purchase" value ="Purchase Review"/>
+		<label name="Indexing" value ="Purchase Indexing"/>
+		<label name="po.tbdDate1" value ="Due Date"/>
+		<label name="poLine.orderedQuantity" value ="PO Ordered QTY"/>
+		<label name="poLine.receivedQuantity" value ="Received To Date"/>
+		<label name="itemCode" value ="Item Code"/>
+		<label name="orderedUOM" value ="UoM"/>
+		<label name="poLine.lineNumber" value ="PO Line #"/>
+		<label name="poLine.tbdString3" value ="Item Comment 1"/>
+		<label name="poLine.tbdString4" value ="Item Comment 2"/>
+		<label name="tbdString3" value ="Receiving Comment"/>
+		<label name="tbdString16" value ="Requester Name"/>
+		<label name="tbdDate10" value ="Blanket Start Date"/>
+		<label name="tbdDate11" value ="Blanket End Date"/>
+		<label name="remitToId" value="Remit ID" />
+		
+		
+		<label name="tbdString2" value ="Req Office"/>
+		<label name="specialHandlingCode" value ="Description"/>
+		<label name="date" value ="PO Date"/>
+		<label name="requesterName" value="Requested by"/>
+		<label name="originatorName" value="Orginator"/>
+		<label name="approvals" value ="Approvals"/>
+		<label name="scanSource" value="Source"/>
+		<label name="baselineDate" value="Date"/>
+		<label name="tbdDate2" value="Approval Date"/>
+		<label name="buyerId" value="Buyer"/>
+		<label  name="receiveDate" value="Date"/>
+		<label name="grossAmount" value="Cost Estimate"/>
+		<label name="tbdDate1" value="ETA Delivery Date"/>
+		<label name="purchase.requistion" value="Purchase Requistion" />
+		<label name="action.purchase.upload1" value="New Purchase Request"/>
+		<label name="action.purchase.upload2" value="New RoG"/>
+		<label name="action.purchase.upload3" value="Materials"/>
+		<label name="action.purchase.upload4" value="Corporate"/>
+		<label name="message.nolines" value="Please create at least one PO line before submitting"/>
+			
+			
+			<label name="PURCH001" value="General" />
+			<label name="PURCH002" value="Info Tech" />
+			<label name="PURCH003" value="Materials" />
+			<label name="PURCH004" value="Corporate" />
+			<label name="OTHER" value="Other" />	
+		
+			
+		<label name="action.rog.indexing" value="RoG Processing"/>
+		<label name="action.purchase.indexing" value="Purchase Req. Processing"/>
+		<label name="action.purchase.process" value="Requester Process"/>
+		<label name="action.purchase.approve" value="Waiting Approval"/>
+		<label name="action.purchase.purchase" value="Issue Purchase Order"/>
+		<label name="action.purchase.exception" value="Exceptions"/>
+		<label name="action.myinbox.purchase" value="My Purchase Inbox"/>
+		<label name="section.purchasing.review" value="Purchase Issuing"/>
+		<label name="section.purchasing" value="Purchasing"/>
+		<label name="section.purchasing.index" value="Receipt of Goods"/>
+		<label name="section.purchasing.exception" value="Purchase Exceptions"/>
+		<label name="section.mpnavigation" value="Purchase"/>
+		
+		<label name="quantity" value="Quantity"/>
+<!-- should be using queue.<queuename> for label assignments -->
+		<label name="queue.Purchase" value="Issue Purchase Order"/>
+		<label name="Purchase" value="Issue Purchase Order"/>
+		<label name="queue.PurchaseIndexing" value="Purchase Requisition Processing"/>
+		<label name="PurchaseIndexing" value="Purchase Requisition Processing"/>
+		<label name="queue.PurchaseProcess" value="Purchase Posting"/>
+		<label name="PurchaseProcess" value="Purchase Posting"/>
+
+		
+	</locale>
+</labels>
+
+

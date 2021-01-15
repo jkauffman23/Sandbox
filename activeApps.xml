@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The file names listed in here will be search *in order* for a label.  The first file
+in this list must also define the default locale.  Subsequent attempts to redefine the
+default locale will be ignored.
+
+
+Max number of apps is controlled by mangedpayconfig setting
+Default is 16
+
+User Roles mapping:  (Updated 1/9/2021 Based on Brandywine)
+
+Friendly Name	             		  Role Name
+Administrator					MP_Administrator3
+ActiveWorx Support				MP_Administrator4
+
+*** * * *AP APP * * * * * * * * * * * * * * * * * * * * * * 
+AP User							MP_Finance
+AP Power User 1					MP_Confirmer1
+AP Indexer 1					MP_Indexer1
+AP Approver 1					MP_Approver1
+AP Exceptions 1					MP_Auditor1
+AP Reviewer 1					MP_Processor1
+
+*** * * *EXPENSE APP * * * * * * * * * * * * * * * * * * * * * * 
+EXPENSE User					MP_Expense
+EXPENSE Power User 1			MP_Confirmer2
+EXPENSE Approver 1				MP_Approver2
+EXPENSE Exceptions 1			MP_Auditor2
+
+*** * * *PAY APP * * * * * * * * * * * * * * * * * * * * * * 
+PAY User						MP_Search5
+PAY Power User 1				MP_Confirmer3
+PAY Approver 1					MP_Approver3
+PAY Exceptions 1				MP_Auditor3
+
+*** * * *PURCHASE APP * * * * * * * * * * * * * * * * * * * * * * 
+PURCHASE User					MP_Buyer1
+PURCHASE Power User 1			MP_Confirmer4
+PURCHASE Approver 1				MP_Approver4
+PURCHASE Exceptions 1			MP_Auditor4
+
+*** * * *VENDOR APP * * * * * * * * * * * * * * * * * * * * * * 
+VMGMT User						MP_VendorMaintenance1
+VMGMT Power User 1				MP_Confirmer5
+VMGMT Approver 1				MP_Approver5
+VMGMT Exceptions 1				MP_VendorMaintenance2
+
+*** * * *INVOICING APP * * * * * * * * * * * * * * * * * * * * * * 
+INVOICING User					MP_Energy
+INVOICING Power User 1			MP_Confirmer6
+INVOICING Approver 1			MP_Approver6
+
+*** * * *JOURNAL APP * * * * * * * * * * * * * * * * * * * * * * 
+JOURNAL User					MP_Ledger
+JOURNAL Power User 1			MP_Confirmer7
+JOURNAL Approver 1				MP_Approver7
+
+*** * * *AP APP * * * * * * * * * * * * * * * * * * * * * * 
+TAX User						MP_Search4
+TAX Power User 1				MP_Confirmer8
+
+*** * * *REPORTS APP * * * * * * * * * * * * * * * * * * * * * * 
+REPORTS User					MP_Buyer3
+REPORTS Power User 1			MP_Confirmer9
+
+*** * * *DASHBOARD APP * * * * * * * * * * * * * * * * * * * * * * 
+DASHBOARD User					MP_Buyer4
+DASHBOARD Power User 1			MP_Confirmer10
+
+*** * * *MAILROOM APP * * * * * * * * * * * * * * * * * * * * * * 
+MAILROOM User					MP_Scanner1
+MAILROOM Power User 1			MP_Scanner2
+
+*** * * *PORTAL APP * * * * * * * * * * * * * * * * * * * * * * 
+PORTAL User						MP_Portal
+
+*** * * *SEARCH APP * * * * * * * * * * * * * * * * * * * * * * 
+SEARCH User 1					MP_Search1
+
+
+*** * * * UNASSIGNED * * * * * * * * * * * * * * * * * * * * * * 
+zTBD Administrator 1			MP_Administrator1
+zTBD Administrator 2			MP_Administrator2
+zTBD Indexer 2					MP_Indexer2
+zTBD Processor 2				MP_Processor2
+zTBD Processor 3				MP_Processor3
+zTBD Processor 4				MP_Processor4
+zTBD Buyer 2					MP_Buyer2
+zTBD Indexer 3					MP_Indexer3
+zTBD Indexer 4					MP_Indexer4
+zTBD Indexer 5					MP_Indexer5
+zTBD Indexer 6					MP_Indexer6
+zTBD Indexer 7					MP_Indexer7
+zTBD Indexer 8					MP_Indexer8
+zTBD Indexer 9					MP_Indexer9
+zTBD Indexer 10					MP_Indexer10
+zTBD Processor 5				MP_Processor5
+zTBD Processor 6				MP_Processor6
+zTBD Processor 7				MP_Processor7
+zTBD Processor 8				MP_Processor8
+zTBD Processor 9				MP_Processor9
+zTBD Processor 10				MP_Processor10
+zTBD Approver 8					MP_Approver8
+zTBD Approver 9					MP_Approver9
+zTBD Approver 10				MP_Approver10
+zTBD Search 2					MP_Search2
+zTBD Search 3					MP_Search3
+
+-->
+
+<root>
+
+<apps>
+	<app name="Common" default="true" roles="">
+		<dcApp name="Null" url="index.jsp?app=" target="_parent" desktop="Null" disableImg="Null" order="19"/>
+	</app>
+	
+	<app name="Pay"  roles="MP_Administrator3, MP_Administrator4, MP_Indexer1, MP_Confirmer1, MP_Approver1, MP_Processor8, MP_Processor9, MP_Processor10">
+		<dcApp name="Pay" url="index.jsp?app=" target="_parent" desktop="Pay" disableImg="Pay" order="1" displayName="AP"/>
+	</app>
+	
+	<app name="Expense"  roles="MP_Administrator3,MP_Administrator4, MP_Confirmer2">
+		<dcApp name="Expense" url="index.jsp?app=" target="_parent" desktop="Expense" disableImg="Expense" order="2" displayName="Expense"/>
+	</app>
+	
+
+	<app name="BankPay" roles="MP_Administrator3, MP_Administrator4, MP_Confirmer3, MP_Approver4, MP_Scanner1, MP_Indexer3, MP_Indexer2, MP_Indexer4, MP_Indexer5, MP_Indexer6" >
+		<dcApp name="BankPay" url="index.jsp?app=" target="_parent" desktop="BankPay" disableImg="BankPay" order="3"  displayName="Payments"/>
+	</app>
+
+	<app name="Purchase"  roles="MP_Administrator3, MP_Administrator4, MP_Confirmer4, MP_Buyer1, MP_Buyer2, MP_Buyer3">
+		<dcApp name="Purchase" url="index.jsp?app=" target="_parent" desktop="Purchase" disableImg="Purchase" order="4" displayName="Purchase"/>		
+	</app>
+	
+	
+	<app name="VMgmt"  roles="MP_Administrator3, MP_Administrator4, MP_Confirmer5, MP_Finance, MP_VendorMaintenance1, MP_VendorMaintenance2">
+		<dcApp name="VMgmt" url="index.jsp?app=" target="_parent" desktop="VMgmt" disableImg="VMgmt" order="5" displayName="Vendors"/>
+	</app>	
+
+	<app name="Report"  roles="MP_Administrator3, MP_Administrator4, MP_Confirmer9" >
+		<dcApp name="Report" url="https://app.powerbi.com/groups/me" target="_blank" desktop="Report" disableImg="Report" order="6" displayName="Reports"/>
+	</app>	
+
+	<app name="Dashboard"  roles="MP_Administrator3, MP_Administrator4, MP_Confirmer10">
+		<dcApp name="Dashboard" url="indexreports.jsp?app=" target="_parent" desktop="Dashboard" disableImg="Dashboard" order="7" displayName="Dashboard"/>
+	</app>
+
+	<app name="Mailroom"  roles="MP_Administrator3, MP_Administrator4, MP_Finance">
+		<dcApp name="Mailroom" url="http://10.212.212.124:9080/navigator/?desktop=" target="_blank" desktop="APMailroomDev10" disableImg="Mailroom" order="8" displayName="Mailroom"/>
+	</app>
+
+	<app name="Tax"  roles="MP_Administrator3, MP_Administrator4, MP_Confirmer8">
+		<dcApp name="Tax" url="index.jsp?app=" target="_parent" desktop="Tax" disableImg="Tax" order="9" displayName="Tax"/>
+	</app>
+		
+	<app name="Journal"  roles="MP_Administrator3, MP_Administrator4, MP_Confirmer7" >
+		<dcApp name="Journal" url="index.jsp?app=" target="_parent" desktop="Journal" disableImg="Journal" order="10" displayName="Journal"/>		
+	</app>
+
+	<app name="Bills" roles="MP_Administrator4, MP_Confirmer6" >
+		<dcApp name="Bills" url="index.jsp?app=" target="_parent" desktop="Doc" disableImg="Bills" order="11" displayName="Invoicing"/>
+	</app>
+
+	<app name="Case"  roles="MP_Administrator4" >  
+		<dcApp name="Case" url="index.jsp?app=" target="_parent" desktop="Case" disableImg="Case" order="12" displayName="Case"/>
+	</app>	
+
+	<app name="Portal" roles="MP_Administrator4" >
+		<dcApp name="Portal" url="indexportal.jsp?app=" target="_parent" desktop="Portal" disableImg="Portal" order="13" displayName="Portal"/>
+	</app>
+	
+	
+	<app name="Navigator"  roles="MP_Administrator4" >
+		<dcApp name="Navigator" url="http://dev-app1:9083/navigator/?desktop=" target="_blank" desktop="AC" disableImg="Navigator" order="14" displayName="Navigator"/>
+	</app>	
+	
+	<app name="Search"  roles="MP_Administrator4">
+		<dcApp name="Search" url="index.jsp?app=" target="_parent" desktop="Search" disableImg="Search" order="15" displayName="Search"/>			
+	</app>
+	
+	<app name="Doc" roles="MP_Administrator4" >
+		<dcApp name="Doc" url="index.jsp?app=" target="_parent" desktop="Doc" disableImg="Doc" order="16" displayName="Doc"/>
+	</app>
+	
+	<app name="Admin" roles="MP_Administrator3, MP_Administrator4">	
+		<dcApp name="Admin" url="index.jsp?app=" target="_parent" desktop="Null" disableImg="Admin" order="20"/>	
+	</app>	
+	
+</apps>
+
+<DocumentTypes>
+	<app type="CASH"  name="Expense"/>
+	<app type="EXP"  name="Expense"/>
+	<app type="MISC"  name="Pay"/>
+	<app type="NON-PO"  name="Pay"/>
+	<app type="PO"  name="Pay"/>
+	<app type="EDI"  name="Pay"/>
+	<app type="RECEIVER"  name="Pay"/>
+    <app type="DOC" name="Doc"/>
+	<app type="TAX" name="Doc"/>
+	<app type="JOURNAL" name="Journal"/>
+	<app type="TASK" name="Journal"/>
+	<app type="PURCHASE" name="Purchase"/>
+	<app type="RECEIPT" name="Purchase"/>
+	<app type="REPORT"   name="Case"/>
+	<app type="ACTION"   name="Case"/>
+	<app type="BATCH"   name="BankPay"/>
+	<app type="VENDOR"   name="VMgmt"/>
+	<app type="TEMPLATE"   name="Pay"/>
+</DocumentTypes>
+
+</root>

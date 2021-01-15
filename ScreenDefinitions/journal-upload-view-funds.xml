@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="journal-upload-view-001" template="journal-upload-001-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+			
+		</locale>
+</labels>
+
+<section-overrides>	
+</section-overrides>
+
+<property-overrides>
+			<text name="postingERPId" defaultValue="FUNDS" forceDefault="true"/>
+			<text name="vendorERPId" defaultValue="FUNDS" forceDefault="true"/>
+			<text name="accountERPId" defaultValue="FUNDS" forceDefault="true"/>
+			<text name="paymentTermERPId" defaultValue="FUNDS" forceDefault="true"/>
+			<text name="paymentTypeERPId" defaultValue="FUNDS" forceDefault="true"/>
+			<text name="paymentModeERPId" defaultValue="FUNDS" forceDefault="true"/>
+</property-overrides>
+
+<validations>
+    
+</validations>
+
+</view>
+
+

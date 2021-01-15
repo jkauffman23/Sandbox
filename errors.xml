@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<errors default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/errors.xsd">
+	<locale name="en">
+	     <error name="customeridvalidation.message" message="Please select a valid customer using the customer look-up before proceeding."/>
+		<error name="accountstatus.invalid" message="Invalid Account on line ${line}."/>
+		<error name="accountValidator.companyCodeMismatch" message="The account ${account} on line ${line} has a company code mismatch."/>
+		<error name="accountValidator.currencyMismatch" message="The account ${account} on line ${line} has a currency mismatch."/>
+		<error name="accountValidator.markedForDeletion" message="The account ${account} on line ${line} is marked for deletion."/>
+		<error name="accountValidator.nullAccount" message="Invalid Account on line ${line}."/>
+		<error name="accountValidator.postingBlock" message="The account ${account} on line ${line} is not active (posting block). Please change the account number or contact your accounting representative."/>
+		<error name="alternateVendorValidator.invalidAlternateVendor" message="Vendor : {$value} is not a valid alternate vendor."/>
+		<error name="Appropriation.MayBeRequired" message="Appropriation May Be required at line ${line}." type="warning"/>
+		<error name="Appropriation.Required" message="Appropriation required at line ${line}."/>
+		<error message="ApproverValidation - No approvers found for this document. Please select the approvers"
+           name="ApproverValidation.approvers.not.found.message" />
+		 <error name="approverOrganizationSecurityValidation.error" message="The following approvers don't have security access to this invoice's Cost Center: ${userList}"/>
+		 <error name="approverDepartmentSecurityValidation.error" message="The following lines do not have a user that is able to approve them: ${lineList}"/>
+		 <error name="glAccountRoutingValidation.error" message="The invoice you are trying to approve has the following Special GL Accounts that require a Special GL Review process.&lt;br&gt;To assignthe appropriate users to approve the Special GL Accounts please use the Adhoc Routing icon, and select&lt;br&gt;‘Review’, and then search for the appropriate user for the Review.  Note: the CMA Special GL Reviewer list can be found here [link]&lt;br&gt; 
+Here are the Special GL Accounts on this invoice that still need a valid user assigned in Adhoc:&lt;br&gt;
+${glCodeList}   
+"/>
+		<error name="badEmail" message="Error with email address(es). Please check recipient's email address.  "/>
+		<error name="BlockedFixedAssetAccount.Found" message="Fixed Asset Account Blocked at line ${line}."/>
+        <error name="checkCleared.required" message="Check cleared date has not been populated yet."/>
+        <error name="companycode.invalid" message="The company code ${companyCode} is not a valid company code."/>
+		<error name="currency" message="${label} must be a currency."/>
+		<error name="currency.foreignkey" message="The currency ${code} is used by a different database table. Please delete all relationships first."/>
+		<error name="date" message="${label} must be a valid date, ${value} is invalid."/>
+		<error name="decimal" message="${label} must be a decimal number, ${value} is invalid."/>
+		<error name="departmentApprovalValidation.invalid" message="Remaining Balance is not $0.00, therefore please assign at least one Adhoc Approver or update invoice lines accordingly in our to submit your approval."/>
+		<error name="departmentApprovalValidation.invalidNoLines" message="Approved Amount does not match Gross Amount, therefore please assign at least one Adhoc Approver or update invoice lines accordingly in our to submit your approval."/>
+		<error name="docAccountCurrencyValidator.currencyMismatch" message="A mismatch in currencies was found between an account (${account}) on line ${line} and the document."/>
+		<error name="documentNetAmountValidator.negativeNetAmount" message="The net document amount is negative which is not allowed. Please correct header document amount properties."/>
+		<error name="docVendorCurrencyValidator.nonMatchingCurrencies" message="The document currency (${docCurrency}) does not match the vendor currency (${vendorCurrency})"/>
+		<error name="DollarLimitExceeded.Appropriation" message="Dollar limit exceeded for appropriation 992004."/>
+		<error name="duplicateCheckValidator.duplicateInvoice" message="${duplicateList} is a possible duplicate of this invoice."/>
+		<error name="duplicateCheckValidator.duplicateInvoices" message="${duplicateList} are possible duplicates of this invoice."/>
+		<error name="duplicatevendorid.message" message="The Vendor Id is already in the system. Please choose a different Vendor Id."/>
+		<error name="duplicateponumber.message" message="The PO Number is already in the system. Please use a different PO Number."/>
+		<error name="duplicateRemitIdValidation.duplicateRemitId" message="Remit ID already exists."/>
+		<error name="erpRequiredForPOValidation.postingERPIdBlank" message="You must select an ERP if you enter a PO number."/>
+		<error name="GLPercentageValidation.invalid" message="The percentages of the GL Lines do not total to 100%."/>
+		<error name="jurisdictionValidator.salesTax.no.taxable.amount" message="Sales tax specified, no taxable amount allowed."/>
+		<error name="jurisdictionValidator.salesTax.not.jurisdiction" message="Sales tax is specified. Please select a correct jurisdiction code."/>
+		<error name="jurisdictionValidator.taxable.amount.no.salesTax" message="Taxable amount specified, no sales tax allowed."/>
+		<error name="jurisdictionValidator.taxable.amount.not.state.code" message="Taxable amount specified. Please select a state code."/>
+		<error name="lineItemAmountValidator.amountsDoNotMatch" message="The Total does not match the sum of the lines."/>
+		<error name="lineItemAmountValidator.noLineAmount" message="A document line is missing a total."/>
+		<error name="lineItemAmountValidator.noLines" message="Line items are required.  No Line Items were found for this transaction."/>
+		<error name="lineReceivablesMatchValidation.billedQtyNotSet" message="Billed quantity not set on PO line ${lineNumber} for PO with number ${poNumber} on invoice line ${lineNumber}."/>
+		<error name="lineReceivablesMatchValidation.cannotFetchPO" message="Cannot load PO for invoice line ${lineNumber}."/>
+		<error name="lineReceivablesMatchValidation.invoiceQtyNotSet" message="Invoice quantity not set on invoice line ${lineNumber}."/>
+		<error name="lineReceivablesMatchValidation.poLineNotFound" message="Could not load PO line ${lineNumber} for PO with number ${poNumber} on invoice line ${lineNumber}."/>
+		<error name="lineReceivablesMatchValidation.poLinesNotFound" message="Could not load PO lines for PO with number ${poNumber} on invoice line ${lineNumber}."/>
+		<error name="lineReceivablesMatchValidation.poNotFound" message="Could not find PO with number ${poNumber} on invoice line ${lineNumber}."/>
+		<error name="lineReceivablesMatchValidation.qtyNotReceived" message="Quantity not received for PO line ${lineNumber} for PO with number ${poNumber} on invoice line ${lineNumber}."/>
+		<error name="lineReceivablesMatchValidation.receivedQtyNotSet" message="Received quantity not set on PO line ${lineNumber} for PO with number ${poNumber} on invoice line ${lineNumber}."/>
+		<error name="match.headerAbsolute" message="The net invoice amount is ${actualDifference} greater than the PO amount, but only ${allowedDifference} is allowed." />
+		<error name="match.headerPercentage" message="The net invoice amount is ${actualPercentage} greater than the PO amount, but only ${allowedPercentage} is allowed."/>
+		<error name="match.line.total.absolute" message="On line ${lineNumber}, the total extended line amount is ${actualDifference} more than the PO line amount, but only ${allowedDifference} is allowed."/>
+		<error name="match.line.total.percentage" message="On line ${lineNumber}, the total extended line amount is ${actualPercentage} more than the PO line amount, but only ${allowedPercentage} is allowed."/>
+		<error name="match.line.unitprice.absolute" message="On line ${lineNumber}, the invoice unit price varies from the PO unit price by ${actualDifference} which is more than the allowed tolerance of ${allowedDifference}."/>
+		<error name="match.line.unitprice.percentage" message="On line ${lineNumber}, the invoice unit price varies from the PO unit price by ${actualPercentage} which is more than the ${allowedPercentage} tolerance allowed."/>
+		<error name="match.multiplePos" message="The invoice has multiple pos. Don't know how to perform matching on a header level."/>
+		<error name="match.noLines" message="The invoice doesn't have any lines, so no matching can be done."/>
+		<error name="match.noPOFound" message="No purchase order with number ${number} from ${erp} could be found. Cannot perform matching."/>
+		<error name="maxlength" message="${label} is ${charactersEntered} characters, but only ${maxLength} characters are allowed."/>
+		<error name="missingParam" message="There were missing parameters for the validation."/>
+		<error name="negativeDecimal" message="${label} must be a negative number, ${value} is invalid."/>
+		<error name="newVendorValidation.noPurchasingAddresses" message="This document does not have a purchasing address."/>
+		<error name="newVendorValidation.multiplePurchasingAddresses" message="This document should only have one Purchasing Address."/>
+		<error name="nonZero" message="${label} must not be zero."/>
+		<error name="noSpecialCharacters" message="${label} must not contain special characters."/>
+		<error name="notFuture" message="${label} cannot be future dated."/>
+		<error name="number" message="${label} must be a number."/>
+		<error name="oneTimeVendor.noTaxCode" message="1099 Code has been selected; Please enter a valid Tax Id (SSN ###-###-#### or FID ##-#######)."/>
+		<error name="oneTimeVendor.taxIdAnd1099CodeBlank" message="1099 Code is blank"/>
+		<error name="oneTimeVendor.ten99CodeTaxIdPresentValidation" message="1099 Code has been selected; Tax Id may not be blank"/>
+		<error name="oneTimeVendorInvalid" message="You cannot use a one-time vendor for the selected type and subtypes. Please uncheck one-time vendor"/>
+		<error name="paymentModeValidation.invalidCompanyCode" message="Company Code is not compatible with selected Payment Template."/>
+		<error name="paymentModeValidation.invalidCurrency" message="Currency is not compatible with selected Payment Template."/>
+		<error name="paymentModeValidation.invalidPaymentType" message="Payment Type is not compatible with selected Payment Template."/>
+		<error name="paymentModeValidation.unknownPaymentType" message="The Payment Template entered cannot be found."/>
+		<error name="paymentTermValidator.noPaymentTermFound" message="Payment term specified cannot be found."/>
+		<error name="paymentTermValidator.noPaymentTermFoundWithCompanyCode" message="Payment term specified cannot be found within company code ${value}."/>
+		<error name="poHelper.poMultiple" message="Multiple POs with number ${poId} were found. Please use the multple PO feature to select the correct."/>
+		<error name="poHelper.poNotFound" message="A PO with number ${poId} cannot be found within this business unit or ERP system."/>
+		<error name="poHelper.poNotSpecified" message="Please enter a PO number."/>
+		<error name="poHelper.poTypeInvalid" message="Only Formal PO Type can be flipped"/>
+		<error name="poNumberValidator.blocked" message="This PO is marked as blocked."/>
+		<error name="poNumberValidator.blockedLine" message="The PO line used on line ${line} is marked as blocked."/>
+		<error name="poNumberValidator.markedForDeletion" message="This PO is marked for deletion."/>
+		<error name="poNumberValidator.missingParams" message="PO number is missing."/>
+		<error name="poNumberValidator.noLines" message="The document has no lines, so it cannot have a PO."/>
+		<error name="poNumberValidator.notFound" message="PO number not found."/>
+		<error name="positiveDecimal" message="${label} must be a positive decimal, ${value} is invalid."/>
+		<error name="processorIndexer.error" message="The Processor and Indexer of this document are the same user."/>
+		<error name="PropertyUnit.DistributionAccount.ExpenseAccountMismatch" message="Property unit is a capital type, distribution account must be a capital account at line ${line}."/>
+		<error name="PropertyUnit.DistributionAccount.CapitalAccountMismatch" message="Property unit is an expense type, distribution account must be an expense account at line ${line}."/>
+		<error name="PropertyUnit.InvalidKeyCombination" message="Invalid Appropriation/Property Unit combination at line ${line}."/>
+		<error name="PropertyUnit.NoMatchCostCentre" message="Cost center must match property unit at line ${line}."/>
+		<error name="PropertyUnit.NotActive" message="Property Unit Not Active at line ${line}."/>
+		<error name="PropertyUnitType.DistributionAccount.CostAccountMismatch" message="Distribution account not assigned to property unit at line ${line}."/>
+		<error name="PropertyUnitType.Invalid" message="Invalid Property Unit at line ${line}."/>
+		<error name="qa" message="The invoice was selected as a random sample for review by AP."/>
+		<error name="refundTypeValidator.Blank" message="Check number must not be blank for refunds and pre-paids"/>
+		<error name="refundTypeValidator.CheckNumberWrong" message="Check number must start with C for refunds"/>
+		<error name="required" message="${label} is required. Please enter a value or lookup related data."/>
+		<error name="shippingDocIdValidator.missingParams" message="Shipping document id is missing."/>
+		<error name="shippingDocIdValidator.notFound" message="Shipping document id not found."/>
+		<error name="startBeforeEnd" message="Start date must be before the end date."/>
+		<error name="taxableAmountValidator.fail" message="The taxable amount exceeds the net total amount."/>
+		<error name="taxAssessmentValidator.invalidTaxAssessment" message="Invalid values for Sales Tax, Tax Basis, and Tax Id."/>
+		<error name="amortizationValidator.invalidAmortization" message="Document lines that has GL Account codes that start with 108, or 12 must have a value for Amortization Info."/>
+		<error name="taxAmountValidator.excessTaxes" message="The tax amount exceeds the gross invoice amount."/>
+		<error name="taxCodeValidator.invalidTaxCode" message="Tax code ${taxCode} on line ${line} is not a valid code."/>
+		<error name="updateVendorValidation.noPurchasingAddress" message="No purchasing addresses were found."/>
+		<error name="updateVendorValidation.multiplePurchasingAddresses" message="More than one purchasing address was found."/>
+		<error name="updateVendorValidation.puchasingAddressExistsInDatabase" message="This vendor has a purchasing address already."/>
+		<error name="vendorLineItemValidation.noLines" message="No line items exist."/>
+		<error name="validVendor" message="The vendor that you have entered is not valid."/>
+		<error name="validation.incorrectVendorValidation" message="The Vendor company code does not match the Organization/Company assigned for this invoice.   Either select the appropriate vendor and Submit, or Reject this invoice to an appropriate destination for resolution"/>
+		<error name="validation.paymentBatchValidation" message="The payment lines are mismatched. Please regenerate the payment lines."/>
+		<error name="vendor.blocked" message="Vendor: ${value} is blocked."/>
+		<error name="vendor.markedForDeletion" message="Vendor: ${value} is marked for deletion."/>
+		<error name="vendorMismatchValidator.missingParams" message="Values in vendor name and zip fields missing"/>
+		<error name="vendorMismatchValidator.nameMismatch" message="Scan vendor name (${vendorNameOnDocument}) does not match vendor name on PO (${vendorNameOnVendor})"/>
+		<error name="vendorMismatchValidator.vendorNameOnDocumentMissing" message="No vendor name value found on the document"/>
+		<error name="vendorMismatchValidator.vendorNameOnVendorMissing" message="No vendor name value found on the vendor"/>
+		<error name="vendorMismatchValidator.vendorNotSet" message="No vendor is associated with the document"/>
+		<error name="vendorMismatchValidator.vendorZipOnDocumentMissing" message="No scanned zip code found."/>
+		<error name="vendorMismatchValidator.vendorZipOnVendorMissing" message="The selected vendor has no zip code."/>
+		<error name="vendorMismatchValidator.zipMismatch" message="Scanned vendor zip (${vendorZipOnDocument}) does not match the zip on PO (${vendorZipOnVendor})."/>
+		<error name="vendorPayBlockValidator.payBlockFail" message="Vendor ${vendorId} is pay blocked."/>		
+		<error name="vendorValidator.blocked" message="Vendor ${vendorId} is blocked. If you change the vendor, please TAB out of the vendor field before continuing."/>
+		<error name="vendorValidator.markedForDeletion" message="Vendor ${vendorId} is marked for deletion."/>
+		<error name="vendorValidator.noVendorFound" message="Vendor ${vendorId} is not a valid vendor."/>
+		<error name="vendorValidator.required" message="Vendor ID is required, please enter a value."/>
+		<error name="zipcode.invalid" message="The zip code ${zipCode} is not a valid zip code."/>
+		<error name="CPEdit.8A" message="Property unit is an expense type, distribution account CANNOT be of type capital on line ${line}."/>
+		<error name="CPEdit.8B" message="Property unit is a Capital type, distribution account must be a Capital account on line ${line}."/>
+		<error name="CPEdit.8C" message="Property unit is a Capital type, distribution account must be a Capital account on line ${line}."/>
+		<error name="CPEdit.8D" message="Invalid Property Unit on line ${line}."/>
+		<error name="CPEdit.8E" message="Distribution account not assigned to property unit on line ${line}"/>
+        <error name="taxCodeValidation.codeNotFound" message="Tax code ${taxCode} is not a valid tax code."/>
+        <error name="shortpay.message" message="Short pay reason required if not approving the whole invoice"/>
+        <error name="capexValidation.message" message="A CAPEX code is required for line number ${lineNumber}"/>
+		<error name="facilitiesValidation.message" message="You have coded this invoice to a fixed asset code, if you proceed the invoice will be reviewed by the Fixed asset dept"/>
+		<error name="approvedAmountValidator.excessApprovedAmt" message="The current Gross Amount on the invoice does not match the Scanned amount"/>
+		<error name="approvers.not.found.message" message="No approvers or location found for this invoice. Please select the approvers or location"/>
+		<error name="approver.limit.message" message="You do not have authority to approve invoices for this amount. Click on the green routing icon and add another approver"/>
+		<error name="approver.invalid.organization" message="You do not have authority to approve invoices for this department. Click on the green routing icon and add another approver"/>
+		<error name="check.requester.originator" message="You cannot create an expense report for yourself on this screen."/>
+		<error name="check.requester.to.approver" message="The approver must be someone other than the claimant."/>
+		<error name="check.originator.to.approver" message="The approver must be someone other than the submitter."/>
+		<error name="check.requester.to.approver.document" message="The approver must be someone other than the claimant."/>
+		<error name="check.originator.to.approver.document" message="The approver must be someone other than the submitter."/>
+		<error name="approverUserValidator.sameApprover" message="The approver must be someone other than the person entering the request."/>
+		<error name="lines.not.exists" message="No Document Lines found."/>
+		<error name="lines.total.zero" message="No line amount found"/>
+		<error name="datevalidation.message" message="Due date cannot be earlier than invoice date"/>
+		<error name="vendorTypevalidation.message" message="Please re-select a valid vendor for the invoice type"/>
+		<error name="expenseLineTypes.creditOnly" message="The Itemize function can only be used with Credit Card Expenses."/>
+		<error name="validation.mileageMessage" message="Reminder: You cannot claim mileage and fuel for the same vehicle. Edit your report or  click Accept to acknowledge this message."/>
+		<error name="expenseaccount.message" message="You must add a GL Distribution code to each line."/>
+		<error name="validation.cashMessage" message="Reminder: Please ensure you have included the names of company and guests when claiming meals or entertainment. Edit your report or  click Accept to acknowledge this message."/>
+		<error name="deleteMainLineItem.message" message="This function only removes main lines. Reposition your cursor and try again or use the -Itemize button to remove sub-lines."/>
+		<error name="addSubLineItem.message" message="Place your cursor on the line you wish to itemize before using this function."/>
+		<error name="deleteSubLineItem.message" message="This function only removes main lines. Reposition your cursor and try again or use the Delete button to remove a main line."/>
+		<error name="lineItemAmountValidator.mainLineAmtSublineAmt" message="Itemized lines must add up to main line."/>
+		<error name="mileage.tbdstring2.required" message="When submitting mileage claims, you must complete the City, State"/>
+        <error name="mileage.tbdquantity1.required" message="When submitting mileage claims, you must enter a value for mileage"/>
+		<error name="assigned.ccNumber" message="Only unassigned cards can be flagged for deletion."/>
+		<error name="trans.assigned.ccNumber" message="Pending transactions associated this CC."/>
+		<error name="trans.assigned.ccNumber.name" message="Pending transactions associated this CC - name change."/>
+		<error name="duplicate.ccNumber" message="CC already exists."/>
+		<error name="expenseType.cannotFetchCityState" message="Cash lines require the City and State. "/>
+		<error name="duplicate.ccNumber" message="CC already exists."/>
+		<error name="templine.message" message="Sum of Debits must equal sum of credits."/>
+		<error name="expenseType.cannotFetchBusinessName" message="Cash lines require the Business Name."/>
+		<error name="ststatus.message" message="You must select a Next Step before proceeding"/>
+		<error name="check.creditcard.claimant" message="Claimant and credit card details does not match. Please check."/>
+		<error name="check.creditcard.cashadvance" message="You can only submit an Advance request using a Pre-Paid card. If you do not have a Pre-Paid card, leave the credit Card field blank."/>
+		<error name="approvedAmountValidator.lessApprovedAmt" message="The Approved amount must be greater than gross invoice amount and less than zero."/>
+		<error name="delegate.invalid" message="Invalid delegate."/>
+		<error name="thirdPartyAccount.jCode" message="Lines must contain Line Code J."/>
+		<error name="thirdPartyAccount.accountFormat" message="Account must be in the correct format, 5 digits - 10 digits."/>
+		<error name="thirdPartyAccount.combined" message="Lines must contain Line Code J and account code must be in correct format."/>
+		<error name="zeroCode.error" message="When Payment Term is 6 or 7, Invoice Amount must be $0.00."/>
+		<error name="approverSensitivityValidation.sensitivity" message="The next approver does not have a sensitivity level sufficent to work this invoice. Please use Ad-hoc routing to select an appropriate approver."/>
+		<error name="attachmentValidator.attachmentRequired" message="The required attachment was not found."/>
+		<error name="negativePaymentsValidation.negativePayment" message="Cannot include negative or $0 payments. The following payment lines fail: ${payments}"/>
+
+		<error name="validation.specialCharactersInBankRoutingNumber" message="Check routing number entry  on line ${lineNumber}. No special characters or letters can be used."/>
+		<error name="validation.lengthBankRoutingNumber" message="Check routing number entry  on line ${lineNumber}. Length is not correct."/>
+		<error name="validation.specialCharactersInBankSwiftRoutingNumber" message="Check swift routing number entry on line ${lineNumber}. No special characters can be used."/>
+		<error name="validation.lengthBankSwiftRoutingNumber" message="Check swift routing number entry on line ${lineNumber}. Length is not correct."/>
+		<error name="check.excelupload.empty" message="Please upload a file."/>
+		
+
+    </locale>
+</errors>

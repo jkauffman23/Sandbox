@@ -1,0 +1,10 @@
+<navigation name="section.mpnavigation">
+
+
+	<section name="section.search" collapsed="false">
+		<documentsearch target="right" showPoSearch="true" showVendorSearch="true"/>
+		<action href="/protected/paidinvoicesearch.do" target="right" image="/images/ico_search.gif" name="action.paidinvoicesearch" />
+		<action href="/protected/unpaidinvoicesearch.do" target="right" image="/images/ico_search.gif" name="action.unpaidinvoicesearch" />
+	</section>
+
+</navigation>

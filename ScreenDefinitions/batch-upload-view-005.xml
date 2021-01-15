@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="batch-upload-view-005" template="batch-upload-ach-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+
+			<label name="batch" value="Funds Payment - ACH" />
+		</locale>
+</labels>
+
+<section-overrides>	
+</section-overrides>
+
+<property-overrides>
+		<hidden name="postingERPId" defaultValue="AOPS001"/>
+		<hidden name="vendorERPId" defaultValue="AOPS001"/>
+       	<hidden name="paymentTermERPId" defaultValue="AOPS001"/>
+		<hidden name="paymentTypeERPId" defaultValue="AOPS001"/>
+		<hidden name="paymentModeERPId" defaultValue="AOPS001"/>
+		<hidden name="erpDocId" defaultValue="AOPS001"/>
+</property-overrides>
+
+<validations>
+    
+</validations>
+
+</view>
+
+

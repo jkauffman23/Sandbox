@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THIS FILE -->
+
+		<locale name="en">
+			
+			<label name="paymentBatchDescription" value="Batch Name" />
+			<label name="tbdString11" value="" /> <!-- Used for AutoNumber Warning -->
+	
+			<label name="netAmount" value="Total Payments" />
+			<label name="assigntoBatch" value="Assign to Batch" />
+			<label name="removefromBatch" value="Remove from Batch"/>
+			<label name="paymentModeId" value="Payment Mode" />
+			<label name="action.myinbox.bankpay" value="My Inbox - Batches" />
+			<label name="action.pay.newbatch" value="New Payment Batch"/>
+			<label name="action.pay.batch.drafts" value="Payment Batch Drafts" />
+			<label name="action.pay.batch.review" value="Payment Batch Review" />
+			<label name="action.pay.batch.posting" value="Payment Batch Posted" />
+			<label name="action.pay.batch.confirmation" value="Payment Batch Confirmed" />
+			<label name="section.queues.pay.status" value="Batch Status" />	
+			<label name="action.pay.batch.complete" value="OLD INDEXING" />
+			<label name="action.pay.batch.error" value="Batch Errors" />
+			<label name="action.pay.invoice.batching" value="Invoices to Pay" />
+			<label name="action.pay.invoice.maintenance" value="Invoices in Batch Draft"/>
+			<label name="batchStatus" value="Payment Status" />
+			<label name="section.queues.pay.batches" value="Batch Management" />
+			<label name="section.queues.pay.clearing" value="Clearing"  />
+			<label name="action.pay.pending" value="Pending" />
+			<label name="action.pay.paid" value="Paid" />
+			<label name="action.pay.reconcile" value="Reconciled" />	
+			<label name="action.pay.complete" value="Complete" />
+			<label name="batchPaymentMode" value="Payment Mode"/>
+			<label name="lineItems" value="Payments" />
+			<label name="getLines" value="Calculate Payments" />
+			<label name="getLinesTitle" value="Calculate and Optimize Payments" />
+			<label name="message.duplicateBatchValidation" value="This is a duplicate batch number" />
+			<label name="Invoice.Number" value="Number"/>
+			<label name="paymentsConsolidate" value="Consolidate Payments" />
+			<label name="paymentBatch" value="Payment Batch" />
+			<label name="companyCode" value="Org Code" />
+			
+			<label name="custom2.bankName" value="Bank Name" />
+			<label name="custom2.tbdString1" value="Acct Number" />
+			<label name="custom2.tbdString3" value="Company" />
+			<label name="message.returnBatch.Exception" value="Reject to Batch Errors Queue"/>
+			<label name="message.Batch.terminate" value="Terminate this Batch and Release Invoices"/>
+			<label name="tbdString5" value="Pay Batch" />
+			<label name="paymentsNumPayments" value="Num of Payments" />
+			<label name="paymentsNumVendors" value="Num of Vendors"/>
+			<label name="paymentsCompanyAcctCode" value="Company Account Code" />
+			<label name="paymentsCompanyAcctName" value="Company Account Name" />
+			<label name="paymentsAddr3" value="Address3"/>
+			<label name="paymentsAddr4" value="Address4"/>
+			<label name="number" value="Number" />
+			<label name="date" value="Date"/>
+			<label name="dueDate" value="Due Date" />	
+			<label name="paymentsDueDate" value="Date to Pay" /> 
+			<label name="paymentsBankName" value="Bank Name" />
+			<label name="paymentsVendorBankRoutingNo" value="Routing No"/>
+			
+			<label name="paymentsNumber" value="Number"/>
+			<label name="dol.seqId" value="Payment ID"/>
+			<label name="paymentsVendorName" value="Vendor Name" />
+			<label name="paymentsVendorId" value="Vendor ID" />
+			<label name="paymentsInvoice" value="Invoice" />
+			<label name="paymentsAddr1" value="Address1" />
+			<label name="paymentsAddr2" value="Address2" />
+			<label name="payemtsAddr3" value="Address3" />
+			<label name="paymentsAddr4" value="Address4" />
+			<label name="paymentsCity" value="City" />
+			<label name="paymentsState" value="State" />
+			<label name="paymentsCountry" value="Country"/>
+			<label name="paymentsPostalCode" value="Postal" />
+			<label name="paymentsSourceSeqId" value="Invoice Reference No(s)" />
+			
+			<label name="paymentsNumberInvoices" value="#" />
+			<label name="lineTotal" value="Total" />
+			<label name="paymentsSeparateCheck" value="Sep. Check" />
+			
+			
+			<label name="paymentsVendorBankName" value="Bank Name" />
+			<label  name="paymentsVendorBankAcctNo" value="Acct No."/>
+			<label  name="paymentsVendorBankRouting" value="Route No."/>
+			
+			<label name="paymentsVendorSwift" value="Swift No"/>
+			<label name="paymentsVendorIBAN" value="IBAN"/>
+			<label name="paymentsDate" value="Date" />
+			<label name="paymentsAcctType" value="Bank Acct Type" />
+			
+			
+			
+			<label name="batch" value="Payment Batch" />
+			<label name="batchDetails" value="Detail"/>
+			
+			<label name="actionAddToBatch" value="Add to Batch" />
+			<label name="searchPaymentBatch" value="Find Batch" />
+			<label name="searchPaymentMode" value="Find by Payment Mode" />
+			<label name="searchPaymentDescription" value="Find by Payment Description" />
+			<label name="lookup.manager" value="Lookup Manager" />
+			<label name="action.search" value="Search" />
+			<label name="action.cancel" value="Cancel" />
+			<label name="action.search.paymentBatchDescription" value="Payment Description" />
+			<label name="action.search.number" value="Batch Number" />
+			<label name="action.search.paymentModeId" value="Payment ID" />
+			<label name="Batch_Error" value="Batch Error"/>
+			<label name="Batch_Draft" value="Batch Draft"/>
+			<label name="Batch_Review" value="Batch Review"/>
+			<label name="Batch_Staging" value="Batch Posting"/>
+			<label name="Batch_Confirm" value="Batch Confirm"/>
+			
+			<label name="action.search.addToBatch.message" value="Adding Invoice to Batch" />
+			<label name="tbdString8" value="Account Tokens" />
+			<label name="tbdString9" value="Category" />
+			<label name="tbdString12" value="Org Description" />
+			
+			<label name="paymentsCurrencyId" value="CurrencyID" />
+			<label name="paymentsDiscountAmount" value="Discount Amount" />
+			<label name="paymentsNetAmount" value="Net Amount" />
+			<label name="paymentsAddrType" value="Remit ID" />
+			<label name="venBankAddr1" value="Bank Address 1" />
+			<label name="venBankAddr2" value="Bank Address 2" />
+			<label name="venBankCity" value="Bank City" />
+			<label name="venBankState" value="Bank State" />
+			<label name="venBankPostalCode" value="Bank Postal" />
+			<label name="venBankCountry" value="Bank Country" />
+			<label name="venRegFieldName1" value="Regulatory Field 1" />
+			<label name="venRegFieldName2" value="Regulatory Field 2" />
+			<label name="venRegFieldName3" value="Regulatory Field 3" />
+			<label name="venRegFieldName4" value="Regulatory Field 4" />
+			<label name="venRegFieldName5" value="Regulatory Field 5" />
+			<label name="venRegValue1" value="Regulatory Value 1" />
+			<label name="venRegValue2" value="Regulatory Value 2" />
+			<label name="venRegValue3" value="Regulatory Value 3" />
+			<label name="venRegValue4" value="Regulatory Value 4" />
+			<label name="venRegValue5" value="Regulatory Value 5" />
+			
+	</locale>
+</labels>
+
+

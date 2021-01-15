@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<columns>
+		<group name="mDbProcess" queues="Indexing,AwaitingReceipt" colOrder="1" displayName="Processing"
+			style="dashboardTypical" title="Items in Indexing and Waiting Receipts items." searchName="mDbinProcess"/>
+			
+		<group name="mDbApprove" queues="Approve" colOrder="2" displayName="Approving"
+			style="dashboardRed" title="Items Waiting Approval." searchName="mDbinApprove"/>
+		
+		<group name="mDbReview" queues="HighDollarReview" colOrder="3" displayName="Review" 
+			   style="dashboardTypical" title="Items in High Dollar Review." searchName="mDbinReview"/>
+
+
+		<group name="mDbException" queues="GeneralException" colOrder="4" displayName="Exceptions" 
+			   style="dashboardRed" title="Items in General Exception." searchName="mDbinException"/>
+	
+		<group name="mDbposting" queues="Posting" colOrder="5" displayName="Posting" 
+			   style="dashboardTypical" title="Items in Posting" searchName="mDbinPosting"/>
+	 
+		
+	<!--	
+		<group name="highDollarReview" queues="High Dollar Review" colOrder="6" displayName="High Dollar Review" 
+			   style="dashboardTypical" title="Includes High Dollar Review queue items" searchName="mDbSearchCol06"/> 
+				
+		
+		<group name="posting" queues="Posting" colOrder="4" displayName="Posting" 
+			   style="dashboardTypical" title="Includes Posting items" searchName="mDbSearchCol07"/>
+			   
+		
+		<group name="terminate" queues="Terminated" colOrder="5" displayName="Terminated" 
+			   style="dashboardTypical" title="Includes Terminated Items" searchName="mDbSearchCol08"/>
+	-->
+	
+	</columns>
+</root>

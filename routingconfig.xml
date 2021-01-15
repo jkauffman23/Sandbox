@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/routingconfig.xsd">
+    <routing name="nonPo">
+		<queue name="Approve" inbox="true" enforceApprovalLimit="false"/>
+        <displayProperties>
+            <property name="site"/>
+            <property name="displayName"/>
+            <property name="email"/>
+            <property name="approvalLimit"/>
+			<property name="officeFlag"/>
+        </displayProperties>
+    </routing>
+	
+    <routing name="po">
+        <queue name="Approve" inbox="false" enforceApprovalLimit="true"/>
+
+        <displayProperties>
+            <property name="displayName"/>
+            <property name="email"/>
+            <property name="approvalLimit"/>
+            <property name="paymentOveride"/>
+        </displayProperties>
+    </routing>
+
+	 
+</routings>
+

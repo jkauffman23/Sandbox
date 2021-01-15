@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="doc-readonly-view-01" template="doc-tax-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd" readonly="true">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>	
+	</section-overrides>
+	
+		
+	<property-overrides>
+			
+			<textArea name="processInformation.comment" readonly="true"  />
+			<dropDown name="subType" readonly="true" />
+			<dropDown name="sensitivity" readonly="true" />
+			<date name="date" readonly="true" />
+			<checkbox name="tbdBoolean1" readonly="true" />
+			<date name="tbdDate1" readonly="true"/>
+			<dropDown name="tbdString1" readonly="true" validation=""  styleClass="onefifty" />
+			<date name="tbdDate2" readonly="true" />
+			<textArea name="voucherComments" readonly="true" />
+			<text name="vendor.name" validation="" readonly="true"/>		
+	</property-overrides>
+
+	<lineItem-overrides>		 
+	</lineItem-overrides>
+
+	<action-overrides>
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+				<subReason name="Duplicate Tax Form"/>
+				<subReason name="Incomplete documentation"/>
+				<subReason name="Not a Genuine Tax Form"/>
+				<subReason name="Other"/>
+			</reason>
+			<reason name="Rescan" commentsRequired="true" note="message.rescan">
+			</reason>
+			<reason name="Vendor Maintenance" commentsRequired="true" note="message.returnVendorMaintenance">
+			</reason>
+			<reason name="Terminate" commentsRequired="true" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+	</validations>
+</view>

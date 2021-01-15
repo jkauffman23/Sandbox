@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="upload-view" template="pexp-tpl.xml" readonly="true"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+	  
+	  
+	  <property-overrides>
+		
+	</property-overrides>
+	  
+    <validations>
+        
+    </validations>
+    
+</view>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="journal-error-view-001" template="journal-001-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+			<label name="Reject" value="Terminate"/>
+		</locale>
+	</labels>
+
+	<section-overrides>	
+	
+	</section-overrides>
+	
+	<property-overrides>
+			<lookup name="tbdString15" readonly="true" />
+			<text name="tbdString17" readonly="true" />
+			<textArea name="voucherComments" readonly="true"/>
+			<text name="accountingPeriod" readonly="true" />
+	</property-overrides>
+
+	<lineItem-overrides> 
+		<text name="itemDescription" readonly="true" />
+
+	</lineItem-overrides>
+
+	<action-overrides>
+
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.journal.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+	<validations>
+		<!-- validation name="validation.lineItemAmount" messageType="error" message="message.unbalancedJournalEntry"/ -->
+
+	</validations>
+</view>

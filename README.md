@@ -1,2 +1,2 @@
-# Sandbox
-Sandbox for training
+# Tutorial
+Tutorial for learning Git. Also acts as a Sandbox

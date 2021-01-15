@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels>
+		<!-- Label overrides for this template -->
+		<locale name="en">			
+			
+		</locale>
+	</labels>
+
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="tbdString14" labelKey="vendor.name" lookupType="lookup.vendorCode.VMgmt" readonly="false" validation="required" styleClass="threehundred"/> <!--Vendor name -->
+			<lookup row="1" col="2" name="vendorId" readonly="true" validation="required" lookupType="lookup.vendorCode.VMgmt" styleClass="threehundred"/>
+			<text row="2" col="1" name="erpDocId" readonly="true" styleClass="threehundred"/>
+			<text row="2" col="2" name="type" readonly="true" defaultValue="VENDOR"  styleClass="threehundred"/>
+			<text row="3" col="1" name="subType" readonly="true" defaultValue="W9" styleClass="threehundred"/>
+	    </properties>
+		<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="w9" visible="false" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1-2" name="tbdString52" labelKey="tbdString52" readonly="false" styleClass="threehundred"/> <!--TIN -->
+
+	    </properties>
+	</section>
+	
+	<section name="lineItems" visible="false" collapsible="true" collapsed="false">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+		</lineItemProperties>
+		<actions>
+		</actions>
+	</section>
+
+	<hiddenFields>
+	
+		<hidden name="postingERPId"  defaultValue="AOPS001"/>
+		<hidden name="group"  defaultValue="Vendor"/>
+        <hidden name="newBatchNumber"/>
+        <hidden name="paymentTermERPId"/>
+		<hidden name="paymentTypeERPId"/>
+		<hidden name="alternateVendor"/>
+		<hidden name="uploadRef"/>
+		<hidden name="requester.userName"/>
+		<hidden name="processInformation.failReason"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+	</hiddenFields>
+	<processors>
+	
+	</processors>
+</propertyTemplate>

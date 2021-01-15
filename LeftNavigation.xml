@@ -1,0 +1,108 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<!-- Version 6.6  2016.07.15 -->
+
+    <initpage href="/filenet/search.do?searchName=InboxSearchPay"/>
+    <action href="/filenet/search.do?searchName=InboxSearchPay" target="right" image="/images/ico-inbox-c16.png" name="action.myinbox" searchName="InboxSearchPay"/>
+		
+		
+		
+		<!--   Main Team Queues Section         -->
+   <section name="section.queues" collapsed="true" >
+		<action href="/filenet/search.do?searchName=IndexingSearch" target="right" image="/images/ico-folder-c16.png" name="action.indexing"  searchName="IndexingSearch"/>
+		<action href="/filenet/search.do?searchName=IndexingSearchPO" target="right" image="/images/ico-folder-c16.png" name="action.indexingPO"  searchName="IndexingSearchPO"/>
+		<action href="/filenet/search.do?searchName=IndexingSearchNP" target="right" image="/images/ico-folder-c16.png" name="action.indexingNP"  searchName="IndexingSearchNP"/>
+	</section>
+		
+	<!--   Main Team Queues Section         -->
+    <section name="section.queues.process" collapsed="true" >
+		<action href="/filenet/search.do?searchName=ExceptionSearch" target="right" image="/images/ico-folder-c16.png" name="action.generalexception" searchName="ExceptionSearch"/>
+		<action href="/filenet/search.do?searchName=SupervisorSearch" target="right" image="/images/ico-folder-c16.png" roles="MP_Administrator4" name="action.supervisor" searchName="SupervisorSearch"/>
+		<action href="/filenet/search.do?searchName=TradeReceiptsSearch" target="right" image="/images/ico-folder-c16.png" name="action.tradereceipts" searchName="CancelledInvoiceSearch"/>
+		<action href="/filenet/search.do?searchName=CorpFacilitiesSearch" target="right" image="/images/ico-folder-c16.png" name="action.corpfacilities" searchName="CorpFacilitiesSearch"/>
+		<action href="/filenet/search.do?searchName=VendorMaintenanceSearch" target="right" image="/images/ico-folder-c16.png" name="action.vendormaintenance" searchName="VendorMaintenanceSearch"/>
+		<action href="/filenet/search.do?searchName=InstructionsSearch" target="right" image="/images/ico-folder-c16.png" name="action.instructions" searchName="InstructionsSearch"/>
+        <action href="/filenet/search.do?searchName=RescanSearch" target="right" image="/images/ico-folder-c16.png" name="action.rescan" searchName="RescanSearch"/>		
+	</section>
+	
+		<!--   AP Group Queues         
+    <section name="section.queues.groups" collapsed="true" >
+		<action href="/filenet/search.do?searchName=IndexingSearchPO-G1" target="right" image="/images/ico-folder-c16.png" name="action.indexingPO-G1"  searchName="IndexingSearchPO-G1"/>
+		<action href="/filenet/search.do?searchName=IndexingSearchPO-G2" target="right" image="/images/ico-folder-c16.png" name="action.indexingPO-G2"  searchName="IndexingSearchPO-G2"/>
+		<action href="/filenet/search.do?searchName=IndexingSearchPO-G3" target="right" image="/images/ico-folder-c16.png" name="action.indexingPO-G3"  searchName="IndexingSearchPO-G3"/>
+		<action href="/filenet/search.do?searchName=IndexingSearchPO-G4" target="right" image="/images/ico-folder-c16.png" name="action.indexingPO-G4"  searchName="IndexingSearchPO-G4"/>
+		<action href="/filenet/search.do?searchName=IndexingSearchPO-G5" target="right" image="/images/ico-folder-c16.png" name="action.indexingPO-G5"  searchName="IndexingSearchPO-G5"/>
+		<action href="/filenet/search.do?searchName=IndexingSearchPO-UN" target="right" image="/images/ico-folder-c16.png" name="action.indexingPO-UN"  searchName="IndexingSearchPO-UN"/>
+	</section>-->
+	
+			<!--   AP Group Queues         
+    <section name="section.queues.special" collapsed="true" >
+		<action href="/filenet/search.do?searchName=ApproveCheckRequest" target="right" image="/images/ico-folder-c16.png" name="action.approvecheckrequest"  searchName="ApproveCheckRequest"/>
+		<action href="/filenet/search.do?searchName=PriceSupport" target="right" image="/images/ico-folder-c16.png" name="action.pricesupport"  searchName="PriceSupport"/>
+		<action href="/filenet/search.do?searchName=ZeroBalance" target="right" image="/images/ico-folder-c16.png" name="action.zerobalance"  searchName="ZeroBalance"/>
+	</section>-->
+	
+	
+	<!--   Main Get Next Work Item action        -->
+	<section name="section.getnext" roles="MP_Administrator4" collapsed="true" >
+        <action href="/filenet/search.do?searchName=IndexingSearch&amp;next=true" target="_blank" image="/images/ico-arrow-w8.png" name="action.getnext.indexing" roles="MP_Administrator1,MP_Processor1, MP_Processor4,MP_Administrator4,MP_Processor2, MP_Indexer3"/>
+        <action href="/filenet/search.do?searchName=ExceptionSearch&amp;next=true" target="right" image="/images/ico-arrow-w8.png" name="action.getnext.generalexception" roles="MP_Administrator1,MP_Indexer2, MP_Processor1, MP_Processor4, MP_Processor5,MP_Administrator4"/>
+		<action href="/filenet/search.do?searchName=SupervisorSearch&amp;next=true" target="_blank" image="/images/ico-arrow-w8.png" name="action.getnext.supervisor" roles="MP_Administrator1,MP_Processor1, MP_Processor4,MP_Administrator4,MP_Processor2"/>
+		<action href="/filenet/search.do?searchName=PreTaxSearch&amp;next=true" target="_blank" image="/images/ico-arrow-w8.png" name="action.getnext.pretax" roles="MP_Administrator1,MP_Processor1, MP_Approver4,MP_Auditor4, MP_Buyer4, MP_Processor2, MP_Processor3"/>   
+        <action href="/filenet/search.do?searchName=RescanSearch&amp;next=true" target="_blank" image="/images/ico-arrow-w8.png" name="action.getnext.rescan" roles="MP_Administrator1,MP_Indexer1, MP_Processor1,MP_Administrator4,MP_Processor2, MP_Indexer3"/>
+    </section>
+	
+			
+	<!--   Create Items Section       -->
+	<section name="section.requests" roles=" MP_Administrator1,MP_Administrator4, MP_Indexer2, MP_Processor1, MP_Processor4, MP_Processor2, MP_Indexer4, MP_Indexer3, MP_Approver1" collapsed="true">
+		<action href="/filenet/upload.do?view=upload-nonpo-view.xml" target="right" image="/images/ico-add-doc-c16.png" name="action.nonpo" />   		
+		<action href="/filenet/upload.do?view=upload-po-view.xml" target="right" image="/images/ico-add-doc-c16.png" name="action.po" />
+		<action href="/filenet/upload.do?view=upload-special-view.xml" target="right" image="/images/ico-add-doc-c16.png" name="action.special" />
+		<action href="/filenet/upload.do?view=upload-xls-view.xml&amp;flag=excel" target="right" image="/images/ico-add-doc-c16.png" name="action.excel" />			
+    </section>
+	
+	
+
+	
+	<!--   VENDOR MANAGEMENT SECTION     -->
+	<section name="section.vendormgmt" roles="MP_Administrator4" collapsed="true" Role="MP_Administrator4" >
+		<action href="/filenet/search.do?searchName=PortalAddressSearch" target="right" image="/images/ico-folder-c16.png" name="action.portaladdress" searchName="PortalAddressSearch"/>
+		<action href="/filenet/search.do?searchName=PortalFAQSearch" target="right" image="/images/ico-folder-c16.png" name="action.portalFAQ" searchName="PortalFAQSearch"/>
+		<action href="/filenet/search.do?searchName=PortalDiscountSearch" target="right" image="/images/ico-folder-c16.png" name="action.portaldiscount" searchName="PortalDiscountSearch"/>
+		<action href="/filenet/search.do?searchName=PortalW9Search" target="right" image="/images/ico-folder-c16.png" name="action.portalW9" searchName="PortalW9Search"/>
+		
+    </section>
+	
+    <!--  Posting Queues Section         -->    
+	<section name="section.postingqueues" roles=" MP_Administrator1, MP_Administrator4" collapsed="true" >
+		<!--<action href="/filenet/search.do?searchName=PrePostingSearch" target="right" image="/images/ico-folder-c16.png" name="action.preposting"  searchName="PrePostingSearch"/>-->
+		<action href="/filenet/search.do?searchName=PostingSearch" target="right" image="/images/ico-folder-c16.png" name="action.posting"  searchName="PostingSearch"/>
+		<action href="/filenet/search.do?searchName=PostingFailedSearch" target="right" image="/images/ico-folder-c16.png" name="action.postingfailed" searchName="PostingFailedSearch"/>
+		<action href="/filenet/search.do?searchName=PaymentSearch" target="right" image="/images/ico-folder-c16.png" name="action.payment" searchName="PaymentSearch"/>
+		<action href="/filenet/search.do?searchName=ClearanceSearch" target="right" image="/images/ico-folder-c16.png" name="action.clearance" searchName="ClearanceSearch"/>
+		<action href="/filenet/search.do?searchName=CancelledInvoiceSearch" target="right" image="/images/ico-folder-c16.png" name="action.cancelled" searchName="CancelledInvoiceSearch"/>
+				
+	</section>             
+
+	<!--   Search Actions        -->
+    <section name="section.search" collapsed="false">
+		<documentsearch target="right" showPoSearch="true" showVendorSearch="true"/>		
+    </section>
+	
+	<!--   Tools        -->
+    <section name="section.tools" collapsed="true">
+        <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-c16.png" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-c16.png" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-c16.png" name="action.preferences"/>
+		<!--<action href="" target="_blank" image="/images/ico-config-c16.png" name="action.preposting" roles="MP_Administrator1" contextPath="/ManagedPay/preposting.jsp"/>-->
+    </section>
+         
+	<!--   Applications         -->
+    <section name="section.applications" collapsed="True" roles="MP_Administrator1,MP_Administrator4">
+		<action href="" target="_blank" image="/images/ico-reports-c16.png" name="action.watson" roles="MP_Administrator1, MP_Processor4" contextPath="https://watson.analytics.ibmcloud.com/"/>
+		<action href="" target="_blank" image="/images/ico-reports-c16.png" name="action.powerbi" roles="MP_Administrator1, MP_Processor4" contextPath="https://app.powerbi.com/groups/me/getdata/welcome"/>
+	    <action href="" target="_blank" image="/images/ico-config-c16.png" name="action.adminmodule" roles="MP_Administrator1, MP_Processor4" contextPath="/ManagedPay/admin/index.jsp"/>
+		<action href="" target="_blank" image="/images/ico-config-c16.png" name="action.rulesadmin" roles="MP_Administrator1, MP_Processor4" contextPath="http://activepay64:9081/navigator/?desktop=Activeadmin"/>	
+		<action href="" target="_blank" image="/images/ico_configuration.gif" name="action.simpsap" roles="MP_Administrator1, MP_Processor4" contextPath="/ManagedPay/simsap"/>
+    </section>
+
+</navigation>

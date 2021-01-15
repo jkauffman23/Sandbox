@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<locale name="en">
+		<!-- Labels for Documents and Lines -->
+		<!-- This is done ALPHABETICALLY - PLEASE MAINTAIN THE ORDER! -->
+		
+		
+					<!--Choicelist labels-->
+					<!--label name="badEmail" value="PO"/-->
+			<label name="choicelist.invoiceTypePO" value="PO"/>
+			<label name="choicelist.invoiceTypeNONPO" value="NON-PO"/>
+			<label name="choicelist.invoiceTypeEDI" value="EDI"/>
+			<label name="choicelist.invoiceTypeEXP" value="Expense Report"/>
+			<label name="choicelist.invoiceTypePEXP" value="Purchase Card"/>
+			<label name="choicelist.invoiceTypeDOC" value="Doc"/>			
+			<label name="choicelist.invoiceTypeTAX" value="Tax"/>
+			<label name="choicelist.invoiceTypeBATCH" value="Batch" />
+			<label name="choicelist.invoiceTypeJOURNAL" value="Journal" />
+			<label name="choicelist.invoiceTypeRECEIPT" value="Receipt"/>
+			<label name="choicelist.invoiceTypeVENDOR" value="Vendor"/>
+			<label name="choicelist.invoiceTypePURCHASE" value="Purchase"/>
+			<label name="choicelist.invoiceTypeTEMPLATE" value="Template"/>
+			
+			
+			
+			<label name="choicelist.invoiceSubtypeINV" value="Standard"/>
+			<label name="choicelist.invoiceSubtypeCM" value="Credit Memo"/>
+			<label name="choicelist.invoiceSubtypeFXA" value="Fixed Assets"/>
+
+
+			
+			<label name="choicelist.invoicePOSubtypeINV" value="Standard"/>
+			<label name="choicelist.invoicePOSubtypeCM" value="Credit Memo"/>
+			<label name="choicelist.invoicePOSubtypeFXA" value="Fixed Assets"/>
+
+
+
+			<label name="choicelist.invoiceNONPOSubtypeINV" value="Standard"/>
+			<label name="choicelist.invoiceNONPOSubtypeCM" value="Credit Memo"/>
+			<label name="choicelist.invoiceNONPOSubtypeFXA" value="Fixed Assets"/>
+
+			<label name="choicelist.expenseSubTypesREGULAR" value="Credit Card"/>
+			<label name="choicelist.expenseSubTypesPREPAID" value="Pre-Paid Card"/>
+			<label name="choicelist.expenseSubTypesTRAVEL" value="Travel Request"/>
+			
+			<label name="choicelist.subTypeDoc01" value="W-8BEN"/>
+			<label name="choicelist.subTypeDoc02" value="W-8ECI"/>
+			<label name="choicelist.subTypeDoc03" value="W-8EXP"/>
+			<label name="choicelist.subTypeDoc04" value="W-8IMY"/>
+			<label name="choicelist.subTypeDoc05" value="W-8BEN-E"/>
+			<label name="choicelist.subTypeDoc06" value="W-9"/>
+			<label name="choicelist.subTypeDocOther" value="Other"/>
+			
+			<label name="choicelist.legalEntityPartnership" value="Partnership"/>
+			<label name="choicelist.legalEntityLLP" value="LLP"/>
+			<label name="choicelist.legalEntityLLC" value="LLC"/>
+			<label name="choicelist.legalEntityCorporation" value="Corporation"/>
+			<label name="choicelist.legalEntityIndividual" value="Individual"/>
+			<label name="choicelist.legalEntityOther" value="Other"/>
+			
+			<label name="choicelist.department1" value="Department 1"/>
+			<label name="choicelist.department2" value="Department 2"/>
+			<label name="choicelist.department3" value="Department 3"/>
+			
+			<label name="choicelist.specialHandlingCodeN" value="N - No Special Handling"/>
+			<label name="choicelist.specialHandlingCode1" value="1 - Future Use"/>
+			<label name="choicelist.specialHandlingCode2" value="2 - Print Remit Copy"/>
+			<label name="choicelist.specialHandlingCode3" value="3 - Return for final disposition"/>
+			<label name="choicelist.specialHandlingCode4" value="4 - Future Use"/>
+			<label name="choicelist.specialHandlingCode5" value="5 - Rent Vendor"/>
+			<label name="choicelist.specialHandlingCode6" value="6 - Expedited - FedEx"/>
+			<label name="choicelist.specialHandlingCode7" value="7 - EE Travel / Ent Reimbursements"/>
+			
+			<label name="choicelist.priority1" value="Low"/>
+			<label name="choicelist.priority2" value="Normal"/>
+			<label name="choicelist.priority3" value="High"/>
+			<label name="choicelist.priority4" value="Rush"/>
+			
+			<label name="choicelist.sensitivity1" value="Normal"/>
+			<label name="choicelist.sensitivity5" value="Sensitive"/>
+			<label name="choicelist.sensitivity10" value="Confidential"/>
+
+			
+			<label name="choicelist.customTypesDefaults" value="DEFAULT"/>
+			
+			<label name="choicelist.attachmentTypes15" value="Email"/>
+			<label name="choicelist.attachmentTypes1" value="AP Documents"/>
+			<label name="choicelist.attachmentTypes2" value="AR Documents"/>
+			<label name="choicelist.attachmentTypes3" value="Journal Documents"/>
+			<label name="choicelist.attachmentTypes4" value="Expense Attachments"/>
+
+			
+			<label name="choicelist.statesAL" value="Alabama"/>
+			<label name="choicelist.statesAK" value="Alaska"/>
+			<label name="choicelist.statesAZ" value="Arizona"/>
+			<label name="choicelist.statesAR" value="Arkansas"/>
+			<label name="choicelist.statesCA" value="California"/>
+			<label name="choicelist.statesCO" value="Colorado"/>
+			<label name="choicelist.statesCT" value="Connecticut"/>
+			<label name="choicelist.statesDE" value="Delaware"/>
+			<label name="choicelist.statesDC" value="District of Columbia"/>
+			<label name="choicelist.statesFL" value="Florida"/>
+			<label name="choicelist.statesDOT" value="Foreign Vendor"/>
+			<label name="choicelist.statesGA" value="Georgia"/>
+			<label name="choicelist.statesHI" value="Hawaii"/>
+			<label name="choicelist.statesID" value="Idaho"/>
+			<label name="choicelist.statesIL" value="Illinois"/>
+			<label name="choicelist.statesIN" value="Indiana"/>
+			<label name="choicelist.statesIA" value="Iowa"/>
+			<label name="choicelist.statesKS" value="Kansas"/>
+			<label name="choicelist.statesKY" value="Kentucky"/>
+			<label name="choicelist.statesLA" value="Louisiana"/>
+			<label name="choicelist.statesME" value="Maine"/>
+			<label name="choicelist.statesMD" value="Maryland"/>
+			<label name="choicelist.statesMA" value="Massachusetts"/>
+			<label name="choicelist.statesMI" value="Michigan"/>
+			<label name="choicelist.statesMN" value="Minnesota"/>
+			<label name="choicelist.statesMS" value="Mississippi"/>
+			<label name="choicelist.statesMO" value="Missouri"/>
+			<label name="choicelist.statesMT" value="Montana"/>
+			<label name="choicelist.statesNE" value="Nebraska"/>
+			<label name="choicelist.statesNV" value="Nevada"/>
+			<label name="choicelist.statesNH" value="New Hampshire"/>
+			<label name="choicelist.statesNJ" value="New Jersey"/>
+			<label name="choicelist.statesNM" value="New Mexico"/>
+			<label name="choicelist.statesNY" value="New York"/>
+			<label name="choicelist.statesNC" value="North Carolina"/>
+			<label name="choicelist.statesND" value="North Dakota"/>
+			<label name="choicelist.statesOH" value="Ohio"/>
+			<label name="choicelist.statesOK" value="Oklahoma"/>
+			<label name="choicelist.statesOR" value="Oregon"/>
+			<label name="choicelist.statesPA" value="Pennsylvania"/>
+			<label name="choicelist.statesRI" value="Rhode Island"/>
+			<label name="choicelist.statesSC" value="South Carolina"/>
+			<label name="choicelist.statesSD" value="South Dakota"/>
+			<label name="choicelist.statesTN" value="Tennessee"/>
+			<label name="choicelist.statesTX" value="Texas"/>
+			<label name="choicelist.statesUT" value="Utah"/>
+			<label name="choicelist.statesVT" value="Vermont"/>
+			<label name="choicelist.statesVA" value="Virginia"/>
+			<label name="choicelist.statesWA" value="Washington"/>
+			<label name="choicelist.statesWV" value="West Virginia"/>
+			<label name="choicelist.statesWI" value="Wisconsin"/>
+			<label name="choicelist.statesWY" value="Wyoming"/>
+			
+			
+			<label name="choicelist.provincesAB" value="Alberta"/>
+			<label name="choicelist.provincesBC" value="British Columbia"/>
+			<label name="choicelist.provincesMB" value="Manitoba"/>
+			<label name="choicelist.provincesNB" value="New Brunswick"/>
+			<label name="choicelist.provincesNF" value="New Foundland"/>
+			<label name="choicelist.provincesNS" value="Nova Scotia"/>
+			<label name="choicelist.provincesON" value="Ontario"/>
+			<label name="choicelist.provincesPE" value="Prince Edward Island"/>
+			<label name="choicelist.provincesQC" value="Quebec"/>
+			<label name="choicelist.provincesSK" value="Saskatchewan"/>
+			
+			<label name="choistList.currencyUSD" value="USD"/>
+			<label name="choistList.currencyCDN" value="Canadian Dollar"/>
+			
+			<label name="choistList.messageSubTypesM1" value="Invoice"/>
+			<label name="choistList.messageSubTypesM2" value="Payment"/>
+			<label name="choistList.messageSubTypesM3" value="Address"/>
+			<label name="choistList.messageSubTypesM4" value="Misc"/>
+
+			<label name="choistList.voucherInvoiceTypesNONPO" value="Non-PO Voucher"/>
+			<label name="choistList.voucherInvoiceTypesPO" value="PO Voucher"/>
+			
+			<label name="choistList.approvalExceptionTypeApprove" value="Approval"/>
+			<label name="choistList.approvalExceptionTypeGL" value="GL Review Accounts"/>
+			<label name="choistList.approvalExceptionTypeFXA" value="FXA Accounts"/>
+			<label name="choistList.approvalExceptionType0" value="--None--"/>
+			
+			<label name="choistList.comments1" value="Charged Wrong Tax Amount"/>
+			<label name="choistList.comments2" value="Vendor Charged More Than Negotiated"/>
+			<label name="choistList.comments3" value="Did Not Receive Goods or Service"/>
+			<label name="choistList.comments4" value="Invoice Had Previous Paid Balance"/>
+			<label name="choistList.comments5" value="Multiple Approvals Needed"/>
+			
+			<label name="choistList.credit0" value="Credit Reason 1"/>
+			<label name="choistList.credit1" value="Credit Reason 2"/>
+			
+			
+			
+			<label name="choistList.expenseLineTypesCash" value="Cash"/>
+			<label name="choistList.expenseLineTypesCredit" value="CC Corp"/>
+			
+			<label name="choistList.truncated0" value="No"/>
+			<label name="choistList.truncated1" value="Yes"/>
+
+			
+			<label name="choistList.freightTerms1" value="Pre-Paid"/>
+			<label name="choistList.freightTerms3" value="Collect"/>
+			<label name="choistList.freightTerms5" value="Third Party Collect"/>
+			
+
+			<label name="choistList.department1" value="Marketing"/>
+			<label name="choistList.department2" value="Merchandise Merchandise"/>
+			<label name="choistList.department3" value="Custom Merchandise"/>
+			<label name="choistList.department4" value="In Store Events"/>
+			
+			<label name="choistList.frequency1" value="AD Hoc"/>
+			<label name="choistList.frequency2" value="Monthly"/>
+			<label name="choistList.frequency3" value="Quarterly"/>
+			<label name="choistList.frequency4" value="Year-End"/>
+
+			
+			<label name="choistList.portalstatusProcessing" value="Processing"/>
+			<label name="choistList.portalstatusPayment" value="Payment Scheduled"/>
+			<label name="choistList.portalstatusApproved" value="Approved"/>
+			<label name="choistList.portalstatusPaid" value="Paid"/>
+			<label name="choistList.portalstatusCleared" value="Cleared"/>
+			<label name="choistList.portalstatusMessage" value="Message"/>
+			
+			<label name="choistList.accrualReg" value="Regular"/>
+			<label name="choistList.accrualAPC" value="Coded Invoices"/>
+			<label name="choistList.accrualAPN" value="Uncoded Invoices"/>
+			<label name="choistList.accrualEXP" value="Expense Reports"/>
+			
+			<label name="choistList.queueNumber1" value="Draft-Not Submitted"/>
+			<label name="choistList.queueNumber2" value="Ready for Approval"/>
+			<label name="choistList.queueNumber3" value="Posting"/>
+			<label name="choistList.queueNumber4" value="Posting Failed"/>
+			<label name="choistList.queueNumber5" value="Vendor Maintenance"/>
+			<label name="choistList.queueNumber6" value="Exception"/>
+			<label name="choistList.queueNumber7" value="Rejected for review"/>
+			<label name="choistList.queueNumber8" value="AP review"/>
+			
+			<label name="choistList.UOMEA" value="EA"/>
+			<label name="choistList.UOMLB" value="LBS"/>
+			<label name="choistList.UOMGL" value="GAL"/>
+			<label name="choistList.UOMDY" value="DAY"/>
+			<label name="choistList.UOMWK" value="WEEK"/>
+			<label name="choistList.UOMMH" value="MONTH"/>
+			<label name="choistList.UOMYR" value="YEAR"/>
+			<label name="choistList.UOMLTR" value="LTR"/>
+			
+			<label name="choiceList.DCBPAYMENTS" value="DCB PAYMENTS"/>
+			<label name="choiceList.COMDATAPAYMENTS" value="COMDATA PAYMENTS"/>
+			<label name="choiceList.CAMBRIDGEPAYMENTS" value="CAMBRIDGE PAYMENTS"/>
+
+			<!--MIR-1077-->
+			<label name="choiceList.vendor.bankAccountType.checking" value="Checking"/>
+			<label name="choiceList.vendor.bankAccountType.saving" value="Saving"/>
+			
+			<label name="paymentsAddToBatch.paymentBatch" value="Already in Batch"/>
+			<label name="paymentsAddToBatch.paymentModeId" value="Mismatched Payment Mode"/>
+
+			<label name="previousQueue" value="Previous Queue"/>
+			<label name="previousQueueDateTime" value="Previous Queue DateTime"/><label name="paymentsAddToBatch.paymentBatch" value="Already in Batch"/>
+			<label name="paymentsAddToBatch.paymentModeId" value="Mismatched Payment Mode"/>
+
+			<label name="previousQueue" value="Previous Queue"/>
+			<label name="previousQueueDateTime" value="Previous Queue DateTime"/>
+			<!-- mir-1108 -->
+			<label name="choistList.paymentType.category.wire" value="WIRE"/>
+			<label name="choistList.paymentType.category.check" value="CHECK"/>
+			<label name="choistList.paymentType.category.ach" value="ACH"/>
+			<label name="choistList.paymentType.category.vcard" value="VCARD"/>
+			<label name="choistList.paymentType.category.iACH" value="iACH"/>
+			<label name="choistList.paymentType.category.iWIRE" value="iWIRE"/>
+			
+			<label name="lookup.Department" value="Department"/>
+			<label name="lookup.Description" value="Description"/>
+			
+			<label name="choiceList.purchaseSubtype.regular" value="Regular"/>
+			<label name="choiceList.purchaseSubtype.blanket" value="Blanket"/>
+			
+			<label name="choiceList.poMatchMethod.N" value="Non Receivable PO"/>
+			<label name="choiceList.poMatchMethod.F" value="Receivable PO"/>
+			
+			
+			<label name="choiceList.vendorcategory.C" value="C - Vendor"/>
+			<label name="choiceList.vendorcategory.B" value="B - Back office"/>
+			<label name="choiceList.vendorcategory.T" value="T - Trustee"/>
+			<label name="choiceList.vendorcategory.E" value="E - Employee"/>			
+			
+			<label name="choiceList.independentContractor.NA" value="N/A"/>
+			<label name="choiceList.independentContractor.verified" value="Verified"/>			
+			
+			<label name="choiceList.bankaccounttype.C" value="Checking"/>
+			<label name="choiceList.bankaccounttype.S" value="Savings"/>		
+	 
+			<label name="choiceList.erpID.1" value="Active Ops"/>
+	 			
+			<label name="choiceList.approvalMethod.businessUnit" value="Business Unit"/>
+			<label name="choiceList.approvalMethod.routeCode" value="Route Codes"/>
+			<label name="choiceList.approvalMethod.adhocRoute" value="Adhoc Routing"/>
+			
+			
+			
+			<!--testing labels for MIR-13-->
+			<label name="Login Failed. Password has expired. Please contact administrator for password reset." value="login2319"/>
+			
+			<label name="account.company.code" value="Organization Code"/>   <!--  MUST REMEMBER THIS IS MAPPED FROM ORG TABLE TO companyCode ID. -->
+			<label name="appVersion" value="Baseline6.8.5" />   <!--  Use this label to display on app page for validation of system you are in -->
+			<label name="AuditUTA" value="Use Tax Audit" /> 
+			<label name="SupervisorUTA" value="Supervisor UTA" /> 
+			<label name="action.myinbox.UTA" value="Use Tax Inbox" /> 
+			<label name="action.audit.UTA" value="Use Tax Audit" /> 
+			<label name="action.supervisor.UTA" value="Use Tax Review" />
+			<label name="action.dashboard" value="Dashboard" />
+			<label name="action.passwordreset" value="Reset Password" />
+			<label name="action.resetposting" value="Reset Posting" />
+			<label name="taxDetails" value="Tax Detail" />
+			<label name="invoiceAccountDetails" value="Invoice Account Detail" />
+			<label name="shipToCompany" value="Ship To Company" />
+			<label name="shipToAddress1" value="Ship To Add1" />
+			<label name="shipToAddress2" value="Ship To Add2" />
+			<label name="shipToCity" value="Ship To City" />
+			<label name="shipToState" value="Ship To State" />
+			<label name="shipToZip" value="Ship To Postal Code" />
+			<label name="seqId" value="Doc Seq ID"/>
+			<label name="doc" value="Task" />
+			<label name="docDetail" value="Document Detail"/>
+
+			<label name="calculatedRemainingTotal" value="Remaining Balance"/>
+
+			<label name="appName" value="ActiveOps"/>
+			
+			<label name="docOrgCode" value="Organization"/>
+			<label name="docSubType" value="Sub Type"/>
+			<label name="paymentModeId" value="Payment Mode"/>
+			
+			<label name="addLineItem" value="Add"/>
+			<label name="removeLineItem" value="Delete"/>
+			<label name="addSubLineItem" value="+Itemize"/>
+			<label name="removeSubLineItem" value="-Itemize"/>
+			<label name="Status Pending" value="Workflow Terminated"/>
+			<label name="accountCode" value="GL Account Code"/>
+			<label name="account.code" value="GL Account Code"/>
+			<label name="date" value="Invoice Date"/>
+			<label name="dateRange" value="Invoice Range"/>
+			<label name="delegateUserName" value="Card Holders"/>
+			<label name="department" value="Department"/>
+			<label name="discount" value="Discount Amount"/>
+			<label name="discountDueDate" value="Discount Due Date"/>
+			<label name="dueDate" value="Due Date"/>
+			<label name="docPriority" value="Priority"/>
+			<label name="scannedZipCode" value="Scanned Zip Code" />
+			<label name="organization.name" value="Name" />
+			<label name="organization.code" value="Code" />
+			<label name="organization.description" value="Description"/>
+			<label name="organization.deleteFlag" value="Disabled?" />
+			<label name="project.code" value="Project number"/>
+			<label name="project.desc" value="Project Description"/>
+			<label name="1099Type" value="1099 Code"/>		
+			<label name="account.autoPosting" value="Auto Posting"/>
+			<label name="account.company.fullname" value="Company Full Name"/>
+			<label name="account.code1" value="Code 1"/>
+			<label name="account.code2" value="Code 2"/>
+			<label name="account.code3" value="Code 3"/>
+			<label name="account.code4" value="Code 4"/>
+			<label name="account.code5" value="Code 5"/>
+			<label name="account.code6" value="Code 6"/>
+			<label name="account.code7" value="Code 7"/>
+			<label name="account.code8" value="Code 8"/>
+			<label name="account.code9" value="Code 9"/>
+			<label name="account.code10" value="Code 10"/>
+			<label name="account.currency.code" value="Currency Code"/>
+			<label name="account.company.code" value="Company Code"/>
+			<label name="account.currency.name" value="Currency"/>
+			<label name="account.deleteFlag" value="Deletion Flag"/>
+			<label name="account.description" value="Description"/>
+			<label name="account.postingBlock" value="Post Block"/>
+			<label name="account.systemOriginator.code" value="ERP"/>
+			<label name="account.systemOriginator.description" value="ERP System"/>
+			<label name="account.type" value="Account Type"/>
+			<label name="accountingPeriod.year" value="Accounting Year"/>
+			<label name="accountingPeriod.details" value="Accounting Period Details"/>
+			<label name="accountingPeriod.month" value="Accounting Month"/>
+			<label name="accountingPeriod.period" value="Accounting Period"/>
+			<label name="accountingPeriod.startDate" value="Start Date"/>
+			<label name="accountingPeriod.endDate" value="End Date"/>
+			<label name="accountingPeriod.orgCode" value="Organization Code"/>		
+			<label name="accountingPeriod.deletionFlag" value="Enabled/Disabled"/>
+			<label name="accountingPeriod.seqId" value="Seq. #"/>
+			<label name="accountingPeriod.company" value="Company Code"/>
+			<label name="accountingPeriod.systemOriginatorId" value="System Originator ID"/>
+			<label name="accountingPeriod.createDate" value="Create Date"/>
+			<label name="accountingPeriod.lastModifiedDate" value="Last Modified Date"/>
+			<label name="afeNumber" value="AFE Number"/>
+			<label name="alternatevendor" value="New Vendor"/>
+			<label name="approver" value="Approver"/>
+			<label name="approvalException" value="Approval Exception" /> 
+			<label name="approvalException.majorMinor" value="Account" />
+			<label name="approvalException.type" value="Type" />
+			<label name="approvalException.description" value="Description"/>
+			<label name="approvalException.approvalLimit" value="Approval Limit"/>
+			<label name="approvalException.defaultLimit" value="Default Limit"/>
+			<label name="approvalException.userPkId" value="User ID"/>
+			<label name="approvalException.defaultLimit" value="Default Limit"/>
+			<label name="accountDescription" value="Account Description"/>
+			
+			<label name="baselineDate" value="Baseline Date"/>
+			<label name="batchNumber" value="Batch Number"/>
+			<label name="batch.idsequence" value="Batch ID"/>
+			<label name="batchOrdinal" value="Batch Ordinal"/>
+			<label name="businessUnit" value="Business Unit"/>
+			<label name="buyerId" value="Buyer ID"/>
+			<label name="buyerName" value="Buyer"/>
+			<label name="bankAcctNumber" value="Bank Acct No."/>
+
+			<label name="cctseqId" value="CC Id" /> 
+			<label name="ccttranxId" value="Trans Id" /> 
+			<label name="cctemployeeNo" value="Emp No" /> 
+			<label name="cctsrcCurr" value="Src Curr" /> 
+			<label name="cctbillCurr" value="Bill Curr" /> 
+			<label name="cctconvRate" value="Conv Rate" /> 
+			<label name="ccttranxDate" value="Trans Date" /> 
+			<label name="cctPostingDate" value="Posting Date" /> 
+			<label name="ccttotalDue" value="Total Due" /> 
+			<label name="cctNumber" value="Card No" /> 
+			<label name="cctdescription" value="Trans Desc" /> 
+			<label name="ccttaxamt" value="Tax Amount" /> 
+			<label name="cctcreatedate" value="Create Date" /> 
+			<label name="cctassigned" value="Allocated?" /> 
+			<label name="cctassigneddate" value="Allocated Date" /> 
+			<label name="cctUserId" value="User" /> 
+			<label name="userId" value="Card Holder" /> 
+			<label name="creditCardNumber" value = "CC #"/>
+
+			<label name="checkCode" value="Check Code"/>
+			<label name="checkNumber" value="Check Number"/>
+			<label name="checkDate" value="Check Date"/>
+			<label name="checkClearDate" value="Check Clear Date"/>
+			<label name="checkDescription" value="Unused"/>
+			<label name="checkStubMessage" value="Check Message"/>
+			<label name="companyCode" value="Organization Code"/>
+			<label name="clearingDocumentNumber" value="Check Number"/>
+			<label name="clearingAmount" value="Check Amount"/>
+			<label name="clearingDate" value="Clearing Date"/>		
+
+			<label name="company.code" value="Company"/>
+			<label name="company.country" value="Country"/>
+			<label name="company.customerCode" value="Customer Code"/>
+			<label name="company.deleteFlag" value="Deletion Flag"/>
+			<label name="company.fullName" value="Company Name"/>
+			<label name="company.shortName" value="Company Name (short)"/>
+			<label name="company.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="company.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="company.tbdDate1" value="tbdDate1"/>
+			<label name="company.tbdDate2" value="tbdDate2"/>
+			<label name="company.tbdNumber1" value="tbdNumber1"/>
+			<label name="company.tbdNumber2" value="tbdNumber2"/>
+			<label name="company.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="company.tbdQuantity2" value="tbdQuantity2"/>
+			<label name="company.tbdString1" value="tbdString1"/>
+			<label name="company.tbdString2" value="tbdString2"/>
+			<label name="company.tbdString3" value="tbdString3"/>
+			<label name="company.tbdString4" value="tbdString4"/>
+			<label name="Cost Center" value="Cost Center"/>
+			<label name="costObjectId1" value="BU Code"/>
+			<label name="costObjectId2" value="costObjectId2"/>
+			<label name="costObject" value="Cost Objects"/>
+			<label name="costObject.code" value="Code"/>
+			<label name="costObject.description" value="Description"/>
+			<label name="costObject.tbdString2" value="Approver" />  
+			<label name="costObject.deleteFlag" value="Deleted?" /> 
+			<label name="costObject.systemOriginatorId" value="System Originator ID"/>
+			<label name="costObject.tbdNumber1" value="tbdNumber1"/>
+			<label name="costObject.tbdNumber2" value="Not Used" />  
+			<label name="costObject.tbdCurrency1" value="Not Used" />
+			<label name="costObject.tbdCurrency2" value="Not Used" />  
+			<label name="costObject.tbdQuantity1" value="Not Used" />  
+			<label name="costObject.tbdQuantity2" value="Not Used" />  
+			<label name="costObject.tbdString1" value="Not Used" />  
+			<label name="costObject.tbdString3" value="Not Used" />  
+			<label name="costObject.tbdString4" value="Not Used" />  
+			<label name="costObject.tbdString5" value="Not Used" />  
+			<label name="costObject.tbdString6" value="Not Used" />  
+			<label name="costObject.tbdString7" value="Not Used" />  
+			<label name="costObject.tbdString8" value="Not Used" />  
+			<label name="costObject.tbdString9" value="Not Used" />  
+			<label name="costObject.tbdString10" value="Not Used" />  
+			<label name="costObject.tbdString11" value="Not Used" />  
+			<label name="costObject.tbdString12" value="Not Used" />
+			<label name="costObject.costObjectType" value="Cost Object Type"/>
+			<label name="costObject.costObjectType.code" value="Cost Object Type"/>
+			<label name="costObject.costObjectType.company.code" value="Company"/>
+			<label name="costObject.costObjectType.controlArea" value="Cost Object Control Area"/>
+			<label name="costObject.costObjectType.description" value="Cost Object Description"/>
+			<label name="costObjectType.code" value="BU Type"/>
+			<label name="costObjectTypeId1" value="BU Type"/>
+			<label name="costObjectType.company.code" value="Company"/>
+			<label name="costObjectType.controlArea" value="Control Area"/>
+			<label name="costObjectType.description" value="Cost Object Description"/>
+			<label name="country.code" value="Country Code"/>
+			<label name="country.currency" value="Currency"/>
+			<label name="country.currency.code" value="Currency Code"/>
+			<label name="country.deleteFlag" value="Deletion Flag"/>
+			<label name="country.name" value="Country"/>
+			<label name="country.languageCode" value="Language"/>
+			<label name="country.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="country.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="country.tbdDate1" value="tbdDate1"/>
+			<label name="country.tbdDate2" value="tbdDate2"/>
+			<label name="country.tbdNumber1" value="tbdNumber1"/>
+			<label name="country.tbdNumber2" value="tbdNumber2"/>
+			<label name="country.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="country.tbdQuantity2" value="tbdQuantity2"/>
+			<label name="country.tbdString1" value="tbdString1"/>
+			<label name="country.tbdString2" value="tbdString2"/>
+			<label name="country.tbdString3" value="tbdString3"/>
+			<label name="country.tbdString4" value="tbdString4"/>
+			<label name="country.alpha2Code" value="Alpha 2 Code"/>
+			<label name="country.alpha3Code" value="Alpha 3 Code"/>
+			<label name="country.numericCode" value="Numeric Code"/>
+			<label name="createDate" value="Create Date"/>
+			<label name="creditCard.assigned" value="Assigned ?"/>
+			<label name="creditCard.cardNumber" value="Card Number"/>
+			<label name="creditCard.delete" value="Delete ?"/>
+			<label name="creditCard.employeeNumber" value="Employee Number"/>
+			<label name="currencies.currency.code" value="Currency Code"/>
+			<label name="currencies.currency.name" value="Currency"/>
+			<label name="currencyId" value="Currency"/>
+			<label name="currency.code" value="Currency Code"/>
+			<label name="currency.name" value="Currency"/>
+			<label name="currency.deleteFlag" value="Deletion Flag"/>
+			<label name="currency.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="currency.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="currency.tbdDate1" value="tbdDate1"/>
+			<label name="currency.tbdDate2" value="tbdDate2"/>
+			<label name="currency.tbdNumber1" value="tbdNumber1"/>
+			<label name="currency.tbdNumber2" value="tbdNumber2"/>
+			<label name="currency.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="currency.tbdQuantity2" value="tbdQuantity2"/>
+			<label name="currency.tbdString1" value="tbdString1"/>
+			<label name="currency.tbdString2" value="tbdString2"/>
+			<label name="currency.tbdString3" value="tbdString3"/>
+			<label name="currency.tbdString4" value="tbdString4"/>
+			<label name="ccCardIndicator" value="Credit Card Indicator"/>
+			<label name="defaultCode1" value="Default Company"/>
+			<label name="defaultCode2" value="Default Location"/>
+			<label name="defaultValue" value="Default Values"/>	
+			<label name="defaultValue.company.code" value="Company Code"/>
+			<label name="defaultValue.details" value="User Default Details"/>
+			<label name="defaultValue.costObjectType" value="Cost Object Type"/>	
+			<label name="defaultValue.costObject" value="Cost Object"/>
+			<label name="defaultValue.paymentOveride" value="Cost Object"/>
+			<label name="defaultValue.approvalLimit" value="Approval Limit"/>
+			<label name="defaultValue.notificationFrequency" value="Notification Frequency"/>
+			<label name="defaultValue.approvalCurrency" value="Approval Currency"/>
+			<label name="defaultValue.level" value="Level"/>				
+			<label name="erpDocId" value="Voucher"/>
+			<label name="erpDocumentId" value="ERP Document Id"/>
+			<label name="errorCodeTranslation.add" value="Add new error code translation"/>
+			<label name="errorCodeTranslation.header.list" value="Error code translations"/>
+			<label name="errorCodeTranslation.header.form" value="Error code translation"/>
+			<label name="errorCodeTranslation.managedPayCode" value="MP Error Code"/>
+			<label name="errorCodeTranslation.erpCode" value="ERP Error Code"/>
+			<label name="errorCodeTranslation.erpErrorMessage" value="Error Message"/>
+			<label name="errorCodeTranslation.systemOriginator" value="ERP Source"/>
+			
+			<label name="expenseCategory" value="Expense Category"/>
+			<label name="expenseCategory.details" value="Expense Category Details"/>
+			<label name="expenseCategory.name" value="Category Name"/>
+			<label name="expenseCategory.description" value="Description"/>
+			<label name="expenseCategory.deletionFlag" value="Disabled"/>
+			
+
+			<label name="failReason" value="Reason"/>
+			<label name="firstName" value="First Name"/>
+			<label name="freightAmount1" value="Shipping Amount"/>
+			<label name="freightAmount2" value="Freight Adjustment"/>
+
+			<label name="glExcelUpload" value="GL Excel Upload"/>
+			<label name="glExcel.accountCode" value="GL Account Code"/>
+			<label name="glExcel.description" value="Item Description"/>
+			<label name="glExcel.file" value="File:"/>
+			<label name="glExcel.lineTotal" value="Line Total"/>
+			<label name="glExcel.tbdString14" value="Department"/>
+			
+			<label name="grossAmount" value="Gross Amount"/>
+			<label name="group" value="Doc Group"/>
+			<label name="group.displayName" value="Display Name"/>
+			<label name="group.header" value="Group Details"/>
+			<label name="group.code" value="Group Code"/>
+			<label name="group.createDate" value="Create Date"/>
+			<label name="group.email" value="Email"/>
+			<label name="group.phone" value="Phone"/>
+			<label name="group.lastLogon" value="Last Log-on"/>
+			<label name="group.lastModifiedDate" value="Last Modified Date"/>
+			<label name="group.tableHeader" value="Users for this Group"/>
+			<label name="group.name" value="Group Name"/>
+			<label name="group.description" value="Description"/>
+			<label name="group.user" value="User Name"/>
+			<label name="group.tbdDate1" value="tbdDate1"/>
+			<label name="group.tbdDate2" value="tbdDate2"/>
+			<label name="group.tbdNumber1" value="tbdNumber1"/>
+			<label name="group.tbdNumber2" value="tbdNumber2"/>
+			<label name="group.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="group.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="group.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="group.tbdQuantity2" value="tbdQuantity2"/>
+
+			<label name="includeDeleted" value="Include Disabled"/>
+			<label name="itemCode" value="Item Code"/>
+			<label name="itemDescription" value="Item Description"/>
+			<label name="invoice.postalCode" value="ZIP"/>
+			
+			<label name="lastRejectionReason" value="Reject Reason"/>
+			<label name="lastSubRejectionReason" value="Sub-Reason"/>
+			<label name="lastFailReason" value="Fail Reason"/>
+
+			<label name="lastModifiedDate" value="Last Modified"/>
+			<label name="lastName" value="Last Name"/>
+			<label name="launch" value="Override Edit"/>
+			<label name="lineNumber" value="Line"/>
+			<label name="lineStatusCode" value="Status"/>
+			<label name="lineTotal" value="Line Total"/>
+			<label name="line.tbdString1" value="TBD String 1"/>
+			<label name="line.tbdString3" value="TBD String 3"/>
+			<label name="location.code" value="Location Code"/>
+			<label name="location.store" value="Branch Store"/>
+			<label name="location.department" value="Department"/>
+			
+			<label name="journal.idsequence" value="Journal ID"/>
+			
+			<label name="majorMinor" value="Cost Code" />
+			<label name="majorMinor.lookup" value="Account" />
+			<label name="materialId" value="Material"/>
+			<label name="manfPartNummber" value="Manf Part Number"/>
+			<label name="mccCode" value="MCC Code"/>
+			<label name="matched" value="Matched"/>
+			
+			<label name="venBankSwiftCode" value="SWIFT"/>
+
+			<label name="next" value="Get Next"/>
+			<label name="netAmount" value="Net Amount"/>
+			<label name="newBatchNumber" value="New Batch Number"/>
+			<label name="newBatchOrdinal" value="New Batch Ordinal"/>
+			<label name="number" value="Invoice Number"/>
+
+			<label name="outputReference" value="Output Reference"/>
+			<label name="originatorName" value="Submitter"/>
+			<label name="operationName" value="Operation Name"/>
+			<label name="organization" value="Organization" />
+			<label name="organization.header" value="Organizations" />
+			<label name="organization.name" value="Name" />
+			<label name="organization.createDate" value="Create Date" />
+			<label name="organization.lastModifiedDate" value="Last Modified Date" />
+			<label name="organization.code" value="Code" />
+			<label name="organization.description" value="Description"/>
+			<label name="organization.deleteFlag" value="Disabled?" />
+			<label name="organization.tbdDate1" value="tbdDate1" />
+			<label name="organization.tbdDate2" value="tbdDate2" />
+			<label name="organization.tbdNumber1" value="tbdNumber1" />
+			<label name="organization.tbdNumber2" value="tbdNumber2" />
+			<label name="organization.tbdString1" value="tbdString1" />
+			<label name="organization.tbdString2" value="tbdString2" />
+			<label name="organization.tbdString3" value="tbdString3" />
+			<label name="organization.tbdString4" value="tbdString4" />
+			<label name="organization.tbdCurrency1" value="tbdCurrency1" />
+			<label name="organization.tbdCurrency2" value="tbdCurrency2" />
+			<label name="organization.tbdQuantity1" value="tbdQuantity1" />
+			<label name="organization.tbdQuantity2" value="tbdQuantity2" />
+			
+			<label name="paymentModeId" value="Payment Template"/>
+			<label name="paymentMode.paymentType.category" value="Category"/>
+			<label name="paymentMode.country.name" value="Bank Country"/>
+			<label name="paymentBatchNumber" value="Payment Batch Number"/>
+			<label name="paymentBatchDescription" value="Payment Batch Description"/>
+			<label name="paymentsPayRef" value="Payment Pay Reference"/>
+			<label name="paymentsSourceSeqId" value="Payment Source SeqId"/>
+			<label name="parameter" value="Parameter"/>
+			<label name="parameter.admin4Specific" value="Admin4 Specific?"/>
+			<label name="parameter.startDate" value="Effective Start Date"/>
+			<label name="parameter.endDate" value="Effective End Date"/>
+			<label name="parameter.systemParameter" value="System Parameter"/>
+			<label name="parameter.value" value="Parameter Value"/>
+			<label name="parameter.type" value="Parameter Type"/>
+			<label name="parameter.disabled" value="Disabled"/>
+			<label name="parameter.addEdit" value="Add/Edit System Parameters Form"/>
+			<label name="parameter.add" value="Add/Edit System Parameters Form"/>
+			<label name="parameter.header" value="System Parameters"/>
+			<label name="parameter.to" value="To"/>
+			<label name="parameter.from" value="From"/>
+			<label name="partNumber" value="Part Number"/>
+			<label name="partialPaymentFlag" value="Partial Payment"/>
+			<label name="paymentMemo" value="Payment Memo"/>
+			<label name="paymentTermERPId" value="ERP"/>
+			<label name="paymentTermId" value="Payment Term"/>
+			<label name="paymentTerm.code" value="Payment Terms Code"/>
+			<label name="paymentTerm.daysDue" value="Duedate Offset"/>
+			<label name="paymentTerm.daysOffset1" value="Days Offset 1"/>
+			<label name="paymentTerm.daysOffset2" value="Days Offset 2"/>
+			<label name="paymentTerm.daysOffset3" value="Days Offset 3"/>
+			<label name="paymentTerm.description" value="Terms"/>
+			<label name="paymentTerm.details" value="Payment Term Details"/>
+			<label name="paymentTerm.lookupDescription" value="Payment Terms Description"/>
+			<label name="paymentTerm.deleteFlag" value="Deletion Flag"/>
+			<label name="paymentTerm.discount1" value="Discount 1"/>
+			<label name="paymentTerm.discount2" value="Discount 2"/>
+			<label name="paymentTerm.discount3" value="Discount 3"/>
+			<label name="paymentTerm.company.code" value="Company"/>
+			<label name="paymentTerm.company.fullName" value="Company"/>
+			<label name="paymentTerm.systemOriginator.code" value="ERP System"/>
+			<label name="paymentTerm.systemOriginator.description" value="ERP Name"/>
+			<label name="paymentTerm.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="paymentTerm.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="paymentTerm.tbdDate1" value="tbdDate1"/>
+			<label name="paymentTerm.tbdDate2" value="tbdDate2"/>
+			<label name="paymentTerm.tbdNumber1" value="tbdNumber1"/>
+			<label name="paymentTerm.tbdNumber2" value="tbdNumber2"/>
+			<label name="paymentTerm.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="paymentTerm.tbdQuantity2" value="tbdQuantity2"/>
+			<label name="paymentTerm.tbdString1" value="tbdString1"/>
+			<label name="paymentTerm.tbdString2" value="tbdString2"/>
+			<label name="paymentTerm.tbdString3" value="tbdString3"/>
+			<label name="paymentTerm.tbdString4" value="tbdString4"/>
+			<label name="paymentType" value="Payment Types"/>
+			<label name="paymentTypeERPId" value="ERP"/>
+			<label name="paymentTypeId" value="Payment Type"/>
+			<label name="paymentType.category" value="Payment Type Category"/>
+			<label name="paymentType.code" value="Payment Type"/>
+			<label name="paymentType.deleteFlag" value="Deletion Flag"/>
+			<label name="paymentType.description" value="Payment Type"/>
+			<label name="paymentType.systemOriginator.code" value="ERP"/>
+			<label name="paymentType.systemOriginator.description" value="ERP System"/>
+			<label name="paymentType.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="paymentType.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="paymentType.tbdDate1" value="tbdDate1"/>
+			<label name="paymentType.tbdDate2" value="tbdDate2"/>
+			<label name="paymentType.tbdNumber1" value="tbdNumber1"/>
+			<label name="paymentType.tbdNumber2" value="tbdNumber2"/>
+			<label name="paymentType.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="paymentType.tbdQuantity2" value="tbdQuantity2"/>
+			<label name="paymentType.tbdString1" value="Check Description"/>
+			<label name="paymentType.tbdString2" value="tbdString2"/>
+			<label name="paymentType.tbdString3" value="tbdString3"/>
+			<label name="paymentType.tbdString4" value="Part Desc2"/>
+			<label name="paymentType.zeroResults" value="No Payment Types found."/>
+			<label name="poId" value="PO Number"/>
+			<label name="po.amount" value="PO Amount"/>
+			<label name="po.billedAmount" value="Paid To Date-Blank"/>
+			<label name="po.blockFlag" value="PO Blocked"/>
+			<label name="po.businessUnit" value="Business Unit"/>
+			<label name="po.buyerId" value="PO Initiator"/>
+			<label name="po.buyer.displayName" value="Buyer"/>
+			<label name="po.company.code" value="Company"/>
+			<label name="po.company.fullName" value="Company"/>
+			<label name="po.createDate" value="Date Created"/>
+			<label name="po.currency.code" value="Currency"/>
+			<label name="po.date" value="PO Date"/>
+			<label name="po.deleteFlag" value="Deleted?"/>
+			<label name="po.number" value="PO Number"/>
+			<label name="po.paymentTerm.code" value="Payment Terms"/>
+			<label name="po.paymentTerm.description" value="Payment Terms"/>
+			<label name="po.receivableFlag" value="Receivable?"/>
+			<label name="po.requesterId" value="Requester ID"/>
+			<label name="po.requester.displayName" value="Requester"/>
+			<label name="po.shippingDocumentId" value="Shipping Document"/>
+			<label name="po.statusCode" value="PO Status"/>
+			<label name="po.systemOriginator.code" value="ERP System"/>
+			<label name="po.systemOriginator.description" value="ERP Name"/>
+			<label name="po.taxCode.code" value="Tax Code"/>
+			<label name="po.tbdString1" value="tbdString1"/>
+			<label name="po.tbdString2" value="tbdString2"/>
+			<label name="po.tbdString3" value="tbdString3"/>
+			<label name="po.tbdString4" value="tbdString4"/>
+			<label name="po.tbdNumber1" value="tbdNumber1"/>
+			<label name="po.tbdNumber2" value="tbdNumber2"/>
+			<label name="po.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="po.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="po.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="po.tbdQuantity2" value="tbdQuantity2"/>
+			<label name="po.tbdDate1" value="tbdDate1"/>
+			<label name="po.tbdDate2" value="tbdDate2"/>
+			<label name="po.type" value="PO Invoice"/>
+			<label name="po.validityEnd" value="Valid Until"/>
+			<label name="po.validityStart" value="Valid From"/>
+			<label name="po.vendor.code" value="Vendor ID"/>
+			<label name="po.vendor.name" value="Vendor Name"/>
+			
+			<label name="poLine.appropriationNo" value="Approp #"/>
+			<label name="poLineNumber" value="PO Line"/>
+			<label name="poLine.accountCode" value="GL Distribution"/>
+			<label name="poLine.account.code" value="Account"/>
+			<label name="poLine.account.code1" value="Dist Corp"/>
+			<label name="poLine.account.code2" value="Account"/>
+			<label name="poLine.account.code3" value="Cost Center"/>
+			<label name="poLine.account.description" value="Account Description"/>
+			<label name="poLine.billedAmount" value="Paid To Date"/>
+			<label name="poLine.billedQuantity" value="Qty Billed"/>
+			<label name="poLine.blockFlag" value="Blocked"/>
+			<label name="poLine.company.code" value="Company"/>
+			<label name="poLine.costObject1.code" value="Cost Center"/>
+			<label name="poLine.costObject2.code" value="Approp #"/>
+			<label name="poLine.costObject3.code" value="Dist Corp"/>
+			<label name="poLine.costObject4.code" value="costObject4.code"/>
+			<label name="poLine.deleteFlag" value="Deleted?"/>
+			<label name="poLine.itemCode" value="Item Code"/>
+			<label name="poLine.itemDescription" value="Item Description"/>
+			<label name="poLine.lineNumber" value="Line #"/>
+			<label name="poLine.materialId" value="Material ID"/>
+			<label name="poLine.manfPartNumber" value="Part #"/>
+			<label name="poLine.orderedQuantity" value="Avail Qty"/>
+			<label name="poLine.orderedUnitPrice" value="Ordered Price"/>
+			<label name="poLine.orderedUOM" value="UOM Ordered"/>
+			<label name="poLine.partNumber" value="Part No"/>
+			<label name="poLine.propertyUnit" value="Prop Unit"/>
+			<label name="poLine.receivableFlag" value="Receivables"/>
+			<label name="poLine.receivedQuantity" value="Received Qty "/>
+			<label name="poLine.releaseNo" value="Release #"/>			
+			<label name="poLine.statusCode" value="Status"/>
+			<label name="poLine.systemOriginator.code" value="ERP"/>
+			<label name="poLine.systemOriginator.description" value="ERP System"/>
+			<label name="poLine.taxCode.code" value="Tax Code"/>
+			<label name="poLine.tbdCurrency1" value="Receipt to Pay"/>
+			<label name="poLine.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="poLine.tbdDate1" value="tbdDate1"/>
+			<label name="poLine.tbdDate2" value="tbdDate2"/>
+			<label name="poLine.tbdNumber1" value="Release #"/>
+			<label name="poLine.tbdNumber2" value="tbdNumber2"/>
+			<label name="poLine.tbdString1" value="Part Desc2"/>
+			<label name="poLine.tbdString2" value="Receipt #"/>
+			<label name="poLine.tbdString3" value="Property Unit"/>
+			<label name="poLine.tbdString4" value="Appropriation #"/>
+			<label name="poLine.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="poLine.tbdQuantity2" value="tbdQuantity2"/>
+			
+			<label name="poHistory.poNumber" value="PO Number"/>
+			<label name="poHistory.number" value="PO Hist Number"/>
+			<label name="poHistory.shippingDocumentId" value="Shipping Doc #"/>
+			<label name="poHistory.lineNumber" value="PO Line #"/>
+			<label name="poHistory.quantityReceived" value="Quantity Received"/>
+			<label name="poHistory.uom" value="Unit of Measure"/>
+			<label name="poHistory.company.code" value="Company"/>
+			<label name="poHistory.systemOriginator.code" value="ERP System"/>
+			<label name="poHistory.companyCode" value="Company Code"/>
+			<label name="poHistory.tbdNumber1" value="PO Hist TBDNumber1"/>
+			<label name="poHistory.tbdNumber2" value="PO Hist TBDNumber2"/>
+			<label name="poHistory.tbdString1" value="PO Hist tbdString1"/>
+			<label name="poHistory.tbdString2" value="PO Hist tbdString2"/>
+			<label name="poHistory.tbdString3" value="PO Hist tbdString3"/>
+			<label name="poHistory.tbdString4" value="PO Hist tbdString4"/>
+			<label name="poHistory.tbdCurrency1" value="PO Hist tbdCurrency1"/>
+			<label name="poHistory.tbdCurrency2" value="PO Hist tbdCurrency2"/>
+			<label name="poHistory.tbdQuantity1" value="PO Hist tbdQuantity1"/>
+			<label name="poHistory.tbdQuantity2" value="PO Hist tbdQuantity2"/>
+			<label name="poNumber" value="PO"/>
+			<label name="postingERPId" value="ERP"/>
+			<label name="pounitprice" value="PO Unit Price"/>
+			<label name="processCode" value="Status"/>
+			<label name="propertyUnit" value="Property Unit"/>
+			
+			<label name="previousComments" value="Previous &lt;br&gt; Comments "/>
+			<label name="previousCommentsWindow" value="Previous Comments"/>
+			<label name="noPreviousComments" value="No Previous Comments Exists."/>
+		
+			<label name="quantity" value="Invoice Qty"/>
+			<label name="remitToId" value="Remit Id*"/>
+			<label name="receivable" value="Receivables"/>
+			<label name="receivedDate" value="Received By AP"/>
+			<label name="receiveDate" value="Date Received"/>
+			<label name="rejectionReason" value="Reason"/>
+			<label name="requester.approvalCurrency" value="Approval Currency"/>
+			<label name="requester.approvalLimit" value="Approval Limit"/>
+			<label name="requester.distinguishedName" value="Distinguished Name"/>
+			<label name="requester.displayName" value="Buyer"/>
+			<label name="requester.email" value="Buyer E-Mail"/>
+			<label name="requester.employeeNumber" value="Employee Number"/>
+			<label name="requester.firstName" value="Requester"/>
+			<label name="requester.lastName" value="Requester"/>
+			<label name="requester.notificationManager" value="Manager"/>
+			<label name="requester.paymentOverride" value="Logos"/>
+			<label name="requester.phone" value="Phone"/>
+			<label name="requesterId" value="Requester ID"/>
+			<label name="requesterName" value="Claimant"/>
+			<label name="responseCode" value="Message Type"/>
+			<label name="responseDescription" value="Description"/>
+			<label name="retentionBoxId" value="Capital/Project"/>
+			<label name="routingCode" value="Routing Code"/>
+			<label name="refreshPage" value="Refresh Page"/>
+
+			<label name="scanAmount" value="Scan Amount"/>
+			<label name="scanDate" value="Scan Date"/>
+			<label name="scanBy" value="Scanned By"/>
+			<label name="scanSite" value="Scan Site"/>
+			<label name="scanSource" value="Scan Source"/>
+			<label name="scanType" value="Scan Type"/>
+			<label name="scanVendorAddress1" value="Scan Vendor Add1"/>
+			<label name="scanVendorAddress2" value="Scan Vendor Add2"/>
+			<label name="scanVendorName" value="Scan Vendor Name"/>
+			<label name="searchFilter" value="Search Filter"/>
+			<label name="searchFilter.results" value="   Search Results for Search Filter Sets"/>
+			<label name="searchFilter.filterSet" value="Filter Sets"/>
+			<label name="searchFilter.tableHeader" value="Filter Set"/>
+			<label name="searchFilter.user" value="Search Filter for User"/>
+			<label name="sensitivity" value="Sensitivity"/>
+			<label name="separateCheck" value="Separate Check"/>
+			<label name="specialHandlingCode" value="Short Pay Reason"/>
+			<label name="shippingDocumentId" value="Initial Shipment #"/>
+			<label name="statusCode" value="Status Code"/>
+			<label name="stepName" value="Step Name"/>
+			<label name="subRejectionReason" value="Sub-Reason"/>
+			<label name="subType" value="Sub-type"/>
+			<label name="systemOriginator.code" value="ERP"/>
+			<label name="systemOriginator.description" value="ERP System"/>
+			<label name="systemOriginator.syncTime" value="Sync Time"/>
+			<label name="systemOriginator.tbdDate1" value="TBDDate1"/>
+			<label name="systemOriginator.tbdDate2" value="TBDDate2"/>
+			<label name="systemOriginator.tbdNumber1" value="TBDNumber1"/>
+			<label name="systemOriginator.tbdNumber2" value="TBDNumber2"/>
+			<label name="systemOriginator.tbdCurrency1" value="TBDCurrency1"/>
+			<label name="systemOriginator.tbdCurrency2" value="TBDCurrency2"/>
+			<label name="systemOriginator.tbdQuantity1" value="TBDQuantity1"/>
+			<label name="systemOriginator.tbdQuantity2" value="TBDQuantity2"/>
+			<label name="systemOriginator.tbdString1" value="TBDString1"/>
+			<label name="systemOriginator.tbdString2" value="TBDString2"/>
+			<label name="systemOriginator.tbdString3" value="TBDString3"/>
+			<label name="systemOriginator.tbdString4" value="TBDString4"/>
+			<label name="taxCode.details" value="Tax Code Details"/>
+			<label name="taxCode.code" value="Tax Code"/>
+			<label name="taxCode.country" value="Country"/>
+			<label name="taxCode.country.code" value="Country Code"/>
+			<label name="taxCode.country.name" value="Country"/>
+			<label name="taxCode.deleteFlag" value="Deletion Flag"/>
+			<label name="taxCode.description" value="Description"/>
+			<label name="taxCode.percent" value="Tax (%)"/>
+			<label name="taxCode.systemOriginator" value="ERP"/>
+			<label name="taxCode.systemOriginator.code" value="ERP"/>
+			<label name="taxCode.systemOriginator.description" value="ERP System"/>
+			<label name="taxCode.seqId" value="Tax Code Seqid"/>
+			<label name="taxCode.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="taxCode.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="taxCode.tbdDate1" value="tbdDate1"/>
+			<label name="taxCode.tbdDate2" value="tbdDate2"/>
+			<label name="taxCode.tbdNumber1" value="tbdNumber1"/>
+			<label name="taxCode.tbdNumber2" value="tbdNumber2"/>
+			<label name="taxCode.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="taxCode.tbdQuantity2" value="tbdQuantity2"/>
+
+			<label name="taxCode.tbdString1" value="Jurisdiction"/>
+			<label name="taxCode.tbdString2" value="State"/>
+			<label name="taxCode.tbdString3" value="City"/>
+			<label name="taxCode.tbdString4" value="tbdString4"/>
+
+
+			<label name="taxAmount" value="Total CR"/>
+			<label name="taxAmount1" value="Sales Tax"/>
+			<label name="taxAmount2" value="Tax Assessment"/>
+			<label name="taxAmount3" value="TaxAmount3"/>
+			<label name="taxAmount4" value="TaxAmount4"/>
+			<label name="taxERPId" value="ERP"/>
+			<label name="taxId" value="Tax Code"/>
+			<label name="type" value="Type"/>
+			<label name="tbdBoolean1" value="NE Tax"/>
+			<label name="tbdBoolean2" value="tbdBoolean2"/>
+			<label name="tbdCurrency1" value="Other Amount"/>
+			<label name="tbdCurrency2" value="Amount Paid"/>
+			<!--label name="tbdDate1" value="Message Date"/-->
+			<label name="tbdDate2" value="Travel End Date"/>
+			<label name="tbdString1" value="tbdString1"/>
+			<label name="tbdString2" value="tbdString2"/>
+			<label name="tbdString3" value="tbdString3"/>
+			<label name="tbdString4" value="tbdString4"/>
+			<label name="tbdNumber1" value="tbdNumber1"/>
+			<label name="tbdNumber2" value="tbdNumber2"/>
+			<label name="tbdQuantity1" value="tbdQuantity1"/>
+			
+			<label name="template" value="GL Template"/>
+			<label name="template.header" value="GL Templates"/>
+			<label name="template.deleteFlag" value="Disabled"/>
+			<label name="template.description" value="Description"/>
+			<label name="template.inactiveDate" value="Inactive Date"/>
+			<label name="template.isPrivate" value="Private Owner"/>
+			<label name="template.private" value="Private Template?"/>
+			<label name="template.name" value="Name"/>
+			<label name="template.owner" value="Owner"/>
+			<label name="template.createDate" value="Create Date"/>
+			<label name="template.lastModifiedDate" value="Last Modified Date"/>
+			<label name="template.vendors" value="Vendors"/>
+			<label name="template.glCode" value="GL Code"/>
+			<label name="templateFlipHeader" value="Select ActiveOps Template"/>
+			
+			<label name="user" value="Users" />
+			<label name="user.approvals" value="Approvals" />
+			<label name="user.delegates" value="Delegates" />
+			<label name="user.manager" value="Manager" />
+			<label name="user.organization" value="Organizations" />
+			<label name="user.preferredAccounts" value="Preferred Accounts" />
+			<label name="user.info" value="User Information" />
+			<label name="user.roles" value="Roles" />
+			<label name="user.ignoreOrgSecurity" value="Ignore Organization Security" />
+			<label name="user.details" value="User Details" />
+			<label name="user.activeFlag" value="Active" />
+			<label name="user.usingDefault" value="Default" />
+			<label name="user.description" value="Description" />
+			<label name="user.firstName" value="First Name" />
+			<label name="user.lastName" value="Last Name" />
+			<label name="user.displayName" value="Display Name" />
+			<label name="user.userName" value="Short User Name" />
+			<label name="user.company" value="Company" />
+			<label name="user.lastLogon" value="Last Logon"/>
+			<label name="user.lastModified" value="Last Modified" />
+			<label name="user.createDate" value="Create Date"/>
+			<label name="user.deleteFlag" value="Disabled?"/>
+			<label name="user.fullUserName" value="Login ID" />
+			<label name="user.phone" value="Telephone Number" />
+			<label name="user.email" value="Email" />
+			<label name="user.title" value="Title"/>
+			<label name="user.extendedAttributes" value="Extended Attributes"/>
+			<label name="user.paymentOveride" value="Overide Payment"/>
+			<label name="user.department" value="Department" />
+			<label name="user.sensitivityLevel" value="Sensitivity Level"/>
+			<label name="user.timeZoneOffset" value="TimeZone Offset"/>
+			<label name="user.approvalLimit" value="Approval Limit" />
+			<label name="user.approvalCurrency" value="Currency" />
+			<label name="user.defaultCostObject" value="Cost Object" />
+			<label name="user.employeeNumber" value="Employee #" />
+			<label name="user.site" value="Site"/>
+			<label name="user.officeFlag" value="Out Of Office?" />
+			<label name="user.level" value="Level" />
+			<label name="user.notificationFrequency" value="Notification Frequency" />
+			<label name="user.tbdCurrency1" value="Not Used" />
+			<label name="user.tbdCurrency2" value="Not Used" />
+			<label name="user.tbdDate1" value="Not Used" />
+			<label name="user.tbdDate2" value="Not Used" />
+			<label name="user.tbdNumber1" value="Not Used" />
+			<label name="user.tbdNumber2" value="Not Used" />
+			<label name="user.tbdString1" value="Not Used" />
+			<label name="user.tbdString2" value="Not Used" />
+			<label name="user.tbdString3" value="Not Used" />
+			<label name="user.tbdString4" value="Not Used" />
+			<label name="user.tbdQuantity1" value="Not Used" />
+			<label name="user.tbdQuantity2" value="Not Used" />
+			<label name="user.tbdNumber2" value="Not Used" />
+			<label name="user.outOfOfficeEndDate" value="Out Of Office End Date" />
+			<label name="userApproval.approvalLimit" value="Approval Limit"/>
+			<label name="userApproval.glCode" value="GL Code"/>
+			<label name="userApproval.currency" value="Currency"/>
+			<label name="userApproval.costObject" value="Cost Object ID"/>
+			<label name="userApproval.tbdDate1" value="tbdDate1"/>
+			<label name="userApproval.tbdDate2" value="tbdDate2"/>
+			<label name="userApproval.tbdNumber1" value="tbdNumber1"/>
+			<label name="userApproval.tbdNumber2" value="tbdNumber2"/>
+			<label name="userApproval.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="userApproval.tbdQuantity2" value="tbdQuantity2"/>
+			<label name="userApproval.tbdString1" value="Description"/>
+			<label name="userApproval.tbdString2" value="tbdString2"/>
+			<label name="userApproval.tbdString3" value="tbdString3"/>
+			<label name="userApproval.tbdString4" value="tbdString4"/>
+			<label name="userApproval.glSegment1" value="GL Segment(1)"/>
+			<label name="userApproval.glSegment2" value="GL Segment(2)"/>
+			<label name="userApproval.glSegment3" value="GL Segment(3)"/>
+			<label name="userApproval.glSegment4" value="GL Segment(4)"/>
+			<label name="userApproval.glSegment5" value="GL Segment(5)"/>
+			<label name="userApproval.glSegment6" value="GL Segment(6)"/>
+			<label name="userApproval.glSegment7" value="GL Segment(7)"/>
+			<label name="userApproval.glSegment8" value="GL Segment(8)"/>
+			<label name="userApproval.glSegment9" value="GL Segment(9)"/>
+			<label name="userApproval.glSegment10" value="GL Segment(10)"/>
+			
+			<!-- Line Items TBD fields -->
+			<label name="lineItems.tbdString1" value="Not Used"/>
+			<label name="lineItems.tbdString2" value="Not Used"/>
+			<label name="lineItems.tbdString3" value="Not Used"/>
+			<label name="lineItems.tbdString4" value="Not Used"/>
+			<label name="lineItems.tbdString5" value="Not Used"/>
+			<label name="lineItems.tbdDate1" value="Message Date"/>
+			<label name="lineItems.tbdDate2" value="Travel End Date"/>
+			<label name="lineItems.tbdBoolean1" value="Not Used"/>
+			<label name="lineItems.tbdBoolean2" value="Not Used"/>
+			<label name="lineItems.tbdNumber1" value="Not Used"/>
+			<label name="lineItems.tbdNumber2" value="Not Used"/>
+			<label name="lineItems.tbdQuantity1" value="Not Used"/>
+			<label name="lineItems.tbdQuantity2" value="Not Used"/>
+			<label name="lineItems.tbdCurrency1" value="Not Used"/>
+			<label name="lineItems.tbdCurrency2" value="Not Used"/>
+			
+		
+			<label name="unitPrice" value="Invoice Price"/>
+			<label name="uom" value="UOM"/>
+			<label name="uploadRef" value="Upload Ref"/>
+
+			<label name="vendorERPId" value="ERP"/>
+			<label name="vendor.ten99Code" value="1099 Code"/>
+			<label name="vendor.ten99Flag" value="1099 Flag"/>
+			<label name="vendorId" value="Vendor ID"/>
+			<label name="vendor.address1" value="Address1"/>
+			<label name="vendor.address2" value="Address2"/>
+			<label name="vendor.address3" value="Address3"/>
+			<label name="vendor.address4" value="City/State"/>
+			<label name="vendor.approvalCode" value="Approval Code"/>
+			<label name="vendor.bankAccountNumber" value="Bank Account Number"/>
+			<label name="vendor.bankName" value="Bank Name"/>
+			<label name="vendor.bankRoutingNo" value=" Bank Routing Number"/>
+			<label name="vendor.bankAccountType" value="Bank Account Type"/>
+			<label name="vendor.code" value="Vendor Code"/>
+			<label name="vendor.company.code" value="Organization Code"/>
+			<label name="vendor.companyCode" value="Company Code"/>
+			<label name="vendor.company.fullName" value="Company"/>
+			<label name="vendor.country.Code" value="Country"/>
+			<label name="vendor.country.name" value="Country"/>
+			<label name="vendor.contact" value="Contact"/>
+			<label name="vendor.currency.code" value="Currency"/>
+			<label name="vendor.city" value="City"/>
+			<label name="vendor.dba" value="DBA or Banking Notes"/>
+			<label name="vendor.deleteFlag" value="Disabled"/>
+			<label name="vendor.email" value="E-mail"/>
+			<label name="vendor.emailOpIn" value="E-mail Opt-In"/>
+			<label name="vendor.createDate" value="Create Date"/>
+			<label name="vendor.lastModifiedDate" value="Last Modified Date"/>
+			<label name="vendor.fax" value="Fax"/>
+			<label name="vendor.name" value="Vendor Name"/>
+			<label name="vendor.name2" value="Short Name"/>
+			<label name="vendor.phone" value="Phone"/>
+			<label name="vendor.Phase" value="MP Phase"/>	
+			<label name="vendor.payBlock" value="Pay Block?"/>
+			<label name="vendor.paymentTerm.code" value="Payment Terms"/>
+			<label name="vendor.paymentTerm.description" value="Payment Terms"/>
+			<label name="vendor.paymentType.code" value="Payment Type"/>
+			<label name="vendor.paymentType.description" value="Payment Type Description"/>
+			<label name="vendor.payToCode" value="Pay-to Code"/>
+			<label name="vendor.postBlock" value="Post Block?"/>
+			<label name="vendor.postalCode" value="Zip"/>
+			<label name="vendor.separatePayment" value="Separate Payment?"/>
+			<label name="vendor.state" value="State"/>
+			<label name="vendor.status" value="Status"/>
+			<label name="vendor.systemOriginator.code" value="ERP"/>
+			<label name="vendor.systemOriginator.description" value="ERP System"/>
+			<label name="vendor.taxId" value="Tax ID"/>
+			<label name="vendor.type" value="Vendor Type"/>			
+			<label name="vendor.tbdDate1" value="TBD Date1"/>
+			<label name="vendor.tbdDate2" value="TBD Date2"/>
+			<label name="vendor.tbdNumber1" value="TBD Number1"/>
+			<label name="vendor.tbdNumber2" value="TBD Number2"/>
+			<label name="vendor.tbdCurrency1" value="TBD Currency1"/>
+			<label name="vendor.tbdCurrency2" value="TBD Currency1"/>
+			<label name="vendor.tbdString1" value="Category"/>
+			<label name="vendor.tbdString2" value="Vendor tbdString2"/>
+			<label name="vendor.tbdString3" value="Vendor TBD String3"/>
+			<label name="vendor.tbdString4" value="Vendor tbdString4"/>
+			<label name="vendor.tbdQuantity1" value="TBD Quantity1"/>
+			<label name="vendor.tbdQuantity2" value="TBD Quantity2"/>
+			<label name="vendor.vendor" value="Vendor"/>
+			<label name="vendor.wireInstructions" value="Wire Instructions"/>
+			<label name="vendor.addvendor" value="Add Vendor"/>
+			<label name="vendor.filter" value="Filter"/>
+			<label name="vendor.clear" value="Clear"/>
+			<label name="voucherComments" value="Invoice Description"/>
+			<label name="vendor.wireInstructions" value="Wire Instructions"/>
+			<label name="vendor.zeroResults" value="No vendors found."/>
+			
+			<label name="vendor.bankAddr1" value="Bank Address1"/>
+			<label name="vendor.bankAddr2" value="Bank Address2"/>
+			<label name="vendor.bankCity" value="Bank City"/>
+			<label name="vendor.bankPostalCode" value="Bank Postal Code"/>
+			<label name="vendor.bankState" value="Bank State"/>
+			<label name="vendor.bankCountry" value="Bank Country"/>
+			<label name="vendor.bankSwiftCode" value="Bank Swift Code"/>
+			<label name="vendor.regFieldName1" value="Reg Field Name 1"/>
+			<label name="vendor.regValue1" value="Reg Field Value 1"/>
+			<label name="vendor.regFieldName2" value="Reg Field Name 2"/>
+			<label name="vendor.regValue2" value="Reg Field Value 2"/>
+			<label name="vendor.regFieldName3" value="Reg Field Name 3"/>
+			<label name="vendor.regValue3" value="Reg Field Value 3"/>
+			<label name="vendor.regFieldName4" value="Reg Field Name 4"/>
+			<label name="vendor.regValue4" value="Reg Field Value 4"/>
+			<label name="vendor.regFieldName5" value="Reg Field Name 5"/>
+			<label name="vendor.regValue5" value="Reg Field Value 5"/>
+
+
+			<label name="detailsForVendorAddress" value="Details for Vendor Address"/>
+			<label name="vendorAddress.details" value="Vendor Address Details"/>
+			<label name="vendorAddress.remitToId" value="Remit ID"/>
+			<label name="vendorAddress.name" value="Remit Name"/>
+			<label name="vendorAddress.name2" value="Remit DBA"/>
+			<label name="vendorAddress.address1" value="Remit Address 1"/>
+			<label name="vendorAddress.address2" value="Remit Address 2"/>
+			<label name="vendorAddress.address3" value="Remit Address 3"/>
+			<label name="vendorAddress.address4" value="Remit Address 4"/>
+			<label name="vendorAddress.backToVendor" value="Back to Vendor"/>
+			<label name="vendorAddress.addVendorAddress" value="Add Vendor Address"/>
+			<label name="vendorAddress.city" value="Remit City"/>
+			<label name="vendorAddress.cityStatePostal" value="City/State/Postal" />
+			<label name="vendorAddress.editVendorAddress" value="Edit Vendor Address"/>
+			<label name="vendorAddress.state" value="Remit State"/>
+			<label name="vendorAddress.postalCode" value="Remit Zip Code"/>
+			<label name="vendorAddress.contact" value="Remit Contact Name"/>
+			<label name="vendorAddress.phone" value="Remit Phone"/>
+			<label name="vendorAddress.email" value="Remit E-mail"/>
+			<label name="vendorAddress.fax" value="Remit Fax"/>
+			<label name="vendorAddress.type" value="Address Type"/>
+			<label name="vendorAddress.country.name" value="Remit Country"/>
+			<label name="vendorAddress.taxId" value="Remit Tax ID"/>
+			<label name="vendorAddress.deleteFlag" value="Disabled"/>
+			<label name="vendorAddress.postBlock" value="Remit Post Block"/>
+			<label name="vendorAddress.payBlock" value="Remit Pay Block"/>
+			<label name="vendorAddress.seqId" value="Vendor Address SeqId"/>
+			<label name="vendorAddress.systemOriginator" value="Remit System Originator"/>
+			<label name="vendorAddress.tbdDate1" value="Remit tbdDate1"/>
+			<label name="vendorAddress.tbdDate2" value="Remit tbdDate2"/>
+			<label name="vendorAddress.tbdNumber1" value="Remit tbdNumber1"/>
+			<label name="vendorAddress.tbdNumber2" value="Remit tbdNumber2"/>
+			<label name="vendorAddress.tbdCurrency1" value="Remit tbdCurrency1"/>
+			<label name="vendorAddress.tbdCurrency2" value="Remit tbdCurrency2"/>
+			<label name="vendorAddress.tbdQuantity1" value="Remit tbdQuantity1"/>
+			<label name="vendorAddress.tbdQuantity2" value="Remit tbdQuantity2"/>
+			<label name="vendorAddress.tbdString1" value="Purchasing Address?"/>
+			<label name="vendorAddress.tbdString2" value="Remit tbdString2"/>
+			<label name="vendorAddress.tbdString3" value="Remit tbdString3"/>
+			<label name="vendorAddress.tbdString4" value="Remit tbdString4"/>
+			<label name="vendorAddress.vendor" value="Vendor"/>
+
+			<label name="vendorBankId" value="Vendor Bank Id"/>
+			<label name="wobNumber" value="WOB #"/>
+
+
+			<!-- Labels for Choicelists -->
+			<!-- Place label all choice lists with "choice." -->
+
+			<label name="chooseChoiceList" value="-  None  -"/>
+			<label name="noSelectionNecessary" value="No items for selection."/>
+
+			<label name="choice.non-po" value="Non Purchase Order"/>
+			<label name="choice.non-po-credit-memo" value="Non PO Credit Memo"/>
+			<label name="choice.po" value="Purchase Order"/>
+			<label name="choice.po-credit-memo" value="PO Credit Memo"/>
+
+
+			<!-- Labels for Rejection Reasons -->
+			<!-- Please label all rejection labels with "reject." -->
+			<label name="reject.imageTooSmall" value="Image is very small."/>
+
+
+			<!-- Constants -->
+
+			<label name="additionalInformation" value="Additional Information"/>
+		
+			<label name="addVendor" value="Vendor-Add Form"/>
+			<label name="approvalCurrency" value="Currency"/>
+			<label name="approvalLimit" value="Approval Limit"/>
+			<label name="officeFlag" value="Out Of Office?"/>
+			<label name="attachments" value="Supporting Documents"/>
+
+			<label name="clearVendorInfo" value="Clear"/>
+			<label name="code" value="Code"/>
+			<label name="commentsRequired" value="Comments are required"/>
+
+			<label name="daily" value="Daily"/>
+			<label name="displayName" value="Display Name"/>
+			<label name="description" value="Description"/>
+
+			<label name="email" value="Send Mail"/>
+			<label name="editRouting" value="Edit Routing"/>
+			<label name="editRouting_template" value="Edit Template Routing"/>
+
+			<label name="freight" value="Freight"/>
+			<label name="fullUserName" value="Username"/>
+
+			<label name="help" value="Online Help"/>
+
+			<label name="immediate" value="Immediate (if configured)"/>
+			<label name="invoice" value="Invoice"/>
+			<label name="invoiceDetails" value="Invoice Details"/>
+			<label name="lineItems" value="GL Distributions"/>
+			<label name="outOfOffice" value="Out of Office"/>
+
+			<label name="paymentMode" value="Payment Mode"/>
+			<label name="paymentMode.header" value="Payment Modes"/>
+			<label name="paymentMode.accountCode" value="Account Code"/>
+			<label name="paymentMode.seqId" value="Seq. #"/>
+			<label name="paymentMode.name" value="Name"/>
+			<label name="paymentMode.description" value="Description"/>
+			<label name="paymentMode.systemOriginator" value="ERP ID"/>
+			<label name="paymentMode.systemOriginator.code" value="ERP ID"/>
+			<label name="paymentMode.clientIdToken" value="Client ID Token"/>
+			<label name="paymentMode.company.code" value="Company"/>
+			<label name="paymentMode.country.code" value="Country"/>
+			<label name="paymentMode.currency.code" value="Currency"/>
+			<label name="paymentMode.docOrgCode" value="Doc. Org. Code"/>
+			<label name="paymentMode.docSubType" value="Doc. Sub-Type"/>
+			<label name="paymentMode.bankName" value="Bank Name"/>
+			<label name="paymentMode.bankRoutingNumber" value="Bank Routing No."/>
+			<label name="paymentMode.bankAccountNumber" value="Bank Account No."/>
+			<label name="paymentMode.foreignTransaction" value="Foreign Transaction"/>
+			<label name="paymentMode.taxIdNumber" value="Tax ID"/>
+			<label name="paymentMode.accountToken" value="Account Token"/>
+			<label name="paymentMode.companyName" value="Company Name"/>
+			<label name="paymentMode.companyShortName" value="Company Short Name"/>
+			<label name="paymentMode.companyDirectClear" value="Company Direct Clear"/>
+			<label name="paymentMode.companyDirectClearCode" value="Company Direct Clear Code"/>
+			<label name="paymentMode.companySundryInfo" value="Company Sundry Info"/>
+			<label name="paymentMode.createDate" value="Create Date"/>
+			<label name="paymentMode.interfaceJob" value="Export Job"/>
+			<label name="paymentMode.lastModifiedDate" value="Last Modified"/>
+			<label name="paymentMode.deleteFlag" value="Disabled?"/>
+			<label name="paymentMode.postingResponse" value="Posting Response"/>
+			<label name="paymentMode.reissuedPayment" value="Reissued Payment"/>
+			<label name="paymentMode.paymentProcessor" value="Payment Processor"/>
+			<label name="paymentBankAccountNumber" value="Payment Bank Acct."/>
+			<label name="paymentInformation" value="Payment Information"/>
+			<label name="phone" value="Phone No."/>
+			<label name="phoneNumber" value="Phone No."/>
+			<label name="processInformation.comment" value="Task Notes &lt;br&gt;(80 characters)"/>
+			<label name="processInformation.deadline" value="Task Due Date"/>
+			<label name="processInformation.failReason" value="Message"/>
+			<label name="processInformation.previousComment" value="Previous &lt;br&gt; Comments "/>
+			<label name="processInformation.queueName" value="Status"/>
+			<label name="processInformation.rejectionReason" value="Rejection Reason"/>
+			<label name="processInformation.subRejectionReason" value="Sub-Reason"/>
+
+			<label name="paymentOveride" value="Out Of Office"/>
+			<label name="paymentDetail" value="Detail Information"/>
+			<label name="paymentOverview" value="ERP Response Overview"/>
+			<label name="poflip" value="Flip PO to document"/>
+
+			<label name="routingWindowAppLabel" value="ManagedPay"/>
+
+
+			<label name="postings" value="Show posting and payment information, if available"/>
+
+			<label name="sourceInformation" value="Source Information"/>
+			<label name="statusWindow" value="Show status history for this work item,"/>
+			<label name="selectApprovers" value="Select Routing" />
+			<label name="print" value="Print" />
+			<label name="vendorHistory" value="Vendor History"/>
+			<label name="barcode" value="Print Barcode Sheet"/>
+			<label name="selectTemplate" value="Select GL Template"/>
+			
+
+			<label name="taskSection" value="Process Information"/>
+			<label name="taxShippingInfo" value="Tax Shipping Information"/>
+			<label name="totalTax" value="Total Tax"/>
+
+			<label name="user" value="User"/>
+			<label name="userName" value="Username"/>
+
+			<label name="value" value="Value"/>
+			<label name="vendorContact" value="Vendor Contact Information"/>
+			<label name="vendorDetails" value="Vendor Details"/>
+			<label name="percent" value="Percent"/>
+			<label name="preferred" value="Preferred"/>
+			<!-- Onscreen messages -->
+			<label name="divider.left" value="Click here to maximize right pane."/>
+			<label name="divider.middle" value="Click here to restore panes."/>
+			<label name="divider.right" value="Click here to maximize left pane."/>
+			<label name="enter.criteria" value="Please enter the search criteria."/>
+			<label name="enter.comments" value="Please enter comments."/>
+			<label name="comments.length" value="Comments should be less than 256 characters."/>
+			<label name="lookup.result.limitation.start" value="A maximum of "/>
+			<label name="lookup.result.limitation.end" value=" results are returned. Please select your criteria accordingly."/>
+			<label name="message.getNextInProgress" value="Please select a queue from the left-hand navigation after finishing with the Get-Next feature."/>
+			<label name="message.noCeDocumentHeader" value="The document image is not accessible."/>
+			<label name="message.noCeDocumentText" value="The requested invoice image does not reside in the system."/>
+			<label name="message.noDataFound" value="No Data Found."/>
+			<label name="message.noGetNext" value="There are no more items in the queue."/>
+			<label name="message.noUsersFoundInGroupOrg" value="No users were found in this group/organization combination."/>
+			<label name="message.noUsersFoundInGroup" value="No users were found in this group."/>
+			<label name="message.noUsersFoundOrg" value="No users were found in this organization."/>
+			<label name="no.file.uploaded" value="Please select a file for upload."/>
+			<label name="reassign.nothingInInbox" value="The selected user has no items in their inbox."/>
+			<label name="reassign.choose" value="Choose items to reassign."/>
+			<label name="reassign.chooseOwner" value="Please select a delegate to assign from:"/>
+			<label name="reassign.chooseReceiver" value="Please select a delegate to assign to:"/>
+			<label name="reassign.noDelegates" value="There are no delegates assigned to you."/>
+			<label name="reassign.reassigned"  value="The selected documents have been reassigned."/>
+			<label name="select.company" value="Please select a Company."/>
+			<label name="select.costObject" value="Please select a Cost Object."/>
+			<label name="select.costObjectType" value="Please select a Cost Object Type."/>
+			<label name="select.rejectionReason" value="Please select a workflow action."/>
+			<label name="select.rejectionSubReason" value="Please select an exception reason."/>
+			<label name="select.organizationAndOrGroup" value="Please choose an organization and/or a group."/>
+			<label name="upload.successful" value="The document upload was successful."/>
+			<label name="user.outOfOfficeEndDate" value="Out Of Office End Date" />
+		<!-- Messages for validation warnings -->
+			<label name="message.accountInvalid" value="The account code is missing or invalid."/>
+			<label name="message.appropriationRequired" value="An appropriation number is required for this code combination."/>
+			<label name="message.blockedFixedAssetAccount" value="The Fixed Asset is blocked for posting"/>
+			<label name="message.currencyValidation" value="If you &quot;Accept&quot; this warning, the invoice will be routed to Exception for review."/>
+			<label name="message.duplicateInvoiceApproval" value="If you &quot;Accept&quot; this warning, the invoice will be routed to Exception for review"/>
+			<label name="message.duplicateInvoiceValidation" value="If you &quot;Accept&quot; this warning, the invoice will be sent to the duplicate review"/>
+			<label name="message.duplicateReviewInvoiceValidation" value="If you &quot;Accept&quot; this warning, the invoice will process through as-is"/>
+			<label name="message.matchingValidation" value="If you &quot;Accept&quot; this warning, the invoice will be processed."/>
+			<label name="message.buyerValidation" value="If you &quot;Accept&quot; this warning, the invoice will be routed to Buyer."/>
+			<label name="message.validVendorValidation" value="If you &quot;Accept&quot; this warning, the invoice will be routed to Vendor Maintenance for review."/>
+			<label name="deleteMainLineItem.message" value="This function only removes main lines. Reposition your cursor and try again or use the -Itemize button to remove sub-lines."/>
+			<label name="addSubLineItem.message" value="Place your cursor on the line you wish to itemize before using this function."/>
+			<label name="deleteSubLineItem.message" value="This function only removes main lines. Reposition your cursor and try again or use the Delete button to remove a main line."/>
+			<label name="expense.inValidCombCreditCard" value="You can only use credit cards that have been assigned to you."/>
+
+		<!-- Messages for Reject dialogs -->
+			<label name="message.alternateCredit" value="The work item will be sent to the Credit Queue of the updated Sub-Type"/>
+			<label name="message.duplicatereivew" value="The work item will be sent to the Duplicate Review queue."/>
+			<label name="message.forceMatch" value="The work item will be sent to the Force Match queue."/>
+			<label name="message.terminate" value="The work item will be terminated."/>
+			<label name="message.terminateApprover" value="If you are the requester, the work item will be terminated. Otherwise, the work item will be sent to the next person in the routing list."/>
+			<label name="message.reissue" value="The work item will be voided and a new item created."/>
+			<label name="message.rematchHold" value="The work item will will be placed in a hold status and will be returned to you at a later time."/>
+			<label name="message.OnHold" value="The work item will marked as On Hold and returned to the bottom of the queue it came from."/>
+			<label name="message.repost" value="The work item will sent back to the ERP and will be posted again."/>
+			<label name="message.rescan" value="The work item will be sent for rescanning."/>
+			<label name="message.research" value="The work item will be sent to Corporate Tax team for review."/>
+			<label name="message.restart" value="Select this option if the work item is in the wrong workflow, so that the correct workflow can be selected."/>
+			<label name="message.retry" value="Invoice will attempt a retry."/>
+			<label name="message.returnBuyer" value="The work item will be returned to the buyer."/>
+			<label name="message.returnException" value="The work item will be sent to Exception."/>
+			<label name="message.returnRequester" value="The work item will be returned to the requester."/>
+			<label name="message.returnSubmitter" value="The work item will be returned to the submitter."/>
+			<label name="message.returnVendorMaintenance" value="The work item will be sent to vendor maintenance. "/>
+			<label name="message.sendToBuyer" value="The work item will be sent to the buyer. It will be returned afterwards."/>
+			<label name="message.sendToException" value="The work item will be sent to Exception."/>
+			<label name="message.sendToIt" value="The work item will be sent to the IT queue."/>
+			<label name="message.sendToSalesTax" value="The work item will be returned to the Sales Tax queue."/>
+			<label name="message.sendToCorpFacilities" value="The work item will be sent to Corp Facilities queue."/>
+			<label name="message.sendToCorpTax" value="The work item will be sent to Corp tax queue."/>
+			<label name="message.sendToVendorMaintenance" value="The work item will be sent to vendor maintenance. It will be returned afterwards."/>
+			<label name="message.stopPayment" value="The payment for this invoice is being stopped."/>
+			<label name="message.vendorMaintenanceW9" value="The work item will sent to the VendorW9 Queue. Use this when waiting for receipt of the W9 form."/>
+			<label name="message.void" value="A new work item will be generated, equal but opposite to this transaction."/>
+			<label name="message.expenseInvoice" value="The invoice will be sent to the Indexing queue to be treated as an Expense invoice."/>
+			<label name="message.tradeInvoice" value="The invoice will be sent to the PO Exception queue to be treated as a PO invoice."/>
+			<label name="message.auditComplete" value="Please record any audit comments (if any) before sending to the Clearance queue"/>
+			<label name="message.returnApprover" value="The invoice will be returned to the last Approver."/>
+			<label name="message.createNewJournal" value="A new journal will be queued up for processing."/>
+			<label name="message.receipts" value="The work item will be sent to awaiting receipts."/>
+			<label name="message.tradeInvoice" value="This invoice will be change to a PO invoice"/>
+			<label name="message.tradeInvoice" value="This invoice will be change to a PO invoice"/>
+			<label name="message.reset" value="The subtype will be reset and processing will start at the beginning"/>
+			<label name="message.duplicatereview" value="This invoice will be sent to duplicate review"/>
+			<label name="message.PostReset" value="This invoice will have its batch status reset"/>
+			<!-- Workflow Messages -->
+			<label name="MP_CustomWP" value="Busy in Workflow (MP_CustomWP)"/>
+			<label name="MP_EmailWP" value="Busy in Workflow (MP_EmailWP)"/>
+			<label name="MP_InvoiceWP" value="Busy in Workflow (MP_InvoiceWP)"/>
+			<label name="MP_POWP" value="Busy in Workflow (MP_POWP)"/>
+			<label name="MP_ProcessWP" value="Busy in Workflow (MP_ProcessWP)"/>
+			
+			
+			<!-- Queue name overrides (valueAlias) -->
+			<!--label name="APIndexing" value="APIndexing"/>
+			<label name="APReview" value="High Dollar Review"/>
+			<label name="APSupervisor" value="AP Supervisor"/>
+			<label name="ARIndexing" value="AR Indexing" />
+			<label name="ARMiscIndexing" value="AR Misc Indexing"/>
+			<label name="Approve" value="Approve"/>
+			<label name="AutoClear" value="Auto Clear"/>
+			<label name="AutoJournalPost" value="Awaiting Journal Posting"/>
+			<label name="AutoJournalFail" value="Allocation Journal Failed"/>
+			<label name="AutoMatch" value="Awaiting Match"/>
+			<label name="AutoPay" value="Awaiting Payment"/-->
+			
+			<label name="queue.APIndexing" value="AP Indexing"/>
+			<label name="queue.Approve" value="Approve"/>
+			<label name="queue.APReview" value="High Dollar Review"/>
+			<label name="queue.APSupervisor" value="AP Supervisor"/>
+			<label name="queue.ARIndexing" value="AR Indexing"/>
+			<label name="queue.ARMiscIndexing" value="AR Misc Indexing"/>
+			<label name="queue.AutoClear" value="Auto Clear"/>
+			<label name="queue.AutoClose" value="Auto Close"/>
+			<label name="queue.AutoJournalFail" value="Allocation Journal Failed"/>
+			<label name="queue.AutoJournalPost" value="Awaiting Journal Posting"/>
+			<label name="queue.AutoMatch" value="Awaiting Match"/>
+			<label name="queue.AutoPay" value="Awaiting Payment"/>
+			<label name="queue.AutoVoid" value="Awaiting Void Payment"/>
+			<label name="queue.AutoReissue" value="Awaiting Reissue Payment"/>
+			<label name="queue.AutoPostTax" value="AutoPostTax"/>
+			<label name="queue.AwaitingReceipt" value="AwaitingReceipt"/>
+			<label name="queue.AwaitingResponse" value="AwaitingResponse"/>
+			<label name="queue.BillsDropped" value="BillsDropped"/>
+			<label name="queue.BillsPosting " value="BillsPosting"/>
+			<label name="queue.Buyer" value="Buyer"/>
+			<label name="queue.CancelledInvoice" value="CancelledInvoice"/>
+			<label name="queue.Conductor" value="Conductor"/>
+			<label name="queue.Conductor2" value="Conductor2"/>
+			<label name="queue.CorpFacilities" value="CorpFacilities"/>
+			<label name="queue.Discount" value="Discount"/>
+			<label name="queue.DOCIndexing" value="DOCIndexing"/>
+			<label name="queue.Dropped" value="Dropped"/>
+			<label name="queue.DuplicateReview" value="DuplicateReview"/>
+			<label name="queue.EDIProcess" value="EDIProcess"/>
+			<label name="queue.EquipmentIndexing" value="EquipmentIndexing"/>
+			<label name="queue.EquipmentProcess" value="EquipmentProcess"/>
+			<label name="queue.ExpenseReceipts" value="ExpenseReceipts"/>
+			<label name="queue.GeneralException" value="GeneralException"/>
+			<label name="queue.GLApprove" value="GLApprove"/>
+			<label name="queue.GLIndexing" value="GLIndexing"/>
+			<label name="queue.header" value="Conductor Queue"/>
+			<label name="queue.HighDollarReview" value="High Dollar Review"/>
+			<label name="queue.Inbox" value="Inbox"/>
+			<label name="queue.Indexing" value="Indexing"/>
+			<label name="queue.MatchBad" value="MatchBad"/>
+			<label name="queue.MatchForce" value="MatchForce"/>
+			<label name="queue.Messages" value="Messages"/>
+			<label name="queue.MiscIndexing" value="MiscIndexing"/>
+			<label name="queue.NONPOException" value="NONPOException"/>
+			<label name="queue.NONPOIndexing" value="NONPOIndexing"/>
+			<label name="queue.NONPOPosting" value="NONPOPosting"/>
+			<label name="queue.OverrideEdit" value="OverrideEdit"/>
+			<label name="queue.POApprove" value="POApprove"/>
+			<label name="queue.POExceptions" value="POExceptions"/>
+			<label name="queue.POFinal" value="POFinal"/>
+			<label name="queue.POIndexing" value="POIndexing"/>
+			<label name="queue.Posting" value="Posting"/>
+			<label name="queue.PostingFailed" value="PostingFailed"/>
+			<label name="queue.PrePosting" value="PrePosting"/>
+			<label name="queue.PreTaxAudit" value="PreTaxAudit"/>
+			<label name="queue.Process" value="Process"/>
+			<label name="queue.RematchHold" value="RematchHold"/>
+			<label name="queue.RematchVendor" value="Rematch Vendor"/>
+			<label name="queue.Rescan" value="Rescan"/>
+			<label name="queue.SpecialInstructions" value="SpecialInstructions"/>
+			<label name="queue.Template_Approve" value="Template Approve"/>
+			<label name="queue.Template_Indexing" value="Template Indexing"/>
+			<label name="queue.Terminate" value="Terminate"/>
+			<label name="queue.UseTaxAudit" value="UseTaxAudit"/>
+			<label name="queue.UseTaxReview" value="UseTaxReview"/>
+			<label name="queue.VendorMaintenance" value="Vendor Maintenance"/>
+			<label name="queue.Batch_Draft" value="Payment Batch Draft"/>
+			<label name="queue.Batch_Review" value="Payment Batch Review"/>
+			<label name="queue.Batch_Staging" value="Payment Batch Posted"/>
+			<label name="queue.Batch_Confirm" value="Payment Batch Confirmed"/>
+			<label name="queue.Batch_Error" value="Payment Batch Error"/>
+			<label name="queue.PurchaseProcess" value="Purchase Process"/>
+			<label name="queue.PurchaseIndexing" value="Purchase Indexing"/>
+			<label name="queue.Purchase" value="Purchase" />
+		
+			<label name="queue.Journal_Draft" value="Journal Draft"/>
+			<label name="queue.Journal_Review" value="Journal Review"/>		
+			<label name="queue.Journal_Staging" value="Journal Posted"/>
+			<label name="queue.Journal_Confirm" value="Journal Confirmed"/>
+			<label name="queue.Journal.Confirm" value="Journal Confirmed"/>
+			<label name="queue.Journal.Error" value="Journal Error"/>
+			
+			<label name="SpecialInstructions" value="Special Instructions"/>
+			
+			<label name="Process" value="Process"/>
+			<label name="Indexing" value="Indexing"/>
+			<label name="POProcessEven" value="PO Processing Even"/>
+			<label name="POProcessingOdd" value="PO Processing Odd"/>
+			<label name="POExceptions" value="PO Exceptions"/>
+			<label name="POAudit" value="PO Audit"/>
+			<label name="AutoTradeAudit" value="PO Audit"/>
+			<label name="AutoPostTax" value="Auto Post Tax"/>
+			<label name="FailedPosting" value="Posting Failed"/>
+			<label name="PostingFailed" value="Posting Failed"/>
+			<label name="PostingPayment" value="Awaiting Payment"/>
+			<label name="CRD" value="CRD"/>
+			<label name="Statements001" value="Statements"/>
+			<label name="CreditAP" value="AP Credits"/>
+			<label name="CreditBoat" value="Boat Warranty Credits"/>
+			<label name="CreditRTV" value="RTV Credits"/>
+			<label name="CreditRebate" value="Rebate Credits"/>
+			<label name="PreTaxAudit" value="Pre Tax Audit"/>
+			<label name="PostTaxAudit" value="Post-Posting Tax Audit"/>
+			<label name="CancelledInvoice" value="Cancelled"/>
+			<label name="CorpFacilities" value="Facilities"/>
+			
+			
+			<label name="MP_RulesWP" value="Busy in Workflow (MP_RulesWP)"/>
+			
+			<label name="MatchBad" value="Match Failed"/>
+			<label name="MatchForce" value="Force Match"/>
+			<label name="MP_SynchronizationWP" value="Busy in Workflow (MP_SynchronizationWP)"/>
+			<label name="MP_UserWP" value="Busy in Workflow (MP_UserWP)"/>
+			<label name="MP_VendorWP" value="Busy in Workflow (MP_VendorWP)"/>
+			<label name="InstructionSheetInterpreter" value="System Step"/>
+			<label name="Delay" value="Delay (Workflow Step)"/>
+			<label name="RematchHold" value="Rematch Hold"/>
+			<label name="RematchReceivables" value="Rematch (Receivables)"/>
+			<label name="RematchVendor" value="Rematch (Vendor)"/>
+			<label name="GeneralException" value="General Exception"/>
+			<label name="AutoClear" value="AutoClear"/>
+		
+			<label name="ExpenseReceipts" value="Awaiting Support Documents"/>
+			<label name="VendorMaintenance" value="Vendor Maintenance"/>
+			<label name="ExpenseSend" value="Dispatch Card"/>
+			<label name="ExpenseClean" value="Confirm Card Receipt"/>
+			<label name="ExpenseDraft" value="Draft Request"/>
+			<label name="ExpenseCard" value="Assign Card"/>
+			<label name="ExpenseClose" value="Clear Comdata Balance"/>
+			
+
+			<!-- Custom Objects-->
+			<!-- These labels are for custom objects that are specific to a particular implementation. -->
+			
+			<!-- Document Upload Table. -->			
+			<label name="custom1.seqId" value="seqId"/>
+			<label name="custom1.uploadRefId" value="uploadRefId"/>
+			<label name="custom1.docSeqId" value="docSeqId"/>
+			<label name="custom1.tbdString1" value="Current Task"/>
+			<label name="custom1.tbdString2" value="Over-ride"/>
+			<label name="custom1.tbdString3" value="Customer Id"/>
+			<label name="custom1.tbdString4" value="Business Name"/>
+			<label name="custom1.tbdString5" value="Address"/>
+			<label name="custom1.tbdString6" value="City"/>
+			<label name="custom1.tbdString7" value="State"/>
+			<label name="custom1.tbdString8" value="Zip"/>
+			<label name="custom1.tbdString9" value="E-Mail"/>
+			<label name="custom1.tbdString10" value="Order #"/>
+			<label name="custom1.tbdString11" value="Phone #"/>
+			<label name="custom1.tbdString12" value="Logo Id"/>
+			<label name="custom1.tbdString13" value="Logo Type"/>
+			<label name="custom1.tbdString14" value="Rush Level"/>
+			<label name="custom1.tbdString15" value="Location(s)"/>
+			<label name="custom1.tbdString16" value="Rush Level"/>
+			<label name="custom1.tbdString17" value="Approval Status"/>
+			<label name="custom1.tbdString18" value="Approval Status"/>
+			<label name="custom1.tbdString19" value="Specialist"/>
+			<label name="custom1.tbdString20" value="Next Step"/>
+			<label name="custom1.tbdString21" value="Contact"/>
+			<label name="custom1.tbdString22" value="Next Step"/>
+			<label name="custom1.tbdString23" value="Stitch Count"/>
+			<label name="custom1.tbdString24" value="Graphic Artist"/>
+			<label name="custom1.tbdString25" value="Specialist Role"/>
+			<label name="custom1.tbdString26" value="Artist Role"/>
+			<label name="custom1.tbdNumber1" value="Application Fee"/>
+			<label name="custom1.tbdNumber2" value="Times Sent"/>
+			<label name="custom1.tbdNumber3" value="Times Sent"/>
+			<label name="custom1.tbdNumber4" value="tbdNumber4"/>
+			<label name="custom1.tbdNumber5" value="tbdNumber5"/>
+			<label name="custom1.tbdNumber6" value="tbdNumber6"/>
+			<label name="custom1.tbdNumber7" value="tbdNumber7"/>
+			<label name="custom1.tbdNumber8" value="tbdNumber8"/>
+			<label name="custom1.tbdNumber9" value="tbdNumber9"/>
+			<label name="custom1.tbdNumber10" value="tbdNumber10"/>
+			<label name="custom1.tbdCurrency1" value="Application Fee"/>
+			<label name="custom1.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="custom1.tbdCurrency3" value="tbdCurrency3"/>
+			<label name="custom1.tbdCurrency4" value="tbdCurrency4"/>
+			<label name="custom1.tbdCurrency5" value="tbdCurrency5"/>
+			<label name="custom1.tbdBoolean1" value="tbdBoolean1"/>
+			<label name="custom1.tbdBoolean2" value="tbdBoolean2"/>
+			<label name="custom1.tbdBoolean3" value="tbdBoolean3"/>
+			<label name="custom1.tbdBoolean4" value="tbdBoolean4"/>
+			<label name="custom1.tbdBoolean5" value="tbdBoolean5"/>
+			<label name="custom1.tbdBoolean6" value="tbdBoolean6"/>
+			<label name="custom1.tbdBoolean7" value="tbdBoolean7"/>
+			<label name="custom1.tbdBoolean8" value="tbdBoolean8"/>
+			<label name="custom1.tbdBoolean9" value="tbdBoolean9"/>
+			<label name="custom1.tbdBoolean10" value="tbdBoolean10"/>
+			<label name="custom1.tbdDate1" value="Preapproval Sent"/>
+			<label name="custom1.tbdDate2" value="Sample Approval Sent"/>
+			<label name="custom1.tbdDate3" value="Create Date"/>
+			<label name="custom1.tbdDate4" value="tbdDate4"/>
+			<label name="custom1.tbdDate5" value="tbdDate5"/>
+			<label name="custom1.tbdDate6" value="tbdDate6"/>
+			<label name="custom1.tbdDate7" value="tbdDate7"/>
+			<label name="custom1.tbdDate8" value="tbdDate8"/>
+			<label name="custom1.tbdDate9" value="tbdDate9"/>
+			<label name="custom1.tbdDate10" value="tbdDate10"/>
+			<label name="custom1.tbdComment1" value=""/>
+			<label name="custom1.tbdComment2" value=""/>
+			<label name="custom1.tbdComment3" value=""/>
+			<label name="custom1.tbdComment4" value=""/>
+			<label name="custom1.tbdComment5" value=""/>
+			
+			<!-- One Time Vendor Table. -->
+			
+			<label name="custom2.address1" value="Address1"/>
+			<label name="custom2.address2" value="Factor Code"/>
+			<label name="custom2.address3" value="Factor Name"/>
+			<label name="custom2.address4" value="Factor Name"/>
+			<label name="custom2.approvalCode" value="Location Custom"/>
+			<label name="custom2.bankAccountNumber" value="Bank Account Number"/>
+			<label name="custom2.bankName" value="Bank Name"/>
+			<label name="custom2.city" value="City"/>
+			<label name="custom2.code" value="Code"/>
+			<label name="custom2.contact" value="Contact"/>
+			<label name="custom2.createDate" value="Create Date"/>
+			<label name="custom2.deleteFlag" value="Disabled"/>
+			<label name="custom2.email" value="E-mail"/>
+			<label name="custom2.fax" value="Fax"/>
+			<label name="custom2.lastModifiedDate" value="Last Modified Date"/>
+			<label name="custom2.mpSeqId" value="mpSeqId"/>
+			<label name="custom2.name" value="Name"/>
+			<label name="custom2.name2" value="Name 2"/>
+			<label name="custom2.payBlock" value="Pay Block"/>
+			<label name="custom2.payToCode" value="Pay To Code"/>
+			<label name="custom2.phone" value="Phone"/>
+			<label name="custom2.postalCode" value="Zip"/>
+			<label name="custom2.postBlock" value="Post Block"/>
+			<label name="custom2.rmtAddress1" value="Address1"/>
+			<label name="custom2.rmtAddress2" value="Address2"/>
+			<label name="custom2.rmtCity" value="City"/>
+			<label name="custom2.rmtName" value="Name"/>
+			<label name="custom2.rmtPostalCode" value="Zip"/>
+			<label name="custom2.rmtState" value="State"/>
+			<label name="custom2.seqId" value="seqId"/>
+			<label name="custom2.state" value="State"/>
+			<label name="custom2.status" value="Status"/>
+			<label name="custom2.taxId" value="Tax Id"/>
+			<label name="custom2.tbdBoolean1" value="tbdBoolean1"/>
+			<label name="custom2.tbdBoolean2" value="tbdBoolean2"/>
+			<label name="custom2.tbdCurrency1" value="tbdCurrency1"/>
+			<label name="custom2.tbdCurrency2" value="tbdCurrency2"/>
+			<label name="custom2.tbdDate1" value="tbdDate1"/>
+			<label name="custom2.tbdDate2" value="tbdDate2"/>
+			<label name="custom2.tbdNumber1" value="tbdNumber1"/>
+			<label name="custom2.tbdNumber2" value="tbdNumber2"/>
+			<label name="custom2.tbdQuantity1" value="tbdQuantity1"/>
+			<label name="custom2.tbdQuantity2" value="tbdQuantity2"/>
+			<label name="custom2.tbdString1" value="SWIFT"/>
+			<label name="custom2.tbdString2" value="Other Routing"/>
+			<label name="custom2.tbdString3" value="tbdString3"/>
+			<label name="custom2.tbdString4" value="tbdString4"/>
+			<label name="custom2.ten99Code" value="ten99Code"/>
+			<label name="custom2.ten99Flag" value="ten99Flag"/>
+			<label name="expenseLineTypes.creditOnly" value="The itemize function can only be used on credit lines."/>
+			<label name="invoiceInclude" value="Include"/>
+			<label name="invoiceAnnotations" value="Annotations"/>
+            <label name="invoiceAttachments" value="Attachments"/>
+			<label name="ccNumber" value="CC #"/>
+			<label name="expense.creditcardisnull" value="You must select a credit card before retrieving card transactions"/>
+			<label name="search.account.code" value="GL Account Code"/>
+			<label name="search.account.code1" value="Corporation"/>
+			<label name="search.account.code2" value="Accounts"/>
+			<label name="search.account.code3" value="Cost Center"/>
+			<label name="search.account.description" value="Description"/>
+			<label name="search.account.code6" value="Preferred"/>
+			
+			<label name="taxStatusCode" value="Tax Review Status" />
+			<label name="action.bulk" value="New - Bulk Upload"/>
+			<label name="vendorAddress.addressType" value="Address Type"/>
+			<label name="enCryptCC" value="P-Card Number"/>
+			<label name="firstApproverName" value="First Approver" />
+						
+			<!--  Button Labels -->
+			<label name="reject" value="Reject"/>
+			<label name="release" value="Release"/>
+			<label name="updateRelease" value="Update"/>
+			<label name="update" value="Save"/>
+			<label name="forward" value="Submit" />
+			<label name="edit" value="Edit" />
+			<label name="add" value="Add" />
+			<label name="addEdit" value="Add/Edit" />
+			<label name="back" value="Back" />
+			<label name="controls" value="Controls" />
+			<label name="submit" value="Submit" />
+			<label name="reset" value="Reset" />
+			<label name="filter" value="Filter" />
+			<label name="cancel" value="Cancel" />
+
+			<!-- labels for title of header buttons -->
+			<label name="rejectTitle" value="Reject to an Alternative Work Process"/>
+			<label name="updateTitle" value="Save Edits and Hold in My Inbox"/>
+			<label name="updateReleaseTitle" value="Save Edits and Release Back to Work Queue"/>
+			<label name="releaseTitle" value="Cancel Edits and Release Back to Work Queue"/>
+			<label name="forwardTitle" value="Save and Move Forward to Next Work Process Step"/>
+			
+			<label name="Recycle" value="Reset Type" />
+			<label name="message.nonpoChange" value="Wrong invoice type, reset type to Expense"/>
+			<label name="message.poChange" value="Wrong invoice type, reset type to PO"/>
+			<label name="Reset" value="Reset Sub-type" />
+			<label name="message.reset" value="Resetting Workflow, use this if the Sub-type was changed."/>
+			
+			<label name="newAttachment" value="New Attachment"/>
+			<label name="newActiveLink" value="New Active Link"/>
+			<label name="backToAttachments" value="Return to Attachments"/>
+			<label name="postalCode" value="Zip"/>
+			<label name="postalCode" value="Zip"/>
+			<label name="name" value="Name"/>
+			<label name="name2" value="Alt Name"/>
+			<label name="code1" value="Code 1"/>
+			<label name="code2" value="Code 2"/>
+			<label name="code3" value="Code 3"/>
+			<label name="deleteMainLineItem.noLinesMessage" value="No line items to delete."/>
+			<label name="RemoveAllItems" value="Remove all line items"/>
+			<label name="RemoveMarkedItems" value="Remove Matched Lines"/>
+			<label name="RemoveUnMarkedItems" value="Remove Unmatched Lines"/>
+			<label name="addExcelLineItem" value="Upload From Excel"/>
+			<label name="lineItemLookup" value="Show Pre-Approved Lines" />
+			
+			<!-- Accounting Period Lookup labels -->
+			<label name="period" value="Accounting Period"/>
+			<label name="month" value="Month"/>
+			<label name="year" value="Year"/>
+			<label name="startDate" value="Start Date"/>
+			<label name="endDate" value="End Date"/>
+			<label name="orgCode" value="Organization Code"/>
+			
+			
+			<!-- *** ADVANCED SEARCH LABELS MIR-739 *** -->
+			<label name="adv.search.incorrect.operator" value="Incorrect operator used on line "/>
+			<label name="adv.search.data.type" value="The data type has not been defined in the XML for line "/>
+			<label name="adv.search.double" value="Value should be a double on line "/>
+			<label name="adv.search.integer" value="Value should be an integer on line "/>
+			<label name="adv.search.attr.null" value="Attribute is null on line  "/>
+			<label name="adv.search.value.null" value="Value is null on line  "/>
+			<label name="adv.search.empty" value="There are no lines on the screen to delete."/>
+			<label name="adv.search.operator" value="Operator"/>
+			<label name="adv.search.attribute" value="Attribute"/>
+			<label name="adv.search.value" value="Value"/>
+			<label name="adv.search.search.logic" value="Search Logic"/>
+			<label name="adv.search.show.hide" value="Show/Hide"/>
+			<label name="adv.search.search" value="Search"/>
+			<label name="adv.search.export" value="Export"/>
+			<label name="adv.search.clear" value="Clear"/>
+			<label name="adv.search.add" value="Add Attribute"/>
+			<label name="adv.search.delete" value="Delete Attribute"/>		
+
+			<label name="adv.search.select.company" value="Please Select Company"/>	
+			<label name="adv.search.select.subtype" value="Please Select Sub-Type"/>
+			<label name="adv.search.select.type" value="Please Select Type"/>
+			<label name="adv.search.select.sensitivity" value="Please Select Sensitivity"/>
+			<label name="adv.search.select.group" value="Please Select Group"/>
+			<label name="adv.search.select.priority" value="Please Select Priority"/>
+			<label name="adv.search.select.tbdBoolean2" value="N/A"/>
+			<label name="adv.search.select.templateMatchedStatus" value="Please Select Status"/>
+			
+			<label name="adv.search.equals" value="Equals"/>
+			<label name="adv.search.notEqual" value="Does Not Equal"/>
+			<label name="adv.search.startWith" value="Starts With"/>
+			<label name="adv.search.endWith" value="Ends With"/>
+			<label name="adv.search.greaterThan" value="Greater Than"/>
+			<label name="adv.search.lessThan" value="Less Than"/>
+			<label name="adv.search.greaterThanEqual" value="Greater Than or Equal To"/>
+			<label name="adv.search.lessThanEqual" value="Less Than or Equal To"/>
+			<label name="adv.search.isNull" value="Is Null"/>
+			<label name="adv.search.notNull" value="Is Not Null"/>	
+			
+			<!-- **** END OF ADVANCED SEARCH LABELS **** -->
+			
+			<label name="calculatedRemainingTotal" value="Remaining Balance"/>
+			<label name="zeroResults" value="No records found" />
+			<label name="lookup" value="Lookup" />
+			<label name="choistList.purposeofpayment.investment" value="Investment payment"/>
+			<label name="choistList.purposeofpayment.payrolls" value="Payroll/Personnel payment"/>
+			<label name="choistList.purposeofpayment.goods" value="Purchase of Good(s)"/>
+			<label name="choistList.purposeofpayment.services" value="Purchase of Service(s)"/>
+			
+			<!-- Added with version 7.2.2 -->
+			
+			<label name="paymentType.category" value="Payment Category"/>
+			<label name="account.code" value="GL Account Code"/>
+			<label name="account.code1" value="Company"/>
+			<label name="account.code2" value="Market"/>
+			<label name="account.code3" value="Group"/>
+			<label name="account.code4" value="Department"/>
+			<label name="account.code5" value="Natural Class"/>
+			<label name="userApproval.glSegment1" value="Company"/>
+			<label name="userApproval.glSegment2" value="Market"/>
+			<label name="userApproval.glSegment3" value="Group"/>
+			<label name="userApproval.glSegment4" value="Department"/>
+			<label name="userApproval.glSegment5" value="Natural Class"/>
+			<label name="paymentsDate" value="Date" />
+			
+			<label name="queue.Journal.Staging" value="Journal Posted" />
+			<label name="queue.Journal_Error" value="Journal Error" />
+			<label name="queue.Journal_confirm" value="Journal Confirm"/>
+			<label name="action.mDbinProcess" value="In Process" />
+			<label name="action.mDbinApprove" value="In Approval" />
+			<label name="action.mDbinReview" value="In Review" />
+			<label name="action.mDbinException" value="In Exception" />
+			<label name="action.mDbinPosting" value="In Posting" />
+			<label name="action.mDbSearchCol06" value="TBD" />
+			<label name="action.mDbSearchCol07" value="TBD" />
+			<label name="action.mDbSearchCol08" value="TBD" />
+			<label name="action.VPMiscRequest" value="New Message" />
+			<label name="paymentBatch" value="Payment Batch"/>
+			
+			<label name="group" value="Group" />
+			<label name="message.awaitingFunds" value="Move to Awaiting Funds queue"/>
+			<label name="userApproval.tbdCurrency1" value="tbdCurrency1"/>
+			<abbel name="userApproval.tbdCurrency2" value="tbdCurrency2"/>
+
+		
+			<label name="paymentModeBatch" value="Payment Mode Lookup"/>
+			<label name="paymentMode.seqId.code" value="PayMode ID"	/>
+			
+			<label name="paymentMode.paymentType.code" value="Type"/>
+			<label name="paymentMode.currency.code" value="Currency"/>
+			<label name="paymentMode.Company.code" value="Company Code"/>
+						
+			<label name="paymentMode.docGroup" value="Group"/>
+			<label name="paymentMode.docOrgCode" value="Organization Code"/>
+			<label name="paymentMode.docSubType" value="SubType"/>		
+
+			<label name="paymentMode.name" value="Name"/>
+			<label name="paymentMode.description" value="Description"/>
+			
+			<label name="paymentMode.bankRoutingNumber" value="Routing Number"/>
+			<label name="paymentMode.bankAccountNumber" value="Bank Acct"/>	
+
+			<label name="paymentMode.bankName" value="Bank Name"/>
+			<label name="paymentMode.companyName" value="Company"/>
+			<label name="paymentMode.companyShortName" value="Co Name"/>
+			<label name="paymentMode.taxIdNumber" value="Tax ID"/>
+			<label name="paymentMode.accountToken" value="Token"/>				
+						
+			<label name="paymentMode.companyDirectClear" value="Direct Clear"/>	
+			<label name="paymentMode.companySundryInfo" value="Sundry Info"/>
+			<label name="paymentMode.companyDirectClearCode" value="Clear Code"/>
+			<label name="paymentModeERPId" value="Payment Mode ERPId"/>
+			<label name="paymentMode" value="Payment Mode"/>
+			<label name="accountingPeriod" value="Accounting Period" />
+			<label name="usesDefaultUpload" value="Uses Default Upload"/>
+			<label name="bankRoutingNo" value="Routing Number" />
+			<label name="bankAccountNo" value="Bank Account Number"/>
+			<label name="batchNumber" value="Batch Number"/>
+			<label name="journalNumber" value="Journal Number"/>
+			<label name="batchStatus" value="Batch Status"/>
+			<label name="batchControl" value="Payment Batch Control" />
+			
+			
+			<label name="vendor.tbdBoolean1" value="Separate Payment"/>
+			<label name="vendor.tbdBoolean2" value="Email Opt Out"/>
+			<label name="vendor.tbdString1" value=" Vendor Category"/>
+			<label name="vendor.tbdString2" value="Default Company"/>
+			<label name="vendor.tbdString3" value="Wire Instructions"/>
+			<label name="vendor.tbdString4" value="DBA / Bank Notes"/>
+			
+			
+		<label name="scanVendorName" value="Submitted By"/>
+		<label name="scanBy" value="Mailroom Pi"/>
+			
+		<label name="taxAmount1" value="Tax"/>
+		<label name="tbdString10" value="Approval Method"/>
+			
+		<label name="Journal_Draft" value="Journal Draft" />
+		<label name="Journal_Review" value="Journal Review"/>
+		<label name="Journal_Staging" value="Journal Posting" />
+		<label name="Journal_Confirm" value="Journal Confirm"/>
+		<label name="Journal_Error" value="Journal Error"/>
+			
+			
+		<label name="invoiceTypePO" value="PO"/>
+		<label name="action.mDbinProcess" value="In Process" />
+		<label name="action.mDbinApprove" value="In Approval" />
+		<label name="action.mDbinReview" value="In Review" />
+		<label name="action.mDbinException" value="In Exception" />
+		<label name="action.mDbinPosting" value="In Posting" />
+		<label name="action.mDbSearchCol06" value="TBD" />
+		<label name="action.mDbSearchCol07" value="TBD" />
+		<label name="action.mDbSearchCol08" value="TBD" />
+
+		<label name="queue.Batch_Draft" value="Payment Batch Draft"/>
+		<label name="queue.Batch_Review" value="Payment Batch Review"/>
+		<label name="queue.Batch_Staging" value="Payment Batch Posted"/>
+		<label name="queue.Batch_Confirm" value="Payment Batch Confirmed"/>
+		<label name="queue.Batch_Error" value="Payment Batch Error"/>
+		<label name="queue.PurchaseProcess" value="Purchase Process"/>
+		<label name="queue.PurchaseIndexing" value="Purchase Indexing"/>
+		<label name="queue.Purchase" value="Purchase" />
+		
+		<label name="queue.Journal_Draft" value="Journal Draft"/>
+		<label name="queue.Journal_Review" value="Journal Review"/>		
+		<label name="queue.Journal_Staging" value="Journal Posted"/>
+		<label name="queue.Journal_Confirm" value="Journal Confirmed"/>
+		<label name="queue.Journal.Confirm" value="Journal Confirmed"/>
+		<label name="queue.Journal.Error" value="Journal Error"/>
+			
+		<label name="paymentMode" value="Payment Mode"/>
+		<label name="paymentMode.header" value="Payment Modes"/>
+		<label name="paymentMode.accountCode" value="Account Code"/>
+		<label name="paymentMode.seqId" value="Seq. #"/>
+		<label name="paymentMode.name" value="Name"/>
+		<label name="paymentMode.description" value="Description"/>
+		<label name="paymentMode.systemOriginator.code" value="ERP ID"/>
+		<label name="paymentMode.clientIdToken" value="Client ID Token"/>
+		<label name="paymentMode.company.code" value="Company"/>
+		<label name="paymentMode.currency.code" value="Currency"/>
+		<label name="paymentMode.docOrgCode" value="Doc. Org. Code"/>
+		<label name="paymentMode.docSubType" value="Doc. Sub-Type"/>
+		<label name="paymentMode.bankName" value="Bank Name"/>
+		<label name="paymentMode.bankRoutingNumber" value="Bank Routing No."/>
+		<label name="paymentMode.bankAccountNumber" value="Bank Account No."/>
+		<label name="paymentMode.foreignTransaction" value="Foreign Transaction"/>
+		<label name="paymentMode.taxIdNumber" value="Tax ID"/>
+		<label name="paymentMode.accountToken" value="Account Token"/>
+		<label name="paymentMode.companyName" value="Company Name"/>
+		<label name="paymentMode.companyShortName" value="Company Short Name"/>
+		<label name="paymentMode.companyDirectClear" value="Company Direct Clear"/>
+		<label name="paymentMode.companyDirectClearCode" value="Company Direct Clear Code"/>
+		<label name="paymentMode.companySundryInfo" value="Company Sundry Info"/>
+		<label name="paymentMode.createDate" value="Create Date"/>
+		<label name="paymentMode.interfaceJob" value="Export Job"/>
+		<label name="paymentMode.lastModifiedDate" value="Last Modified"/>
+		<label name="paymentMode.deleteFlag" value="Disabled?"/>
+		<label name="paymentMode.postingResponse" value="Posting Response"/>
+		<label name="paymentMode.paymentType.category" value="Category"/>
+		<label name="lookup.paymentTemplate.template" value="Payment Template"/>
+		<label name="lookup.paymentTemplate.company" value="Company Code"/>
+		<label name="lookup.paymentTemplate.paymentType" value="Payment Type"/>
+		<label name="lookup.paymentTemplate.currency" value="Currency"/>
+		<label name="lookup.paymentTemplate.subType" value="SubType"/>
+		<label name="officeFlag" value="OOO Flag"/>
+		
+		<!-- 7.2.4 -->
+		<!--MIR-1288 routing labels -->
+		<label name="noRoutesExist" value=" No Route Exist"/>
+		<label name="addNewRoute" value="Add New Route"/>
+		<label name="queue" value="Queue"/>
+		<label name="invoiceAmount" value="Invoice Amount"/>
+		
+		<label name="role" value="Role"/>
+		<label name="addedBy" value="Added By"/>
+		<label name="source" value="Source"/>
+		<label name="dateAdded" value="Date Added"/>
+		<label name="group.deleteFlag" value="Disabled?"/>
+		<label name="searchArchive" value="Search Archive"/>	
+		<label name="activeReport" value="Active Report"/>
+		<label name="activeReport.print" value="Print"/>
+		<label name="activeReport.reload" value="Reload"/>
+		<label name="activeReport.refresh" value="Refresh"/>
+		<label name="activeReport.fullscreen" value="Full Screen"/>
+		
+		<!--Template Fields -->
+		<label name="templateName" value="Template Name"/>
+		<label name="templateDocType" value="Template DocType"/>
+		<label name="templateSubType" value="Template SubType"/>
+		<label name="templateInstructions" value="Template Instructions"/>
+		<label name="templatePrivateFlag" value="Template Private/Public"/>
+		<label name="templateOwner" value="Template Owner"/>
+		<label name="templateMatchedStatus" value="Template Matched Status"/>
+		<label name="templateCode" value="Template Code"/>
+		<label name="templateGLCodePercentage" value="Template GL%"/>
+		<label name="templateRouting" value="Template Routing"/>
+		<label name="templateApprovalLimit" value="Template Approval Limit"/>
+		<label name="templateHeader" value="Template"/>
+		<label name="templateDetails" value="Template Details"/>
+		<label name="templateReviewDate" value="Template Review Date"/>
+		<label name="otherTemplate" value="Other Template Fields"/>
+		<label name="templateLineItems" value="Template GL Fields"/>
+		<label name="label.yes" value="Yes"/>
+		<label name="label.no" value="No"/>
+		<label name="templateRoutingUserNull" value="All Approver Names need to be filled before saving."/>
+		<label name="createTemplate" value="Create Template"/>
+		
+		<label name="lookup.document.tbdString4" value="NA"/>
+			
+		</locale>
+</labels>
+
+

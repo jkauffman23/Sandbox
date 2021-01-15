@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The searchfilter.xml works in tandem with the user specific search filitering (see the MP_SEARCH_FILTER_HEADER,
+MP_SEARCH_FILTER_PARAM_REF and MP_SEARCH_FILTER_DETAIL tables). The search filter tables are important 
+in getting search filtering to work. The MP_SEARCH_FILTER_HEADER table has columns for multiple 
+database column names and database values. Sometimes these database values will want to be a concatenation
+or various items in the MP_SEARCH_FILTER_PARAM_REF table. The primary keys of those two tables is what is 
+used in this xml. 
+
+In the dbColumn tag, you are linking the SFH_DBCOLUMN[1-5] to a entry in the MP_SEARCH_FILTER_PARAM_REF
+table. The column value in the dbColumn tag contains the [1-5] of the SFH-DBCOLUMN[1-5]. The param value is
+the primary key of the param ref whose db column will populate this column. If you have an entry in the
+search filter header that will be made up of multiple items, it only needs one entry in the dbColumns tag.
+
+The trickier bit is the dbValues. Say you have a GL Code that is made up of three parts 123-456-789.
+You want to have different limitations on each part. In that case each section, section1, section2, 
+and section3 are entries in the MP_SEARCH_FILTER_PARAM_REF tables. What you will do is build an entry
+in the header table by having in order of appearance, each part of the gl code in the dbValues table. If you want
+have a permanent item in you header, you can use a param value of "0". For example the entry
+
+<dbValue column="1"  param="1" entry =""/>
+<dbValue column="1"  param="0" entry ="-"/>
+<dbValue column="1"  param="2" entry =""/>
+
+Will create a string like param1+"-"+param2 in your header table. 
+
+
+
+-->
+<root>
+	<dbColumns>
+		<dbColumn column="1" param="1" />
+	</dbColumns>
+	<dbValues>
+		<dbValue column="1"  param="1" entry =""/>
+		<dbValue column="1"  param="0" entry ="-"/>
+		<dbValue column="1"  param="2" entry =""/>
+		<dbValue column="1"  param="0" entry ="-"/>
+		<dbValue column="1"  param="3" entry =""/>
+		<dbValue column="1"  param="0" entry ="-"/>
+		<dbValue column="1"  param="4" entry =""/>
+
+	</dbValues>
+	
+
+
+	
+</root>
+

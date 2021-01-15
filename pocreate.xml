@@ -1,0 +1,41 @@
+<pocreate>
+<!-- Header Details -->
+<property invoice="poId"					po="number" lineItem="false"/>
+<property invoice="tbdString1"				po="type" lineItem="false"/>
+<property invoice="companyCode"				po="company.code" lineItem="false"/>
+<property invoice="vendor" 					po="vendor" lineItem="false"/>
+<property invoice="vendorId" 				po="vendor.code" lineItem="false"/>
+<property invoice="vendorERPId" 			po="vendor.systemOriginator.code" lineItem="false"/>
+<property invoice="paymentTerm" 			po="paymentTerm" lineItem="false"/>
+<property invoice="paymentTermERPId" 		po="paymentTerm.systemOriginator.code" lineItem="false"	/>
+<property invoice="paymentTermId" 			po="paymentTerm.code" lineItem="false"/>
+<property invoice="buyerId" 				po="buyerId" lineItem="false"/>
+<property invoice="taxId" 					po="taxCode.code" lineItem="false"/>
+<property invoice="businessUnit"			po="businessUnit" lineItem="false"/>
+<property invoice="taxCode" 				po="taxCode" lineItem="false"/>
+<property invoice="taxERPId" 				po="taxCode.systemOriginator.code" lineItem="false"/>
+<property invoice="requesterId" 			po="requesterId" lineItem="false"/>
+<property invoice="tbdString25" 			po="type" lineItem="false"/>
+<property invoice="tbdDate10"				po="validityStart" lineItem="false"/>
+<property invoice="tbdDate11"				po="validityEnd" lineItem="false"/>
+<property invoice="date"					po="date" lineItem="false"/>
+<!-- LineItem Details-->
+<property invoice="accountCode" 			po="account.code" lineItem="true"/>
+<property invoice="accountERPId" 			po="systemOriginator.code" lineItem="true"/>
+<property invoice="accountERPId" 			po="account.systemOriginator.code" lineItem="true"/>
+<property invoice="unitPrice" 				po="orderedUnitPrice" lineItem="true"/>
+<property invoice="tbdNumber1" 				po="lineNumber" lineItem="true"/>
+<property invoice="taxId"					po="taxCode.code" lineItem="true"/>
+<property invoice="taxERPId" 				po="taxCode.systemOriginator.code" lineItem="true"/>
+<property invoice="costObjectId1"			po="costObject1.code" lineItem="true"/>
+<property invoice="costObjectId2" 			po="costObject2.code" lineItem="true"/>
+<property invoice="itemCode" 				po="itemCode" lineItem="true"/>
+<property invoice="unitPrice" 				po="orderedUnitPrice" lineItem="true"/>
+<property invoice="itemDescription" 		po="itemDescription" lineItem="true"/>
+<property invoice="manfPartNumber" 			po="manfPartNumber" lineItem="true"/>
+<property invoice="materialId"				po="materialId" lineItem="true"/>
+<property invoice="partNumber" 				po="partNumber" lineItem="true"/>
+<property invoice="uom" 					po="orderedUOM" lineItem="true"/>
+<property invoice="quantity" 				po="orderedQuantity" lineItem="true"/>
+<property invoice="tbdString14" 			po="tbdString3" lineItem="true"/>
+</pocreate>

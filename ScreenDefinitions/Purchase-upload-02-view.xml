@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="Purchase-upload-02-view" template="Purchase-upload-02-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+			<label name="tbdString3" value ="Item Comment 1"/>
+			<label name="grossAmount" value="Blanket Total"/>
+		</locale>
+</labels>
+
+<property-overrides>	
+	<dropDown name="subType" defaultValue="Blanket" choiceList="choice.purchaseSubTypes" onChange="reloadPage(this)" validation="required"/>
+</property-overrides>
+
+
+</view>
+
+

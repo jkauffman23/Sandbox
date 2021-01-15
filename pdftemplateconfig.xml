@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pdf-templates loader="FileLoader"  path="E:\MiriaSystems\DEV10\ActiveOps\Common\Templates\">
+	<templates>
+	<template 
+			name="regularPurchaseOrder" 
+			fileName="regularpo.ftl" 
+			displayName="Purchase Order" 
+			displayOnUI="true"
+			description="Use this template to generate a purchase order."
+			nameVariable="poId"
+			nameConcatenation="Regular_PO#_%x%"/>
+		<template 
+			name="blanketPurchaseOrder" 
+			fileName="blanketPO.ftl" 
+			displayName="Blanket Purchase Order" 
+			displayOnUI="true"
+			description="Use this template to generate a blanket purchase order."
+			nameVariable="poId"
+			nameConcatenation="Blanket_PO_#%x%"/>
+	</templates>
+	
+	
+</pdf-templates>

@@ -1,0 +1,72 @@
+<navigation name="admin.leftnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/leftNavigation.xsd">
+	 <initpage href="/queuestats.do"/>
+	 	
+		
+	<!--    Not Used in version 7.2  
+	<section name="section.admin.usersearch" colapsible="true" collapsed="true" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"> 			
+		<usersearch />
+		<action href="" target="right" name=""/>  Used to add space </section>
+	 -->
+		
+		
+	 <section name="section.admin.organization" collapsed="true" roles="MP_Administrator3, MP_Administrator4"> 			
+		<action href="/users.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.users"/>
+		<action href="/organization/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.organizations"/>
+		<action href="/defaultvalues.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.defaults.user" />	
+	</section>
+	
+	
+	<section name="section.admin.organization.docs" collapsed="true" roles="MP_Administrator3, MP_Administrator4"> 			
+		<action href="/groups/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.groups"/>
+		<action href="/costobjects/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.costobjects"/>
+		<action href="/approvalexception/list.do" 	target="right" image="/images/ico-submenu-16x8.png" name="action.admin.approvalexception"/>
+		<action href="/queues.do" 		 target="right" image="/images/ico-submenu-16x8.png" name="action.admin.queue.security" roles="MP_Administrator4"/>
+		<action href="/listSearchFilter.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.filters" roles="MP_Administrator4"/>
+	</section>
+	
+	<section name="section.admin.erp.tables" collapsed="true" roles="MP_Administrator3, MP_Administrator4">
+		<action href="/vendor/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.simsap.vendors" />
+		<action href="/accountingperiod/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.accountingperiod"/>	
+		<action href="/poheader/list.do?page=0" target="right" image="/images/ico-submenu-16x8.png" name="action.simsap.poheaders"  />
+		<action href="/receivable/list.do?page=0" target="right" image="/images/ico-submenu-16x8.png" name="action.simsap.receivable" />
+		<action href="/systemoriginator/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.simsap.systemoriginator"/>
+		<action href="/account/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.simsap.accounts" />
+		<action href="/listpaymentterms.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.paymentterms"/>	
+		<action href="/paymenttypes/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.paymenttypes"/>
+		<action href="/paymentmodes/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.paymentmodes"/>
+		<action href="/listtaxcodes.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.taxcodes"/>
+		<action href="/creditcategory/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.expensecategory"/>
+		<action href="/countries/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.countries" />	
+		<action href="/currencies/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.currencies" />
+		<action href="/currencyconversion.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.currencyConversion" />
+		<action href="/erperrorcode/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.erperrorcodes" />
+	</section>
+	
+	<section name="section.admin.interfaces"  collapsed="true" roles="MP_Administrator4"> 
+		<action href="/errorcodetranslations.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.errorcodetranslations"/>	
+	</section>
+	
+	 <section name="section.admin.advConfig" collapsed="true" roles="MP_Administrator3, MP_Administrator4"> 
+		<action href="/listParameter.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.parameters" />
+		<action href="/templates/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.gltemplate"/>
+	 </section>
+				
+ <section name="section.admin.reports" collapsed="true" roles="MP_Administrator3, MP_Administrator4">
+		<action href="/listreportcategory.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.report.category" />
+		<action href="/listreportsubcategory.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.report.subCategory" />	 
+		<action href="/listreport.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.report" />
+	 </section>
+	
+	<section name="section.admin.health" collapsed="true" roles="MP_Administrator3, MP_Administrator4"> 
+		<action href="/queuestats.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.queuestats"/>
+		<action href="/conductorqueue.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.conductor"/>
+	</section>
+	
+	<section name="section.admin.tools" roles="MP_Administrator4" collapsed="true">
+		<action href="/refresh.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.refresh"  />
+		<action href="/users/refresh.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.tools.usersrefresh" />
+		<action href="/companies/list.do" target="right" image="/images/ico-submenu-16x8.png" name="action.admin.companies" />
+    </section>
+	
+
+</navigation>

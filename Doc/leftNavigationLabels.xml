@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THIS FILE -->
+
+<labels default="en">
+	<locale name="en">
+		<label name="action.myinbox.doc" value="Doc Form Inbox" />
+		<label name="action.indexing.doc" value="Doc Form Indexing" />
+		<label name="action.upload.doc" value="Doc Form Upload" />
+		<label name="section.queues.exception" value="Exceptions" />
+		<label name="action.generalexception.doc" value="General" />
+		<label name="action.vendormaintenance.doc" value="Vendor Maintenance" />
+		<label name="action.rescan.doc" value="Waiting Rescan" />
+		<label name="action.exception.terminate.doc" value="Terminate" />
+	</locale>
+
+</labels>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+

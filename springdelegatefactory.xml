@@ -1,0 +1,8 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-lazy-init="true">
+
+
+    <bean id="CustomizationDelegate" class="com.miriasystems.custom.CustomizationDelegateImpl" />
+    <bean id="routingDelegate" class="com.miriasystems.routing.RoutingDelegateImpl" />
+
+</beans>

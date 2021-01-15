@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-posting-view" template="Purchase-ROG-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>
+		<section name="vendorDetails" visible="true" collapsed="false"/>
+		<section name="lineItems" visible="true" />		
+	</section-overrides>
+	
+	
+	<property-overrides>
+			<lookup name="vendorId" lookupType="lookup.vendorCode" styleClass="twohundred" validation="required" readonly="true"/>
+			<text name="remitToId" styleClass="onehundred" validation="required" inputReadonly="true" readonly="true"/>
+			<lookup name="vendor.name" lookupType="lookup.vendorCode" styleClass="twohundred" readonly="true"/>
+			<poNumber name="poId" readonly="true" lookupType="lookup.poHeader"/>
+			<date name="po.date" readonly="true"  styleClass="date"/>
+			<date name="po.tbdDate1" readonly="true"  styleClass="date"/>
+			<text name="po.buyerId" readonly="true"  styleClass="onehundred"/>
+			<text name="po.requesterId" readonly="true"  styleClass="onehundred"/>
+			<lookup name="po.company.code" validation="required" styleClass="onehundred" readonly="true" lookupType="lookup.organization"/>
+			<textArea name="tbdComment1" styleClass="comment" readonly="true"/>
+			<textArea name="tbdComment2" styleClass="comment" readonly="true"/>	
+			
+			<text name="tbdString23" styleClass="sixhundred" readonly="true"/>
+			<text name="shippingDocumentId" styleClass="twohundred" readonly="true"/>
+			<text name="shipToCompany" styleClass="twohundred" readonly="true"/>
+			<text name="shipToAddress1" styleClass="sixhundred" readonly="true"/>
+			<text name="shipToAddress2" styleClass="sixhundred" readonly="true"/>
+			<text name="shipToCity" styleClass="twohundred" readonly="true"/>
+			<text name="shipToState" styleClass="twohundred" readonly="true"/>
+			<text name="shipToZip" styleClass="twohundred" readonly="true"/>			
+	</property-overrides>
+
+	<action-overrides>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="false" alwaysActive="false"/>	
+	</action-overrides>
+	
+	<lineItem-overrides>
+			<text name="poLine.lineNumber" readonly="true" styleClass="thirty"/>
+			<text name="itemCode" readonly="true" styleClass="oneeighty"/>
+			<text name="itemDescription" readonly="true" validation="required" styleClass="oneeighty" labelKey="poLine.itemDescription"/>
+			<dropDown name="uom" readonly="true" choiceList="choice.UOM" validation="required" styleClass="onehundred" />
+			<text name="poLine.orderedQuantity" readonly="true" validation="required" styleClass="onehundred" />	
+			<text name="poLine.receivedQuantity" readonly="true" validation="required" styleClass="onehundred" />
+			<text name="quantity" readonly="true" validation="required" styleClass="onehundred" />
+			<text name="poLine.tbdString3" readonly="true" styleClass="oneeighty"/>	
+			<text name="poLine.tbdString4" readonly="true" styleClass="oneeighty"/>		
+			<text name="tbdString3" readonly="true" styleClass="oneeighty"/>
+	</lineItem-overrides>
+	
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+			</reason>
+
+		</rejectionReasons>
+	</documentRejection>
+	
+	<validations>
+		<validation name="validation.validVendor"/>
+	</validations>
+</view>

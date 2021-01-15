@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<advancedSearch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	
+	<advancedSearchProperties name="main">
+		<properties>
+			<property value="date" labelKey="date" type="date" searchType="text" lookupName="" choiceListName=""/>
+			<property value="seqId" labelKey="seqId" type="int" searchType="text" lookupName="" choiceListName=""/>	
+			<property value="sensitivity" labelKey="sensitivity" type="int" searchType="choiceList" lookupName="" choiceListName="choice.sensitivity"/>
+			<property value="number" labelKey="number" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="group" labelKey="group" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="subType" labelKey="subType" type="string" searchType="choiceList" lookupName="" choiceListName="choice.invoiceSubTypes.upload"/>
+			<property value="uploadRef" labelKey="uploadRef" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="vendorId" labelKey="vendorId" type="string" searchType="lookup" lookupName="lookup.vendorCodeAdv" choiceListName=""/>
+			<!--property value="department" labelKey="department" type="string" searchType="text" lookupName="" choiceListName=""/-->
+			<property value="routingCode" labelKey="routingCode" type="string" searchType="lookup" lookupName="lookup.costObject1" choiceListName=""/>
+			<property value="type" labelKey="type" type="string" searchType="choiceList" lookupName="" choiceListName="choice.invoiceTypes"/>
+			<property value="grossAmount" labelKey="grossAmount" type="double" searchType="text" lookupName="" choiceListName=""/>
+			<!--property value="batchOrdinal" labelKey="batchOrdinal" type="int" searchType="text" lookupName="" choiceListName=""/-->
+			<property value="companyCode" labelKey="companyCode" type="string" searchType="lookup" lookupName="lookup.organizationAdv" choiceListName=""/>
+			<property value="requesterId" labelKey="requesterId" type="string" searchType="lookup" lookupName="lookup.requesterAdv" choiceListName=""/>
+			<property value="buyerId" labelKey="buyerId" type="string" searchType="lookup" lookupName="lookup.buyerAdv" choiceListName=""/>
+			<property value="scanVendorName" labelKey="scanVendorName" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="poId" labelKey="poId" type="string" searchType="lookup" lookupName="lookup.poHeaderAdv" choiceListName=""/>
+			<!--property value="receiveDate" labelKey="receiveDate" type="date" searchType="text" lookupName="" choiceListName=""/-->
+			<property value="dueDate" labelKey="dueDate" type="date" searchType="text" lookupName="" choiceListName=""/>
+			<property value="scanDate" labelKey="scanDate" type="date" searchType="text" lookupName="" choiceListName=""/>
+			<property value="discountDueDate" labelKey="discountDueDate" type="date" searchType="text" lookupName="" choiceListName=""/>
+			<property value="batchNumber" labelKey="batchNumber" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="scanSite" labelKey="scanSite" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="erpDocId" labelKey="erpDocId" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<!--property value="newBatchNumber" labelKey="newBatchNumber" type="string" searchType="text" lookupName="" choiceListName=""/-->	
+			<!--property value="businessUnit" labelKey="businessUnit" type="string" searchType="lookup" lookupName="lookup.businessUnitAdv" choiceListName=""/-->
+			<property value="journalNumber" labelKey="journalNumber" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="paymentBatchDescription" labelKey="paymentBatchDescription" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="paymentsPayRef" labelKey="paymentsPayRef" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="paymentsSourceSeqId" labelKey="paymentsSourceSeqId" type="int" searchType="text" lookupName="" choiceListName=""/>		
+			<property value="paymentModeId" labelKey="paymentModeId" type="string" searchType="text" lookupName="" choiceListName=""/>   
+			<property value="accountingPeriod" labelKey="accountingPeriod" type="string" searchType="text" lookupName="" choiceListName=""/>   
+			<property value="batchStatus" labelKey="batchStatus" type="int" searchType="text" lookupName="" choiceListName=""/>   
+			<property value="paymentBatch" labelKey="paymentBatch" type="string" searchType="text" lookupName="" choiceListName=""/>   
+			<property value="docPriority" labelKey="docPriority" type="int" searchType="choiceList" lookupName="" choiceListName="choice.priority"/>  
+			<property value="tbdString10" labelKey="tbdString10" type="string" searchType="text" lookupName="" choiceListName=""/>
+			<property value="tbdBoolean2" labelKey="tbdBoolean2" type="string" searchType="choiceList" lookupName="" choiceListName="choice.notAvailable"/> 	
+			<property value="templateCode" labelKey="templateCode" type="string" searchType="text" lookupName="" choiceListName=""/>			
+			<property value="templateName" labelKey="templateName" type="string" searchType="text" lookupName="" choiceListName=""/>			
+			<property value="templateOwner" labelKey="templateOwner" type="string" searchType="lookup" lookupName="lookup.templateOwnerAdv" choiceListName=""/>			
+			<property value="templateMatchedStatus" labelKey="templateMatchedStatus" type="int" searchType="choiceList" lookupName="" choiceListName="choice.matchedStatus.Template"/>
+			<property value="templateReviewDate" labelKey="templateReviewDate" type="date" searchType="text" lookupName="" choiceListName=""/>
+			<property value="tbdString12" labelKey="tbdString12" type="string" searchType="text" lookupName="" choiceListName=""/>
+
+			
+		</properties>
+			
+		<operators>
+			<operator value="0" labelKey="adv.search.equals"/>
+			<operator value="1" labelKey="adv.search.notEqual"/>
+			<operator value="2" labelKey="adv.search.startWith"/>
+			<operator value="3" labelKey="adv.search.endWith"/>
+			<operator value="4" labelKey="adv.search.greaterThan"/>
+			<operator value="5" labelKey="adv.search.lessThan"/>
+			<operator value="6" labelKey="adv.search.greaterThanEqual"/>
+			<operator value="7" labelKey="adv.search.lessThanEqual"/>
+			<operator value="8" labelKey="adv.search.isNull"/>
+			<operator value="9" labelKey="adv.search.notNull"/>
+		</operators>
+	</advancedSearchProperties>
+		
+	
+</advancedSearch>

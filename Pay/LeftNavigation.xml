@@ -1,0 +1,73 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+<!-- Version 6.6  2016.07.15 -->
+
+
+    <initpage href="/filenet/search.do?searchName=InboxSearchPay"/>
+    <action href="/filenet/search.do?searchName=InboxSearchPay" target="right" image="/images/ico-inbox-w16.png" name="action.myinbox" searchName="InboxSearchPay"/>
+	<action href="/dashboard.do" target="right" image="/images/ico-inbox-w16.png" name="action.dashboard"/>
+	
+		
+		<!--   Main Team Queues Section         -->
+   <section name="section.queues.indexing" collapsed="true" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Confirmer1, MP_Indexer1" >
+		<action href="/filenet/search.do?searchName=IndexingSearchNP" target="right" image="/images/ico-folder-w16.png" name="action.indexingNP"  searchName="IndexingSearchNP"/> 
+		<action href="/filenet/search.do?searchName=IndexingSearchPO" target="right" image="/images/ico-folder-w16.png" name="action.indexingPO"  searchName="IndexingSearchPO"/>  
+	</section>
+	
+	
+	<section name="section.queues.review" roles="MP_Administrator3, MP_Administrator4, MP_Confirmer1, MP_Processor1" collapsed="true" >
+		<action href="/filenet/search.do?searchName=ReviewSearchSupervisor" target="right" image="/images/ico-folder-w16.png" name="action.review.supervisor" searchName="ReviewSearchSupervisor" />
+		<action href="/filenet/search.do?searchName=ReviewSearchSpecial" target="right" image="/images/ico-folder-w16.png" name="action.review.special"    searchName="ReviewSearchSpecial" />
+		<action href="/filenet/search.do?searchName=CorpFacilitiesSearch" target="right" image="/images/ico-folder-w16.png" name="action.corpfacilities" searchName="CorpFacilitiesSearch" />  
+		<action href="/filenet/search.do?searchName=HighDollarReview" target="right" image="/images/ico-folder-w16.png" name="action.highdollar.review" searchName="HighDollarReview"  /> 
+		<action href="/filenet/search.do?searchName=APReviewSearch" target="right" image="/images/ico-folder-w16.png" name="action.APReview"  searchName="APReviewSearch"/>		
+	</section>
+	
+		
+	<!--   Main Exceptions Queues        -->
+    <section name="section.queues.exceptions" collapsed="true" roles="MP_Administrator3, MP_Administrator4, MP_Confirmer1, MP_Auditor1">
+		<action href="/filenet/search.do?searchName=ExceptionSearch" target="right" image="/images/ico-folder-w16.png" name="action.generalexception" searchName="ExceptionSearch" />    
+		<action href="/filenet/search.do?searchName=AwaitingReceipt" target="right" image="/images/ico-folder-w16.png" name="action.awaitingreceipt" searchName="AwaitingReceipt"/>  
+		<action href="/filenet/search.do?searchName=DuplicateSearch" target="right" image="/images/ico-folder-w16.png" name="action.duplicatereview" searchName="DuplicateSearch"/> 		
+		<action href="/filenet/search.do?searchName=VendorMaintenanceSearch" target="right" image="/images/ico-folder-w16.png" name="action.vendormaintenance" searchName="VendorMaintenanceSearch" />     
+        <action href="/filenet/search.do?searchName=RescanSearch" target="right" image="/images/ico-folder-w16.png" name="action.rescan" searchName="RescanSearch" />	
+		<action href="/filenet/search.do?searchName=TerminateSearch" target="right" image="/images/ico-folder-w16.png" name="action.terminate" searchName="TerminateSearch"/>	
+		<action href="/filenet/search.do?searchName=OverrideEditSearch" target="right" image="/images/ico-folder-w16.png" name="action.overrideEditAP" searchName="OverrideEditSearch" />		
+	</section>
+	
+	<!--   Create Items Section       -->
+	<section name="section.requests" roles="MP_Administrator3, MP_Administrator4, MP_Indexer1, MP_Confirmer1" collapsed="true">
+		<action href="/filenet/upload.do?view=upload-nonpo-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.nonpo" />   		
+		<action href="/filenet/upload.do?view=upload-po-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.po" />
+		<action href="/filenet/upload.do?view=upload-xls-view.xml&amp;flag=excelExtraFields" target="right" image="/images/ico-add-doc-w16.png" name="action.excel"/>			
+    </section>
+	
+	
+   <!--  Posting Queues Section         -->    
+	<section name="section.postingqueues" roles="MP_Administrator3, MP_Administrator4, MP_Confirmer1" collapsed="true" >
+		<action href="/filenet/search.do?searchName=PostingSearch" target="right" image="/images/ico-folder-w16.png" name="action.posting"  searchName="PostingSearch" />
+		<action href="/filenet/search.do?searchName=ResetPostingSearch" target="right" image="/images/ico-folder-w16.png" name="action.resetposting"  searchName="ResetPostingSearch" />
+		<action href="/filenet/search.do?searchName=AutoClearSearch" target="right" image="/images/ico-folder-w16.png" name="action.AutoClear"  searchName="AutoClearSearch" />
+		<action href="/filenet/search.do?searchName=AutoCloseSearch" target="right" image="/images/ico-folder-w16.png" name="action.AutoClose"  searchName="AutoCloseSearch" />
+		<action href="/filenet/search.do?searchName=AutoVoidSearch" target="right" image="/images/ico-folder-w16.png" name="action.AutoVoid"  searchName="AutoVoidSearch" />	
+		<action href="/filenet/search.do?searchName=AutoReissueSearch" target="right" image="/images/ico-folder-w16.png" name="action.AutoReissue"  searchName="AutoReissueSearch" />			
+	</section>    
+
+	<!--  Template Queues Section         -->    
+	<section name="section.templatequeues" roles="MP_Administrator3, MP_Administrator4, MP_Confirmer1" collapsed="true" >
+		<action href="/filenet/upload.do?view=template-upload-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.template" /> 
+		<action href="/filenet/search.do?searchName=TemplateIndexSearch" target="right" image="/images/ico-folder-w16.png" name="action.indexingTemplate"  searchName="TemplateIndexSearch"/>
+		<action href="/filenet/search.do?searchName=OverrideEditSearchTemplate" target="right" image="/images/ico-folder-w16.png" name="action.overrideEditTemp" searchName="OverrideEditSearchTemplate" />	
+	</section>
+
+	<!--   Tools        -->
+    <section name="section.tools" collapsed="true">
+        <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-w16.png" name="action.preferences"/>
+		<action href="/restricted/passwordreset.do" target="right" image="/images/ico-wrench-c16.png" name="action.passwordreset"/>
+
+    </section>
+	
+
+         
+</navigation>

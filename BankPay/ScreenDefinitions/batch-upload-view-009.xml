@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="batch-upload-view-006" template="batch-upload-vcard-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+			<label name="batch" value="Funds Payment - vCard" />
+		</locale>
+</labels>
+
+<section-overrides>	
+</section-overrides>
+
+<property-overrides>
+</property-overrides>
+
+<hidden-overrides>
+	<hidden name="postingERPId" defaultValue="FUNDS" forceDefault="true"/>
+	<hidden name="vendorERPId" defaultValue="FUNDS" forceDefault="true"/>
+    <hidden name="paymentTermERPId" defaultValue="FUNDS" forceDefault="true"/>
+	<hidden name="paymentTypeERPId" defaultValue="FUNDS" forceDefault="true"/>
+	<hidden name="paymentModeERPId" defaultValue="FUNDS" forceDefault="true"/>
+	<hidden name="erpDocId" defaultValue="FUNDS" forceDefault="true"/>
+</hidden-overrides>
+
+
+<validations>
+    
+</validations>
+
+</view>
+
+

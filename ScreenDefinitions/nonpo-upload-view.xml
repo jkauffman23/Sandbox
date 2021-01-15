@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="upload-inv-view" template="upload-nonpo-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+		</locale>
+</labels>
+
+<section-overrides>	
+		<section name="New Vendor Details" visible="false"/>
+</section-overrides>
+
+<property-overrides>
+	<text name="custom2.name" defaultValue="" forceDefault="true"/>
+	<text name="custom2.address1" defaultValue="" forceDefault="true"/>
+	<text name="custom2.city" defaultValue="" forceDefault="true"/>
+	<text name="custom2.state" defaultValue="" forceDefault="true"/>
+	<text name="custom2.postalCode" defaultValue="" forceDefault="true"/>
+	<text name="custom2.address2" defaultValue="" forceDefault="true"/>
+	<text name="custom2.address3" defaultValue="" forceDefault="true"/>
+	<text name="custom2.rmtName" defaultValue="" forceDefault="true"/>
+	<text name="custom2.rmtAddress1" defaultValue="" forceDefault="true"/>
+	<text name="custom2.rmtCity" defaultValue="" forceDefault="true"/>
+	<text name="custom2.rmtState" defaultValue="" forceDefault="true"/>
+	<text name="custom2.rmtPostalCode" defaultValue="" forceDefault="true"/>	
+	<dropDown name="erpDocId" defaultValue="Tolas" forceDefault="false"/>
+</property-overrides>
+
+<validations>
+</validations>
+
+</view>
+
+

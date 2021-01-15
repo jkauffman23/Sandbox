@@ -1,0 +1,6 @@
+<choice value="DOC001" label="Invoice" />  Template=		doc-tpl
+<choice value="DOC002" label="Proof of Delivery" />		doc-pod-tpl
+<choice value="DOC003" label="Address Change" />		doc-address-change-tpl
+<choice value="DOC004" label="Tax W9" />			doc-tax-w9-tpl
+<choice value="DOC005" label="Tax Exempt" />			doc-tax-exempt-tpl
+<choice value="DOC006" label="Other 2" />			doc-tpl

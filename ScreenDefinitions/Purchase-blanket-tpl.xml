@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+           
+    <labels>
+	<!-- Label overrides for this template -->
+		<locale name="en">
+			
+		</locale>
+	</labels>
+	
+	<section name="doc" collapsible="false" collapsed="false">
+		<!-- The following section is standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+		<properties>
+			<valueAlias row="1" col="1" name="processInformation.queueName" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="2" name="originatorName" styleClass="threehundred" readonly="true"/>
+			<textArea row ="2" col="1-2" name="processInformation.comment" readonly="false" styleClass="comment" />
+			<output row="3" col="1-2" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+		</properties>
+
+		<actions>
+			<button name="default" command="forward" readonly="false" type="submit" styleClass="buttonHide"/>
+			<!--getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/-->					
+			<rejectButton name="reject" readonly="false" isAnchored="false" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" styleClass="button70"/>
+		</actions>
+	</section>
+	
+		
+	<section name="PURCH001" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="subType" readonly="false" validation="required" choiceList="choice.purchaseSubTypes" onChange="reloadPage(this)" styleClass="threehundred"/>
+			<text row="1" col="2" name="number" styleClass="threehundred" validation="required"/> <!-- Requester Number -->
+			<lookup row="2" col="1" name="vendorId" lookupType="lookup.vendorCode" styleClass="threehundred" validation="required" inputReadonly="true"/>
+			<lookup row="2" col="2" name="vendor.name" lookupType="lookup.vendorCode" styleClass="threehundred" inputReadonly="true"/>
+			<text row="3" col="1" name="remitToId" styleClass="threehundred" validation="required" readonly="true"/>
+			<date row="3" col="2" name="tbdDate10" readonly="false" validation="required" styleClass="threehundred"/>
+			<date row="4" col="1" name="tbdDate11" readonly="false" validation="required" styleClass="threehundred"/>
+			<currency row="4" col="1" name="grossAmount" styleClass="threehundred" validation="required" readonly="false"/>
+			<dynamicDropDown row="5" col="1" name="currencyId" providerClass="com.miriasystems.ui.providers.CurrencyChoiceListProvider" styleClass="threehundred" readonly="false" validation="required"/>
+			<date row="5" col="2" name="date" readonly="true"  styleClass="threehundred"/>
+			<text row="6" col="1" name="tbdString22" validation="required" styleClass="threehundred"/>
+			<text row="6" col="2" name="tbdString24" readonly="false" styleClass="threehundred"/>
+			<text row="7" col="1" name="poId" readonly="false"  styleClass="threehundred"/>
+			<lookup row="7" col="2" name="companyCode" validation="required" styleClass="threehundred" lookupType="lookup.organization" inputReadonly="true"/>
+			<lookup row="8" col="1" name="buyerName" readonly="false" lookupType="lookup.buyer" styleClass="threehundred" /> <!-- Buyer -->
+			<textArea row="9" col="1-2" name="tbdComment1" styleClass="comment"/>
+			<textArea row="10" col="1-2" name="tbdComment2" styleClass="comment"/>			
+		</properties>
+		<actions>
+			<iconAction name="pdf" icon="/images/ico-pdf-w24.png" width="24" height="24" link="javascript:openGeneratePDFWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="false" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>		
+		</actions>
+	</section>
+	
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="true">
+		<properties>
+			<text row="1" col="1" name="vendorAddress.address1" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="2" name="vendor.phone" readonly="true" styleClass="threehundred"/>
+			<text row="2" col="1" name="vendorAddress.address2" readonly="true" styleClass="threehundred"/>
+			<text row="2" col="2" name="vendorAddress.state" readonly="true" styleClass="threehundred"/>
+			<text row="3" col="1" name="vendorAddress.city" readonly="true" styleClass="threehundred" />
+			<text row="3" col="2" name="vendorAddress.postalCode" readonly="true" styleClass="threehundred"/>			
+	    </properties>
+	</section>
+	
+	<section name="shipDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="shippingDocumentId" styleClass="threehundred" readonly="false" lookupType="lookup.vendorCode.purchase"/>
+			<lookup row="1" col="2" name="shipToCompany" styleClass="threehundred" readonly="false" lookupType="lookup.vendorCode.purchase"/>
+			<text row="2" col="1" name="tbdString23" styleClass="threehundred" readonly="false"/>
+			<text row="2" col="2" name="shipToAddress1" styleClass="threehundred" readonly="false"/>
+			<text row="3" col="1" name="shipToAddress2" styleClass="threehundred" readonly="false"/>
+			<text row="3" col="2" name="shipToCity" styleClass="threehundred" readonly="false"/>
+			<text row="4" col="1" name="shipToState" styleClass="threehundred" readonly="false"/>
+			<text row="4" col="2" name="shipToZip" styleClass="threehundred" readonly="false"/>
+		</properties>
+	</section>
+	
+	<section name="lineItems" visible="true" collapsible="true" collapsed="false">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<text row="1" col="1" name="itemDescription" readonly="false" validation="required" styleClass="oneeighty" labelKey="poLine.blanketDescription"/>
+			<currency row="1" col="2" name="unitPrice" readonly="false" validation="required" styleClass="currency" labelKey="poLine.blankettotal"/>
+			<lookup row="1" col="3" name="accountCode" lookupType="lookup.accountCode_SEI" validation="required" readonly="true" inputReadonly="true" styleClass="oneeighty" />
+			<text row="1" col="4" name="account.description" readonly="false" styleClass="oneeighty"/>	
+			<lineItemHidden row="0" col="0" name="quantity" readonly="true" styleClass="fifty" defaultValue="1"/>	
+			<lineItemHidden row="0" col="0" name="lineTotal" readonly="true" styleClass="currency"/>	
+			<text row="2" col="3" name="tbdString3" readonly="false" styleClass="oneeighty"/>	
+			<text row="2" col="4" name="tbdString4" readonly="false" styleClass="oneeighty"/>	
+			<text row="2" col="5" name="tbdString1" readonly="false" styleClass="oneeighty"/>
+		</lineItemProperties>
+		<actions>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->					
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" docType="upload" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" docType="upload" visible="true" alwaysActive="false"/>
+			
+		</actions>
+	</section>
+	
+		
+	<hiddenFields>
+		<hidden name="type" defaultValue="PURCHASE" />
+		<hidden name="postingERPId"  defaultValue="AOPS001"/>
+		<hidden name="vendorERPId"/>
+        <hidden name="newBatchNumber"/>
+       	<hidden name="paymentTermERPId"/>
+		<hidden name="paymentTypeERPId"/>
+       	<hidden name="vendor.status" defaultValue="1"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="requesterId"/>
+		<hidden name="scanSource" defaultValue="Direct Entry" forceDefault="true"/>
+		<hidden name="scanType" defaultValue="Purchase" forceDefault="true"/>
+		<hidden name="requester.userName"/>
+	</hiddenFields>
+	<processors>
+		<processor name="com.miriasystems.processors.NetAmountNoDiscountProcessor"/>
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+		<processor name="com.miriasystems.processors.LineTotalCalculator"/>
+		<!--processor name="com.miriasystems.processors.LineItemUnitPriceCalculator"/-->
+    	</processors>
+</propertyTemplate>

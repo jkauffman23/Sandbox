@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">  
+    
+	<labels>
+		<locale name="en">
+		<label name="label.dol.tbdString2" value="New Remit Id"/>
+		</locale>
+	</labels>
+		
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="type" labelKey="type" readonly="true" defaultValue="VENDOR" styleClass="threehundred"/>
+			<text row="1" col="2" name="subType" labelKey="subType" readonly="true" defaultValue="NEW" styleClass="threehundred"/>
+			<text row="2" col="1" name="tbdString14" labelKey="vendor.name" readonly="false" validation="required" styleClass="threehundred"/> <!--Vendor name -->
+			<dynamicDropDown row="2" col="2" name="currencyId" providerClass="com.miriasystems.ui.providers.CurrencyChoiceListProvider" readonly="false" styleClass="threehundred"/>
+			<text row="3" col="1" name="tbdString16" readonly="false" styleClass="threehundred"/>  <!-- Short Name -->
+			<dropDown row="3" col="2" name="erpDocId" choiceList="choice.erpID" validation="required" readonly="false" styleClass="threehundred"/>
+			<dropDown row="4" col="1" name="tbdString47" readonly="false" validation="required" choiceList="choice.vendorcategory" styleClass="threehundred" onChange="reloadPage(this)"/> <!--Vendor category -->
+			<dynamicDropDown row="4" col="2" name="paymentTypeId" providerClass="com.miriasystems.ui.providers.PaymentTypeChoiceListProvider" styleClass="threehundred" inputReadonly="true"/>
+			<lookup row="5" col="1" name="paymentTermId" lookupType="lookup.paymentTerm" styleClass="threehundred" inputReadonly="true"/>
+			<text row="5" col="2" name="tbdString37"  labelKey="label.vendorEmail" readonly="false" styleClass="threehundred"/> <!--Opt-in email -->
+			<lookup row="6" col="1" name="companyCode" readonly="false" lookupType="lookup.organization" styleClass="threehundred" inputReadonly="true"/>
+			<text row="6" col="2" name="tbdString35" labelKey="label.vendorContact" readonly="false" styleClass="threehundred"/> <!--Vendor Contact -->
+			<text row="7" col="1" name="tbdString52" readonly="false" styleClass="threehundred"/> <!--TIN -->
+			<text row="7" col="2" name="tbdString36" labelKey="label.vendorPhone" readonly="false" styleClass="threehundred"/> <!--Vendor Phone -->
+			<dropDown row="8" col="1" name="tbdString45" readonly="false" choiceList="choice.independdentContractor" styleClass="threehundred"/> <!-- Independent Contractor Verification -->
+			<text row="8" col="2" name="tbdString46" labelKey="label.vendorFax" readonly="false" styleClass="threehundred"/> <!--Vendor Fax -->
+			<text row="9" col="1" name="tbdString17" labelKey="tbdString17" readonly="false" styleClass="threehundred"/> <!--DBA / Banking Notes -->
+			<checkbox row="10" col="1" name="tbdBoolean11" readonly="false"/> <!--Opt-in -->
+			<checkbox row="10" col="2" name="tbdBoolean12" readonly="false" /> <!--Leased -->
+			<checkbox row="11" col="1" name="tbdBoolean14" readonly="false" /> <!--Separate Payment -->
+			<checkbox row="11" col="2" name="tbdBoolean15" readonly="false"/> <!--1099 -->
+		</properties>
+		
+		<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="vendorpaymentDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="bankRoutingNo" labelKey="bankRoutingNo" readonly="false" styleClass="threehundred"/> <!--ABA Routing Num -->
+			<text row="1" col="2" name="bankAccountNo" labelKey="bankAccountNo" readonly="false" styleClass="threehundred"/> <!--Bank Acct Num -->
+			<text row="2" col="1" name="tbdString42" labelKey="tbdString42" readonly="false" styleClass="threehundred"/> <!--Bank Name -->
+			<dropDown row="2" col="2" name="tbdString15" labelKey="tbdString15" readonly="false" choiceList="choice.bankaccounttype" styleClass="threehundred"/> <!--Bank Acct Type -->
+			<text row="3" col="1" name="tbdString43" labelKey="tbdString43" readonly="false" styleClass="threehundred"/><!--Wire Instructions -->
+		</properties>
+	</section>	
+	
+
+	
+	<section name="lineItems" visible="true" collapsible="true" collapsed="false">
+
+		<lineItemProperties showTotal="false" showTaxTotal="false">
+			<text row="1" col="1" name="tbdString16" labelKey="vendorAddress.remitToId" readonly="false" styleClass="twohundred"/> 
+			<text row="1" col="2" name="tbdString14" labelKey="vendorAddress.name" readonly="false" styleClass="twohundred" />
+			<text row="1" col="3" name="tbdString3" labelKey="vendorAddress.address1" readonly="false" styleClass="twohundred"/>
+			<text row="1" col="4" name="tbdString4" labelKey="vendorAddress.address2" readonly="false" styleClass="twohundred"/>
+			<text row="1" col="5" name="tbdString5" labelKey="vendorAddress.address3" readonly="false" styleClass="twohundred"/>
+			<text row="1" col="6" name="tbdString6" labelKey="vendorAddress.address4" readonly="false" styleClass="twohundred"/>
+			<dropDown row="1" col="7" name="tbdString17" labelKey="dol.tbdString17" choiceList="choice.truncated" defaultValue="0" readonly="false" styleClass="twohundred"/>
+			
+			<text row="2" col="3" name="tbdString7" labelKey="vendorAddress.city" readonly="false" styleClass="twohundred"/>
+			<dropDown row="2" col="4" name="tbdString8" labelKey="vendorAddress.state" readonly="false" choiceList="choice.statesAndProvinces" styleClass="twohundred"/>
+			<text row="2" col="5" name="tbdString9" labelKey="vendorAddress.postalCode" readonly="false" styleClass="twohundred"/>
+			<dynamicDropDown row="2" col="6" name="tbdString10" labelKey="vendorAddress.country.name" providerClass="com.miriasystems.ui.providers.CountryChoiceListProvider" readonly="false" styleClass="twohundred" />
+			<text row="2" col="7" name="tbdString11" labelKey="vendorAddress.contact" readonly="false" styleClass="twohundred"/>
+			<text row="2" col="8" name="tbdString12" labelKey="vendorAddress.email" readonly="false" styleClass="twohundred"/>
+			<text row="2" col="9" name="tbdString13" labelKey="vendorAddress.phone" readonly="false" styleClass="twohundred" />
+		</lineItemProperties>
+		<actions>				
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" docType="upload" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" docType="upload" visible="true" alwaysActive="false"/>
+			
+		</actions>
+	</section>
+	
+
+	<hiddenFields>
+		<hidden name="vendorId" autoNumber="true" autoNumberFormat="VENDORIDSEQUENCE_FORMAT"/> <!-- do not remove / comment out -->
+		<hidden name="postingERPId"  defaultValue="AOPS001"/>
+		<hidden name="group"  defaultValue="Vendor"/>
+        <hidden name="newBatchNumber"/>
+        <hidden name="paymentTermERPId"/>
+		<hidden name="paymentTypeERPId"/>
+		<hidden name="alternateVendor"/>
+		<hidden name="uploadRef"/>
+		<hidden name="requester.userName"/>
+		<hidden name="processInformation.failReason"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+		<hidden name="scanSource" defaultValue="Direct Entry" forceDefault="true"/>
+    </hiddenFields>
+
+	<processors>
+	</processors>
+</propertyTemplate>

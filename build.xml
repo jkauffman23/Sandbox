@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Base" default="ear" basedir=".">
+    <property file="${user.home}/user.properties"/>
+    <target name="archive">
+        <ant antfile="build.xml" dir="ETL" target="archive"/>
+        <ant antfile="build.xml" dir="CustomCode" target="archive"/>
+        <ant antfile="build.xml" dir="CustomWeb" target="archive"/>
+    </target>
+    <target name="ear">
+        <ant antfile="build.xml" dir="CustomCode" target="archive"/>
+        <ant antfile="build.xml" dir="CustomWeb" target="ear"/>
+        <ant antfile="build.xml" dir="CustomCode" target="ear"/>
+        <ant antfile="build.xml" dir="ETL" target="archive"/>
+        <copy todir="bin">
+            <fileset dir="ETL/bin">
+                <include name="*.war"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="clean">
+        <ant antfile="build.xml" dir="CustomCode" target="clean"/>
+        <ant antfile="build.xml" dir="ETL" target="clean"/>
+        <ant antfile="build.xml" dir="CustomWeb" target="clean"/>
+    </target>
+
+
+    <target name="adjust-mp-for-gw">
+        <zip destfile="${managedpay.base.dir}/bin/managedpay.ear" update="true">
+            <zipfileset dir="CustomCode/bin" >
+                <include name="customization-domain.jar"/>
+            </zipfileset>
+        </zip>
+        <zip destfile="${managedpay.base.dir}/bin/reporting-server.ear" update="true">
+            <zipfileset dir="CustomCode/bin" >
+                <include name="customization-domain.jar"/>
+            </zipfileset>
+        </zip>
+        <zip destfile="${managedpay.base.dir}/bin/routing-server.ear" update="true">
+            <zipfileset dir="CustomCode/bin" >
+                <include name="customization-domain.jar"/>
+            </zipfileset>
+        </zip>
+    </target>
+    
+</project>

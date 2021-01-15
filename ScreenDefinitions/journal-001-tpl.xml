@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+     <labels>
+			<label name="grossAmount" value="Journal Amount" />
+	<locale name="en">
+		
+	</locale>
+	</labels>
+	
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1-2" name="processInformation.queueName" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3-4" name="originatorName" styleClass="twohundred" readonly="true"/>
+			<textArea row ="2" col="1-4" name="processInformation.comment" readonly="false" styleClass="comment" />
+			<output row="3" col="1-4" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false"/>
+		</properties>
+		<actions>
+			<button name="default" command="forwardJournal" readonly="false" type="submit" styleClass="buttonHide"/>				
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70" alwaysActive="false" />
+			<button name="release" command="release" readonly="false" visible="true" type="submit"  title="releaseTitle" styleClass="button70"/>
+			<button name="updateReleaseJournal" command="updateReleaseJournal" readonly="false" visible="true" type="submit"  title="updateReleaseTitle" styleClass="button70"/>
+			<button name="updateJournal" command="updateJournal" readonly="false" visible="true" type="submit"  title="updateTitle" styleClass="button70"/>
+			<button name="forwardJournal" command="forwardJournal" readonly="false" type="submit" isAnchored="false"  title="forwardTitle" styleClass="button70"/>
+			<!-- button name="forward" command="forward" readonly="false" type="submit" isAnchored="false"  title="forwardTitle" styleClass="button70"/ -->
+		</actions>
+	</section>
+	
+	<section name="journalHeader001" visible="true" collapsible="false" collapsed="false"> 
+	
+		<properties>
+		<text row="1" col="1" name="type" readonly="true"  styleClass="threehundred"/>
+		<dropDown row="1" col="2" name="subType" choiceList="choice.journalSubTypes" readonly="true" styleClass="threehundred"/>
+		<text row="2" col="1" name="number" readonly="true" styleClass="threehundred"/>
+		<text row="2" col="2" name="group"  readonly="true" validation="required" styleClass="threehundred"/>	
+		<date row="3" col="1" name="tbdDate1" readonly="true" validation="required" styleClass="date" />
+		<text row="3" col="2" name="accountingPeriod" lookupType="lookup.accountingPeriod" readonly="true" styleClass="threehundred"/>
+		<lookup row="4" col="1" name="companyCode" lookupType="lookup.organization" readonly="true" styleClass="threehundred" validation="required"/>
+		<dynamicDropDown row="4" col="2" name="currencyId" providerClass="com.miriasystems.ui.providers.CurrencyChoiceListProvider"  readonly="true" validation="required" styleClass="threehundred"/>
+		<lookup row="5" col="1" name="tbdString15" lookupType="lookup.glOffsetCode" labelKey="glOffset.code" readonly="false" styleClass="threehundred" validation="required"/>
+		<text row="5" col="2" name="tbdString16" labelKey="glOffset.description" readonly="true" styleClass="threehundred" />
+		<text row="6" col="1" name="tbdString17" labelKey="glExportLabel" readonly="false" validation="required" styleClass="threehundred" />
+		<dropDown row="6" col="2" name="erpDocId" choiceList="choice.erpID" readonly="true" />
+		<currency row="7" col="1" name="grossAmount" readonly="true" styleClass="Currency threehundred" />
+		<textArea row="8" col="1-2" name="voucherComments" styleClass="comment" />	
+
+	</properties>
+		
+		
+	<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true" />
+		</actions>
+	</section>	
+	
+	
+	<section name="lineItems" visible="true" collapsible="true" collapsed="false"  type="JOURNAL" >
+
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<lookup row="1" col="1" name="accountCode" lookupType="lookup.journal.accountCode" readonly="true" validation="required" styleClass="twohundred"/>
+			<text row="1" col="2" name="account.description" readonly="true" styleClass="threehundred"/>
+			<currency row="1" col="3" name="lineTotal" readonly="true" styleClass="currencyLine twohundred"/>
+			<text row="1" col="4" name="itemDescription" readonly="false" styleClass="fivehundred"/>	
+			<hidden row="0" col="0" name="accountERPId"/>
+		
+		</lineItemProperties>
+		
+		<actions>
+			<button name="getLines" command="generateJournalLines" readonly="false" type="submit" isAnchored="false" title="getLinesTitle" styleClass="button70"/>
+		</actions>
+	</section>
+
+
+	<hiddenFields>
+		<hidden name="postingERPId"/>
+		<hidden name="vendorERPId"/>
+        <hidden name="newBatchNumber"/>
+       	<hidden name="paymentTermERPId"/>
+		<hidden name="paymentTypeERPId"/>
+		<hidden name="uploadRef"/>
+		<hidden name="requesterId"/>
+		<hidden name="scanSource" />
+		<hidden name="scanType"/>
+		<hidden name="requester.userName"/>
+		<!-- hidden name="grossAmount" defaultValue="0" forceDefault="true"/ -->
+		
+		
+		</hiddenFields>
+	<processors>
+			<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+			
+			
+			
+			
+    </processors>
+</propertyTemplate>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-vm-view" template="Purchase-ROG-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>
+		
+		
+	</section-overrides>
+	
+	<property-overrides>
+			
+	</property-overrides>
+
+	<action-overrides>
+		<iconAction name="editRouting" visible="false"/>
+		<iconAction name="postings" visible="true"/>
+		<iconAction name="addLineItem" readonly="true" visible="false"/>
+		<iconAction name="removeLineItem" readonly="true" visible="false"/>
+	</action-overrides>
+	
+	<lineItem-overrides>
+		<text name="accountCode" readonly="true" validation=""/>
+		<currency name="lineTotal" readonly="true" validation=""/>
+		<text name="tbdString1" readonly="true" validation=""/>
+	</lineItem-overrides>
+	
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+							<subReason name="Duplicate"/>
+				<subReason name="Incorrect Amount/ Invalid Charges"/>
+				<subReason name="Incomplete documentation"/>
+				<subReason name="Not a Genuine Invoice"/>
+				<subReason name="Other"/>
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+	
+	<validations>
+	</validations>
+</view>
+

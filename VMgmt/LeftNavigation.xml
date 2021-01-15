@@ -1,0 +1,44 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+    
+	<initpage href="/filenet/search.do?searchName=InboxSearchVendor"/>
+		<action href="/filenet/search.do?searchName=InboxSearchVendor" target="right" image="/images/ico-inbox-w16.png" name="action.myinbox" searchName="InboxSearchVendor"/> 
+	
+  <!--initpage href="/blank.jsp"></initpage-->
+ 		
+	 <section name="section.vmgmt.vendors" collapsed="false" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_VendorMaintenance1, MP_VendorMaintenance2">   		
+		<action href="/vendor/viewVendor.jsp" target="right" image="/images/ico-add-doc-w16.png" name="action.viewVendor" />  
+		<action href="/filenet/upload.do?view=upload-vendor-add-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.Add.Vendor" /> 
+		<action href="/filenet/upload.do?view=upload-vendor-update-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.updateVendor" />  	 		
+		<action href="/filenet/upload.do?view=upload-vendor-w9-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.Add.W9" />   		
+		<!--action href="/filenet/upload.do?view=upload-vendor-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.temp" roles="MP_Administrator4" /-->
+	</section>
+	
+	<section name="section.vmgmt.vendors.review" collapsed="false" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4,MP_VendorMaintenance2"> 
+		<action href="/filenet/search.do?searchName=RematchVendorManagement" target="right" image="/images/ico-folder-w16.png" name="action.rematchVendor" searchName="RematchVendorManagement"/> 		  		
+		  		
+
+	</section>
+	
+	<section name="section.tools" collapsed="true" >
+        <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-w16.png" name="action.preferences"/>
+		<action href="/restricted/passwordreset.do" target="right" image="/images/ico-wrench-c16.png" name="Reset Password"/>
+		
+    </section>	
+	
+	<section name="section.vmgmt.qualification" collapsed="true" roles="MP_Administrator5" >
+		<action href="/construction.jsp" target="right" image="/images/ico-submenu-16x8.png" name="action.vmgmt.workflow.01"/>
+		<action href="/construction.jsp" target="right" image="/images/ico-submenu-16x8.png" name="action.vmgmt.workflow.02"/>
+		<action href="/construction.jsp" target="right" image="/images/ico-submenu-16x8.png" name="action.vmgmt.workflow.03"/>
+		<action href="/construction.jsp" target="right" image="/images/ico-submenu-16x8.png" name="action.vmgmt.workflow.04"/>
+		<action href="/construction.jsp" target="right" image="/images/ico-submenu-16x8.png" name="action.vmgmt.workflow.05"/>
+	</section>
+	
+		
+
+
+	
+	
+</navigation>
+

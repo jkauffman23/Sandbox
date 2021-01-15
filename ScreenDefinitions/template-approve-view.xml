@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<view name="template-approve-view" template="template-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<labels default="en">
+		<locale name="en">
+			<label name="number" value="Template Code"/>
+		</locale>
+	</labels>
+
+	<section-overrides>
+	</section-overrides>
+
+	<property-overrides>
+		
+	</property-overrides>
+
+	<action-overrides>
+		<iconAction name="editRouting" readonly="false" />
+		<iconAction name="postings" visible="true" />
+		<button name="release" visible="false"/>
+		<button name="updateRelease" visible="false"/>
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+				<subReason name="Incomplete documentation"/>
+				<subReason name="Other"/>
+			</reason>
+			<reason name="Terminate" commentsRequired="true" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+
+    </validations>
+
+</view>

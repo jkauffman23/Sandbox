@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THSI FILE -->
+
+	<locale name="en">
+		<label name="tbdDate1" value="Paid Date" /> 
+	</locale>
+	
+</labels>
+
+

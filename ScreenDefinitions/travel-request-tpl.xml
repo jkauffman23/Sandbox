@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels>
+		<!-- Label overrides for this template -->
+			<locale name="en">
+            </locale>
+	</labels>
+	
+	
+	
+	<section name="doc" collapsible="false" visible="true" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1-2" name="processInformation.queueName" readonly="true" styleClass="twofifty" />
+			<text row="1" col="3-4" name="originatorName"  readonly="true" styleClass="sixhundred" />
+			<textArea row="2" col="1-4" name="processInformation.comment" styleClass="comment" defaultValue="" forceDefault="true"/>
+			<!--<output row="3" col="1-4" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false" />-->
+			<output row="3" col="1-4" name="previousComments" readonly="true" styleClass="comment" escapeXml="false" link="javascript:openPreviousCommentsWindow('$contextPath$', '$seqId$')"/>
+		</properties>
+		<actions>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	
+	<section name="Travel Permission Request" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="originatorName" readonly="true" validation="required"/>
+			<lookup row="1" col="2" name="requesterName"  stlyeClass="twohundred" lookupType="lookup.requester" readonly="true"/>	
+			<date row="2" col="1" name="tbdDate1" styleClass="date" validation="required"/>
+			<date row="2" col="2" name="tbdDate2" styleClass="date" validation="required"/>
+			<text row="3" col="1" name="grossAmount" validation="required, nonZero"/>
+			<date row="3" col="1" name="date" validation="required" styleClass="date" readonly="false"/>
+			<text row="4" col="1" name="seqId" readonly="true"/>
+			<text row="4" col="2-3" name="tbdString6" stlyeClass="twohundred"/>
+			<text row="5" col="1-4" name="voucherComments" readonly="false" styleClass="fulllookup" validation="required"/>
+		</properties>
+		<actions>	
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindowSeqId('$contextPath$', '$wobNumber$', '$seqId$', 'nonPo', 'MP_Processor6')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>
+	</section>
+	
+		<section name="lineItems" visible="true" collapsible="false" collapsed="false">
+			<lineItemProperties showTotal="true" rowLabel="true">
+				<dynamicDropDown row="1" col="1" name="tbdString4" labelKey="lineItems.tbdString4" providerClass="com.miriasystems.ui.providers.CategoryChoiceListProvider"  validation="required" readonly="false" styleClass="twohundred"/>
+				<text row="1" col="2" name="itemDescription" readonly="false" validation="required" styleClass="twohundred" />
+				<text row="1" col="3" name="tbdString2" labelKey="lineItems.tbdString2" readonly="false" isCreditreadonly="false" styleClass="twohundred"/>
+				<date row="1" col="4" name="tbdDate1" labelKey="lineItems.tbdDate1" readonly="false" isCreditreadonly="true" validation="required" showTime="false" styleClass="date"/>
+				<currency row="1" col="5" name="lineTotal" readonly="false" isCreditreadonly="true" validation="required, nonZero" styleClass="currency" />							
+				<lineItemHidden row="0" col="0" name="accountERPId"/>
+				<lineItemHidden row="0" col="0" name="companyCode"/>
+				<lineItemHidden row="0" col="0" name="costObjectTypeId1" defaultValue="CC" />
+				<lineItemHidden row="0" col="0" name="account.type" defaultValue="E" />
+				<lineItemHidden row="0" col="0" name="expType" />
+				<lineItemHidden row="0" col="0" name="cardInd" defaultValue="T"/>
+				<lineItemHidden row="0" col="0" name="code6" defaultValue="Yes" />
+				<lineItemHidden row="0" col="0" name="tbdQuantity1" defaultValue="0.00" />	
+				<lineItemHidden row="0" col="0" name="tbdQuantity2" defaultValue="0.56" />
+			</lineItemProperties>
+			
+			
+			<actions>
+				<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+				<dropDown name="lineitemsdropdown" choiceList="choice.lineitemsdropdown"/>
+				<button name="addLineItem" command="addLineItem" type="button" isAnchored="true" readonly="false" visible="true" allowTabIndex="true" />
+				<button name="removeLineItem" command="deleteLineItem" type="submit" isAnchored="true" readonly="false" visible="true" />
+			</actions>
+		</section>
+	
+	
+	
+	
+	
+	
+	
+	<section name="Travel Permission Guidelines" collapsible="false" collapsed="false">
+		<properties>
+					<output row="1" col="1-2" name="custom1.tbdComment1" defaultValue="Company Travel Policy requires permission for all trips unless your postion allows a standing blanket travel permission." forceDefault="true" readonly="true" styleClass="sixhundred"/>	
+					<output row="2" col="1-2" name="custom1.tbdComment3" defaultValue="Enter your travel details. Your request will be sent to your manager for approval." forceDefault="true" readonly="true" styleClass="sixhundred"/>	
+					<output row="3" col="1-2" name="custom1.tbdComment4" defaultValue="Upon approval you may book your travel. You are required to stay within 10% of the estimated trip budget." forceDefault="true" readonly="true" styleClass="sixhundred"/>	
+		</properties>
+	</section>
+	
+		
+	<hiddenFields>
+	    <hidden name="type" defaultValue='CASH'/>
+		<hidden name="subType"/>
+		<hidden name="tbdBoolean1" defaultValue='1' forceDefault="true"/>
+	    <hidden name="postingERPId"/>
+	    <hidden name="vendorERPId"/>
+		<hidden name="requester.userName"/>
+		<hidden name="processInformation.failReason"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="afeNumber" defaultValue="pre-paid" forceDefault="true"/>
+    </hiddenFields>
+
+    <processors>
+     </processors>
+
+</propertyTemplate>

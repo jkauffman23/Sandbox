@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The file names listed in here will be search *in order* for a label.  The first file
+in this list must also define the default locale.  Subsequent attempts to redefine the
+default locale will be ignored.
+
+Default file list are all located in the common root folder:
+	<file name="labels.xml" /> 		
+	<file name="Pay\labels.xml" />  This will insure that Active Search always uses any overrides from Active Pay
+	<file name="labels-over-ride.xml" />
+	<file name="leftNavigationLabels.xml" />
+    <file name="adminlabels.xml" />
+    <file name="workflowMessages.xml" />
+    <file name="adminMessages.xml"/>
+    <file name="reportinglabels.xml"/>
+	<file name="leftNavLabels-default.xml" />
+	<file name="labels-default.xml"/>
+	
+	
+1. The common\labels.xml file should not contain any label definitions.  It must exist, but it is no longer used.
+2. Common label changes may be made in the labels-over-ride.xml.  Never edit the common-default.xml or the leftNavLabels-default.xml files.
+3. Application label overrides should be defined in the specific applicaton folder labels.xml.  (ex: Pay\labels.xml)
+3. The [App Name]\labels.xml (ex: Expense\labels.xml), should only be present when label overrides are required for that specific application. 
+4. Expense\labels.xml is always required to update Expense labels and will include the default Expense label overrides.  Leave the default section in place, but add the new over rids
+5. The common\labels-default.xml file typically contains the default labels for Active Pay and Active Expense and the use of Pay\labels.xml is only required for customer specfic label overrides.
+6. The search\labels.xml should be deleted.  In that way, the application will select the Pay\labels.xml by default.
+7. The labelSearchOrder.xml, should only be present in the common\ folder path.  It would be ignored in the application paths.
+8. The same rules are true of leftNavigationLabels.xml and lefNavLabels-default.xml.   The file is only required in the override path when label changes are required.
+
+
+
+By default the folder root application paths will containg ONLY the following files  during the baseline deployment:
+Pay\leftNavigationLabels.xml
+Expense\leftNavigationLabels.xml and labels.xml
+Search\leftNavigationLabels.xml
+
+To overright application levellabels, add the labels.xml to the path, but only add labels that will be over written of the default files.
+
+
+-->
+
+
+<labelSearchOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/labelSearchOrder.xsd">
+  
+	<file name="labels.xml" />
+	<file name="Pay\labels.xml" />  <!-- This will insure that Active Search always uses any overrides from Active Pay-->
+	<file name="labels-over-ride.xml" />
+	<file name="leftNavigationLabels.xml" />
+    	<file name="adminlabels.xml" />
+    	<file name="workflowMessages.xml" />
+    	<file name="adminMessages.xml"/>
+	<file name="leftNavLabels-default.xml" />
+	<file name="labels-default.xml"/>
+	<file name="versionLabels.xml"/>
+</labelSearchOrder>
+
+

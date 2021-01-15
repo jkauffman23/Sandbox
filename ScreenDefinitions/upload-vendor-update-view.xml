@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="upload-vendor-update-view" template="upload-vendor-update-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+			<label name="vendorDetails" value="Update Existing Vendor"/>
+		</locale>
+</labels>
+
+<section-overrides>	
+		
+</section-overrides>
+
+<property-overrides>
+<!--dropDown  name="erpDocId" inputReadonly="true" readonly="true" /-->
+
+</property-overrides>
+
+<validations>
+   
+    <validation name="validation.duplicateRemitIdValidation"/>
+
+
+	
+</validations>
+
+</view>
+
+

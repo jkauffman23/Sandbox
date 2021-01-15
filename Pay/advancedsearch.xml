@@ -1,0 +1,30 @@
+<newadvancedsearch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<advDropdownProperties>
+		<property name="advsearchattribute" value="choice.searchAttribute"/>
+		<property name="advsearchoperator" value="choice.searchOperator"/>
+		<property name="advsearchattributetype" value="choice.searchAttributeType"/>
+		<property name="advsearchattribute_subtype" value="choice.invoiceSubTypes.upload"/>
+		<property name="advsearchattribute_invoicetype" value="choice.invoiceTypes"/>
+		<!--<property name="advsearchattributegroup" value="choice.searchAttribute"/>
+		<property name="advsearchattributecompany" value="choice.searchAttribute"/>-->
+		<property name="advsearchattribute_sensitivity" value="choice.sensitivity"/>
+		<property name="advsearchattribute_priority" value="choice.priority"/>
+
+
+		
+	</advDropdownProperties>
+
+	<advLookupProperties>
+		<property name="vendorId" value="lookup.vendorCodeAdv"/>
+		<property name="routingCode" value="lookup.costObject1Adv"/>
+		<property name="poId" value="lookup.poHeaderAdv"/>
+		<property name="businessUnit" value="lookup.businessUnitAdv"/>
+		<property name="requesterId" value="lookup.requesterAdv"/>
+		<property name="buyerId" value="lookup.buyerAdv"/>
+		<property name="companyCode" value="lookup.organizationAdv"/>
+		<!--<property name="approverId" value="lookup.approverAdv"/>-->
+		
+	</advLookupProperties>
+	
+
+</newadvancedsearch>

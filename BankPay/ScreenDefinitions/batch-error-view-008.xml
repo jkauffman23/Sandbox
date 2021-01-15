@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="batch-error-view-002" template="batch-vCard-error-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd" >
+
+	<labels default="en">
+		<locale name="en">
+
+		<label name="forward" value="Submit"/>
+		<label name="Reject" value="Terminate" />
+		<label name="batch" value="Corp Payment - vCard" />
+		</locale>
+	</labels>
+
+	<section-overrides>	
+
+	</section-overrides>
+	
+	<property-overrides>
+
+		<text name="paymentBatchDescription" readonly="false" />
+	
+	</property-overrides>
+
+	<lineItem-overrides> 
+	</lineItem-overrides>
+
+	<action-overrides>
+			<button name="getLines" readonly="true" />
+	
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.Batch.terminate">
+			</reason>
+			<!--reason name="Terminate" commentsRequired="true" note="message.Batch.terminate">
+			</reason-->
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+		<validation name="validation.duplicateInvoiceCheck" messageType="warning" note="message.duplicateBatchValidation"/>
+
+	</validations>
+</view>

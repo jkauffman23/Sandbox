@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+		
+	 <labels>
+	<!-- Label overrides for this template -->
+	<locale name="en">
+		<label name="tbdQuantity1" value="Miles"/>
+		<label name="tbdQuantity2" value="Rate"/>
+		<label name="lineTotal" value="Amount"/>
+		<label name="mileAgeDetails" value="Mileage Calculator"/>
+ 	</locale>
+	</labels>
+	
+
+	<section name="mileAgeDetails" collapsible="false" collapsed="false">
+		<properties>
+			<currency row="1" col="1" name="tbdQuantity1"  styleClass="currency" />
+			<currency row="2" col="1" name="tbdQuantity2"  styleClass="currency" readonly="true" />
+			<currency row="3" col="1" name="lineTotal"  styleClass="currency" readonly="true" />
+		</properties>
+	</section>
+	
+	<hiddenFields>
+		<hidden name="seqId" />
+        </hiddenFields>
+		
+	<processors>
+		<processor name="com.miriasystems.processors.GLDistributionCalculator"/>
+     </processors>
+
+</propertyTemplate>

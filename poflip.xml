@@ -1,0 +1,63 @@
+<poflip flipDeletedLines="false" enhancedPO="true">
+	<!-- PO Header Details -->
+	<property po="number" 								invoice="poId" lineItem="false"/>
+	<property po="company.code" 						invoice="companyCode" lineItem="false"/>
+	<property po="vendor" 								invoice="vendor" lineItem="false"/>
+	<property po="vendor.code" 							invoice="vendorId" lineItem="false"/>
+	<property po="vendor.systemOriginator.code" 		invoice="vendorERPId" lineItem="false"/>
+	<property po="paymentTerm" 							invoice="paymentTerm" lineItem="false"/>
+	<property po="paymentTerm.systemOriginator.code"	invoice="paymentTermERPId" lineItem="false"/>
+	<property po="paymentTerm.code" 					invoice="paymentTermId" lineItem="false"/>
+	<property po="tbdString3" 				        	invoice="tbdString3" lineItem="false"/>
+	<property po="buyerId" 								invoice="buyerId" lineItem="false"/>
+	<property po="taxCode.code" 					invoice="taxId" lineItem="false"/>
+	<property po="type" 								invoice="tbdString5" lineItem="false"/>
+
+	<property po="businessUnit" 					invoice="businessUnit" lineItem="false"/>
+	
+
+	
+	
+	<!--PO LineItem Details-->
+	<property po="account.code" 						invoice="accountCode" lineItem="true"/>
+	<property po="systemOriginator.code"				invoice="accountERPId" lineItem="true"/>
+
+	<property po="account.description"					invoice="account.description" lineItem="true"/>
+		<!--<property po="account.systemOriginator.code"		invoice="accountERPId" lineItem="true"/>
+	-->
+	<property po="receivedQuantity"						invoice="quantity" lineItem="true"/>
+	<property po="orderedUnitPrice"						invoice="unitPrice" lineItem="true"/>
+	<property po="tbdCurrency1"						    invoice="taxAmount" lineItem="true"/>
+	<property po="tbdNumber1"						    invoice="tbdNumber1" lineItem="true"/>
+	<property po="tbdNumber2"						    invoice="tbdNumber2" lineItem="true"/>
+	<property po="tbdCurrency1"						    invoice="tbdCurrency1" lineItem="true"/>
+	<property po="tbdCurrency2"						    invoice="tbdCurrency2" lineItem="true"/>
+	<property po="tbdQuantity1"						    invoice="tbdQuantity1" lineItem="true"/>
+	<property po="tbdQuantity2"						    invoice="tbdQuantity2" lineItem="true"/>
+
+	<property po="tbdString1"						    invoice="subLineTypeNumber" lineItem="true"/>
+	
+	<property po="taxCode.code" 						invoice="taxId" lineItem="true"/>
+	<property po="taxCode.systemOriginator.code"		invoice="taxERPId" lineItem="true"/>
+	
+	<property po="costObject1.code" 					invoice="costObjectId1" lineItem="true"/>
+	<property po="costObject2.code" 					invoice="costObjectId2" lineItem="true"/>
+	<property po="itemCode" 							invoice="itemCode" lineItem="true"/>
+	<property po="tbdCurrency1"							invoice="lineTotal" lineItem="true"/>
+	<property po="orderedUnitPrice"						invoice="unitPrice" lineItem="true"/>
+	<property po="tbdNumber1"							invoice="tbdNumber1" lineItem="true"/>    
+	<property po="itemDescription" 						invoice="itemDescription" lineItem="true"/>
+	<property po="manfPartNumber" 						invoice="manfPartNumber" lineItem="true"/>
+	<property po="materialId" 							invoice="materialId" lineItem="true"/>
+	<property po="partNumber" 							invoice="partNumber" lineItem="true"/>
+	<property po="statusCode" 							invoice="lineStatusCode" lineItem="true"/>
+	<property po="tbdString2" 							invoice="tbdString2" lineItem="true"/>
+	<property po="tbdString3" 							invoice="tbdString14" lineItem="true"/>
+	<property po="tbdString4" 							invoice="tbdString4" lineItem="true"/>
+	<property po="orderedUOM" 							invoice="uom" lineItem="true"/>
+	<!--
+	<property po="tbdNumber1"						    invoice="taxAmount" lineItem="true"/>
+	-->
+
+</poflip>
+

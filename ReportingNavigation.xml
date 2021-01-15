@@ -1,0 +1,45 @@
+<navigation name="reporting.leftnavigation">
+	<initpage href="/blank.jsp"></initpage>
+
+	<section name="section.reporting.apreports">
+<!--
+    Just an experiment... Not done yet.
+		<action href="/generic.do?reportName=InvoiceInventory" target="right" image="/images/ico_report.gif" name="action.reporting.invoiceinventory"/>
+-->
+		<action href="/exclude/report.action?reportName=CompletedInvoices" target="right" image="/images/ico_report.gif" name="action.reporting.completedinvoices"/>
+		<action href="/exclude/report.action?reportName=TerminatedInvoices" target="right" image="/images/ico_report.gif" name="action.reporting.terminatedinvoices"/>
+		<action href="/exclude/report.action?reportName=InvoiceAgingSummary" target="right" image="/images/ico_report.gif" name="action.reporting.agingsummary"/>
+		<action href="/exclude/report.action?reportName=FutureInvoices" target="right" image="/images/ico_report.gif" name="action.reporting.futureinvoices"/>
+		<action href="/exclude/report.action?reportName=InvoicesOverdue" target="right" image="/images/ico_report.gif" name="action.reporting.invoicesoverdue"/>
+		<action href="/exclude/report.action?reportName=InvoiceAccrual" target="right" image="/images/ico_report.gif" name="action.reporting.invoiceaccrual"/>
+		<action href="/exclude/report.action?reportName=InvoiceAccrualLines" target="right" image="/images/ico_report.gif" name="action.reporting.invoiceaccruallines"/>
+		<action href="/exclude/report.action?reportName=InvoicesWithGLAccount" target="right" image="/images/ico_report.gif" name="action.reporting.byglaccount"/>
+		<action href="/exclude/report.action?reportName=InvoicesPerVendor" target="right" image="/images/ico_report.gif" name="action.reporting.invoicespervendor"/>
+		<action href="/exclude/report.action?reportName=InvoicesPerVendorAndAccount" target="right" image="/images/ico_report.gif" name="action.reporting.pervendorandaccount"/>
+	</section>
+
+
+
+<!--
+    Just an experiment
+	<section name="section.reporting.kpireports">
+		<action href="/generic.do?reportName=RateOfInvoices" target="right" image="/images/ico_report.gif" name="action.reporting.rateofinvoices"/>
+	</section>
+-->
+
+	<section name="section.reporting.auditreports">
+		<action href="/exclude/report.action?reportName=QueueSummary" target="right" image="/images/ico_report.gif" name="action.reporting.queuesummary"/>
+		<action href="/exclude/report.action?reportName=Exceptions" target="right" image="/images/ico_report.gif" name="action.reporting.exceptions"/>
+		<action href="/exclude/report.action?reportName=UserAudit&amp;db=mp" target="right" image="/images/ico_report.gif" name="action.reporting.userreport"/>
+		<action href="/exclude/report.action?reportName=UserTouchedInvoices" target="right" image="/images/ico_report.gif" name="action.reporting.usertouchedinvoices"/>
+	</section>
+
+	<section name="section.reporting.admin" roles="MP_Administrator1,MP_Administrator2,MP_Administrator3,MP_Administrator4">
+		<action href="/compile.do" target="right" image="/images/ico_report.gif" name="action.reporting.compile"/>
+	</section>
+
+    <section name="section.reporting.test" >
+		<action href="/process/info.action" target="right" image="/images/ico_report.gif" name="action.reporting.test"/>
+	</section>
+</navigation>
+

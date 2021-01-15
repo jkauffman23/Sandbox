@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels>
+		<!-- Label overrides for this template -->
+		<locale name="en">
+        </locale>
+	</labels>
+		
+	
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1-2" name="processInformation.queueName" readonly="true" styleClass="twofifty" />
+			<text row="1" col="3-4" name="originatorName"  readonly="true" styleClass="sixhundred" />
+			<textArea row="2" col="1-4" name="processInformation.comment" styleClass="comment" defaultValue="" forceDefault="true"/>
+			<!--<output row="3" col="1-4" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false" />-->
+			<output row="3" col="1-4" name="previousComments" readonly="true" styleClass="comment" escapeXml="false" link="javascript:openPreviousCommentsWindow('$contextPath$', '$seqId$')"/>
+		</properties>
+		<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	
+	<section name="invoice" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="originatorName" readonly="true"/>
+			<text row="1" col="2" name="seqId" readonly="true"/>
+			<lookup row="2" col="1" name="requesterName" lookupType="lookup.requester" readonly="true"/>
+			<text row="2" col="2" name="processCode" readonly="true"/>
+			<date row="3" col="1" name="date" readonly="false"/>
+			<text row="3" col="2" name="tbdString2" readonly="true" validation="required"/>	
+			<text row="4" col="1"  name="batchNumber" stlyeClass="threehundred" readonly="false" validation="required" />
+			<text row="5" col="1-2" name="voucherComments" readonly="false" styleClass="fulllookup"/>
+			<currency row="6" col="1" name="tbdCurrency2" readonly="true"/>
+			<currency row="6" col="2" name="grossAmount" readonly="true"/>
+			<currency row="7" col="1" name="scanAmount" readonly="true"/>
+		</properties>
+		
+		<actions>
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true" alwaysActive="true" />
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindowSeqId('$contextPath$', '$wobNumber$', '$seqId$', 'nonPo', 'MP_Processor6')" alwaysActive="true" readonly="false"/>					
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/>			
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="compliance" icon="/images/ico-check-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>
+		
+		
+	</section>
+	
+	<section name="Remittance" visible="true" collapsible="true" collapsed="true">
+		<properties>
+		<lookup row="1" col="1" name="vendor.name" lookupType="lookup.vendorCode" readonly="false" styleClass="fulllookup"/>
+		<lookup row="1" col="2" name="vendorId" lookupType="lookup.vendorCode" readonly="false" />
+		<text row="1" col="3" name="uploadRef" readonly="true"/>
+		<text row="2" col="1-2" name="vendor.name" readonly="true" styleClass="fulllookup"/>
+		<text row="2" col="3" name="grossAmount" readonly="true" />	
+		<text row="3" col="1-2" name="vendor.address1" readonly="true" styleClass="fulllookup"/>
+		<text row="4" col="1" name="vendor.city" readonly="true" />
+		<text row="4" col="2" name="vendor.state" readonly="true"/>
+		<text row="4" col="3" name="vendor.postalCode" readonly="true"/>
+			
+		</properties>
+	</section>
+	
+	<section name="lineItems" visible="true" collapsible="false" collapsed="false">
+			<lineItemProperties showTotal="false" rowLabel="false">
+
+				<date row="1" col="1" name="tbdDate1" readonly="true" validation="required" showTime="false" styleClass="date"/>
+				<dynamicDropDown  row="1" col="2" name="tbdString4" providerClass="com.miriasystems.ui.providers.CategoryChoiceListProvider" defaultValue="A" validation="required" readonly="false" styleClass="twohundred"/>
+				<currency row="1" col="3" name="lineTotal" readonly="true" isCreditreadonly="true" validation="required, nonZero" styleClass="currency" />
+				<text row="1" col="4" name="tbdString3" readonly="true" styleClass="twohundred"/>	
+				<text row="1" col="5" name="itemDescription" readonly="false" validation="required, noSpecialCharacters" styleClass="twohundred"/>
+				<lookup row="2" col="2" name="accountCode" lookupType="lookup.expenseAccountCode" readonly="false" styleClass="twohundred"/>
+				<text row="2" col="3" name="account.description"  readonly="true" styleClass="twohundred"/>
+				<checkbox row="2" col="5" name="tbdBoolean1" styleClass="chkalign" />		
+				<lineItemHidden row="0" col="0" name="accountERPId"/>
+				<lineItemHidden row="0" col="0" name="companyCode"/>
+				<lineItemHidden row="0" col="0" name="costObjectTypeId1" defaultValue="CC" />
+				<lineItemHidden row="0" col="0" name="account.type" defaultValue="E" />
+				<lineItemHidden row="0" col="0" name="expType" />
+				<lineItemHidden row="0" col="0" name="cardInd" />
+				<lineItemHidden row="0" col="0" name="code6" defaultValue="Yes" />
+				<lineItemHidden row="0" col="0" name="tbdString1" defaultValue="Credit" forceDefault="true" />
+			</lineItemProperties>
+			<actions>
+				<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+				<button name="removeLineItem" command="deleteLineItem" type="submit" isAnchored="true" readonly="false" visible="true" />
+				<button name="addSubLineItem" command="addSubLineItem" type="submit" isAnchored="true" allowTabIndex="true" />
+				<button name="removeSubLineItem" command="removeSubLineItem" type="submit" isAnchored="true" allowTabIndex="true" />
+			</actions>
+	</section>
+	
+	
+	
+	<hiddenFields>
+	    <hidden name="type" defaultValue='EXP'/>
+	    <hidden name="postingERPId"/>
+	    <hidden name="vendorERPId"/>
+		<hidden name="requester.userName"/>
+		<hidden name="requesterId" validation="required"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+		<hidden name="subType" defaultValue="P"/>	
+		<hidden name="CardType" defaultValue="P" forceDefault="true"/>
+		<hidden name="enCryptCC"/>
+		<hidden name="newBatchOrdinal"/>
+		<hidden name="processInformation.failReason"/>
+    </hiddenFields>
+
+    <processors>
+    	<processor name="com.miriasystems.processors.NetAmountNoDiscountProcessor"/>
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+		<processor name="com.miriasystems.processors.LineItemTypeProcessor"/>
+		<processor name="com.miriasystems.processors.CalculateExpenseProcessor"/>
+		<processor name="com.miriasystems.processors.GLDistributionCalculator"/>
+     </processors>
+
+</propertyTemplate>

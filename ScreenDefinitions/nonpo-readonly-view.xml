@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-readonly-view" template="nonpo-tpl.xml" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd" readonly="true">   
+
+
+	<action-overrides>
+		<iconAction name="editRouting" visible="false"/>
+		<iconAction name="email" visible="false"/>
+		<iconAction name="attachments" visible="false"/>
+		<iconAction name="attachments" />
+		<attachmentCountAction name="attachmentCount" visible="false" />
+		<iconAction name="print" visible="false"/>
+		<iconAction name="barcode" visible="false"/>
+		<iconAction name="statuswindow" visible="true"/>
+		<iconAction name="compliance" visible="false"/>
+		<iconAction name="addLineItem" readonly="true" visible="false"/>
+		<iconAction name="removeLineItem" readonly="true" visible="false"/>
+		<iconAction name="launch" link="javascript:submitCommandUpload(this, 'launchOverrideEditWorkflow','')" visible="true" alwaysActive="true" visibleRoles="MP_Administrator4, MP_Administrator3, MP_Administrator2, MP_Administrator1"/>
+	</action-overrides>
+	
+	<property-overrides>
+		
+	</property-overrides>
+	
+		
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+</view>

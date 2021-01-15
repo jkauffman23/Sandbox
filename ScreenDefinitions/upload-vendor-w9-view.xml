@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="mn-w9-indexing-view" template="upload-vendor-w9-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<!-- View permutations:
+		  -view: This is the standard view
+		  -viewM: Payment Type 'MC' has been selected
+		  -viewP: Payment Type 'PC' has been selected
+	-->
+
+	<labels default="en">
+		<locale name="en">
+			<label name="vendorDetails" value="Vendor Details - Add W9"/>
+		</locale>
+	</labels>
+
+	<section-overrides>
+		
+		
+	</section-overrides>
+
+	<property-overrides>
+		
+	</property-overrides>
+
+
+	<action-overrides>
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		
+	</documentRejection>
+
+	<validations>
+		
+		<!--validation name="validation.validVendor" note="message.validVendorValidation"/-->
+		<!-- Custom Validations -->
+		<!--validation name="validation.invoiceDateInFuture"/--> 
+		<!--validation name="validation.vendorRemitToBlockedValidation"/-->
+	</validations>
+</view>
+
+

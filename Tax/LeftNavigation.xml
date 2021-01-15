@@ -1,0 +1,18 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+    
+	<!--   Initialize Advance Serach screen for Internal (Auditor3) and Exeternal (Auditor4) user roles  -->
+	<initpage href="/document/advancedsearch.do?showPoProperties=true" roles="MP_Auditor3, MP_Auditor4, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" />
+	
+	<!-- Inbox and Tax Queues and Tools limited to Tax Reviewer (Auditor1) and Supervisor (Auditor2) user roles  -->
+    <action href="/filenet/search.do?searchName=InboxSearch.UTA" target="right" image="/images/ico-inbox-w16.png" name="action.myinbox.UTA" searchName="InboxSearch.UTA" roles="MP_Auditor1, MP_Auditor2, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"/>
+	<action href="/filenet/search.do?searchName=Audit.UTA" target="right" image="/images/ico-folder-w16.png" name="action.audit.UTA"  searchName="Audit.UTA" roles="MP_Auditor1, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"/>
+	<action href="/filenet/search.do?searchName=Supervisor.UTA" target="right" image="/images/ico-folder-w16.png" name="action.supervisor.UTA"  searchName="Supervisor.UTA" roles="MP_Auditor2, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"/>
+		
+	<!--   Tools        -->
+    <section name="section.tools" collapsed="true" roles="MP_Auditor1, MP_Auditor2, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4">
+        <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-w16.png" name="action.preferences"/>
+    </section>
+	
+</navigation>

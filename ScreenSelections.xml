@@ -1,0 +1,10 @@
+<!-- This will be used only when we are not using iLOG, mainly
+     in the case where our license expires.  Once we have a full
+     dev license, this file should go away.
+-->     
+
+<screenSelections>
+    <selection queueName="Index" view="non-po-indexing-view.xml"/>
+    <selection queueName="Process" view="non-po-processing-view.xml"/>
+    <selection queueName="VendorMaintenance" view="non-po-vendor-view.xml"/>
+</screenSelections>

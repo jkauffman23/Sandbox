@@ -1,0 +1,3 @@
+Ref#,Invoice Number,Vendor Name,Amount,Invoice Date,Scan Date,Priority,Type,Group,Status
+34,051120GVN2,A & M LABEL,20,05/11/2020,05/11/2020,0,NON-PO,AP,Conductor
+33,051120GVN1,A & M LABEL,10,05/11/2020,05/11/2020,0,NON-PO,AP,Conductor

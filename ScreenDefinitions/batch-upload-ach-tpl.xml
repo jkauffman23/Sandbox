@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+     <labels>
+		<locale name="en">
+		<label name="lineItems" value=" " />
+		</locale>
+	</labels>
+	
+	<section name="batch" visible="true" collapsible="false" collapsed="false">
+	<properties>
+		<dropDown row="1" col="1" name="subType" choiceList="choice.batchSubTypes"  validation="required" readonly="false" styleClass="threehundred" onChange="reloadPage(this)"/>
+		<text row="1" col="2" name="type" readonly="true" defaultValue="BATCH" forceDefault="true" styleClass="threehundred"/>
+		<text row="2" col="1" name="paymentBatchDescription"  validation="required" readonly="false" styleClass="threehundred" />
+		<!--text row="2" col="2" name="number" validation="required noSpecialCharacters"  readonly="true" styleClass="threehundred"/-->
+		<date row="3" col="1" name="paymentsDueDate" readonly="false" styleClass="date" validation="required" />
+		<checkbox row="3" col="2" name="paymentsConsolidate" readonly="false"  />
+		<currency row="4" col="1" name="grossAmount" readonly="true" styleClass="currency" defaultValue=".00001" forceDefault="true" />
+		<textArea row="5" col="1-2" name="voucherComments" styleClass="comment" />
+		
+	</properties>
+		
+		
+	<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true" />
+			<button name="forward" command="forward" docType="upload" readonly="false"  type="submit" isAnchored="false"  title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="batchPaymentMode" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="paymentModeId" lookupType="lookup.paymentMode.batch"  validation="required" readonly="false" inputReadonly="true" styleClass="threehundred"/>
+			<text row="1" col="2" name="paymentMode.description" readonly="true" styleClass="threehundred" />
+			
+			<text row="2" col="1" name="companyCode" readonly="true" styleClass="threehundred" inputReadonly="true"  />  					<!--From PYM table -->
+			<text row="2" col="2" name="paymentMode.paymentType.code" readonly="true" styleClass="threehundred" />	    <!-- From PYM Table -->
+
+			<text row="3" col="1" name="paymentsBankName" readonly="true" styleClass="threehundred" />					<!-- From PYM BankName -->
+			<text row="3" col="1" name="currencyId" readonly="true" styleClass="threehundred" />
+			
+			<text row="4" col="1" name="tbdString8" readonly="true" styleClass="threehundred" />	    <!-- From PYM Table -->
+			<text row="4" col="2" name="tbdString9" readonly="true" styleClass="threehundred" />	    <!-- From PYM Table -->
+			<text row="5" col="1" name="bankRoutingNo" readonly="true" styleClass="threehundred" />		   				<!-- from PYM paymentMode.bankRoutingNumber -->
+			<text row="5" col="2" name="bankAccountNo" readonly="true" styleClass="threehundred" />		   				<!-- from paymentMode.bankAccountNumber -->
+	    </properties>
+	</section>
+	
+	
+	<section name="lineItems" visible="true" collapsible="false" collapsed="true" type="PAYMENT" >
+
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<text row="1" col="1" name="seqId" labelKey="dol.seqId" readonly="true" styleClass="eighty" />
+			<currency row="1" col="2" name="lineTotal" readonly="true" styleClass="eighty"/>
+			<text row="1" col="3" name="paymentsNumberInvoices" readonly="true" styleClass="thirty"/>	
+			<text row="1" col="4" name="paymentsNumber" readonly="true" styleClass="eighty" />
+						
+			<text row="1" col="5" name="paymentsVendorName"  readonly="true" inputReadonly="true" validation="required" styleClass="onefifty"/>
+			<text row="1" col="6" name="paymentsVendorId" readonly="true" inputReadonly="true" validation="required" styleClass="eighty"/>
+			<text row="1" col="7" name="paymentsAddr1" readonly="true" inputReadonly="true" validation="required" styleClass="onehundred"/>
+			<text row="1" col="8" name="paymentsAddr2" readonly="true" styleClass="onehundred"/>
+			<text row="1" col="7" name="paymentsAddr3" readonly="true" styleClass="onehundred"/>
+			<text row="1" col="8" name="paymentsAddr4" readonly="true" styleClass="onehundred"/>
+			<text row="1" col="9" name="paymentsCity"  readonly="true" styleClass="onehundred"/>
+			<text row="1" col="10" name="paymentsState" readonly="true" styleClass="thirty"/>
+			<text row="1" col="11" name="paymentsPostalCode" readonly="true" styleClass="fifty"/>
+			<text row="1" col="12" name="paymentsCountry" readonly="true" styleClass="fifty" />
+			<text row="1" col="13" name="paymentsVendorBankName" readonly="true" styleClass="onehundred" />
+			<text row="1" col="14" name="paymentsVendorBankAcctNo" readonly="true" inputReadonly="true" validation="required" styleClass="onehundred" />
+			<text row="1" col="15" name="paymentsVendorBankRoutingNo" readonly="true" inputReadonly="true" validation="required"  styleClass="onehundred" />	
+			<text row="1" col="16" name="paymentsSourceSeqId" readonly="true"  />
+			
+			<lineItemHiddent row="0" col="0" name="paymentsSeparateCheck" />
+			<lineItemHidden row="0" col="0" name="paymentsCheckStubMessage" />
+			<lineItemHidden row="0" col="0" name="paymentsCurrencyId" />
+			<lineItemHidden row="0" col="0" name="paymentsAcctType" />
+			<lineItemHidden row="0" col="0" name="paymentsPayRef" />
+			<lineItemHidden row="0" col="0" name="paymentsPoId"/>
+			<lineItemHidden row="0" col="0" name="paymentsDiscountAmount" />
+			<lineItemHidden row="0" col="0" name="paymentsDate" />
+			<lineItemHidden row="0" col="0" name="paymentsDueDate" />
+			<lineItemHidden row="0" col="0" name="paymentsNetAmount" />
+			<lineItemHidden row="0" col="0" name="paymentsEmail" />
+			<lineItemHidden row="0" col="0" name="paymentsVendorSwift" />
+			<lineItemHidden row="0" col="0" name="paymentsVendorIBAN" />
+			<lineItemHidden row="0" col="0" name="accountERPId" />
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+		</lineItemProperties>
+		
+		<actions>
+		</actions>
+	</section>
+
+	
+	<section name="batchControl" visible="hide" collapsible="true" collapsed="false">
+		<properties>	
+			<text row="1" col="1" name="bankAccountNo" readonly="true" styleClass="twohundred"/>
+			<text row="2" col="1" name="bankRoutingNo" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="2" name="paymentModeERPId" readonly="true" styleClass="twohundred"/>
+			<text row="2" col="2" name="batchNumber" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3" name="batchStatus" readonly="true" styleClass="twohundred"/>
+			<text row="2" col="3" name="journalNumber" readonly="true" styleClass="twohundred"/>
+			<text row="3" col="1" name="paymentModeERPId" readonly="true" styleClass="twohundred"/>
+			
+	</properties>
+
+	</section>
+	
+	<hiddenFields>
+		<hidden name="postingERPId" defaultValue="AOPS001"/>
+		<hidden name="vendorERPId" defaultValue="AOPS001"/>
+       	<hidden name="paymentTermERPId" defaultValue="AOPS001"/>
+		<hidden name="paymentTypeERPId" defaultValue="AOPS001"/>
+		<hidden name="paymentModeERPId" defaultValue="AOPS001"/>
+		<hidden name="erpDocId" defaultValue="AOPS001"/>
+       	<hidden name="vendor.status" defaultValue="1"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="requesterId"/>
+		<hidden name="scanSource" defaultValue="Direct Entry" forceDefault="true"/>
+		<hidden name="AFENumber" defaultValue="2" forceDefault="true"/>
+		<hidden name="requester.userName"/>	
+		<hidden name="number" autoNumber="true" autoNumberFormat="BATCHIDSEQUENCE_FORMAT"/>
+		<hidden name="group" defaultValue="Payment"/>
+	</hiddenFields>
+	<processors>
+    </processors>
+</propertyTemplate>

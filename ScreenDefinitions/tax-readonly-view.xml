@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="tax-readonly-view" template="tax-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd" readonly="true">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>	
+	</section-overrides>
+	
+	<property-overrides>
+		
+<!-- Invoice Section -->
+		<dropDown name="type" readonly="true" />	
+		<dropDown name="subType" readonly="true" />
+		<text name="number" readonly="true" />
+		<date name="date" readonly="true" />
+		<date name="dueDate" readonly="true"/>
+		<dropDown name="docPriority" readonly="true" />
+		<text name="routingCode" readonly="true" />
+		<lookup name="routingCode" readonly="true"/>
+		<dropDown name="sensitivity" readonly="true"/> 
+
+<!-- Invoice Details Section -->
+		<lookup name="vendor.name" readonly="true" />
+		<lookup name="vendorId" readonly="true" validation=""/>
+		<currency name="grossAmount" readonly="true"/>
+		<currency name="taxAmount1" readonly="true" />
+		<currency name="freightAmount1" readonly="true" />
+		<dropDown name="companyCode" readonly="true" inputReadonly="false" />  <!-- Cost Center -->
+		<text name="paymentTypeId" readonly="true" />
+		<text name="tbdString4" readonly="true" inputReadonly="false" />   <!-- Approved By -->
+		<text name="paymentTermId" readonly="true"/>
+		<text name="buyerName" readonly="true"/>   <!-- Indexed By -->
+		<dropDown name="separateCheck" readonly="true"/>  <!-- Separate Check -->
+		<dropDown name="specialHandlingCode" readonly="true"/>
+		<text name="checkStubMessage" readonly="true"/>
+		<text name="voucherComments" readonly="true" />  
+
+<!-- Invoice Account Details Section -->
+		<checkbox name="tbdBoolean1" readonly="true" />  <!-- Third Party -->
+		<text name="tbdString2" readonly="true" />  <!-- Third Party Acct# -->	
+		<text name="tbdString1" readonly="true" />  <!-- Contract# -->	
+		<text name="scanVendorAddress1" readonly="true" /> <!-- MA#/Consultant# -->
+		<text name="scanVendorAddress2" readonly="true" />  <!-- 	Dept. Project# -->
+		<text name="tbdString3" readonly="true" />	<!-- Project CC-Corp#-->
+
+<!-- Ship To - User Tax Section -->
+		<text name="taxId" readonly="true" inputReadonly="true"/>
+		<text name="taxCode.description" readonly="true"  />
+		<text name="taxCode.percent" readonly="true" />
+		<text name="shipToAddress1" readonly="true" /> <!-- Ship To Addr1-->
+		<text name="shipToCompany" readonly="true"/>  <!-- Ship To Company -->
+		<text name="shipToAddress2" readonly="true" /> <!-- Ship To Addr2-->
+		<text name="shipToCity" readonly="true" /> <!-- Ship To City-->
+		<text name="shipToState" readonly="true"/> <!-- Ship To State-->
+		<text name="shipToZip" readonly="true"/> <!-- Ship To Zip-->
+	</property-overrides>
+	
+
+	<lineItem-overrides>
+			<text name="accountCode" readonly="true" />
+			<text name="account.description" readonly="true" />
+			<text name="itemDescription" readonly="true" />
+			<currency name="lineTotal" readonly="true"  />
+			<text name="tbdString3" readonly="true" />
+			<text name="tbdString1" readonly="true" />
+			 
+	</lineItem-overrides>
+
+	<action-overrides>
+			<iconAction name="editRouting" readonly="true" />	
+			
+			<dropDown name="lineitemsdropdown" readonly="true" visible="false" />
+		    <button name="addLineItem" visible="false" />
+			<button name="removeLineItem" visible="false" />
+		
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+				<subReason name="Duplicate invoice"/>
+				<subReason name="Incomplete documentation"/>
+				<subReason name="Not a Genuine Invoice"/>
+				<subReason name="Other"/>
+			</reason>
+			<reason name="Rescan" commentsRequired="true" note="message.rescan">
+			</reason>
+			<reason name="Vendor Maintenance" commentsRequired="true" note="message.returnVendorMaintenance">
+			</reason>
+			<reason name="Terminate" commentsRequired="true" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+	</validations>
+</view>

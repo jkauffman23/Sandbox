@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THSI FILE -->
+
+		<locale name="en">
+			<label name="vendor.wireInstructions" value="Wire Instructions"/>
+		
+		
+			<label name="action.viewVendor" value="View Vendor" />
+			<label name="action.updateVendor" value="Update Vendor"/>
+			<label name="action.Add.W9" value="Add W9" />
+			<label name="action.Add.TExempt" value="Add Tax Exempt"/>
+			<label name="action.Add.Vendor" value="Add New Vendor" />
+			<label name="action.temp" value="Vendor View XML"/>
+		
+			<label name="DOC001" value="Invoice" />  				<!--doc-tpl-->
+			<label name="DOC002" value="Proof of Delivery" />		<!--doc-pod-tpl-->
+			<label name="DOC003" value="Address Change" />			<!--doc-address-change-tpl-->
+			<label name="DOC004" value="Tax W9" />					<!--doc-tax-w9-tpl-->
+			<label name="DOC005" value="Tax Exempt" />				<!--doc-tax-exempt-tpl-->
+			<label name="DOC006" value="Other 2" />				<!--doc-tpl-->
+		
+		
+			<label name="erpDocId" value="ERP ID" />
+			<label name="sourcedoc" value="Document Detail" />
+			<label name="document" value="New Document" /> 
+			<label name="number" value="Document Number"/>
+			<label name="grossAmount" value="Amount" />
+			<label name="documentDetails" value="Details"/>
+			<label name="VendorDetails" value="Vendor Details"/>
+			<label name="Address" value="Remit Address"/>
+			<label name="vendorAddDetails" value="Additional Vendor Details"/>
+			<label name="vendortbd" value="Vendor TBD Fields"/>
+			<label name="vendor.tbdString1" value="Vendor TBD String1"/>
+			<label name="vendor.tbdString2" value="Vendor TBD String2"/>
+			<label name="vendor.tbdString3" value="Vendor TBD String3"/>
+			<label name="vendor.tbdString4" value="Vendor TBD String4"/>
+			<label name="vendor.ten99flag" value="1099 Flag"/>
+			<label name="tbdBoolean4" value="Disable Flag"/>
+			<label name="tbdBoolean11" value="Email Opt-in"/>
+			<label name="tbdBoolean12" value="Leased"/>
+			<label name="tbdBoolean13" value="Disable"/>
+			<label name="tbdBoolean14" value="Separate Payment"/>
+			<label name="tbdBoolean15" value="1099 Flag"/>
+			<label name="vendor.remit" value="Remit ID"/>
+			<label name="tbdString4" value="DBA Info"/>
+			<label name="tbdString14" value="Vendor Name"/>
+			<label name="tbdString15" value="Bank Account Type"/>
+			<label name="tbdString16" value="Short Name"/>
+			<label name="tbdString17" value="DBA or Banking Notes"/>
+			<label name="dol.tbdString17" value="Purchasing Address?"/>
+			<label name="tbdString27" value="Vendor ID"/>
+			<label name="label.vendorContact" value="Contact" />  <!--tbdString35-->
+			<label name="label.vendorPhone" value="Phone"/>		<!-- tbdSTring36 -->
+			<label name="label.vendorEmail" value="Email Address"/>  <!--tbdString37 -->
+			<label name="label.vendorFax" value="Fax"/>  <!--tbdString37 -->
+			<label name="tbdString39" value="Preferred Payment Method"/>
+			<label name="tbdString40" value="ABA Routing No."/>
+			<label name="tbdString43" value="Wire Instructions"/>
+			<label name="tbdString44" value="Global Swift No."/>
+			<label name="tbdString42" value="Bank Name"/>
+			<label name="tbdString47" value="Vendor Category"/>
+			<label name="tbdString48" value="Federal Tax Classification"/>
+			<label name="tbdString52" value="Tax ID No. (TIN)"/>
+			<label name="vendorAddress.address4" value="Remit Address 4"/>
+			<label name="tbdString45" value="Indep. Contractor Verification"/>
+			<label name="tbdString49" value="Exempt Payee Code"/>
+			<label name="tbdString50" value="Exemption from FACTA reporting Code"/>
+			<label name="tbdDate3" value="Request Date"/>
+			<label name="requesterName" value="Requester Name"/>
+			
+			<label name="date" value="Submitted Date" />
+			<label name="tbdDate1" value="Signature Date" />
+			<label name="tbdDate2" value="Expiration Date" />
+			<label name="tbdBoolean1" value="InActive" />
+			<label name="voucherComments" value="Comments" />
+			
+			<label name="action.myinbox.doc" value="Doc Form Inbox" />
+		
+		<label name="action.indexing.doc" value="Doc Form Indexing" />
+		
+		<label name="action.upload.doc" value="New Doc Form" />
+		<label name="action.rematchVendor" value="Vendor Review" />
+		<label name="action.myinbox.vendor" value="Vendor Inbox" />
+		<label name="action.posting" value="Waiting For Outbound" />
+		<label name="section.queues.exception" value="Exceptions" />
+		<label name="action.generalexception.doc" value="General" />
+		<label name="action.vendormaintenance.doc" value="Vendor Maintenance" />
+		<label name="action.rescan.doc" value="Waiting Rescan" />
+		<label name="action.exception.terminate.doc" value="Terminate" />
+		
+		<label name="section.vmgmt.vendors" value="Vendor Management"/>
+		<label name="section.vmgmt.vendors.review" value="Vendor Change Review"/>
+		<label name="section.vmgmt.qualification" value="Vendor Qualifcation"/>
+		<label name="w9" value="W9 Fields"/>
+		<label name="IndContractor" value="Independent Contractors"/>
+		<label name="lineItems" value="Remit Addresses"/>
+		<label name="vendorpaymentDetails" value="Vendor Payment Details"/>
+		<label name="RematchVendor" value="Vendor Review"/>
+		
+		<label name="action.vmgmt.workflow.01" value="VMgmt Workflow 01"/>
+		<label name="action.vmgmt.workflow.02" value="VMgmt Workflow 02"/>
+		<label name="action.vmgmt.workflow.03" value="VMgmt Workflow 03"/>
+		<label name="action.vmgmt.workflow.04" value="VMgmt Workflow 04"/>
+		<label name="action.vmgmt.workflow.05" value="VMgmt Workflow 05"/>
+		<label name="vmgmt.search.indexing" value="VMgmt Indexing"/>
+		<label name="message.duplicateRemitIdValidation" value="The Remit ID you choose is already in use. Please create a new one."/>
+		
+		
+		<!--
+		<label name="section.tools" value="Tools" />
+		<label name="action.reassignSelf" value="Reassign Self" />
+		<label name="action.reassignDelegate" value="Reassign Delegate" />
+		<label name="action.preferences" value="Preferences" />
+		-->
+
+		</locale>
+</labels>
+
+

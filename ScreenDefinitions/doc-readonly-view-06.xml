@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-indexing-view" template="doc-tax-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>		
+	</section-overrides>
+	
+	<property-overrides>
+	</property-overrides>
+
+	<lineItem-overrides>		 
+	</lineItem-overrides>
+
+	<action-overrides>
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+				<subReason name="Duplicate invoice"/>
+				<subReason name="Incomplete documentation"/>
+				<subReason name="Not a Genuine Invoice"/>
+				<subReason name="Other"/>
+			</reason>
+			<reason name="Rescan" commentsRequired="true" note="message.rescan">
+			</reason>
+			<reason name="Vendor Maintenance" commentsRequired="true" note="message.returnVendorMaintenance">
+			</reason>
+			<reason name="Terminate" commentsRequired="true" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+	</validations>
+</view>

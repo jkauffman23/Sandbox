@@ -1,0 +1,12 @@
+<embeddedreports xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<biProperties>
+		<property name="appId" value="e38a7f81-736c-42e9-b6c3-7115f89e0b87"/> <!-- application Id / workspace Id -->
+		<property name="authorityUrlSP" value= "https://login.microsoftonline.com/ddbed8bb-f377-46e6-b08c-ceb243e2d71a/"/> <!--/url with tenant id-->
+		<property name="resourceUrl" value= "https://analysis.windows.net/powerbi/api"/>
+		<property name="clientSecret" value = "zw14xM1E:wpqDx_=YZGk]wM8n9]WetAk"/> <!-- secret password for service principal -->
+		<property name="groupId" value = "8cb13193-f0a4-47d6-a211-0b88565ece44"/> <!-- power bi group id -->
+		<property name="clientPrefix" value="DEV10"/> <!-- client's 3 letter symbol -->
+		<property name="defaultPrefix" value="AOP"/> <!-- default baseline -->
+	</biProperties>	
+
+</embeddedreports>

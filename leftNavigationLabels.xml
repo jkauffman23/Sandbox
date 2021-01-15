@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THIS FILE -->
+
+<labels default="en">
+	<locale name="en">
+		
+		<!--Choicelist labels-->
+		<label name="invoiceTypePO" value="PO"/>
+		
+		
+	</locale>
+
+</labels>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+

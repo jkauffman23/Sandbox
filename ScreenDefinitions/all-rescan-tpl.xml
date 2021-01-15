@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+     <labels>
+	<!-- Label overrides for this template -->
+	<locale name="en">
+	</locale>
+	</labels>
+
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1" name="processInformation.queueName" readonly="true" styleClass="threehundred" />
+			<text row="1" col="2" name="originatorName"  readonly="true" styleClass="threehundred" />
+			<textArea row="2" col="1-2" name="processInformation.comment" styleClass="comment" defaultValue="" forceDefault="true"/>
+			<output row="3" col="1-2" name="previousComments" readonly="true" styleClass="comment" escapeXml="false" link="javascript:openPreviousCommentsWindow('$contextPath$', '$seqId$')"/>
+		</properties>
+		<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="invoice" visible="true" collapsible="false" collapsed="false">
+		<properties>
+		<dropDown row="1" col="1" name="type" choiceList="choice.invoiceTypes" readonly="true" validation="required" onChange="reloadPage(this)" styleClass="threehundred"/>
+		<dropDown row="1" col="2" name="subType" choiceList="choice.invoiceSubTypes" readonly="true" validation="required" onChange="reloadPage(this)" styleClass="threehundred"/>
+		<text row="2" col="1" name="number" readonly="true" validation="required, noSpecialCharacters" styleClass="threehundred"/>
+        <date row="2" col="2" name="date" readonly="true" validation="required" styleClass="threehundred"/>
+		<text row="3" col="1" name="previousQueue" readonly="true" styleClass="threehundred"/>
+		<RadioButton row="3" col="2" name="tbdBoolean1" choiceList="choice.invoiceTypes"/>
+		</properties>
+		<actions>
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/>
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo', 'DEV-APP3_DEV9_MPSys_Dev')" alwaysActive="true" readonly="false"/>			
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<iconAction name="vendorHistory" icon="/images/ico-vhistory-w24.png" width="24" height="24" link="javascript:openVendorHistoryWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="false" alwaysActive="true"/>
+			<iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>	
+		</actions>
+	</section>
+	
+		
+<section name="sourceInformation" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<date row="1" col="1" name="scanDate" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="2" name="scanType" readonly="true" styleClass="threehundred"/>
+			<text row="2" col="1" name="seqId" readonly="true" styleClass="threehundred"/>
+			<text row="2" col="2" name="scanSource" readonly="true" styleClass="threehundred"/>
+			<text row="3" col="1" name="batchNumber" readonly="true" styleClass="threehundred"/> 
+		</properties>
+	</section>
+
+
+	<hiddenFields>
+		<hidden name="postingERPId"/>
+		<hidden name="vendorERPId"/>
+        <hidden name="newBatchNumber"/>
+        <hidden name="paymentTermERPId"/>
+        <hidden name="vendor.status" defaultValue="V"/>
+		<hidden name="alternateVendor"/>
+		<hidden name="costObjectTypeId1" defaultValue="COS1"/>
+		<hidden name="uploadRef" defaultValue="0"/>
+		<hidden name="processInformation.failReason"/>
+		
+    </hiddenFields>
+
+	<processors>
+		<processor name="com.miriasystems.processors.ScanVendorNameProcessor"/>
+		<processor name="com.miriasystems.processors.NetAmountProcessor"/>
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+		<processor name="com.custom.processors.DueDateProcessor"/>
+    </processors>
+</propertyTemplate>

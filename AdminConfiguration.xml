@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<user>
+		<security roles="MP_Administrator3,MP_Administrator4"/>
+		<fields>
+			<field name="firstName" visible="false"/>
+			<field name="lastName" visible="true"/>
+			<field name="displayName" visible="true"/>
+			<field name="userName" visible="true"/>
+			<field name="fullUserName" visible="false"/>
+			<field name="description" visible="true"/>
+			<field name="activeFlag" visible="true"/>
+			<field name="officeFlag" visible="true"/>
+			<field name="level" visible="true"/>
+			<field name="approvals" visible="true"/>
+			<field name="title" visible="false"/>
+			<field name="department" visible="true"/>
+			<field name="userCompany" visible="true"/>
+			<field name="lastLogon" visible="true"/>
+			<field name="phone" visible="true"/>
+			<field name="email" visible="true"/>
+			<field name="paymentOverride" visible="true"/>
+			<field name="sensitivityLevel" visible="true"/>
+			<field name="timeZoneOffset" visible="false"/>
+			<field name="approvalLimit" visible="true"/>
+			<field name="approvalCurrency" visible="true"/>
+			<field name="defaultCostObject" visible="true"/>
+			<field name="employeeNumber" visible="true"/>
+			<field name="site" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="lastModified" visible="true"/>
+			<field name="manager" visible="true"/>
+			<field name="delegates" visible="true"/>
+			<field name="erpUserNames" visible="false"/>
+			<field name="roles" visible="true"/>
+			<field name="groups" visible="true"/>
+			<field name="organizations" visible="true"/>
+			<field name="preferredAccounts" visible="true"/>
+			<field name="creditCards" visible="false"/>
+			<field name="ignoreOrgSecurity" visible="true"/>
+			<field name="activeDirectoryGroups" visible="true"/>
+			<field name="notificationFrequency" visible="true"/>
+			<field name="oooFlag" visible="true"/>
+			<field name="tbdDate1" visible="false"/>
+			<field name="tbdDate2" visible="false"/>
+			<field name="tbdNumber1" visible="false"/>
+			<field name="tbdNumber2" visible="false"/>
+			<field name="tbdCurrency1" visible="false"/>
+			<field name="tbdCurrency2" visible="false"/>
+			<field name="tbdQuantity1" visible="false"/>
+			<field name="tbdQuantity2" visible="false"/>
+			<field name="tbdString1" visible="false"/>
+			<field name="tbdString2" visible="false"/>
+			<field name="tbdString2" visible="false"/>
+			<field name="tbdString3" visible="false"/>
+			<field name="tbdString4" visible="false"/>
+			<field name="outOfOfficeEndDate" visible="true"/>
+		</fields>
+	</user>
+	<userApproval>
+		<security roles="MP_Administrator4, MP_Administrator3"/>
+		<fields>
+			<field name="approvalLimit" visible="true"/>
+			<field name="currency" visible="true"/>
+			<field name="costObject" visible="false"/>
+			<field name="tbdDate1" visible="false"/>
+			<field name="tbdDate2" visible="false"/>
+			<field name="tbdNumber1" visible="false"/>
+			<field name="tbdNumber2" visible="false"/>
+			<field name="tbdCurrency1" visible="false"/>
+			<field name="tbdCurrency2" visible="false"/>
+			<field name="tbdQuantity1" visible="false"/>
+			<field name="tbdQuantity2" visible="false"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="false"/>
+			<field name="tbdString3" visible="false"/>
+			<field name="tbdString4" visible="false"/>
+			<field name="glSegment1" visible="true"/>
+			<field name="glSegment2" visible="true"/>
+			<field name="glSegment3" visible="true"/>
+			<field name="glSegment4" visible="true"/>
+			<field name="glSegment5" visible="true"/>
+			<field name="glSegment6" visible="false"/>
+			<field name="glSegment7" visible="false"/>
+			<field name="glSegment8" visible="false"/>
+			<field name="glSegment9" visible="false"/>
+			<field name="glSegment10" visible="false"/>
+		</fields>
+	</userApproval>
+	<costObject>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="tbdCurrency1" visible="false"/>
+			<field name="tbdCurrency2" visible="false"/>
+			<field name="tbdQuantity1" visible="false"/>
+			<field name="tbdQuantity2" visible="false"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="false"/>
+			<field name="tbdString1" visible="false"/>
+			<field name="tbdString3" visible="false"/>
+			<field name="tbdString4" visible="false"/>
+			<field name="tbdString5" visible="false"/>
+			<field name="tbdString6" visible="false"/>
+			<field name="tbdString7" visible="false"/>
+			<field name="tbdString8" visible="false"/>
+			<field name="tbdString9" visible="false"/>
+			<field name="tbdString10" visible="false"/>
+			<field name="tbdString11" visible="false"/>
+			<field name="tbdString12" visible="false"/>
+			<field name="createDate" visible="false"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+		</fields>
+	</costObject>
+	<paymentTerm>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="companyCode" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+			<field name="daysDue" visible="true"/>
+			<field name="daysOffset1" visible="true"/>
+			<field name="daysOffset2" visible="true"/>
+			<field name="daysOffset3" visible="true"/>
+			<field name="discount1" visible="true"/>
+			<field name="discount2" visible="true"/>
+			<field name="discount3" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="false"/>
+			<field name="tbdString1" visible="false"/>
+			<field name="tbdString2" visible="false"/>
+			<field name="tbdString3" visible="false"/>
+			<field name="tbdString4" visible="false"/>
+			<field name="tbdNumber1" visible="false"/>
+			<field name="tbdNumber2" visible="false"/>
+			<field name="tbdCurrency1" visible="false"/>
+			<field name="tbdCurrency2" visible="false"/>
+			<field name="tbdQuantity1" visible="false"/>
+			<field name="tbdQuantity2" visible="false"/>
+		</fields>
+	</paymentTerm>
+	<approvalException>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="userName" visible="true"/>
+			<field name="majorMinor" visible="true"/>
+			<field name="limit" visible="true"/>
+			<field name="defaultLimit" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="type" visible="true"/>
+		</fields>
+	</approvalException>
+	<paymentType>
+		<security roles="MP_Administrator3,MP_Administrator4"/>
+		<fields>
+			<field name="category" visible="true"/>
+			<field name="code" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+		</fields>
+	</paymentType>
+	<glTemplate>
+		<security roles="MP_Administrator3,MP_Administrator4"/>
+		<fields>
+			<field name="name" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="owner" visible="true"/>
+			<field name="private" visible="true"/>
+			<field name="disabled" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="inactiveDate" visible="true"/>
+		</fields>
+	</glTemplate>
+	<currency>
+		<security roles="MP_Administrator3,MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="name" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+		</fields>
+	</currency>
+	<organization>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="users" visible="true"/>
+			<field name="expenseCategories" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+		</fields>
+	</organization>
+	<parameter>
+		<security roles="MP_Administrator3,MP_Administrator4"/>
+		<fields>
+			<field name="startDate" visible="true"/>
+			<field name="endDate" visible="true"/>
+			<field name="systemParameter" visible="true"/>
+			<field name="value" visible="true"/>
+			<field name="admin4Specific" visible="true"/>
+			<field name="disabled" visible="true"/>
+		</fields>
+	</parameter>
+	<countryCode>
+		<security roles="MP_Administrator3,MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="name" visible="true"/>
+			<field name="country" visible="true"/>
+			<field name="language" visible="false"/>
+			<field name="currencyCode" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+			<field name="alpha2Code" visible="true"/>
+			<field name="alpha3Code" visible="true"/>
+			<field name="numericCode" visible="true"/>
+		</fields>
+	</countryCode>
+	<expenseCategory>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="name" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="majorMinor" visible="true"/>
+			<field name="status" visible="true"/>
+		</fields>
+	</expenseCategory>
+	<defaultValue>
+		<security roles="MP_Adminstrator3, MP_Administrator4"/>
+		<fields>
+			<field name="companyCode" visible="true"/>
+			<field name="costObjectType" visible="true"/>
+			<field name="costObject" visible="true"/>
+			<field name="sensitivityLevel" visible="true"/>
+			<field name="paymentOverride" visible="true"/>
+			<field name="approvalLimit" visible="true"/>
+			<field name="notificationFrequency" visible="true"/>
+			<field name="approvalCurrency" visible="true"/>
+			<field name="level" visible="true"/>
+			<field name="groups" visible="true"/>
+			<field name="organizations" visible="true"/>
+		</fields>
+	</defaultValue>
+	<group>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="users" visible="true"/>
+			<field name="userName" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+		</fields>
+	</group>
+	<taxCode>
+		<security roles="MP_Administrator3,MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="percent" visible="true"/>
+			<field name="country" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+		</fields>
+	</taxCode>
+	
+	<!-- SIMSAP Screens -->
+	
+	<vendor>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="name" visible="true"/>
+			<field name="name2" visible="true"/>
+			<field name="status" visible="true"/>
+			<field name="address1" visible="true"/>
+			<field name="address2" visible="true"/>
+			<field name="address3" visible="true"/>
+			<field name="address4" visible="true"/>
+			<field name="city" visible="true"/>
+			<field name="state" visible="true"/>
+			<field name="postalCode" visible="true"/>
+			<field name="country" visible="true"/>
+			<field name="fax" visible="true"/>
+			<field name="phone" visible="true"/>
+			<field name="email" visible="true"/>
+			<field name="contact" visible="true"/>
+			<field name="company" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+			<field name="payBlock" visible="true"/>
+			<field name="postBlock" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="approvalCode" visible="true"/>
+			<field name="taxId" visible="true"/>
+			<field name="bankName" visible="true"/>
+			<field name="bankAccountNumber" visible="true"/>
+			<field name="bankRoutingNo" visible="true"/>
+			<field name="bankAccountType" visible="true"/>
+			<field name="payToCode" visible="true"/>
+			<field name="paymentType" visible="true"/>
+			<field name="paymentTerm" visible="true"/>
+			<field name="currency" visible="true"/>
+			<field name="1099Code" visible="true"/>
+			<field name="1099Flag" visible="true"/>
+			<field name="tbdBoolean1" visible="true"/>
+			<field name="tbdBoolean2" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+			<field name="separatePayment" visible="false"/>
+			<field name="bankAddr1" visible="true"/>
+			<field name="bankAddr2" visible="true"/>
+			<field name="bankCity" visible="true"/>
+			<field name="bankPostalCode" visible="true"/>
+			<field name="bankState" visible="true"/>
+			<field name="bankCountry" visible="true"/>
+			<field name="bankSwiftCode" visible="true"/>
+			<field name="regFieldName1" visible="true"/>
+			<field name="regValue1" visible="true"/>
+			<field name="regFieldName2" visible="true"/>
+			<field name="regValue2" visible="true"/>
+			<field name="regFieldName3" visible="true"/>
+			<field name="regValue3" visible="true"/>
+			<field name="regFieldName4" visible="true"/>
+			<field name="regValue4" visible="true"/>
+			<field name="regFieldName5" visible="true"/>
+			<field name="regValue5" visible="true"/>
+			
+	
+			
+		</fields>	
+	</vendor>
+	<company>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="fullName" visible="true"/>
+			<field name="shortName" visible="true"/>
+			<field name="customerCode" visible="true"/>
+			<field name="country" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+		</fields>
+	</company>
+	<erpError>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="managedPayCode" visible="true"/>
+			<field name="erpCode" visible="true"/>
+			<field name="message" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+		</fields>
+	</erpError>
+	<poHeader>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="systemOriginator" visible="true"/>
+			<field name="company" visible="true"/>
+			<field name="type" visible="true"/>
+			<field name="number" visible="true"/>
+			<field name="date" visible="true"/>
+			<field name="validityStart" visible="true"/>
+			<field name="validityEnd" visible="true"/>
+			<field name="amount" visible="true"/>
+			<field name="billedAmount" visible="true"/>
+			<field name="currency" visible="true"/>
+			<field name="taxCode" visible="true"/>
+			<field name="buyerId" visible="true"/>
+			<field name="requesterId" visible="true"/>
+			<field name="businessUnit" visible="true"/>
+			<field name="vendor" visible="true"/>
+			<field name="isReceivable" visible="true"/>
+			<field name="blockFlag" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="paymentTerm" visible="false"/>
+			<field name="statusCode" visible="true"/>
+			<field name="shippingDocumentId" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+		</fields>
+	</poHeader>
+	<poLine>
+		<security roles=""/>
+		<fields>
+			<field name="companyCode" visible="false"/>
+			<field name="orderedQuantity" visible="true"/>
+			<field name="orderedUnitPrice" visible="true"/>
+			<field name="orderedUOM" visible="true"/>
+			<field name="accountCode" visible="true"/>
+			<field name="taxCode" visible="true"/>
+			<field name="costObject1Code" visible="true"/>
+			<field name="costObject2Code" visible="true"/>
+			<field name="receivableFlag" visible="true"/>
+			<field name="receivedQuantity" visible="true"/>
+			<field name="billedAmount" visible="true"/>
+			<field name="billedQuantity" visible="true"/>
+			<field name="itemDescription" visible="true"/>
+			<field name="itemCode" visible="true"/>
+			<field name="partNumber" visible="true"/>
+			<field name="manfPartNumber" visible="true"/>
+			<field name="statusCode" visible="true"/>
+			<field name="materialId" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="blockFlag" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+		</fields>
+	</poLine>
+	<poHistory>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="company" visible="true"/>
+			<field name="poLine" visible="true"/>
+			<field name="quantityRecevied" visible="true"/>
+			<field name="uom" visible="true"/>
+			<field name="shippingDocumentId" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="currency" visible="true"/>
+			<field name="taxCode" visible="true"/>
+			<field name="billedAmount" visible="true"/>
+			<field name="entryDate" visible="true"/>
+			<field name="historyType" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+		</fields>
+	</poHistory>
+	<receivable>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="poNumber" visible="true"/>
+			<field name="poLineNumber" visible="true"/>
+			<field name="quantityRecevied" visible="true"/>
+			<field name="uom" visible="true"/>
+			<field name="shippingDocumentId" visible="true"/>
+			<field name="company" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+		</fields>
+	</receivable>
+	<vendorAddress>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="systemOriginator" visible="true"/>
+			<field name="vendor" visible="true"/>
+			<field name="name" visible="true"/>
+			<field name="name2" visible="true"/>
+			<field name="address1" visible="true"/>
+			<field name="address2" visible="true"/>
+			<field name="address3" visible="true"/>
+			<field name="address4" visible="true"/>
+			<field name="city" visible="true"/>
+			<field name="state" visible="true"/>
+			<field name="type" visible="true"/>
+			<field name="postalCode" visible="true"/>
+			<field name="country" visible="true"/>
+			<field name="fax" visible="true"/>
+			<field name="phone" visible="true"/>
+			<field name="email" visible="true"/>
+			<field name="contact" visible="true"/>
+			<field name="remitToId" visible="true"/>
+			<field name="taxId" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+			<field name="payBlock" visible="true"/>
+			<field name="postBlock" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+		</fields>
+	</vendorAddress>
+	<account>
+		<security roles="MP_Administrator4"/>
+		<fields>
+			<field name="code" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="type" visible="true"/>
+			<field name="code1" visible="true"/>
+			<field name="code2" visible="true"/>
+			<field name="code3" visible="true"/>
+			<field name="code4" visible="true"/>
+			<field name="code5" visible="true"/>
+			<field name="code6" visible="true"/>
+			<field name="code7" visible="true"/>
+			<field name="code8" visible="true"/>
+			<field name="code9" visible="true"/>
+			<field name="code10" visible="true"/>
+			<field name="currencyList" visible="true"/>
+			<field name="company" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+			<field name="autoPosting" visible="true"/>
+			<field name="postingBlock" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+			<field name="tbdBoolean1" visible="true"/>
+			<field name="tbdBoolean2" visible="true"/>
+			<field name="tbdBoolean3" visible="true"/>
+			<field name="tbdBoolean4" visible="true"/>
+			<field name="tbdBoolean5" visible="true"/>
+			<field name="tbdBoolean6" visible="true"/>
+		</fields>
+	</account>
+	<accountingPeriod>
+		<security roles = "MP_Administrator3,MP_Administrator4"/>
+		<fields>
+			<field name="seqId" visible="true"/>
+			<field name="company" visible="true"/>
+			<field name="systemOriginatorID" visible="true"/>
+			<field name="year" visible="true"/>
+			<field name="month" visible="true"/>
+			<field name="period" visible="true"/>
+			<field name="startDate" visible="true"/>
+			<field name="endDate" visible="true"/>
+			<field name="deletionFlag" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="orgCode" visible="true"/>
+		</fields>	
+	</accountingPeriod>
+	<paymentMode>
+		<security roles = "MP_Administrator4"/>
+		<fields>
+			<field name="accountCode" visible="true"/>
+			<field name="seqId" visible="true"/>
+			<field name="company" visible="true"/>
+			<field name="country" visible="true"/>
+			<field name="systemOriginator" visible="true"/>
+			<field name="name" visible="true"/>
+			<field name="description" visible="true"/>
+			<field name="paymentType" visible="true"/>
+			<field name="period" visible="true"/>
+			<field name="currency" visible="true"/>
+			<field name="docGroup" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="interfaceJob" visible="true"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="docGroup" visible="true"/>
+			<field name="docOrgCode" visible="true"/>
+			<field name="docSubType" visible="true"/>
+			<field name="bankName" visible="true"/>
+			<field name="bankRoutingNumber" visible="true"/>
+			<field name="bankAccountNumber" visible="true"/>
+			<field name="taxIdNumber" visible="true"/>
+			<field name="accountToken" visible="true"/>
+			<field name="companyName" visible="true"/>
+			<field name="companyShortName" visible="true"/>
+			<field name="companyDirectClear" visible="true"/>
+			<field name="companyDirectClearCode" visible="true"/>
+			<field name="companySundryInfo" visible="true"/>
+			<field name="foreignTransaction" visible="true"/>
+			<field name="clientIdToken" visible="true"/>
+			<field name="postingResponse" visible="true"/>
+			<field name="reissuedPayment" visible="true"/>
+			<field name="paymentProcessor" visible="true"/>
+		</fields>	
+	</paymentMode>
+	<systemOriginator>
+		<security roles = "MP_Administrator4"/>
+		<fields>
+			<field name="description" visible="true"/>
+			<field name="code" visible="true"/>
+			<field name="syncTime" visible="true"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="createDate" visible="true"/>
+			<field name="lastModifiedDate" visible="true"/>
+			<field name="tbdDate1" visible="true"/>
+			<field name="tbdDate2" visible="true"/>
+			<field name="tbdString1" visible="true"/>
+			<field name="tbdString2" visible="true"/>
+			<field name="tbdString3" visible="true"/>
+			<field name="tbdString4" visible="true"/>
+			<field name="tbdCurrency1" visible="true"/>
+			<field name="tbdCurrency2" visible="true"/>
+			<field name="tbdQuantity1" visible="true"/>
+			<field name="tbdQuantity2" visible="true"/>
+			<field name="tbdNumber1" visible="true"/>
+			<field name="tbdNumber2" visible="true"/>
+		</fields>	
+	</systemOriginator>
+	<report>
+		<security roles = "MP_Administrator4"/>
+		<fields>
+			<field name="name" visible="true"/>
+			<field name="displayName" visible="true"/>
+			<field name="reportCategory" visible="true"/>
+			<field name="reportSubCategory" visible="true"/>
+			<field name="displayOrder" visible="false"/>
+			<field name="deleteFlag" visible="true"/>
+			<field name="idOnServer" visible="true"/>
+			<field name="roles" visible="true"/>
+			<field name="activeDirectoryGroups" visible="true"/>
+		</fields>
+	</report>
+	
+	<reportSubCategory>
+		<security roles = "MP_Administrator4"/>
+		<fields>
+			<field name="subCategoryName" visible="true"/>
+			<field name="reportCategory" visible="true"/>
+			<field name="displayOrder" visible="false"/>
+			<field name="displayName" visible="true"/>
+			
+		</fields>
+	</reportSubCategory>
+	
+	<reportCategory>
+		<security roles = "MP_Administrator4"/>
+		<fields>
+			<field name="categoryName" visible="true"/>
+			<field name="displayOrder" visible="false"/>
+			<field name="displayName" visible="true"/>
+			
+		</fields>
+	</reportCategory>
+	<queueSecurity>
+		<security roles = "MP_Administrator4"/>
+	</queueSecurity>
+</root>

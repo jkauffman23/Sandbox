@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="doc-indexing-view-01" template="Purchase-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+			
+		
+		</locale>
+	</labels>
+
+	<section-overrides>	
+			
+	</section-overrides>
+	
+	<property-overrides>
+		<dropDown name="tbdString25" readonly="true" validation="required" choiceList="choice.poMatchMethod"/>
+		<text name="poId" validation="required"/>
+		<text name="number" readonly="true" />
+		<text name="grossAmount" readonly="true" />
+		<lookup name="vendorId" readonly="true" inputReadonly="false"/>
+		<lookup name="vendor.name" readonly="true" inputReadonly="false"/>
+		<text name="poId" readonly="true" />
+		<lookup name="companyCode" readonly="true" inputReadonly="false"/>
+		<text name="currencyId" readonly="true"/>
+		<text name="buyerName" readonly="true"/>
+		<text name="tbdComment1" readonly="true"/>
+	</property-overrides>
+
+	<lineItem-overrides>
+			<text name="itemCode" readonly="true" />
+			<text name="itemDescription" readonly="true" />
+			<lookup name="accountCode" lookupType="lookup.accountCode" readonly="true" inputReadonly="false" />
+			<dropDown name="uom" readonly="true" />
+			<text name="quantity" readonly="true" />
+			<currency name="unitPrice" readonly="true" />
+			<currency name="lineTotal" readonly="true"/>
+			<text name="tbdString3" readonly="true" />
+			<text name="tbdString4" readonly="true"/>
+			<text name="account.description" readonly="true" />	
+			<text name="tbdString1" readonly="true" />
+	</lineItem-overrides>
+
+	<action-overrides>
+		<iconAction name="addLineItem" visible="false" />
+		<iconAction name="removeLineItem" visible="false" />
+		
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+		<validation name="validation.validVendor" messageType="warning" note="message.validVendorValidation"/>
+	</validations>
+</view>

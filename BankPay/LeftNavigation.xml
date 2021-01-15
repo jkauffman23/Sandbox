@@ -1,0 +1,33 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+    
+	
+		
+    <initpage href="/filenet/search.do?searchName=InboxSearchPayBatch"/>
+    <action href="/filenet/search.do?searchName=InboxSearchPayBatch" target="right" image="/images/ico-inbox-w16.png" name="action.myinbox.bankpay" searchName="InboxSearchBankPay"/>
+	
+	
+	<section name="section.queues.pay.batches" collapsed="false" >
+		<action href="/filenet/upload.do?view=batch-upload-view-001.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.pay.newbatch" /> 
+		<action href="/filenet/search.do?searchName=paymentsInvoiceBatching" target="right" image="/images/ico-add-doc-w16.png" name="action.pay.invoice.batching"  searchName="action.pay.invoice.batching"/>
+		<action href="/filenet/search.do?searchName=paymentsInvoiceBatchMaintenance" target="right" image="/images/ico-add-doc-w16.png" name="action.pay.invoice.maintenance"  searchName="action.pay.invoice.maintenance"/>
+	</section>
+	
+	
+	<section name="section.queues.pay.status" collapsed="false" >
+		<action href="/filenet/search.do?searchName=payBatchDrafts" target="right" image="/images/ico-folder-w16.png" name="action.pay.batch.drafts"    searchName="action.pay.batch.drafts"/> 
+		<action href="/filenet/search.do?searchName=payBatchReview" target="right" image="/images/ico-folder-w16.png" name="action.pay.batch.review"    searchName="action.pay.batch.review"/> 
+		<action href="/filenet/search.do?searchName=payBatchStaging" target="right" image="/images/ico-folder-w16.png" name="action.pay.batch.posting"    searchName="action.pay.batch.posting"/> 
+		<action href="/filenet/search.do?searchName=payBatchConfirmation" target="right" image="/images/ico-folder-w16.png" name="action.pay.batch.confirmation"    searchName="action.pay.batch.confirmation"/>
+		<action href="/filenet/search.do?searchName=payBatchError" target="right" image="/images/ico-folder-w16.png" name="action.pay.batch.error"    searchName="BankPayBatchError"/>  
+	</section>
+
+ 
+	<!--   Tools        -->
+    <section name="section.tools" collapsed="true">
+        <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-w16.png" name="action.preferences"/>
+		<action href="/restricted/passwordreset.do" target="right" image="/images/ico-wrench-c16.png" name="Reset Password"/>
+    </section>
+	
+</navigation>

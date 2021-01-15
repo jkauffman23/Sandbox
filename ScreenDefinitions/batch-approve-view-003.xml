@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="batch-approve-view-003" template="batch-wire-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		<label name="batch" value="Corp Payment - Wire" />
+		
+		</locale>
+	</labels>
+
+	<section-overrides>	
+	
+	</section-overrides>
+	
+	<property-overrides>
+	</property-overrides>
+
+	<lineItem-overrides> 
+	</lineItem-overrides>
+
+	<action-overrides>
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.Batch.terminate">
+			</reason>
+			<!--reason name="Terminate" commentsRequired="true" note="message.Batch.terminate">
+			</reason-->
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+		<validation name="validation.duplicateInvoiceCheck" messageType="warning" note="message.duplicateBatchValidation"/>
+
+	</validations>
+</view>

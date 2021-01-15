@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="po-posting-view" template="po-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+   
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+	
+	<section-overrides>
+		<section name="vendorDetails" visible="true" collapsed="false"/>	
+		<section name="lineItems" visible="true" collapsed="false"/>	
+	</section-overrides>
+
+	
+	<property-overrides>
+		<textArea   name="processInformation.comment" readonly="true"/>
+		<currency name="freightAmount1" readonly="true" validation="" />
+		<currency name="freightAmount2" readonly="true" validation="" />
+		<currency name="tbdCurrency1" readonly="true" validation="" />
+		<currency name="grossAmount" readonly="true" validation="" />
+		<currency name="taxAmount1" readonly="true"/><!--sales tax-->
+		<currency name="taxAmount2" readonly="true" validation="" />
+		<date name="date" readonly="true" validation="" />
+		<dropDown name="specialHandlingCode" readonly="true" />
+		<dropDown name="subType" readonly="true" validation="" />
+		<dropDown name="type" readonly="true" validation="" />
+		<dynamicDropDown name="paymentTermId" readonly="true" validation="" />
+		<poNumber name="poId" readonly="true" validation="" />
+		<text name="number" readonly="true" validation="" />
+		<dropDown name="checkStubMessage" readonly="true"/>
+		<text name="voucherComments" readonly="true" />
+		<text name="paymentsPurposeOfPayment" styleClass="twohundred" readonly="true"/>
+	</property-overrides>
+
+	
+	<action-overrides>
+		<button name="forward" readonly="true" visible="false"/>
+		<button name="release" readonly="true" visible="false"/>
+		<iconAction name="addLineItem" readonly="true" visible="false"/>
+		<iconAction name="removeLineItem" readonly="true" visible="false"/>
+		<iconAction name="editRouting" readonly="true" visible="false"/>
+		<iconAction name="postings" readonly="true" visible="false"/>
+		<button name="update" readonly="true" visible="false"/>
+		<getNext name="next" readonly="true" visible="false"/>
+  <button name="release" readonly="false" visible="true"/>
+  <rejectButton name="reject" isAnchored="false" title="rejectTitle" styleClass="button70" readonly="true" visible="false"/>
+  <button name="updateRelease" command="updateRelease" readonly="true" visible="false" type="submit" title="updateReleaseTitle" styleClass="button70"/>  
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Funds" commentsRequired="true" note="message.awaitingFunds">
+			</reason>
+			<reason name="Void" commentsRequired="true" note="message.void">
+			</reason>
+			<reason name="Reissue" commentsRequired="true" note="message.reissue">
+			</reason>			
+		</rejectionReasons>	
+	</documentRejection>
+
+	<validations>
+	</validations>
+</view>

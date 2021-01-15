@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THIS FILE -->
+
+		<locale name="en">
+		<label name="appName" value="Active Pay"/> 
+		
+				<!--Choicelist labels-->
+		<label name="invoiceTypePO" value="PO"/>
+		<label name="action.AutoClear" value="Awaiting Clearance"/>
+		<label name="action.AutoClose" value="Awaiting Closure"/>
+		<label name="action.AutoVoid" value="Void Payment"/>
+		<label name="action.AutoReissue" value="Reissue Payment"/>	
+		<label name="message.returnTOClearance" value="Return to Awaiting Clearance"/>
+		<label name="message.void" value="Void Invoice Payment"/>
+		<label name="message.reissue" value="Reissue Invoice Payment"/>
+		<label name="paymentsPurposeOfPayment" value="Purpose of Payment"/>
+		<label name="tbdString53" value="Check- Payment Status"/>
+		
+		<label name="templateHeader" value="Template"/>
+		<label name="templateDetails" value="Template Details"/>
+		<label name="templateInfo" value="Template Info"/>
+		
+		<!-- Advanced Search labels -->
+		<label name="tbdString12" value="Approver ID"/>
+		</locale>
+</labels>
+
+

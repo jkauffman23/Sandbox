@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en">
+	<locale name="en">
+		
+		<!-- ManagedPay Left navigation -->
+		<!-- Common Labels * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.mpnavigation" value="Active Pay"/>
+			<label name="version" value="1.0001" />
+			<label name="number" value="Invoice"/>	
+			<label name="action.myinbox" value="My Work Inbox"/>
+			<label name="action.dashboard" value="Dashboard"/>
+			<label name="action.myinbox.doc" value="Doc Inbox" />
+			<label name="action.watson" value="Watson Analytics"/>						
+			<label name="action.powerbi" value="PowerBI Analytics"/>						
+			<label name="action.rulesadmin" value="Workflow Rules Admin"/>
+			<label name="action.indexingNP" value="Non-PO Indexing" />
+			<label name="priority" value="Priority" />
+			<label name="action.myinbox.doc" value="Doc Inbox" />
+			<label name="section.queues.process" value="Processing"/>
+			<label name="action.process.review" value="Review"/>
+			<label name="action.processing" value="Processing"/>
+			<label name="action.processing.preapproved" value="Pre-Approved"/>
+			<label name="action.processing.costcenter" value="Cost Center" />
+			<label name="section.queues.review" value="Review"/>
+			<label name="action.review.supervisor" value="Supervisor"/>
+			<label name="action.review.fixedasset" value="Fixed Assets"/>
+			<label name="action.review.highdollar" value="High Dollar" />
+			<label name="action.review.special" value="Special"/>
+			<label name="action.preposting" value="Pre Posting" />
+			<label name="action.APReview" value="AP Review" />
+
+
+
+			
+			
+		<!-- Common Labels * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			
+		<!-- Team Work Queues  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.queues.processing" value="Processing" />
+			<label name="section.queues" value="Work Queues"/>
+			<label name="section.queues.indexing" value="Indexing"/>
+			<label name="section.queues.exceptions" value="Exceptions" />
+			<label name="section.queues.exceptions.custom" value="Review" />
+			<label name="action.indexing" value="Indexing"/>
+			<label name="action.indexingPO" value="PO Indexing"/>
+			<label name="action.titleindexing" value="Title Doc Indexing"/>
+			<label name="action.generalexception" value="Exception"/>
+			<label name="action.poexception" value="PO Exception"/>
+			<label name="action.supervisor" value="Supervisor"/>
+			<label name="action.pretax" value="Tax Audit"/>
+			<label name="action.corpfacilities" value="Fixed Assets"/>
+			<label name="action.vendormaintenance" value="Vendor Maintenance"/>
+			<label name="action.instructions" value="Special Handling"/>
+			<label name="action.rescan" value="Waiting Rescan"/>
+			<label name="action.freight.invoices" value="Freight Invoices"/>
+			<label name="action.accounting.review" value="Accounting Review"/>
+			<label name="action.highdollar.review" value="High Dollar Review" />
+			<label name="action.legal.review" value="Legal Review" />
+			<label name="action.paynow" value="Pay Now Indexing" />
+			<label name="action.vendorrelations.review" value="Vendor Relations" />
+			<label name="action.confidential.review" value="Confidential" />
+			<label name="section.buyer" value="Buyer" />
+			<label name="section.purchase" value="Purchasing" />
+			<label name="action.awaitingreceipt" value="Waiting Receipts" />
+			<label name="action.overrideEditAP" value="Override Edit-Pay" />
+			
+			<label name="action.duplicatereview" value="Duplicate Review" />
+			<label name="action.terminate" value="Terminate" />
+		<!-- Team Work Queues  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->		
+			
+		<!--  GET NEXT ACTIONS * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.getnext" value="Get Next Work"/>
+			<label name="action.getnext.indexing" value="Get-Next: Indexing"/>
+			<label name="action.getnext.generalexception" value="Get-Next: Exception"/>
+			<label name="action.getnext.supervisor" value="Get-Next: Supervisor"/>
+			<label name="action.getnext.pretax" value="Get-Next: Pre-Tax Audit"/>
+			<label name="action.getnext.rescan" value="Get-Next: Rescan"/>
+		<!--  GET NEXT END DEFAULT * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		
+		<!--AR CONFIGURATION * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="action.uploadAR" value="Request AR Invoice"/>
+			<label name="action.ar1" value="Review Invoice"/>
+			<label name="action.ar2" value="Post Invoice"/>
+			<label name="action.ar3" value="Awaiting Settlement"/>
+			<label name="action.ar4" value="Dispute Resolution"/>
+			<label name="action.ar5" value="AR Exceptions"/>
+			<label name="action.ar6" value="Customer Maintenance"/>
+			<label name="action.upload5" value="Upload Excel Invoice"/>
+		<!--AR CONFIGURATION * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		
+		<!--  PURCHASING CONFIGURATION * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.purchasing" value="Purchasing"/>
+			<label name="action.po.upload" value="General Purchase"/>
+			<label name="action.po.upload2" value="Material Purchase" />
+			<label name="action.po.upload3" value="IT Purchase" />
+			<label name="action.po.buyer" value="Buyer Reveiw" />
+			<label name="action.po.purchase" value="PO Processing" />
+			<label name="action.po.approve" value="PO Approvals" />
+			<label name="action.po.exception" value="PO Exceptions"/>	
+		<!--  PURCHASING CONFIGURATION * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			
+		
+		<!--  UPLOAD ACTIONS * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.requests" value="Create New"/>
+			<label name="action.po" value="New PO Check"/>
+			<label name="action.nonpo" value="New Non-PO Check"/>
+			<label name="action.special" value="New - Special" />
+			<label name="action.excel" value="New XLS Upload"/>
+		<!--  UPLOAD ACTIONS * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+
+		
+		<!--  VENDOR MANAGEMENT AND PORTAL MANAGEMENT     * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.vendormgmt" value="Vendor Management"/>
+			<label name="action.portaladdress" value="Change of Address"/>
+			<label name="action.portalFAQ" value="Misc Questions"/>
+			<label name="action.portaldiscount" value="Early Payment Request"/>
+			<label name="action.portalW9" value="W9 Request"/>
+			<label name="action.upload1MM" value="Vendor Upload"/>
+		<!--  VENDOR MANAGEMENT AND PORTAL MANAGEMENT     * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			
+		
+		<!-- JOURNAL PROCESS QUEUES    * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.journals" value="Journal Processing"/>
+			<label name="section.upload.journal" value="Create Journal"/>
+			<label name="action.jn.review" value="Review Journal"/>
+			<label name="action.jn" value="Post Journal"/>
+			<label name="action.jn1" value="Monthly Journals"/>
+			<label name="action.jn2" value="Quarterly Journals"/>
+			<label name="action.jn3" value="Year-End Journals"/>
+			<label name="action.jn4" value="Other"/>
+			<label name="action.jn8" value="Upload by Excel"/>
+			<label name="action.jn9" value="Other"/>
+			<label name="action.jn.search" value="Other"/>
+			<label name="action.jn1.search" value="Other1"/>
+			<label name="action.jn2.search" value="Other2"/>
+			<label name="action.jn3.search" value="Other3"/>
+			<label name="action.jn4.search" value="Other4"/>
+			<label name="action.jn5.search" value="Other5"/>
+			<label name="action.jn.task" value="JE Task"/>
+			
+			<label name="section.journal.custom" value="Custom" />
+			
+			
+		<!-- JOURNAL PROCESS QUEUES    * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		
+		<!--   POSTING QUEUES    * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.postingqueues" value="Posting"/>
+			<label name="action.tradereceipts" value="Awaiting Receipts"/>
+			<label name="action.posting" value="Posting"/>
+			<label name="action.postingfailed" value="Posting Failed"/>
+			<label name="action.payment" value="Awaiting Payment"/>
+			<label name="action.clearance" value="Awaiting Clearance"/>
+			<label name="action.cancelled" value="Cancelled"/>
+		<!--   POSTING QUEUES    * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		
+		<!--   SEARCH ACTIONS    * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->	
+			<label name="section.search" value="Search"/>
+			<label name="action.advancedinvoicesearch" value="Advanced Search"/>
+			<label name="action.searchsave" value="Export Search Data"/>
+			<label name="action.preferences" value="User Preferences"/>
+			<label name="action.mysearch" value="Active Search" />
+		<!--   SEARCH ACTIONS    * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		
+		<!--    TOOLS SECTION   * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.tools" value="Tools"/>
+			<label name="action.reassignDelegate" value="Team Delegation"/>
+			<label name="action.reassignSelf" value="Reassign Work"/>
+		<!--    TOOLS SECTION   * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		
+		<!--    APPLICATIONS SECTION  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+			<label name="section.applications" value="Applications"/>
+			<label name="action.adminmodule" value="ActivePay Admin"/>
+			<label name="action.reporting" value="ActivePay Reporting"/>
+		<!--    APPLICATIONS SECTION  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		<!--    Templates SECTION  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		<label name="section.templatequeues" value="Templates"/>
+		<label name="action.template" value="New Template"/>
+		<label name="action.indexingTemplate" value="Template Indexing"/>
+		<label name="action.overrideEditTemp" value="Override Edit-Templates" />
+		<!--    Templates SECTION  * * * * * * * * * * * * * * * * * * * * * * * * * * * *  -->
+		
+		<!--Expense Application Config-->
+		
+		<label name="section.exp.mpnavigation" value="Active Expense"/>
+		<label name="section.exp.requests" value="Create Reports"/>
+		<label name="section.exp.queues" value="Expense Queues"/>
+		<label name="section.exp.myLibrary" value="Expense Library" />
+		<label name="action.exp.myExpDrafts" value="Drafts and Approvals" />
+		<label name="action.exp.InAudit" value="Waiting Audit" />
+		<label name="action.exp.InPostingPaid" value="Paid Expenses"/>
+		<label name="action.exp.InPostingCleared" value="Cleared" />
+		<label name="action.exp.InPosting" value="In Posting" />
+		<label name="action.exp.InException" value="Exceptions" />	
+		<label name="action.exp.libraryDrafts" value="Draft Expenses" />
+		<label name="action.exp.libraryApprovals" value="Waiting Approval" />
+		<label name="action.exp.libraryWaitPayment" value="Waiting Payment" />
+		<label name="action.exp.libraryPaid" value="Paid Expenses" />
+		<label name="action.exp.libraryTravelReq" value="Travel Requests" />
+		<label name="action.exp.newtravelrequest" value="Travel Request" />
+		<label name="action.exp.newexpvoucher" value="Expense Report"/>
+		<label name="action.exp.newcashadvance" value="Cash Advance"/>
+		<label name="action.exp.InFail" value="Failed Reports" />
+		<label name="action.exp.InProcess" value="In Process" />
+		<label name="action.exp.InApprove" value="Waiting Approval" />
+		<label name="action.indexing.doc" value="Doc Indexing" />
+		<label name="action.upload.doc" value="Upload Doc" />
+		<label name="inboxSearch.doc" value="Inbox Doc Search" />
+		
+		
+		<!--Choicelist labels-->
+		<label name="invoiceTypePO" value="PO"/>
+		
+		
+	</locale>
+	
+
+
+
+	
+</labels>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+

@@ -1,0 +1,4 @@
+Ref#,Invoice Number,Vendor Name,Amount,Invoice Date,Scan Date,Priority,Type,Group,Status
+<#list documentsList as document>
+<#if document.seqId?exists>${document.seqId?string.number?replace(",","")}</#if>,<#if document.number?exists>${document.number?replace(",","")}</#if>,<#if document.vendor?exists><#if document.vendor.name?exists>${document.vendor.name?replace(",", "")}</#if></#if>,<#if document.grossAmount?exists>${document.grossAmount?string.number?replace(",","")}</#if>,<#if document.date?exists>${document.date?string["MM/dd/yyyy"]}</#if>,<#if document.scanDate?exists>${document.scanDate?string["MM/dd/yyyy"]}</#if>,<#if document.docPriority?exists>${document.docPriority}</#if>,<#if document.type?exists>${document.type}</#if>,<#if document.group?exists>${document.group}</#if>,<#if document.processInformation.queueName?exists>${document.processInformation.queueName}</#if>
+</#list>

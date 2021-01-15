@@ -1,0 +1,220 @@
+<%@ page import="java.util.Map" %>
+<%@ page import="com.miriasystems.constants.WebKeys" %>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>css/Appcenter/demandcenter.css" type="text/css" rel="stylesheet" />
+<title>Demand Center</title>
+</head>
+
+<%
+    Map roles = (Map)request.getAttribute("rolesMap");
+    session.setAttribute("appName", null);
+	
+		
+	session.setAttribute("dcApp1", "Pay");
+	session.setAttribute("dcApp1URL", "index.jsp?app=");
+	session.setAttribute("dcApp1Target", "_parent");
+	session.setAttribute("dcApp1Desktop", "Pay");
+	session.setAttribute("dcApp1DisableImg", "Pay");
+	
+	session.setAttribute("dcApp2", "Search");
+	session.setAttribute("dcApp2URL", "index.jsp?app=");
+	session.setAttribute("dcApp2Target", "_parent");
+	session.setAttribute("dcApp2Desktop", "Search");
+	session.setAttribute("dcApp2DisableImg", "Search");
+	
+	session.setAttribute("dcApp3", "Mailroom");
+	session.setAttribute("dcApp3URL","http://activedemo:9081/navigator/?desktop=");
+	session.setAttribute("dcApp3Target", "_blank");
+	session.setAttribute("dcApp3Desktop", "Dev1");
+	session.setAttribute("dcApp3DisableImg", "Mailroom");
+		
+	session.setAttribute("dcApp4", "Expense");
+	session.setAttribute("dcApp4URL", "index.jsp?app=");
+	session.setAttribute("dcApp4Target", "_parent");
+	session.setAttribute("dcApp4Desktop", "Expense");
+	session.setAttribute("dcApp4DisableImg", "Expense");
+	
+	session.setAttribute("dcApp5", "Report");
+	session.setAttribute("dcApp5URL", "https://app.powerbi.com/groups/me");
+	session.setAttribute("dcApp5Target", "_blank");
+	session.setAttribute("dcApp5Desktop", "");
+	session.setAttribute("dcApp5DisableImg", "Report");
+	
+	session.setAttribute("dcApp6", "Content");
+	session.setAttribute("dcApp6URL", "http://dev1:9081/navigator/?desktop=");
+	session.setAttribute("dcApp6Target", "_blank");
+	session.setAttribute("dcApp6Desktop", "AP");
+	session.setAttribute("dcApp6DisableImg", "Content");
+	
+	session.setAttribute("dcApp7", "Null");
+	session.setAttribute("dcApp7URL", "Null");
+	session.setAttribute("dcApp7Target", "_blank");
+	session.setAttribute("dcApp7Desktop", "Null");
+	session.setAttribute("dcApp7DisableImg", "Null");
+	
+	session.setAttribute("dcApp8", "Null");
+	session.setAttribute("dcApp8URL", "Null");
+	session.setAttribute("dcApp8Target", "_blank");
+	session.setAttribute("dcApp8Desktop", "Null");
+	session.setAttribute("dcApp8DisableImg", "Null");
+	
+	session.setAttribute("dcApp9", "Null");
+	session.setAttribute("dcApp9URL", "index.jsp?app=");
+	session.setAttribute("dcApp9Target", "_parent");
+	session.setAttribute("dcApp9Desktop", "Null");
+	session.setAttribute("dcApp9DisableImg", "Null");
+	
+	
+%>
+
+<body >
+
+<div class="headerbar63">
+
+				<ul>
+
+				<li>
+					<% if( roles.get("Admin")!=null && ((Boolean)roles.get("Admin")).booleanValue()){ %>
+					
+					<a href="/ManagedPay/admin/index.jsp" target="_blank">Admin</a>
+					<% }else{ %>
+					<a href="javascript:void(0);" style="cursor:default;"></a>
+					<% } %>
+
+				</li>
+
+				<li>
+				<a href="protected/logout.do">LogOut</a>
+				</li>
+
+				<li>
+				<a href="<c:url value="/webspherelogin.do"/>" target="_top" style="cursor:pointer;">
+
+				</li>
+
+				<li>
+				<div class="MSlogo"></div></a>
+				</li>
+
+				</ul>
+
+    </div>
+
+    <div class="container63">
+
+        <div class="container_mid63">
+		
+			<div class="headertop63" >
+            <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/activeOps.jpg" height="60" width="240" border="0" alt="Active Finance"/>
+            </div>
+
+			<div class="container_border63">
+			</div>
+            
+			<div class="containericon63">
+               <ul>
+
+	       <!-- Row 1 ********************************************* -->
+                   <li class="margintop63">
+                        <% if( roles.get(session.getAttribute("dcApp1"))!=null && ((Boolean)roles.get(session.getAttribute("dcApp1"))).booleanValue()){ %>
+                            <a href="<%=session.getAttribute("dcApp1URL")%><%=session.getAttribute("dcApp1Desktop")%>" target="<%=session.getAttribute("dcApp1Target")%>"> <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp1" )%>.png" alt="Active <%=session.getAttribute("dcApp1" )%>" title="Active <%=session.getAttribute("dcApp1" )%>"/></a>
+                        <% }else{ %>
+                            <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp1DisableImg" )%>_disable.png" />
+                        <% } %>
+                    </li>
+							
+					<li class="margintop63">
+                        <% if( roles.get(session.getAttribute("dcApp2"))!=null && ((Boolean)roles.get(session.getAttribute("dcApp2"))).booleanValue()){ %>
+                           <a href="<%=session.getAttribute("dcApp2URL")%><%=session.getAttribute("dcApp2Desktop")%>" target="<%=session.getAttribute("dcApp2Target")%>"> <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp2" )%>.png" alt="Active <%=session.getAttribute("dcApp2" )%>" title="Active <%=session.getAttribute("dcApp2" )%>"/></a>
+                        <% }else{ %>
+                            <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp2DisableImg" )%>_disable.png" />
+                       <% } %>
+                    </li>
+
+					<li class="margintop63">
+                        <% if( roles.get(session.getAttribute("dcApp3"))!=null && ((Boolean)roles.get(session.getAttribute("dcApp3"))).booleanValue()){ %>
+                            <a href="<%=session.getAttribute("dcApp3URL")%><%=session.getAttribute("dcApp3Desktop")%>" target="<%=session.getAttribute("dcApp3Target")%>"><img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp3" )%>.png" alt="Active <%=session.getAttribute("dcApp3" )%>" title="Active <%=session.getAttribute("dcApp3" )%>"/></a>
+                        <% }else{ %>
+                           <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp3DisableImg" )%>_disable.png" />
+						<% } %>
+                    </li>
+
+			<!-- Row 2 ********************************************* -->
+					<li class="margintop63">
+                        <% if( roles.get(session.getAttribute("dcApp4"))!=null && ((Boolean)roles.get(session.getAttribute("dcApp4"))).booleanValue()){ %>
+                            <a href="<%=session.getAttribute("dcApp4URL")%><%=session.getAttribute("dcApp4Desktop")%>" target="<%=session.getAttribute("dcApp4Target")%>"><img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp4" )%>.png" alt="Active <%=session.getAttribute("dcApp4" )%>" title="Active <%=session.getAttribute("dcApp4")%>"/></a>
+                        <% }else{ %>
+                           <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp4DisableImg" )%>_disable.png" />
+						<% } %>
+                    </li>
+					
+					
+		<li class="margintop63">
+                        <% if( roles.get(session.getAttribute("dcApp5"))!=null && ((Boolean)roles.get(session.getAttribute("dcApp5"))).booleanValue()){ %>
+                            <a href="<%=session.getAttribute("dcApp5URL")%><%=session.getAttribute("dcApp5Desktop")%>" target="<%=session.getAttribute("dcApp5Target")%>"><img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp5" )%>.png" alt="Active <%=session.getAttribute("dcApp5" )%>" title="Active <%=session.getAttribute("dcApp5")%>"/></a>
+                        <% }else{ %>
+                            <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp5DisableImg" )%>_disable.png" />
+					   <% } %>
+                    </li>
+					
+					
+		<li class="margintop63">
+                        <% if( roles.get(session.getAttribute("dcApp6"))!=null && ((Boolean)roles.get(session.getAttribute("dcApp6"))).booleanValue()){ %>
+                            <a href="<%=session.getAttribute("dcApp6URL")%><%=session.getAttribute("dcApp6Desktop")%>" target="<%=session.getAttribute("dcApp6Target")%>"><img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp6" )%>.png" alt="Active <%=session.getAttribute("dcApp6" )%>" title="Active <%=session.getAttribute("dcApp6" )%>"/></a>
+                        <% }else{ %>
+                            <img src="/ManagedPay<%=session.getAttribute(WebKeys.REVISED_PATH)%>images/appcenter/Active<%=session.getAttribute("dcApp6DisableImg" )%>_disable.png" />
+					   <% } %>
+                    </li>
+					
+			
+					
+
+	
+		</div>
+        		
+		</div>
+		
+		<div class="containermess">
+						
+				<% if (session.getAttribute("dcMessBus") != null) { %>
+				<span class="dc_message">
+				<%=session.getAttribute("dcMessBus")%>
+
+				</span>
+				<% } else {%>
+
+				<% } %>
+
+				</br>
+				<% if (session.getAttribute("dcMessSys") != null) { %>
+				<span class="dc_message_sys">
+				<%=session.getAttribute("dcMessSys")%>
+
+				</span>
+				<% } else {%>
+
+				<% } %>	
+           
+		</div>
+				
+				
+		
+		
+<div class="footer63">
+		<span class="footer63"><%= (String)session.getAttribute(WebKeys.APPLICATION_NAME) %>&trade; v<jsp:include page="version.html"/>&nbsp;&nbsp; &nbsp; <c:out value="${currentYear}" /> Miria Systems, Inc.     </span>
+        
+	</div>
+	</div>
+
+	
+	
+	
+</body>
+</html>

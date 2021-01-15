@@ -1,0 +1,344 @@
+<ajaxActions>
+
+    <action class="com.miriasystems.processors.NetAmountNoDiscountProcessor" type="processor"
+            name="netAmountNoDiscountProcessor">
+        <request>
+            <property name="grossAmount"/>
+            <property name="taxAmount1"/>
+            <!--property name="taxAmount2"/>
+           <property name="taxAmount3"/>
+           <property name="taxAmount4"/-->
+            <property name="freightAmount1"/>
+            <!--property name="freightAmount2"/-->
+            <!--property name="discountAmount"/-->
+        </request>
+        <response>
+            <property name="netAmount"/>
+        </response>
+    </action>
+	
+	<action class="com.miriasystems.processors.SalesTaxCalculator" type="processor"
+            name="salesTaxCalculator">
+        <request>
+            <property name="grossAmount"/>
+            <property name="taxAmount1"/>
+            <property name="taxCode.percent"/>
+			 <property name="taxId"/>
+
+        </request>
+        <response>
+            <property name="taxAmount2"/>
+			  <property name="taxAmount3"/>
+
+        </response>
+    </action>
+	
+	
+	 <action class="com.custom.processors.FreightAmountProcessor" type="processor"
+            name="freightAmountProcessor">
+        <request>
+            <property name="grossAmount"/>
+            <property name="freightAmount2"/>
+        </request>
+        <response>
+            <property name="netAmount"/>
+        </response>
+    </action>
+
+	
+	 <action class="com.custom.processors.NetAmountProcessor" type="processor"
+            name="customNetAmountProcessor">
+        <request>
+            <property name="grossAmount"/>
+        </request>
+        <response>
+            <property name="netAmount"/>
+        </response>
+    </action>
+	
+	<action class="com.custom.processors.ScanAmountProcessor" type="processor"
+            name="customScanAmountProcessor">
+        <request>
+            <property name="scanAmount"/>
+        </request>
+        <response>
+            <property name="netAmount"/>
+        </response>
+    </action>
+	<action class="com.custom.processors.DueDateProcessor" type="processor" name="dueDateProcessor">
+        <request>
+            <property name="paymentTermId"/>
+            <property name="date"/>
+            <!--property name="scanVendorAddress2"/-->
+            <property name="tbdBoolean2"/>
+            <property name="dueDate"/>
+            <!--property name="taxAmount2"/>
+           <property name="taxAmount3"/>
+           <property name="taxAmount4"/-->
+            <!--property name="freightAmount1"/-->
+            <!--property name="freightAmount2"/-->
+            <!--property name="discountAmount"/-->
+        </request>
+        <response>
+            <property name="dueDate"/>
+        </response>
+    </action>
+	
+	<action class="com.miriasystems.processors.LineTotalCalculator" type="processor" name="lineTotalCalculator">
+        <request>
+            <property name="quantity" lineItem="true"/>
+            <property name="unitPrice" lineItem="true"/>
+        </request>
+        <response>
+            <property name="lineTotal" lineItem="true"/>
+        </response>
+    </action>
+	<action class="com.custom.processors.PaymentModeInterfaceJobProcessor" type="processor" name="paymentModeInterface">
+        <request>
+            <property name="paymentModeId"/>
+        </request>
+        <response>
+            <property name="paymentModeInterfaceJob"/>
+        </response>
+    </action>
+
+    <!--action class="com.miriasystems.processors.ScanVendorNameProcessor" type="processor" name="scanVendorNameProcessor">
+        <request>
+            <property name="vendorId"/>
+            <property name="scanVendorName"/>
+            <property name="vendor.name"/>
+        </request>
+        <response>
+            <property name="vendor.name"/>
+        </response>
+    </action-->
+
+    <action class="com.miriasystems.processors.TotalLineAmountProcessor" type="processor" name="lineItemTotal">
+        <request>
+            <property name="lineTotal" lineItem="true"/>
+			<property name="taxAmount" lineItem="true"/>
+            <property name="calculatedLineTotal"/>
+        </request>
+        <response>
+            <property name="lineTotal" lineItem="true"/>
+            <property name="calculatedLineTotal"/>
+			<property name="calculatedTaxTotal"/>
+        </response>
+    </action>
+	
+	 <action class="com.miriasystems.processors.RemainingTotalLineAmountProcessor" type="processor" name="remainingLineItemTotal">
+        <request>
+            <property name="lineTotal" lineItem="true"/>
+			<property name="taxAmount" lineItem="true"/>
+			<property name="tbdQuantity1"/>
+			<property name="grossAmount"/>
+            <property name="calculatedLineTotal"/>
+			<property name="calculatedRemainingLineTotal"/>
+
+        </request>
+        <response>
+            <property name="lineTotal" lineItem="true"/>
+            <property name="calculatedLineTotal"/>
+			<property name="calculatedTaxTotal"/>
+			<property name="calculatedRemainingLineTotal"/>
+
+        </response>
+		    </action>
+
+		
+		 <action class="com.miriasystems.processors.NonUserApprovalRemainingTotalLineAmountProcessor" type="processor" name="nonUserApprovalRemainingLineItemTotal">
+        <request>
+            <property name="lineTotal" lineItem="true"/>
+			<property name="taxAmount" lineItem="true"/>
+			<property name="grossAmount"/>
+            <property name="calculatedLineTotal"/>
+			<property name="calculatedRemainingLineTotal"/>
+
+        </request>
+        <response>
+            <property name="lineTotal" lineItem="true"/>
+            <property name="calculatedLineTotal"/>
+			<property name="calculatedTaxTotal"/>
+			<property name="calculatedRemainingLineTotal"/>
+
+        </response>
+    </action>
+
+    <!--action class="com.fifththirdbank.processors.TotalPOLineAmountProcessor" type="processor" name="poLineItemTotal">
+        <request>
+            <property name="lineTotal" lineItem="true"/>
+            <property name="tbdBoolean1" lineItem="true"/>
+        </request>
+        <response>
+            <property name="lineTotal" lineItem="true"/>
+            <property name="calculatedLineTotal"/>
+        </response>
+    </action-->
+
+    <!--<action class="com.fifththirdbank.processors.ClearingDocumentNumberProcessor" type="processor" name="clearingDoc">-->
+    <!--<response>-->
+    <!--<property name="tbdString4" lineItem="false"/>-->
+    <!--</response>-->
+    <!--</action>-->
+
+    <action class="com.miriasystems.processors.LineItemUnitPriceCalculator" type="processor" name="lineItemUnitPrice">
+        <request>
+            <property name="quantity" lineItem="true"/>
+            <property name="lineTotal" lineItem="true"/>
+        </request>
+        <response>
+            <property name="unitPrice" lineItem="true"/>
+        </response>
+    </action>
+
+    <!-- Not in use at the moment as far as I can tell
+
+    <action class="com.miriasystems.processors.GrossAmountShortPayProcessor" type="processor" name="grossAmountShortProcessor">
+        <request>
+            <property name="lineTotal" lineItem="true"/>
+        </request>
+        <response>
+            <property name="grossAmount" lineItem="true"/>
+        </response>
+    </action>
+
+    <action class="com.miriasystems.processors.NetAmountShortPayProcessor" type="processor" name="netAmountShortProcessor">
+        <request>
+            <property name="lineTotal" lineItem="true"/>
+        </request>
+        <response>
+            <property name="netAmount" lineItem="true"/>
+        </response>
+    </action>
+
+    -->
+    <!--action class="com.fifththirdbank.processors.AccountDescProcessor" type="processor" name="accountDescProcessor">
+        <request>
+            <property name="account.code1" lineItem="true"/>
+            <property name="account.code2" lineItem="true"/>
+            <property name="account.code3" lineItem="true"/>
+        </request>
+        <response>
+            <property name="account.description" lineItem="true"/>
+        </response>
+    </action-->
+
+    <!--action class="com.fifththirdbank.processors.CheckStubPopulationProcessor" type="processor"
+            name="checkStubPopulationProcessor">
+        <request>
+            <property name="paymentType.tbdString1"/>
+        </request>
+        <response>
+            <property name="checkStubMessage"/>
+        </response>
+    </action>
+
+    <action class="com.fifththirdbank.processors.CalculateDueDateProcessor" type="processor"
+            name="CalculateDueDateProcessor">
+        <request>
+            <property name="paymentTermId"/>
+            <property name="date"/>
+            <property name="docPriority"/>
+        </request>
+        <response>
+            <property name="dueDate"/>
+        </response>
+    </action-->
+
+    <!--action class="com.fifththirdbank.processors.CustomNetAmountProcessor" type="processor"
+            name="CustomNetAmountProcessor">
+        <request>
+            <property name="grossAmount"/>
+            <property name="taxAmount1"/-->
+            <!--property name="taxAmount2"/>
+           <property name="taxAmount3"/>
+           <property name="taxAmount4"/-->
+            <!--property name="freightAmount1"/-->
+            <!--property name="freightAmount2"/-->
+            <!--property name="discountAmount"/-->
+        <!--/request>
+        <response>
+            <property name="netAmount"/>
+        </response>
+    </action-->
+
+    <!--action class="com.fifththirdbank.processors.PaymentTypeProcessor" type="processor" name="PaymentTypeProcessor">
+        <request>
+            <property name="companyCode"/>
+            <property name="subType"/>
+            <property name="vendorId"/>
+        </request>
+        <response>
+            <property name="paymentTypeId"/>
+        </response>
+    </action-->
+	
+	
+	<action class="com.miriasystems.processors.LineItemTypeProcessor" type="processor" name="LineTypeProcessor">
+        <request>
+            <property name="tbdString1" lineItem="true"/>
+        </request>
+        <response>
+            <property name="tbdQuantity1" lineItem="true"/>
+			<property name="tbdQuantity2" lineItem="true"/>
+			<property name="tbdString3" lineItem="true"/>
+			<property name="tbdString4" lineItem="true"/>
+        </response>
+	</action>
+	<!-- If expense date is entered, calculate Rate -->
+	<action class="com.miriasystems.processors.MileageRateProcessor" type="processor" name="MileageRateProcessor">
+        <request>
+            <property name="tbdDate1" lineItem="true"/>
+			<property name="tbdString3" lineItem="true"/>
+			<!--property name="tbdQuantity1" lineItem="true"/-->
+        </request>
+        <response>
+            <property name="tbdQuantity2" lineItem="true"/>
+			<property name="tbdString1" lineItem="true"/>
+			<property name="tbdString3" lineItem="true"/>
+        </response>
+	</action> 
+	<!-- If mileage is entered, calcualte line total -->
+	<action class="com.miriasystems.processors.CalculateExpenseProcessor" type="processor" name="CalculateExpenseProcessor">
+        <request>
+            <property name="tbdQuantity1" lineItem="true"/>
+			<property name="tbdQuantity2" lineItem="true"/>
+        </request>
+        <response>
+            <property name="lineTotal" lineItem="true"/>
+			
+        </response>
+	</action>
+	
+	<action class="com.miriasystems.processors.GLDistributionCalculator" type="processor" name="GLDistributionCalculator">
+        <request>
+           	<property name="tbdString4" lineItem="true"/>		
+        </request>
+        <response>
+            <property name="accountCode" lineItem="true"/>			
+        </response>
+	</action>
+
+	<action class="com.miriasystems.processors.DiscountDueDateProcessor" type="processor" name="DiscountDueDateProcessor">
+        <request>
+            <property name="dueDate"/>
+			<property name="discountDueDate"/>
+        </request>
+        <response>
+            <property name="freightAmount2"/>			
+        </response>
+	</action>
+	
+	<action class="com.custom.processors.EstimatedTaxProcessor" type="processor"
+            name="customEstimatedTaxProcessor">
+        <request>
+            <property name="taxCode.percent"/>
+			<property name="tbdCurrency1"/>
+        </request>
+        <response>
+            <property name="taxAmount4"/>
+        </response>
+    </action>
+
+
+</ajaxActions>

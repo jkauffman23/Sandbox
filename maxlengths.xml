@@ -1,0 +1,203 @@
+<maxlengths xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/maxlengths.xsd">
+	<headerProperties>
+		<property name="processInformation.comment" maxlength="250"/>
+		<property name="apDocHeadVarchar1" maxlength="64"/>
+		<property name="apDocHeadVarchar2" maxlength="64"/>
+		<property name="apDocHeadVarchar3" maxlength="64"/>
+		<property name="apDocHeadVarchar4" maxlength="64"/>
+		<property name="docNumber" maxlength="16"/> 
+		<property name="docImageGUID" maxlength="40"/>
+		<property name="docType" maxlength="16"/>
+		<property name="docSubType" maxlength="16"/>
+		<property name="docGroup" maxlength="16"/>
+		<property name="docStatus" maxlength="20"/>
+		<property name="docDepartment" maxlength="20"/>
+		<property name="poReference" maxlength="20"/>
+		<property name="businessCode" maxlength="16"/>
+		<property name="currencySeqId" maxlength="3"/>
+
+		<!--  start header properties -->
+		
+		<property name="seqId" maxlength="16"/>
+		<property name="poId" maxlength="32"/> 
+		<property name="companyCode" maxlength="16"/>
+		<property name="vendorId" maxlength="9"/>
+		<property name="vendorERPId" maxlength="16"/>
+		<property name="currencyId" maxlength="3"/>
+		<property name="taxId" maxlength="16"/>
+		<property name="taxERPId" maxlength="16"/>
+		<property name="paymentTermId" maxlength="20"/>
+		<property name="paymentTermERPId" maxlength="16"/>
+		<property name="paymentTypeId" maxlength="16"/>
+		<property name="paymentTypeERPId" maxlength="16"/>
+		<property name="postingERPId" maxlength="64"/>
+		<property name="erpDocId" maxlength="64"/>
+		<property name="ceLibraryId" maxlength="40"/>
+		<property name="ceDocumentId" maxlength="40"/>
+		<property name="wobNumber" maxlength="40"/>
+		<property name="number" maxlength="25"/>  <!--DB=32Char Reset from 12 in the baseline-->
+		<property name="shippingDocumentId" maxlength="32"/>
+		<property name="type" maxlength="16"/>
+		<property name="subType" maxlength="16"/>
+		<property name="group" maxlength="16"/>
+		<property name="date" maxlength="16"/>
+		<property name="receiveDate" maxlength="16"/>
+		<property name="baselineDate" maxlength="16"/>
+		<property name="dueDate" maxlength="16"/>
+		<property name="scanVendorName" maxlength="64"/>
+		<property name="scanVendorAddress1" maxlength="8"/>
+		<property name="scanVendorAddress2" maxlength="64"/>
+		<property name="scanAmount" maxlength="19"/>
+		<property name="alternatevendor" maxlength="5"/>
+		<property name="statusCode" maxlength="16"/>
+		<property name="docPriority" maxlength="16"/>
+		<property name="sensitivity" maxlength="16"/>
+		<property name="department" maxlength="32"/>	 <!-- Max 32 -->
+		<property name="businessUnit" maxlength="36"/>   <!-- Max 36 -->
+		<property name="grossAmount" maxlength="17"/>
+		<property name="taxAmount1" maxlength="17"/>
+		<property name="taxAmount2" maxlength="17"/>
+		<property name="taxAmount3" maxlength="19"/>
+		<property name="taxAmount4" maxlength="19"/>
+		<property name="netAmount" maxlength="19"/>
+		<property name="freightAmount1" maxlength="17"/>
+		<property name="freightAmount2" maxlength="19"/>
+		<property name="discountAmount" maxlength="17"/>
+		<property name="scanDate" maxlength="16"/>
+		<property name="scanSite" maxlength="128"/>
+		<property name="scanBy" maxlength="64"/>
+		<property name="scanSource" maxlength="32"/>
+		<property name="scanType" maxlength="32"/>
+		<property name="batchNumber" maxlength="64"/>
+		<property name="batchOrdinal" maxlength="16"/>
+		<property name="newBatchNumber" maxlength="64"/>
+		<property name="newBatchOrdinal" maxlength="16"/>
+		<property name="requesterId" maxlength="64"/>
+		<property name="requesterName" maxlength="64"/>
+		<property name="routingCode" maxlength="16"/>
+		<property name="processCode" maxlength="20"/>
+		<property name="afeNumber" maxlength="16"/>
+		<property name="buyerId" maxlength="64"/>
+		<property name="buyerName" maxlength="64"/>
+		<property name="separateCheck" maxlength="5"/>
+		<property name="specialHandlingCode" maxlength="32"/>
+		<property name="checkStubMessage" maxlength="60"/>
+		<property name="voucherComments" maxlength="800"/>
+		<property name="retentionBoxId" maxlength="32"/>
+		<property name="createDate" maxlength="20"/>
+		<property name="lastModifiedDate" maxlength="20"/>
+		<property name="rejectionReason" maxlength="256"/>
+		<property name="tbdDate1" maxlength="16"/>
+		<property name="tbdDate2" maxlength="16"/>
+		<property name="tbdNumber1" maxlength="16"/>
+		<property name="tbdNumber2" maxlength="8"/>
+		<property name="tbdCurrency1" maxlength="19"/>
+		<property name="tbdCurrency2" maxlength="19"/>
+		<property name="tbdQuantity1" maxlength="23"/>
+		<property name="tbdQuantity2" maxlength="23"/>
+		<property name="tbdString1" maxlength="32"/>
+		<property name="tbdString2" maxlength="32"/>
+		<property name="tbdString3" maxlength="64"/>
+		<property name="tbdString4" maxlength="32"/>
+		<property name="tbdString6" maxlength="256"/>
+		<property name="custom2.name2" maxlength="31"/>
+		<property name="custom2.address1" maxlength="31"/>
+		<property name="custom2.address2" maxlength="31"/>
+		<property name="custom2.address2" maxlength="31"/>
+		<property name="custom2.address4" maxlength="25"/>
+		<property name="custom2.postalCode" maxlength="9"/>
+		<property name="custom2.taxId" maxlength="11"/>
+		<property name="custom1.tbdString3" maxlength="8"/>
+		<property name="custom1.tbdString10" maxlength="10"/>
+		<property name="custom1.tbdString12" maxlength="10"/>
+		<property name="custom1.tbdString19" maxlength="30"/>
+		<property name="custom1.tbdString24" maxlength="30"/>
+		<property name="custom1.tbdComment1" maxlength="500"/>
+		<property name="custom1.tbdComment3" maxlength="140"/>
+		<property name="custom1.tbdComment4" maxlength="140"/>
+		<property name="custom1.tbdString9" maxlength="32"/>
+		<property name="custom1.tbdString5" maxlength="32"/>
+		<property name="custom1.tbdString6" maxlength="32"/>
+		<property name="custom1.tbdString7" maxlength="32"/>
+		<property name="custom1.tbdString8" maxlength="32"/>
+		<property name="custom1.tbdString11" maxlength="32"/>
+		<property name="custom1.tbdString13" maxlength="32"/>
+		<property name="custom1.tbdString14" maxlength="32"/>
+		<property name="custom1.tbdString15" maxlength="32"/>
+		<property name="custom1.tbdString16" maxlength="32"/>
+		<property name="custom1.tbdString17" maxlength="32"/>
+		<property name="custom1.tbdString18" maxlength="32"/>
+		<property name="custom1.tbdString19" maxlength="32"/>
+		<property name="custom1.tbdString21" maxlength="32"/>
+		<property name="custom1.tbdString22" maxlength="32"/>
+		<property name="custom1.tbdString23" maxlength="32"/>
+		<!--  end header properties -->
+	</headerProperties>
+
+	<lineItemProperties>
+		<property name="docUnitOfMeasure" maxlength="20"/>
+		<property name="orderedUnitOfMeasure" maxlength="20"/>
+		<property name="accountCode1" maxlength="3"/>
+		<property name="accountCode2" maxlength="6"/>
+		<property name="accountCode3" maxlength="5"/>
+		<property name="accountCode4" maxlength="20"/>
+		<property name="accountCode5" maxlength="20"/>
+		<property name="accountCode6" maxlength="20"/>
+		<property name="accountCode7" maxlength="20"/>
+		<property name="accountCode8" maxlength="20"/>
+		<property name="accountCode9" maxlength="20"/>
+		<property name="accountCode10" maxlength="20"/>
+		<property name="packingSlipNumber" maxlength="16"/>
+		<property name="lineStatusCode" maxlength="16"/>
+		<property name="apDocDetVarchar1" maxlength="64"/>
+		<property name="apDocDetVarchar2" maxlength="64"/>
+		<property name="apDocDetVarchar3" maxlength="64"/>
+		<property name="apDocDetVarchar4" maxlength="64"/>
+
+		<!-- start line item properties -->
+		<property name="seqId" maxlength="16"/>
+		<property name="document.seqId" maxlength="16"/> <!--nested object-->
+		<property name="poNumber" maxlength="32"/>
+		<property name="poLineNumber" maxlength="8"/>
+		<property name="poERPId" maxlength="16"/>
+		<property name="taxId" maxlength="16"/>
+		<property name="taxERPId" maxlength="16"/>
+		<property name="costObjectId1" maxlength="16"/>
+		<property name="costObjectId2" maxlength="16"/>
+		<property name="lineNumber" maxlength="3"/>
+		<property name="quantity" maxlength="19"/>
+		<property name="unitPrice" maxlength="19"/>
+		<property name="lineTotal" maxlength="17"/>
+		<property name="uom" maxlength="10"/> <!--ms update-->
+		<property name="taxAmount" maxlength="19"/>
+		<property name="itemCode" maxlength="16"/>
+		<property name="itemDescription" maxlength="64"/>
+		<property name="accountCode" maxlength="128"/>
+		<property name="accountERPId" maxlength="16"/>
+		<property name="lineStatusCode" maxlength="16"/>
+		<property name="materialId" maxlength="16"/>
+		<property name="partNumber" maxlength="16"/>
+		<property name="manfPartNumber" maxlength="16"/>
+		<property name="createDate" maxlength="20"/>
+		<property name="lastModifiedDate" maxlength="20"/>
+		<property name="tbdDate1" maxlength="16"/>
+		<property name="tbdDate2" maxlength="16"/>
+		<property name="tbdNumber1" maxlength="16"/>
+		<property name="tbdNumber2" maxlength="16"/>
+		<property name="tbdCurrency1" maxlength="19"/>
+		<property name="tbdCurrency2" maxlength="19"/>
+		<property name="tbdQuantity1" maxlength="23"/>
+		<property name="tbdQuantity2" maxlength="23"/>
+		<property name="tbdString1" maxlength="20"/>
+		<property name="tbdString2" maxlength="64"/>
+		<property name="tbdString3" maxlength="64"/>
+		<property name="tbdString4" maxlength="64"/>
+		<property name="companyCode" maxlength="16"/>
+		<property name="costObjectTypeId1" maxlength="16"/>
+		<property name="costObjectTypeId2" maxlength="16"/>
+		<property name="bankRoutingNo" maxlength="16"/>
+		
+		<!-- end line item properties -->
+
+	</lineItemProperties>
+</maxlengths>

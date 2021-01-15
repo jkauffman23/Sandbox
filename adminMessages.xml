@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/labels.xsd">
+    <locale name="en">
+        <label name="conductor.noitems" value="There are currently no items in the Conductor Queue."/>
+        <label name="dlq.noitems" value="There are currently no messages in the Dead Letter Queue."/>
+        <label name="message.approvalLimitsAreBase" value="All approval limits are converted to base currency."/>
+        <label name="message.loginerror" value="User name / password combination is invalid. Please try again."/>
+        <label name="security.sensitivity" value="The document you are trying to access is classified with higher sensitivity level than you currently have access to. If you believe that this is inaccurate, please contact your system administrator."/>
+        <label name="security.group" value="The document you are trying to access belongs to a group that you don't have access to."/>
+        <label name="deadlock" value="Someone else has changed the the item that you are trying to modify. Please reload the item and try again."/>
+        <label name="staleObject" value="The invoice was updated by a different process after it was opened by you. Please reload the invoice and reenter the information."/>
+        <label name="no.invoices.same.check" value="There are no checks associated with this invoice."/>
+    </locale>
+</labels>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/labels.xsd">
+	<locale name="en">
+
+		<!-- These messages are used by workflow components. Please localize and modify as they should be shonw to a user for a particular implementation. -->
+		<!-- This is done ALPHABETICALLY - PLEASE MAINTAIN THE ORDER! -->
+
+		<label name="AmountChanged" value="Grosss Amount Changed."/>
+		<label name="BOLNumberMissing" value="The PO or BOL is missing."/>
+		<label name="BuyerOnDocumentLacksRole" value="The Buyer on the document does not have a Buyer role."/>
+		<label name="BuyerNotFound" value="No buyer found on the document."/>
+		<label name="DocumentPosted" value="Document sent for posting."/>
+		<label name="Duplicate" value="Potential Duplicate"/>
+		<label name="InactiveRequester" value="Requester is not active."/>
+		<label name="InvalidCurrency" value="Currency is Invalid"/>
+		<label name="InvalidPhase" value="Vendor Phase is missing or Invalid"/>
+		<label name="MsgApproveTask" value="The document needs to be approved."/>
+		<label name="MsgBuyerTask" value="There is a discrepancy between invoice and PO. Please review and correct as required."/>
+		<label name="MsgConfirmTask" value="The document needs to be confirmed."/>
+		<label name="MsgControllerTask" value="Task needs to be completed."/>
+		<label name="MultiplePOsFound" value="Multiple POs with number ${poId} were found. Using first PO."/>
+		<label name="MultiplePOsFoundUsingPO" value="Multiple POs were found using PO id ${id}."/>
+		<label name="MultiplePOsFoundUsingBOL" value="Multiple POs were found using BOL id ${id}"/>
+		<label name="NeedPaymentTermOverride" value="Payment terms were changed. Need approval."/>
+		<label name="NoBuyerFound" value="No buyer found on the document."/>
+		<label name="NoPaymentHistory" value="No payments made against PO."/>
+		<label name="OTVRejection" value="Sent to Vendor Maintenance due to One-Time Vendor."/>
+		<label name="PaymentHistoryFound" value="Payments have been made against PO."/>
+    		<label name="PONumberOrBOLNumberMissing" value="The PO or BOL is missing."/>
+    		<label name="PONumberMissing" value="A PO with number ${poId} cannot be found."/>
+		<label name="PostingFailure" value="The ERP system has not acknowledged receipt of the document posting."/>
+		<label name="QAPreviously" value="PO Mismatch-Never Been to QA."/>
+		<label name="QARejection" value="Rejected from QA queue."/>
+		<label name="SalesTax" value="Sales Tax = 0"/>
+		<label name="TypeRejection" value="Returned to Exception because Type or Sub-Type were left blank."/>
+		<label name="TaskRejectedByRequester" value="Task was rejected by the requester."/>
+		<label name="UnspecifiedRequester" value="Requester is not specified."/>
+		<label name="WorkFlowCompleted" value="Workflow completed."/>
+		<label name="WrongApprover" value="Incorrect Approver"/>
+		<label name="WorkFlowCreated" value="Workflow created."/>
+		<label name="WorkFlowTerminated" value="Workflow terminated."/>
+	</locale>   
+
+</labels>
+        

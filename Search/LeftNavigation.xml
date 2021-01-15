@@ -1,0 +1,17 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+     <initpage href="/document/advancedsearch.do?showPoProperties=true"/>
+	 
+	
+	<!--   Search Actions        -->
+    <section name="section.search" collapsed="false" colapsible="false">
+		<action href="/document/advancedsearch.do?showPoProperties=true" target="right" image="/images/ico-search-w16.png" name="action.mysearch" searchName="ActiveMySearch"/>
+		
+       
+    </section>
+
+	
+	
+	
+	
+	
+</navigation>

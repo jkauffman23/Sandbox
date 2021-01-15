@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels>
+		<locale name="en">
+		</locale>
+	</labels>
+		
+	<section name="newExpenseRep" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="originatorName" readonly="true"/>
+			<lookup row="1" col="2-3" name="processCode" stlyeClass="twohundred" type="upload" readonly="true" inputReadonly="true" lookupType="lookup.creditCardDetails"/>	
+			<lookup row="2" col="1" name="requesterName" readonly="true" inputReadonly="true" lookupType="lookup.delegate"/>	
+			<text row="2" col="2" name="tbdString2" readonly="true" validation="required"/>  <!-- "Employee#" -->
+			<date row="3" col="1" name="date" readonly="false" validation="required"/>
+			<dynamicDropDown row="3" col="2" name="defaultCode1" providerClass="com.custom.providers.CompaniesChoiceListProvider" onChange="reloadPage(this)" validation="required" />			
+			<text row="4" col="1" name="batchNumber"  stlyeClass="threehundred" readonly="false" validation="required" />
+			<lookup row="4" col="2" name="defaultCode2" lookupType="lookup.locationCode" inputReadonly="true"  />
+			<text row="5" col="2-3" name="tbdString6" stlyeClass="twohundred"/>
+			<textArea row="6" col="1-2"  name="voucherComments" styleClass="comment, seventypercent" readonly="false" validation="required, noSpecialCharacters" />
+		</properties>
+		<actions>
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_APPROVER1')" alwaysActive="true" readonly="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+		
+	<section name="lineItems" visible="false" collapsible="false" collapsed="false">  <!-- hide lines on upload since DefaultCode1 and 2 for building GL Account is not working -->
+	
+			<lineItemProperties showTotal="true" rowLabel="true" mileAgeIcon="true">		
+				<dynamicDropDown row="1" col="1" name="tbdString4"  labelKey="lineItems.tbdString4" providerClass="com.miriasystems.ui.providers.CategoryChoiceListProvider"  readonly="false" onChange="loadMileageButton(this)" styleClass="twohundred"/>
+				<date row="1" col="2" name="tbdDate1" labelKey="lineItems.tbdDate1" readonly="false" isCreditreadonly="true" validation="required" showTime="false" styleClass="date"/>
+				<text row="1" col="3" styleClass="twohundred" name="tbdString3" labelKey="lineItems.tbdString3" isCreditreadonly="true" isMileagereadonly="true"  readonly="false" />
+				<dropDown row="1" col="4" name="tbdString1" labelKey="lineItems.tbdString1" choiceList="choice.expenseLineTypes" styleClass="onehundred" />
+				<currency row="1" col="5" name="lineTotal" readonly="false" isCreditreadonly="true" validation="required, nonZero" styleClass="currency" />		
+				<lookup row="2" col="2" name="accountCode" lookupType="lookup.expenseAccountCode" readonly="true" styleClass="twohundred"/>	
+				<text row="2" col="3" name="itemDescription" readonly="false" validation="required, noSpecialCharacters" styleClass="twohundred" />
+				<checkbox row="2" col="4" name="tbdBoolean1" labelKey="lineItems.tbdBoolean1" />	
+				<text row="3" col="2" name="account.description" readonly="true" styleClass="twohundred"/>
+				<text row="3" col="3" name="tbdString2" labelKey="lineItems.tbdString2" readonly="false" isCreditreadonly="false" styleClass="twohundred"/>		
+				<text row="4" col="2-5" name="tbdString5" labelKey="lineItems.tbdString5" readonly="false" styleClass="ninetypercent"/>		
+				<lineItemHidden row="0" col="0" name="accountERPId"/>
+				<lineItemHidden row="0" col="0" name="companyCode"/>
+				<lineItemHidden row="0" col="0" name="costObjectTypeId1" defaultValue="CC" />
+				<lineItemHidden row="0" col="0" name="account.type" defaultValue="E" />
+				<lineItemHidden row="0" col="0" name="expType" />
+				<lineItemHidden row="0" col="0" name="cardInd" defaultValue="T"/>
+				<lineItemHidden row="0" col="0" name="code6" defaultValue="Yes" />
+				<lineItemHidden row="0" col="0" name="tbdQuantity1" defaultValue="0.00" />	
+				<lineItemHidden row="0" col="0" name="tbdQuantity2" defaultValue="0.56" />
+
+			</lineItemProperties>
+			
+			<actions>
+				<!-- The following set of actions are standard ActivePay and should be included relatively unmodified from the baseline version in most templates -->
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" docType="upload" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<button name="addSubLineItem" command="addSubLineItem" type="submit" isAnchored="true" allowTabIndex="true" />
+			<button name="removeSubLineItem" command="removeSubLineItem" type="submit" isAnchored="true" allowTabIndex="true" />
+			</actions>
+	</section>
+
+			
+	<hiddenFields>
+	    <hidden name="type" defaultValue='EXP'/>
+		<hidden name="subType"/>
+	    <hidden name="postingERPId" defaultValue="AOPS001"/>
+	    <hidden name="vendorERPId" defaultValue="AOPS001"/>
+		<hidden name="requester.userName"/>
+		<hidden name="processInformation.comment"/>
+		<hidden name="requesterId" validation="required"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="custom1.tbdComment1" defaultValue="1." forceDefault="true" readonly="true"/>
+		<hidden name="CardType"/>
+		<hidden name="tbdBoolean1" defaultValue='1' forceDefault="true"/>
+		<hidden name="enCryptCC"/>
+		<hidden name="newBatchOrdinal"/>
+    </hiddenFields>
+
+    <processors>
+    	<processor name="com.miriasystems.processors.NetAmountNoDiscountProcessor"/>
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+		<processor name="com.miriasystems.processors.LineItemTypeProcessor"/>
+		<processor name="com.miriasystems.processors.MileageRateProcessor"/>
+		<processor name="com.miriasystems.processors.CalculateExpenseProcessor"/>
+		<processor name="com.miriasystems.processors.GLDistributionCalculator"/>
+     </processors>
+
+</propertyTemplate>

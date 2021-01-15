@@ -1,0 +1,37 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+  
+ <initpage href="/filenet/search.do?searchName=InboxSearchPurchase"/>
+    <action href="/filenet/search.do?searchName=InboxSearchPurchase" target="right" image="/images/ico-inbox-w16.png" name="action.myinbox" searchName="InboxSearchPurchase"/>  
+
+	<section name="section.purchasing"  collapsed="false" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Buyer1, MP_Buyer2">
+		<action href="/filenet/upload.do?view=Purchase-upload-01-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.purchase.upload1" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Buyer1"/> 
+		<!--action href="/filenet/upload.do?view=Purchase-upload-03-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.purchase.upload3" />
+		<action href="/filenet/upload.do?view=Purchase-upload-04-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.purchase.upload4" /-->
+		<action href="/filenet/search.do?searchName=PurchaseSearchIndexing" target="right" image="/images/ico-folder-w16.png" name="action.purchase.indexing" searchName="PurchaseSearchIndexing" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Buyer1"/>
+		<action href="/filenet/search.do?searchName=PurchaseSearchPurchase" target="right" image="/images/ico-folder-w16.png" name="action.purchase.purchase" searchName="PurchaseSearchPurchase" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Buyer1"/>
+	</section>
+	
+	
+	<section name="section.purchasing.index"  collapsed="false" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Buyer1, MP_Buyer2" >
+		<action href="/filenet/upload.do?view=Purchase-upload-03-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.purchase.upload2" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Buyer2"/> 
+		<action href="/filenet/search.do?searchName=ROGIndexing" target="right" image="/images/ico-folder-w16.png" name="action.rog.indexing" searchName="ROGIndexing" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Buyer2"/>
+	</section>
+	
+	
+	
+	<section name="section.purchasing.exception"  collapsed="true" roles="MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4, MP_Buyer1, MP_Buyer2">
+		<action href="/filenet/search.do?searchName=ExceptionSearchPurchase" target="right" image="/images/ico-folder-w16.png" name="action.generalexception" searchName="ExceptionSearchPurchase"/>
+		<action href="/filenet/search.do?searchName=VendorMaintenanceSearchPurchase" target="right" image="/images/ico-folder-w16.png" name="action.vendormaintenance" searchName="VendorMaintenanceSearchPurchase"/>
+		<action href="/filenet/search.do?searchName=RescanSearchPurchase" target="right" image="/images/ico-folder-w16.png" name="action.rescan" searchName="RescanSearchPurchase"/>
+		<action href="/filenet/search.do?searchName=TerminateSearchPurchase" target="right" image="/images/ico-folder-w16.png" name="action.terminate" searchName="TerminateSearchPurchase"/>
+	</section>
+
+		<!--   Tools        -->
+    <section name="section.tools" collapsed="true" >
+        <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-w16.png" name="action.preferences"/>
+		
+    </section>	
+	
+</navigation>

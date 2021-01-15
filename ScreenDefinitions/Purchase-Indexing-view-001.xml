@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="doc-indexing-view-01" template="Purchase-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+			<label name="tbdString3" value ="Item Comment 1"/>
+			
+		</locale>
+	</labels>
+
+	<section-overrides>	
+			
+	</section-overrides>
+	
+	<property-overrides>
+		<dropDown name="tbdString25" validation="required" choiceList="choice.poMatchMethod"/>
+		<text name="poId" validation="required"/>
+		<lookup name="shipToCompany" validation="required" lookupType="lookup.vendorCode.purchase"/>
+		<text name="shipToAddress1" validation="required" styleClass="twohundred" readonly="false"/>
+		<text name="shipToCity" validation="required" styleClass="twohundred" readonly="false"/>
+		<text name="shipToState" validation="required" styleClass="twohundred" readonly="false"/>
+		<text name="shipToZip" validation="required" styleClass="twohundred" readonly="false"/>
+	</property-overrides>
+
+	<lineItem-overrides>
+			 
+	</lineItem-overrides>
+
+	<action-overrides>
+		<iconAction name="pdf" visible="false" />
+	</action-overrides>
+
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	 <documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+			</reason>
+			<reason name="Vendor Maintenance" commentsRequired="true" note="message.returnVendorMaintenance">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+
+	<validations>
+		<validation name="validation.validVendor" messageType="warning" note="message.validVendorValidation"/>
+		<validation name="validation.lineItemAmount" note="message.nolines"/>
+		<validation name="validation.duplicatePONumber" messageType="error" note="duplicateponumber.message"/>
+	</validations>
+</view>

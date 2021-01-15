@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML configuration for createTemplate -->
+<!-- 
+Uses the document screen to create a new template by transferring data
+
+original ... hibernate field from document 
+template ... hibernate field to map to for the template document. Remove if the hibernate field is that same as original hibernate field
+
+MP DOCUMENT
+MP DOCUMENT LINES
+
+-->
+<createTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">	
+	<createTemplateProperties name="main">
+		<document>
+			<property original="type" template="templateDocType"/>
+			<property original="subType" template="templateSubType"/>
+			<property original="vendorId"/>
+			<property original="vendorERPId"/>
+			<property original="companyCode"/>
+			<property original="paymentTermId"/>
+			<property original="paymentTermERPId"/>
+			<property original="paymentTypeId"/>
+			<property original="paymentTypeERPId"/>
+			<property original="taxId"/>
+			<property original="taxERPId"/>
+			<property original="remitToId"/>
+		</document>
+
+		<documentLine>
+			<property original="accountCode"/>
+			<property original="accountERPId"/>
+		</documentLine>
+	</createTemplateProperties>
+</createTemplate>

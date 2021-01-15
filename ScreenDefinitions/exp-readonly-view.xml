@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="upload-view" template="exp-tpl.xml" readonly="false"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd">
+
+    
+	<property-overrides>
+	</property-overrides>
+	
+	
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Terminate" commentsRequired="false" note="message.terminate">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+	
+	
+	<validations>
+    </validations>
+    
+</view>

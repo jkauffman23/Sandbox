@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THSI FILE -->
+
+		<locale name="en">
+			<label name="appName" value="Active Doc"/> 
+			<label name="document" value="New Source Document" /> 
+			<label name="number" value="Document Number"/>
+			<label name="grossAmount" value="Amount" />
+			<label name="documentDetails" value="Details"/>
+			<label name="VendorDetails" value="Vendor Details"/>
+			
+			<label name="tbdString1" value="Legal Entity"/>
+			<label name="date" value="Submitted Date" />
+			<label name="tbdDate1" value="Signature Date" />
+			<label name="tbdDate2" value="Expiration Date" />
+			<label name="tbdBoolean1" value="InActive" />
+			<label name="voucherComments" value="Comments" />
+			
+			<label name="vendor.name2" value="Alpha Sort Name" />
+			<label name="vendor.address1" value="Vendor Additional" />
+			<label name="vendor.address2" value="Address1" />
+			<label name="vendor.address3" value="Address2" />
+
+		</locale>
+</labels>
+
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en">
+    <locale name="en">
+        <label name="action.reporting.agingsummary" value="Aging Summary"/>
+        <label name="action.reporting.byglaccount" value="By GL Account"/>
+        <label name="action.reporting.completedinvoices" value="Completed Invoices"/>
+        <label name="action.reporting.exceptions" value="Exception Report"/>
+        <label name="action.reporting.futureinvoices" value="Future Invoices"/>
+        <label name="action.reporting.invoiceaccrual" value="Invoice Accrual (Header)"/>
+        <label name="action.reporting.invoiceaccruallines" value="Invoice Accrual (Lines)"/>
+        <label name="action.reporting.invoiceinventory" value="Invoice Inventory"/>
+        <label name="action.reporting.invoicesoverdue" value="Overdue Invoices"/>
+        <label name="action.reporting.invoicespervendor" value="By Vendor"/>
+        <label name="action.reporting.pervendorandaccount" value="By Vendor and Account"/>
+        <label name="action.reporting.queuesummary" value="Work Queue Summary"/>
+        <label name="action.reporting.rateofinvoices" value="Rate of Invoices"/>
+        <label name="action.reporting.terminatedinvoices" value="Terminated Invoices"/>
+        <label name="action.reporting.userreport" value="User Audit"/>
+        <label name="action.reporting.usertouchedinvoices" value="Invoices Touched by User"/>
+
+
+        <label name="reporting.leftnavigation" value="Reporting"/>
+        <label name="section.reporting.apreports" value="AP Reports"/>
+        <label name="section.reporting.auditreports" value="Audit Reports"/>
+        <label name="section.reporting.kpireports" value="KPI Reports"/>
+
+
+        <label name="section.reporting.admin" value="Report Administration"/>
+        <label name="action.reporting.compile" value="Rebuild All Reports"/>
+        <label name="section.reporting.test" value="Report Test"/>
+        <label name="action.reporting.test" value="View Process Entries"/>
+    </locale>
+</labels>

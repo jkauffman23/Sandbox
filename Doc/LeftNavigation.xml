@@ -1,0 +1,24 @@
+<navigation name="section.mpnavigation" colapsible="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+    
+	<initpage href="/filenet/search.do?searchName=InboxSearch.doc"/>
+    <action href="/filenet/search.do?searchName=InboxSearch.doc" target="right" image="/images/ico-inbox-w16.png" name="action.myinbox.doc" searchName="InboxSearch.doc"/>
+	<action href="/filenet/search.do?searchName=Indexing.Doc" target="right" image="/images/ico-folder-w16.png" name="action.indexing.doc"  searchName="Indexing.doc" />
+	<action href="/filenet/upload.do?view=upload-doc-view.xml" target="right" image="/images/ico-add-doc-w16.png" name="action.upload.doc" />
+
+
+	<!--   Exception Queues Section         -->
+    <section name="section.queues.exception" roles="MP_Processor8, MP_Processor9, MP_Processor10, MP_VendorMaintenance1, MP_Confirmer1, MP_Confirmer2, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4" collapsed="true" >
+		<action href="/filenet/search.do?searchName=ExceptionSearch.doc" target="right" image="/images/ico-folder-w16.png" name="action.generalexception.doc" searchName="ExceptionSearch.doc" roles="MP_Processor8, MP_Confirmer1, MP_Confirmer2, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"/>
+		<action href="/filenet/search.do?searchName=VendorMaintenanceSearch.doc" target="right" image="/images/ico-folder-w16.png" name="action.vendormaintenance.doc" searchName="VendorMaintenanceSearch.doc" roles="MP_VendorMaintenance1, MP_Confirmer1, MP_Confirmer2, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"/>
+        <action href="/filenet/search.do?searchName=RescanSearch.doc" target="right" image="/images/ico-folder-w16.png" name="action.rescan.doc" searchName="RescanSearch.doc" roles="MP_Processor9, MP_Confirmer1, MP_Confirmer2, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"/>		
+		<action href="/filenet/search.do?searchName=TerminateSearch.doc" target="right" image="/images/ico-folder-w16.png" name="action.exception.terminate.doc" searchName="TerminateSearch.doc" roles="MP_Processor10, MP_Confirmer1, MP_Confirmer2, MP_Administrator1, MP_Administrator2, MP_Administrator3, MP_Administrator4"/>		
+	</section>
+
+	<!--   Tools        -->
+    <section name="section.tools" collapsed="true">
+        <action href="/documents/reassign.do?userIsSelf=true&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignSelf"/>
+        <action href="/documents/reassign.do?userIsSelf=false&amp;new=true" target="right" image="/images/ico-wrench-w16.png" name="action.reassignDelegate"/>
+        <action href="/protected/preferences.do" target="right" image="/images/ico-wrench-w16.png" name="action.preferences"/>
+    </section>
+	
+</navigation>

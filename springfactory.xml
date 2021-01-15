@@ -1,0 +1,23 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-lazy-init="true">
+    <bean id="hibernatePortal" class="com.miriasystems.utils.HibernateUtil">
+        <constructor-arg type="java.lang.String"><value>/vp.hibernate.cfg.xml</value></constructor-arg>
+    </bean>
+
+     <bean id="hibernateERP" class="com.miriasystems.utils.HibernateUtil">
+        <constructor-arg type="java.lang.String"><value>/erp.hibernate.cfg.xml</value></constructor-arg>
+    </bean>
+
+     <bean id="hibernateMPDB" class="com.miriasystems.utils.HibernateUtil">
+        <constructor-arg type="java.lang.String"><value>/mp.hibernate.cfg.xml</value></constructor-arg>
+    </bean>
+
+     <bean id="hibernateReporting" class="com.miriasystems.utils.HibernateUtil">
+        <constructor-arg type="java.lang.String"><value>/reporting.hibernate.cfg.xml</value></constructor-arg>
+    </bean>
+
+     <bean id="hibernateRouting" class="com.miriasystems.utils.HibernateUtil">
+        <constructor-arg type="java.lang.String"><value>/routing.hibernate.cfg.xml</value></constructor-arg>
+    </bean>
+
+</beans>

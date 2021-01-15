@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="cash-readonly-view" template="exp-advance-tpl.xml"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/view.xsd" readonly="true">
+
+	  <labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+	  
+	  
+	<action-overrides>
+		<iconAction name="editRouting" visible="false" />
+		<iconAction name="postings" visible="true" />
+		<rejectButton name="reject" visible="false"/>
+	</action-overrides>
+	
+	<property-overrides>
+			
+		
+	</property-overrides>
+	
+	<documentRejection>
+		
+	</documentRejection>
+	
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	  
+    <validations>
+      
+    </validations>
+    
+</view>

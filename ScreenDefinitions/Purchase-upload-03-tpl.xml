@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+           
+    <labels>
+	<!-- Label overrides for this template -->
+		<locale name="en">
+			
+		</locale>
+	</labels>
+	
+		
+	<section name="PURCH001" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="vendorId" lookupType="lookup.vendorCode" styleClass="threehundred" validation="required" inputReadonly="true" readonly="false"/>
+			<text row="1" col="2" name="remitToId" styleClass="threehundred" validation="required" inputReadonly="true" readonly="true"/>
+			<lookup row="2" col="1" name="vendor.name" lookupType="lookup.vendorCode" styleClass="threehundred" readonly="false"/>
+			<text row="2" col="2" name="poId" readonly="false"  styleClass="threehundred" validation="required"/>
+			<date row="3" col="1" name="po.date" readonly="false"  styleClass="threehundred"/>
+			<date row="3" col="2" name="po.tbdDate1" readonly="false"  styleClass="threehundred"/>
+			<text row="4" col="1" name="po.buyerId" readonly="false"  styleClass="threehundred"/>
+			<text row="4" col="2" name="po.requesterId" readonly="false"  styleClass="threehundred"/>
+			<lookup row="5" col="1" name="companyCode" validation="required" styleClass="threehundred" lookupType="lookup.organization"/>
+			<textArea row="6" col="1-2" name="tbdComment1" styleClass="comment"/>
+			<textArea row="7" col="1-2" name="tbdComment2" styleClass="comment"/>			
+		</properties>
+		<actions>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="false" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<button name="forward" command="forward" docType="upload" readonly="false"  type="submit" isAnchored="false"  title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="vendorAddress.address1" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="2" name="vendor.phone" readonly="true" styleClass="threehundred"/>
+			<text row="2" col="1" name="vendorAddress.address2" readonly="true" styleClass="threehundred"/>
+			<text row="2" col="2" name="vendorAddress.state" readonly="true" styleClass="threehundred"/>
+			<text row="3" col="1" name="vendorAddress.city" readonly="true" styleClass="threehundred" />
+			<text row="3" col="2" name="vendorAddress.postalCode" readonly="true" styleClass="threehundred"/>			
+	    </properties>
+	</section>
+	
+	<section name="shipDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<text row="1" col="1-2" name="tbdString23" styleClass="threehundred" readonly="false"/>
+			
+			<text row="2" col="1" name="shippingDocumentId" styleClass="threehundred" readonly="false"/>
+			<text row="2" col="2" name="shipToCompany" styleClass="threehundred" readonly="false"/>
+			
+			<text row="3" col="1-2" name="shipToAddress1" styleClass="threehundred" readonly="false"/>
+			<text row="4" col="1-2" name="shipToAddress2" styleClass="threehundred" readonly="false"/>
+			
+			<text row="5" col="1" name="shipToCity" styleClass="threehundred" readonly="false"/>
+			<text row="5" col="2" name="shipToState" styleClass="threehundred" readonly="false"/>
+			<text row="6" col="1" name="shipToZip" styleClass="threehundred" readonly="false"/>
+		</properties>
+	</section>
+	
+	<section name="lineItems" visible="false" collapsible="true" collapsed="false">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<text row="1" col="1" name="poLine.lineNumber" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="2" name="itemCode" readonly="true" styleClass="threehundred"/>
+			<text row="1" col="3" name="itemDescription" readonly="true" validation="required" styleClass="threehundred" labelKey="poLine.itemDescription"/>
+			<text row="1" col="4" name="poLine.orderedQuantity" readonly="true" validation="required" styleClass="threehundred" />	
+			<text row="1" col="5" name="poLine.receivedQuantity" readonly="true" validation="required" styleClass="threehundred" />
+			<text row="1" col="6" name="quantity" readonly="false" validation="required" styleClass="threehundred" />
+				
+			<text row="2" col="4" name="poLine.tbdString3" readonly="true" styleClass="threehundred"/>	
+			<text row="2" col="5" name="poLine.tbdString4" readonly="true" styleClass="threehundred"/>		
+			<dropDown row="2" col="6" name="uom" readonly="true" choiceList="choice.UOM" validation="required" styleClass="threehundred" />
+			
+			<text row="3" col="4" name="tbdString3" readonly="false" styleClass="threehundred"/>	
+		</lineItemProperties>
+		<actions>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+		
+			<!--iconAction name="RemoveAllItems" icon="/images/ico-del-all-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteAllLineItems','anchor_lineItems')" docType="upload" visible="true" alwaysActive="false"/>
+			<iconAction name="RemoveMarkedItems" icon="/images/ico-del-match-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteMarkedLines','anchor_lineItems')" docType="upload" visible="true" alwaysActive="false"/>
+			<iconAction name="RemoveUnMarkedItems" icon="/images/ico-del-unmatched-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteUnMarkedLines','anchor_lineItems')" docType="upload" visible="true" alwaysActive="false"/>					
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" docType="upload" alwaysActive="false"/-->
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" docType="upload" visible="true" alwaysActive="false"/>
+			
+		</actions>
+	</section>
+	
+		
+	<hiddenFields>
+		<hidden name="type" defaultValue="RECEIPT" />
+		<hidden name="subType" defaultValue="Receipt" />
+		<hidden name="postingERPId"  defaultValue="AOPS001"/>
+		<hidden name="tbdString25"  defaultValue="B"/>
+		<hidden name="group" defaultValue="Receipt"/>
+		<hidden name="vendorERPId"/>
+        <hidden name="newBatchNumber"/>
+       	<hidden name="paymentTermERPId"/>
+		<hidden name="paymentTypeERPId"/>
+       	<hidden name="vendor.status" defaultValue="1"/>
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="requesterId"/>
+		<hidden name="scanSource" defaultValue="Direct Entry" forceDefault="true"/>
+		<hidden name="scanType" defaultValue="Purchase" forceDefault="true"/>
+		<hidden name="requester.userName"/>
+		<hidden name="processInformation.comment"/>
+	</hiddenFields>
+	<processors>
+		
+    	</processors>
+</propertyTemplate>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ONLY ADD CUSTOMER LABEL OVER RIDES TO THIS FILE -->
+
+<labels default="en">
+	<locale name="en">
+		
+		<label name="AuditUTA" value="Use Tax Review" /> 
+		<label name="SupervisorUTA" value="Supervisor UTA" /> 
+		<label name="action.myinbox.UTA" value="Use Tax Review Inbox" /> 
+		<label name="action.audit.UTA" value="Use Tax Audit" /> 
+		<label name="action.supervisor.UTA" value="Supervisor Review" />
+		
+	</locale>
+
+</labels>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="upload-view" template="Purchase-upload-03-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+			<label name="dueDate" value="Due Date"/>
+		</locale>
+</labels>
+
+</view>
+
+

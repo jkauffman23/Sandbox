@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-reissue-view" template="nonpo-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>
+		<section name="vendorDetails" visible="true" collapsed="false"/>
+		<section name="lineItems" visible="true" />		
+	</section-overrides>
+	
+	
+	<property-overrides>
+		<button name="release" readonly="false"/>
+		<text name="vendorId" readonly="true" validation=""/>
+		<dropDown name="type" readonly="true"/>	
+		<text name="vendor.name" readonly="true" />
+		<text name="paymentTermId" readonly="true" />
+		<text name="number" readonly="true" />
+		<date name="date" readonly="true" />
+		<date name="dueDate" validation=""/>
+		<currency name="grossAmount" readonly="true"/>
+		<currency name="freightAmount1" readonly="true" />
+		<currency name="taxAmount1" readonly="true" />
+		<currency name="taxAmount2" readonly="true" />
+		<text name="voucherComments" readonly="true" />
+		<text name="tbdString2" readonly="true" />
+		<text name="routingCode" readonly="true" />
+		<text name="scanAmount" readonly="true" />
+		<text name="tbdBoolean1" readonly="true" />
+		<currency name="specialHandlingCode" readonly="true" />
+		<currency name="paymentTypeId" readonly="true" />
+		<text name="tbdString20" readonly="false" visible="true"/>
+		<text name="accountingPeriod" readonly="true" visible="true" styleClass="date"/>
+		<dropDown name="docPriority" choiceList="choice.priority" styleClass="onehundred" readonly="true"/>
+		<dropDown name="sensitivity" choiceList="choice.sensitivity" validation="required" styleClass="onehundred" readonly="true"/>
+		<dropDown name="tbdString10" choiceList="choice.approvalMethod" styleClass="oneeighty" readonly="true" validation="required" onChange="reloadPage(this)"/>
+		<dynamicDropDown name="currencyId" providerClass="com.miriasystems.ui.providers.CurrencyChoiceListProvider" styleClass="onehundred" readonly="true" validation="required"/>
+		<dropDown name="tbdString6" choiceList="choice.comments" styleClass="twohundred" readonly="true" />	
+		<text name="checkStubMessage" styleClass="ninetypercent" readonly="true" />
+		<textArea name="processInformation.comment" readonly="true" styleClass="comment" allowTabIndex="false"/>
+		<checkbox name="separateCheck" readonly="true"/>
+		<text name="paymentsPurposeOfPayment" styleClass="twohundred" readonly="true"/>	
+		<text name="paymentModeId" readonly="true" inputReadonly="true" validation="required"/>
+	</property-overrides>
+
+	<action-overrides>
+		<iconAction name="editRouting" visible="false"/>
+		<iconAction name="addLineItem" readonly="true" visible="false"/>
+		<iconAction name="removeLineItem" readonly="true" visible="false"/>
+		<!--dropDown name="lineitemsdropdown" readonly="true" visible="false"/-->
+		<button name="update" readonly="true" visible="false"/>
+		<getNext name="next" readonly="false" showLabel="true" visible="false" toLeft="true" styleClass="getNext70"/>
+		<button name="updateRelease" command="updateRelease" readonly="false" visible="false" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+		<button name="update" command="update" readonly="false" visible="false" type="submit" title="updateTitle" styleClass="button70"/>
+		<iconAction name="addExcelLineItem" icon="/images/ico-add-excel-line-w24.png" width="24" height="24" link="javascript:openGLExcelWindow('$contextPath$', '$seqId$')" visible="false" alwaysActive="false"/>
+		<iconAction name="RemoveAllItems" icon="/images/ico-del-all-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteAllLineItems','anchor_lineItems')" visible="false" alwaysActive="false"/>
+			<iconAction name="RemoveMarkedItems" icon="/images/ico-del-match-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteMarkedLines','anchor_lineItems')" visible="false" alwaysActive="false"/>
+			<iconAction name="RemoveUnMarkedItems" icon="/images/ico-del-unmatched-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteUnMarkedLines','anchor_lineItems')" visible="false" alwaysActive="false"/>
+			<iconAction name="selectTemplate" icon="/images/ico-gltemplate-w24.png" width="24" height="24" link="javascript:openTemplateWindow('$contextPath$')" alwaysActive="false" visible="false"/>		
+	</action-overrides>
+	
+	<lineItem-overrides>
+		<text name="accountCode" readonly="true" validation=""/>
+		<currency name="lineTotal" readonly="true" validation=""/>
+		<text name="tbdString1" readonly="true" validation=""/>
+		<text name="tbdString14" readonly="true" validation=""/>
+		<text name="itemDescription" readonly="true" validation=""/>
+	</lineItem-overrides>
+	
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnTOClearance">
+			</reason>
+		</rejectionReasons>
+	</documentRejection>
+	
+	<validations>
+		<validation name="validation.validVendor"/>
+	</validations>
+</view>

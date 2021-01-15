@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+	<labels>
+		<!-- Label overrides for this template -->
+	   <locale name="en">
+            </locale>
+	</labels>
+			
+	
+	
+		<section name="invoice" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<text row="1" col="1" name="originatorName" readonly="true" validation="required"/>
+			<lookup row="1" col="2" name="requesterName"  stlyeClass="twohundred" lookupType="lookup.requester" readonly="true"/>	
+			<date row="2" col="1" name="tbdDate1" styleClass="date" validation="required"/>
+			<date row="2" col="2" name="tbdDate2" styleClass="date" validation="required"/>
+			<currency row="3" col="1" name="grossAmount" validation="required, nonZero" styleClass="currency"/>
+			<date row="3" col="1" name="date" validation="required" styleClass="date" readonly="false"/>
+			<text row="4" col="1" stlyeClass="threehundred" name="batchNumber" readonly="false" validation="required" />
+			<text row="4" col="2-3" name="tbdString6" stlyeClass="twohundred"/>
+			<text row="5" col="1-4" name="voucherComments" readonly="false" styleClass="fulllookup" validation="required"/>
+			</properties>
+		<actions>	
+			<iconAction name="selectApprovers" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openUploadRoutingWindow('/ManagedPay/custom', 'routing/upload.action','nonPo', 'MP_APPROVER1')" alwaysActive="true" readonly="false"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="true" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+			<button name="forward" command="forward" readonly="false" docType="upload" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+		<section name="lineItems" visible="true" collapsible="false" collapsed="false">
+			<lineItemProperties showTotal="true" rowLabel="true" mileAgeIcon="false">		
+				<dynamicDropDown row="1" col="1" name="tbdString4" labelKey="lineItems.tbdString4" providerClass="com.miriasystems.ui.providers.CategoryChoiceListProvider"  validation="required" readonly="false" styleClass="twohundred"/>
+				<text row="1" col="2" name="itemDescription" readonly="false" validation="required" styleClass="twohundred" />
+				<text row="1" col="3" name="tbdString2" labelKey="lineItems.tbdString2" readonly="false" isCreditreadonly="false" styleClass="twohundred"/>
+				<date row="1" col="4" name="tbdDate1" labelKey="lineItems.tbdDate1" readonly="false" isCreditreadonly="true" validation="required" showTime="false" styleClass="date"/>
+				<currency row="1" col="5" name="lineTotal" readonly="false" isCreditreadonly="true" validation="required, nonZero" styleClass="currency" />							
+				<lineItemHidden row="0" col="0" name="accountERPId"/>
+				<lineItemHidden row="0" col="0" name="tbdString1" defaultValue="Cash"/>
+				<lineItemHidden row="0" col="0" name="companyCode"/>
+				<lineItemHidden row="0" col="0" name="costObjectTypeId1" defaultValue="CC" />
+				<lineItemHidden row="0" col="0" name="account.type" defaultValue="E" />
+				<lineItemHidden row="0" col="0" name="expType" />
+				<lineItemHidden row="0" col="0" name="cardInd" defaultValue="T"/>
+				<lineItemHidden row="0" col="0" name="code6" defaultValue="Yes" />
+				<lineItemHidden row="0" col="0" name="tbdQuantity1" defaultValue="0.00" />	
+				<lineItemHidden row="0" col="0" name="tbdQuantity2" defaultValue="0.56" />
+			</lineItemProperties>
+
+			<actions>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<iconAction name="RemoveAllItems" icon="/images/ico-del-all-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteAllLineItems','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="RemoveMarkedItems" icon="/images/ico-del-match-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="RemoveUnMarkedItems" icon="/images/ico-del-unmatched-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteUnMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="selectTemplate" icon="/images/ico-gltemplate-w24.png" width="24" height="24" link="javascript:openTemplateWindow('$contextPath$')" alwaysActive="false" />
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>				
+			</actions>
+	</section>
+	<section name="Travel Permission Guidelines" collapsible="false" collapsed="false">
+		<properties>
+			<output row="1" col="1-2" name="custom1.tbdComment1" defaultValue="Company Travel Policy requires permission for all trips unless your postion allows a standing blanket travel permission." forceDefault="true" readonly="true" styleClass="sixhundred"/>	
+			<output row="2" col="1-2" name="custom1.tbdComment3" defaultValue="Enter your travel details. Your request will be sent to your manager for approval." forceDefault="true" readonly="true" styleClass="sixhundred"/>	
+					<output row="3" col="1-2" name="custom1.tbdComment4" defaultValue="Upon approval you may book your travel. You are required to stay within 10% of the estimated trip budget." forceDefault="true" readonly="true" styleClass="sixhundred"/>	
+		</properties>
+	</section>
+	
+	
+	<hiddenFields>
+	    <hidden name="type" defaultValue='EXP'/>
+		<hidden name="subType" defaultValue='TRAVEL'/>
+		<hidden name="tbdBoolean1" defaultValue='1' forceDefault="true"/>
+	    <hidden name="postingERPId"/>
+	    <hidden name="vendorERPId"/>
+		<hidden name="requester.userName"/>
+		<hidden name="processInformation.comment" />
+		<hidden name="uploadRef"/>
+		<hidden name="originatorId"/>
+		<hidden name="afeNumber" defaultValue="pre-paid" forceDefault="true"/>
+    </hiddenFields>
+
+    <processors>
+    	<processor name="com.miriasystems.processors.NetAmountNoDiscountProcessor"/>
+		<processor name="com.miriasystems.processors.TotalLineAmountProcessor"/>
+     </processors>
+
+</propertyTemplate>

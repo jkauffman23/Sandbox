@@ -1,0 +1,60 @@
+/*  Custom - Does not include portal customer */
+
+
+p, td, a, span, div, em, textarea, input, select, {								/* Use to set the global font */
+
+}
+
+p, td, a, span, div, em, textarea, input, select, div.comment {
+
+}
+
+h1 {
+
+}
+
+h2 {
+}
+
+div.sectiondiv {													/* Task Section Header */
+    /* background-color: #003366;  /*  Orig: #DADADA;  Green:#006666; Blue: 336699  Non-web blue: 3273ad New blue  3399cc   Incident: 003366*/	
+}
+
+ .odd {																	/* controls row list sizing   */
+}
+
+ .even {																	
+}
+
+.rowov {
+}
+
+div.sectiondiv {													/* Task Section Header */  
+}
+
+div.sectiondiv #label {												/* Task Section Header Label */	
+}
+ 
+
+div.sectiondiv  img:hover {											/* Task Section Header Hover  */ 
+}
+	
+
+.lineactions {		
+
+}
+
+
+
+
+.containericon63 ul li{
+	width:25% !important;
+	/*list-style:none; 
+	display:block; 
+	float:left; 
+	margin:30px 0px; 
+	position:relative; */
+	}
+/* Controls the column by width % Default is 32*/
+
+

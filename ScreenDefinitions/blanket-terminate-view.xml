@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="nonpo-posting-view" readonly="true" template="Purchase-blanket-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+	<labels default="en">
+		<locale name="en">
+		</locale>
+	</labels>
+
+	<section-overrides>
+		<section name="vendorDetails" visible="true" collapsed="false"/>
+		<section name="lineItems" visible="true" />		
+	</section-overrides>
+	
+	
+	<property-overrides>
+		
+	</property-overrides>
+
+	<action-overrides>
+		
+	</action-overrides>
+	
+	<lineItem-overrides>
+		
+	</lineItem-overrides>
+	
+	<hidden-overrides>
+		<hidden name="processInformation.response" defaultValue="Complete"/>
+	</hidden-overrides>
+
+	<documentRejection>
+		<rejectionReasons>
+			<reason name="Reject" commentsRequired="true" note="message.returnException">
+			</reason>
+
+		</rejectionReasons>
+	</documentRejection>
+	
+	<validations>
+		<validation name="validation.validVendor"/>
+	</validations>
+</view>

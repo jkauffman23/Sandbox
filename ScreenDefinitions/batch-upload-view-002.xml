@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<view name="batch-upload-view-002" template="batch-upload-ach-tpl.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://managedpay.net/schemas/view.xsd">
+
+<labels default="en">
+		<locale name="en">
+			<label name="batch" value="Corp Payment - ACH" />
+		</locale>
+</labels>
+
+<section-overrides>	
+</section-overrides>
+
+<property-overrides>
+
+</property-overrides>
+
+<validations>
+    
+</validations>
+
+</view>
+
+

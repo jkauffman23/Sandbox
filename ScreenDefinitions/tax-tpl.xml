@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyTemplate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/template.xsd">
+        
+        <labels>
+		<locale name="en">	
+ 		</locale>
+	</labels>
+
+	<section name="doc" collapsible="false" collapsed="false">
+		<properties>
+			<valueAlias row="1" col="1-2" name="processInformation.queueName" readonly="true" styleClass="twohundred"/>
+			<text row="1" col="3-4" name="originatorName" styleClass="twohundred" readonly="true"/>
+			<textArea row ="2" col="1-4" name="processInformation.comment" readonly="false" styleClass="comment" hiddenRoles="MP_Auditor4" />
+			<!--<output row="3" col="1-4" name="processInformation.previousComment" readonly="true" styleClass="comment" escapeXml="false" hiddenRoles="MP_Auditor4"/>-->
+			<output row="3" col="1-4" name="previousComments" readonly="true" styleClass="comment" escapeXml="false" hiddenRoles="MP_Auditor4" link="javascript:openPreviousCommentsWindow('$contextPath$', '$seqId$')"/>
+		</properties>
+		<actions>
+			<getNext name="next" readonly="false" showLabel="true" visible="true" toLeft="true" styleClass="getNext70"/>
+			<rejectButton name="reject" readonly="false" isAnchored="false" title="rejectTitle" styleClass="button70"/>
+			<button name="release" command="release" readonly="false" visible="true" type="submit" title="releaseTitle" styleClass="button70"/>
+			<button name="updateRelease" command="updateRelease" readonly="false" visible="true" type="submit" title="updateReleaseTitle" styleClass="button70"/>
+			<button name="update" command="update" readonly="false" visible="true" type="submit" title="updateTitle" styleClass="button70"/>
+			<button name="forward" command="forward" readonly="false" type="submit" isAnchored="false" title="forwardTitle" styleClass="button70"/>
+		</actions>
+	</section>
+	
+	<section name="invoice" visible="true" collapsible="false" collapsed="false">
+		<properties>
+			<dropDown row="1" col="1" name="type" choiceList="choice.invoiceTypes" readonly="true" validation="required" onChange="reloadPage(this)" />
+			<dropDown row="1" col="2" name="subType" choiceList="choice.invoiceSubTypes.NONPO" readonly="false" validation="required" onChange="reloadPage(this)"/>
+			<dropDown row="1" col="3" name="docPriority" choiceList="choice.priority" styleClass="onehundred" readonly="false" validation="required" defaultValue="2" hiddenRoles="MP_Auditor4" />
+			<text row="2" col="1" name="number" validation="required, noSpecialCharacters"/>
+			<date row="2" col="2" name="date" readonly="false" validation="required" styleClass="date" onChange="reloadPage(this)" />
+			<dynamicDropDown row="2" col="3" name="routingCode" providerClass="com.miriasystems.ui.providers.CostObjectChoiceListProvider" readonly="false" validation="required" styleClass="onetwenty" hiddenRoles="MP_Auditor4" />
+			<date row="3" col="2"  name="dueDate" readonly="true" styleClass="date" validation="required"/>
+			<dropDown row="3" col="3" name="sensitivity" choiceList="choice.sensitivity" validation="required" styleClass="onehundred" readonly="false" defaultValue="1" hiddenRoles="MP_Auditor4"/>
+		</properties>
+		
+		<actions>
+			<postingReplyAction name="postings" icon="/images/ico-paid-w24.png" width="24" height="24" link="javascript:openPostingReplyWindow('$contextPath$', '$wobNumber$')" visible="true"/>
+			<iconAction name="launch" icon="/images/ico-tax-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this, 'launchTaxAuditWorkflow','')" visible="true" alwaysActive="true" visibleRoles="MP_Auditor1,MP_Auditor2" />
+			<iconAction name="editRouting" icon="/images/ico-route-w24.png" width="24" height="24" readOnlyLink="javascript:openViewRoutingWindow('$contextPath$', '$wobNumber$', 'nonPo')" link="javascript:openRoutingWindowSeqId('$contextPath$', '$wobNumber$', '$seqId$', 'nonPo', 'MP_Approver1')" alwaysActive="true" readonly="false"/>					
+			<iconAction name="email" icon="/images/ico-mail-w24.png" width="24" height="24" link="javascript:openSendEmailWindow('$contextPath$', '$imageGUID$', '$wobNumber$')" alwaysActive="true"/>
+			<iconAction name="attachments" icon="/images/ico-attachment-w24.png" width="24" height="24" link="javascript:openAttachmentsWindow('$contextPath$', '$wobNumber$')" alwaysActive="true"/>
+			<attachmentCountAction name="attachmentCount" visible="true"/>
+			<iconAction name="print" icon="/images/ico-print-w24.png" width="24" height="24" link="javascript:window.print()" visible="false" alwaysActive="true"/>
+			<iconAction name="barcode" icon="/images/ico-barcode-w24.png" width="24" height="24" link="javascript:openPrintBarcodeWindow('$contextPath$', '$uploadRef$', '$seqId$')" alwaysActive="true"/>
+			<iconAction name="statusWindow" icon="/images/ico-history-w24.png" width="24" height="24" link="javascript:openStatusWindow('$seqId$', '$contextPath$');return false;" alwaysActive="true"/>
+			<iconAction name="help" icon="/images/ico-help-w24.png" width="24" height="24" link="javascript:openHelp('User_Interfaces/Working_with_Invoices.htm', '$contextPath$')" alwaysActive="true"/>
+		</actions>
+	</section>
+	
+	<section name="invoiceDetails" visible="true" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1-4" name="vendor.name" lookupType="lookup.vendorCode" readonly="true" inputReadonly="true" validation="required" styleClass="fulllookup onehundredpercent"/>
+			<lookup row="1" col="5" name="vendorId" lookupType="lookup.vendorCode" styleClass="twohundred" readonly="true" inputReadonly="true" validation="required" hiddenRoles="MP_Auditor4" />
+			<currency row="2" col="1-2" name="grossAmount" validation="required" styleClass="currency" readonly="false"/>
+			<lookup row="2" col="5" name="companyCode"  lookupType="lookup.organization" styleClass="twohundred" readonly="true" inputReadonly="true" validation="required" hiddenRoles="MP_Auditor4" />
+			<currency row="3" col="1-2" name="taxAmount1" readonly="false" styleClass="currency"/>
+			<dynamicDropDown row="3" col="3-4" name="paymentTypeId" providerClass="com.miriasystems.ui.providers.PaymentTypeChoiceListProvider" readonly="false" styleClass="twohundred" validation="required" defaultValue="1" hiddenRoles="MP_Auditor4" />
+			<lookup row="3" col="5" name="tbdString4" lookupType="lookup.approver.commerica" styleClass="twohundred" readonly="true" inputReadonly="true" hiddenRoles="MP_Auditor4" />
+			<currency row="4" col="1-2" name="freightAmount1" readonly="false" styleClass="currency"/>
+			<dynamicDropDown row="4" col="3-4" name="paymentTermId" providerClass="com.miriasystems.ui.providers.PaymentTermChoiceListProvider"  styleClass="twohundred" validation="required" onBlur="reloadPage(this)" hiddenRoles="MP_Auditor4" />
+			<text row="4" col="5" name="buyerName" styleClass="twohundred" readonly="true" hiddenRoles="MP_Auditor4" />
+			<dropDown row="5" col="1-2" name="separateCheck" choiceList="choice.separateCheck" styleClass="forty" readonly="false" defaultValue="0" hiddenRoles="MP_Auditor4" />
+			<dropDown row="5" col="3-4" name="specialHandlingCode" choiceList="choice.specialHandlingCodes" styleClass="twofifty" readonly="false" hiddenRoles="MP_Auditor4" />
+			<text row="6" col="1-5" name="checkStubMessage" styleClass="ninetypercent" readonly="false" hiddenRoles="MP_Auditor4" />
+			<textArea row="7" col="1-5" name="voucherComments" styleClass="comment" hiddenRoles="MP_Auditor4" />
+		</properties>
+	</section>
+
+	<section name="invoiceAccountDetails" visible="true" collapsible="true" collapsed="true">
+		<properties>
+			<checkbox row="1" col="1" name="tbdBoolean1" readonly="false" hiddenRoles="MP_Auditor4" />
+			<text row="2" col="1" name="tbdString2" readonly="false" styleClass="twohundred" hiddenRoles="MP_Auditor4" />	
+			<text row="3" col="1" name="tbdString1" readonly="false" styleClass="twohundred" hiddenRoles="MP_Auditor4" />	
+			<text row="1" col="3" name="scanVendorAddress1" readonly="false" styleClass="twohundred" hiddenRoles="MP_Auditor4" />
+			<text row="2" col="3" name="scanVendorAddress2" readonly="false" styleClass="twohundred" hiddenRoles="MP_Auditor4" />	
+			<text row="3" col="3" name="tbdString3" readonly="false" styleClass="twohundred" hiddenRoles="MP_Auditor4" />	
+		</properties>
+	</section>
+	
+	<section name="vendorDetails" visible="true" collapsible="true" collapsed="true">
+		<properties>
+			<text row="1" col="1-3" name="vendor.name2" readonly="true" styleClass="sixhundred"/>
+			<text row="2" col="1-3" name="vendor.address1" readonly="true" styleClass="sixhundred"/>
+			<text row="3" col="1-3" name="vendor.address2" readonly="true" styleClass="sixhundred"/>
+			<text row="4" col="1-3" name="vendor.address3" readonly="true" styleClass="sixhundred"/>
+			<text row="5" col="1-3" name="vendor.city" readonly="true" styleClass="sixhundred" />
+			<text row="4" col="4" name="vendor.state" readonly="true"/>
+			<text row="5" col="4" name="vendor.postalCode" readonly="true"/>
+	    </properties>
+	
+	</section>
+	
+	<section name="taxDetails" visible="True" collapsible="true" collapsed="false">
+		<properties>
+			<lookup row="1" col="1" name="taxId" lookupType="lookup.taxCodeDetails" validation="required" readonly="true" inputReadonly="true" styleClass="eighty"/>
+			<text row="1" col="2" name="taxCode.description" readonly="true" />
+			<lookup row="1" col="3" name="taxCode.percent" lookupType="lookup.taxCodeDetails" readonly="true" providerClass="com.miriasystems.ui.providers.TaxCodeLookupProvider" styleClass="ten" />
+			<text row="2" col="1-3" name="shipToAddress1" readonly="false" styleClass="sixhundred"/>
+			<text row="2" col="4" name="shipToCompany" readonly="false"/>
+			<text row="3" col="1-3" name="shipToAddress2" readonly="false" styleClass="sixhundred"/>
+			<text row="4" col="1-3" name="shipToCity" readonly="false" styleClass="sixhundred"/>
+			<dropDown row="3" col="4" name="shipToState" choiceList="choice.statesAndProvinces" readonly="false" />
+			<text row="4" col="4" name="shipToZip" readonly="false"/>
+	    </properties>
+	</section>
+	
+	<section name="alternateVendor" visible="false" collapsible="true" collapsed="true">
+		<properties>
+			<label row ="1" col="1" name="Default Address" position="left"/>
+			<text row="2" col="1-4" name="custom2.name" readonly="false" styleClass="fulllookup"/>
+			<text row="3" col="1-4" name="custom2.address1" readonly="false" styleClass="fulllookup"/>
+			<text row="4" col="1" name="custom2.city" readonly="false" />
+			<text row="4" col="2" name="custom2.state" readonly="false"/>
+			<text row="4" col="3" name="custom2.postalCode" readonly="false"/>
+			<text row="5" col="1" name="custom2.address2" readonly="false"/>
+			<text row="5" col="2-4" name="custom2.address3" readonly="false" styleClass="fulllookup"/>
+			<label row ="6" col="1" name="Remit Address" position="left"/>
+			<text row="7" col="1-4" name="custom2.rmtName" readonly="false" styleClass="fulllookup"/>
+			<text row="8" col="1-4" name="custom2.rmtAddress1" readonly="false" styleClass="fulllookup"/>
+			<text row="9" col="1" name="custom2.rmtCity" readonly="false" />
+			<text row="9" col="2" name="custom2.rmtState" readonly="false"/>
+			<text row="9" col="3" name="custom2.rmtPostalCode" readonly="false"/>
+	    </properties>
+	</section>
+	
+	<section name="lineItems" visible="true" collapsible="true" collapsed="true">
+		<lineItemProperties showTotal="true" showTaxTotal="false">
+			<lookup row="1" col="1" name="accountCode" lookupType="lookup.accountCode" readonly="false" validation="required" styleClass="onefifty" hiddenRoles="MP_Auditor4" />
+			<text row="1" col="2" name="account.description" readonly="true" styleClass="twohundred" hiddenRoles="MP_Auditor4" />
+			<text row="1" col="3" name="itemDescription" readonly="false" styleClass="twohundred" hiddenRoles="MP_Auditor4" />
+			<currency row="1" col="4" name="lineTotal" readonly="false" validation="required, nonZero" styleClass="currency"  hiddenRoles="MP_Auditor4" />
+			<dropDown row="1" col="5" name="tbdString3" choiceList="choice.lineCodes" defaultValue="P" readonly="false" styleClass="fifty" validation="required" hiddenRoles="MP_Auditor4" />
+			<text row="1" col="6" name="tbdString1" readonly="false" styleClass="onehundred" hiddenRoles="MP_Auditor4" />
+			<lineItemHidden row="0" col="0" name="accountERPId" defaultValue="INFOR" forceDefault="true" />
+			<lineItemHidden row="0" col="0" name="companyCode"/>
+		</lineItemProperties>
+		
+		<actions>
+			<iconAction name="RemoveAllItems" icon="/images/ico-del-all-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteAllLineItems','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="RemoveMarkedItems" icon="/images/ico-del-match-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="RemoveUnMarkedItems" icon="/images/ico-del-unmatched-w24.png" width="24" height="24" link="javascript:submitCommand(this,'deleteUnMarkedLines','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<!-- The following set of actions are standard ManagedPay and should be included relatively unmodified from the baseline version in most templates -->
+			<iconAction name="selectTemplate" icon="/images/ico-gltemplate-w24.png" width="24" height="24" link="javascript:openTemplateWindow('$contextPath$')" alwaysActive="false" />
+			<iconAction name="addLineItem" icon="/images/ico-add-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'addLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>
+			<iconAction name="removeLineItem" icon="/images/ico-del-line-w24.png" width="24" height="24" link="javascript:submitCommandUpload(this,'deleteLineItem','anchor_lineItems')" visible="true" alwaysActive="false"/>	
+		</actions>
+	</section>
+
+	<section name="sourceInformation" visible="true" collapsible="true" collapsed="true">
+		<properties>
+			<date row="1" col="1" name="scanDate" readonly="true" styleClass="date" hiddenRoles="MP_Auditor4" />
+			<text row="1" col="2" name="scanType" readonly="true" styleClass="twofifty" hiddenRoles="MP_Auditor4" />
+			<text row="1" col="3" name="seqId" readonly="true" styleClass="onefifty" hiddenRoles="MP_Auditor4" />
+			<text row="2" col="1" name="scanSource" readonly="true" styleClass="onefifty" hiddenRoles="MP_Auditor4" />
+			<text row="2" col="2" name="scanVendorName" readonly="true" styleClass="twofifty" hiddenRoles="MP_Auditor4" />
+			<text row="2" col="3" name="batchNumber" readonly="true" styleClass="onefifty" hiddenRoles="MP_Auditor4" /> 		
+			<text row="3" col="1" name="scanSite" readonly="true" styleClass="onefifty" hiddenRoles="MP_Auditor4" />
+			<text row="3" col="3" name="scanBy" readonly="true" styleClass="onefifty" hiddenRoles="MP_Auditor4" />
+		</properties>
+	</section>
+	
+
+	<hiddenFields>
+    </hiddenFields>
+
+	<processors>
+    </processors>
+</propertyTemplate>

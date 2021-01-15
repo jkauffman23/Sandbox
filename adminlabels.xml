@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labels default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/labels.xsd">
+    <locale name="en">
+			
+		
+		<label name="queue.details" value="Edit Queue Details" />
+		
+		
+		<label name="action.simsap.receivable" value="Receivables" />
+		<label name="action.admin.applications" value="App Definitions" />
+		<label name="action.admin.queue.security" value="Queue Security"/>
+		<label name="subMenu.security" value="Security" />
+		<label name="action.admin.types" value="Doc Types" />
+		<label name="action.admin.workflow.sub" value="Workflows" />
+		<label name="action.admin.workflow" value="Workflow View" />
+		<label name="action.admin.forms" value="Forms" />
+		<label name="action.admin.workqueues" value="Work Queues" />
+		<label name="section.admin.advConfig" value="Advanced Config" />	
+		<label name="section.admin.maintenace2" value="Configuration" />
+		<label name="section.admin.portal" value="Vendor Portal" />
+		<label name="action.admin.aolog" value="AOps Logs"/>
+		<label name="action.admin.wflog" value="Workflow Logs"/>
+		<label name="action.admin.mrlog" value="Mailroom Logs"/>
+		<label name="action.admin.accesslog" value="Access History"/>
+			
+		<label name="section.admin.mailroom" value="Mailroom" />
+		<label name="action.vendor.portal.emailfails" value="Email Fix" />
+		<label name="action.admin.mailroom.failedbatches" value= "Batch Fix" />
+		<label name="action.admin.mailroom.fingerprints" value="Fingerprints"/>
+		<label name="action.admin.workflowFail" value="Workflow Recycle" />
+		<label name="section.admin.interfaces" value="Integration Settings"		/>
+		<label name="action.admin.interface.schedule" value="BOT Job Schedule" />
+		<label name="action.admin.interface.reset" value="BOT Job Reset"/>
+		<label name="section.admin.organization.docs" value="Applications"/>
+		
+		<label name="action.payproviders" value="Pay Providers" />
+		<label name="queue.header.list" value="Queue Access Security"  />
+		<label name="queue.filenetName" value="Queue Name" />
+		<label name="queue.description" value="Queue Description" />
+		<label name="section.admin.health" value="System Health"/>
+
+		
+		<label name="section.admin.creditcard" value="Card Maintenance" />
+		<label name="action.admin.companies" value="Companies"/>
+		<label name="section.admin.organization" value="Organization" />
+		<label name="section.admin.organization.parameters" value="Org Settings" />
+		<label name="action.admin.gltemplate" value="GL Templates"/>
+		<label name="action.admin.user.rolegroup" value="Security Roles"/>
+		<label name="section.admin.aops.parameters" value="System Tables" />
+		<label name="section.admin.navigation"  value="Menus and Forms" />
+		
+        <label name="section.admin.maintenance" value="System Maintenance"/>
+		<label name="section.admin.tools" value="Tools" />
+        <label name="section.admin.parameters" value="Operating Parameters"/>
+        <label name="section.admin.rules" value="Business Rules"/>
+        <label name="section.admin.renderers" value="Navigation"/>
+        <label name="section.admin.usersearch" value="User Search"/>
+        <label name="section.admin.vendor" value="Vendors"/>
+		<label name="section.admin.banking" value="Bank Settings"/>
+		<label name="action.admin.preferences" value="Portal Settings" />
+		<label name="section.admin.future" value="7.0 Future" />
+		<label name="section.admin.orphan" value="Archived" />	
+		<label name="action.ad.users" value="Portal Users"/>
+		<label name="action.vendor.portal.links" value="Portal Links" />
+		<label name="action.admin.navigation"  value="Navigation" />
+		<label name="action.poheaders" value="Purchase Orders" />
+		<label name="action.admin.labels" value="Labels " />
+		<label name="action.WASConsole" value="WAS Console" />
+		<label name="action.admin.choicelist" value="Choice Lists" />
+		<label name="action.admin.searches" value="Searches" />
+		<label name="action.admin.emailtemplates" value="Email Templates" />
+		<label name="action.admin.validations" value="Validations" />
+		<label name="action.admin.lookups" value="Lookups" />
+		<label name="action.admin.maxlengths" value="Maximum Lengths" />
+		<label name="action.admin.systemparms" value="Workflow Parameters"/>
+		<label name="action.rulesadmin" value="Workflow Rules" />
+		<label name="action.simsap" value="SimSap" />
+		<label name="action.admin.rules2" value="Rules Viewer" />
+	    <label name="action.admin.approvalexception" value="Route Exceptions"/> <!--Approval Exception-->
+        <label name="admin.leftnavigation" value="Administration"/>
+		<label name="action.admin.clearLock" value="Clear Posting Locks"/>
+        <label name="action.admin.countries" value="Country Codes"/>
+		<label name="action.systemvalues" value="System Values" />
+        <label name="action.admin.conductor" value="Conductor Queue"/>
+        <label name="action.admin.currencies" value="Currency Codes"/>
+		<label name="action.admin.creditcard" value="Credit Card Admin"/>
+        <label name="action.admin.currencyConversion" value="Currency Conversion"/>
+        <label name="action.admin.dlq" value="Dead Letter Queue"/>
+        <label name="action.admin.defaults.system" value="System Settings"/>
+        <label name="action.admin.defaults.user" value="New User Defaults"/>
+        
+        <label name="action.admin.groups" value="Control Groups"/>
+        <label name="action.admin.invitevendor" value="Invite Vendors"/>
+        <label name="action.admin.leftnav" value="Menu Viewer"/>
+        <label name="action.admin.logextract" value="Extract Log Files"/>   
+        <label name="action.admin.organizations" value="Organizations"/>
+		<label name="action.admin.paymentmodes" value="Payment Modes"/>
+        <label name="action.admin.paymentterms" value="Payment Terms"/>
+		<label name="action.admin.listpaymentterms" value="List Payment Terms" />
+        <label name="action.admin.paymenttypes" value="Payment Types"/>
+        <label name="action.admin.queuestats" value="Queue Stats"/>
+		<label name="action.admin.queuesecurity" value="Queue Security"/>
+        <label name="action.admin.refresh" value="Refresh Caches"/>
+        <label name="action.admin.rules" value="Rules Editor"/>
+        <label name="action.admin.taxcodes" value="Tax Codes"/>
+        <label name="action.admin.users" value="Users"/> <!--Users-->
+		 <label name="action.admin.usersrefresh" value="LDAP Import"/>
+        <label name="action.admin.tools.usersrefresh" value="LDAP Refresh"/>
+        <label name="action.admin.views" value="Form Viewer"/>
+        <label name="admin.view.invoice" value="View Invoice"/>
+		<label name="action.admin.expensecategory" value="Expense Categories"/> <!--Expense Category-->
+        <label name="company.add" value="Add New Company"/>
+        <label name="company.header.form" value="Edit Company Code"/>
+        <label name="company.header.list" value="Companies"/>
+        <label name="country.add" value="Add country"/>
+        <label name="country.header.form" value="Edit Country Code"/>
+        <label name="country.header.list" value="Country Codes"/>
+		<label name="country.details" value="Details"/>
+        <label name="currency.add" value="Add Currency Code"/>
+        <label name="currency.header.form" value="Edit Currency Code"/>
+        <label name="currency.header.list" value="Currency Codes"/>
+		<label name="currency.details" value="Details"/>
+		<label name="parameter.details" value="Details"/>
+        <label name="paymentTerm.add" value="Add Payment Term"/>
+		<label name="paymentTerm.details" value="Payment Term Details"/>
+        <label name="paymentTerm.header.form" value="Edit Payment Term"/>
+        <label name="paymentTerm.header.list" value="Payment Terms"/>
+        <label name="paymentType.add" value="Add payment type"/>
+        <label name="paymentType.header.form" value="Edit Payment Type"/>
+        <label name="paymentType.header.list" value="Payment Types"/>
+        <label name="paymentTerm.add" value="Add Payment Term"/>
+		<label name="paymentType.details" value="Payment Type Details"/>
+        <label name="paymentTerm.header.form" value="Edit Payment Term"/>
+        <label name="paymentTerm.header.list" value="Payment Terms"/>
+        <label name="taxCode.add" value="Add Tax Code"/>
+        <label name="taxCode.header.form" value="Edit Tax Code"/>
+        <label name="taxCode.header.list" value="Tax Codes"/>		
+		<label name="action.admin.costobjects" value="Route Codes"/> <!--Location-->
+        <label name="preferences.header" value="Preferences"/>
+        <label name="preferences.legend" value="Work Summary Notification Frequency"/>
+        <label name="preferences.notificationDaily" value="Daily"/>
+        <label name="preferences.notificationImmediate" value="Immediate (if configured)"/>
+		<label name="preferences.outOfOffice" value="Out Of Office"/>
+		<label name="preferences.outOfOfficeEndDate" value="Out of Office End Date"/>
+		<label name="action.admin.filters" value="Search Filters"/>
+		<label name="action.admin.parameters" value="System Parameters"/>
+		
+		<label name="accountingPeriod.accountingPeriod" value="Accouting Period"/>
+		<label name="accountingPeriod.accountingYear" value="Accounting Period Year"/>
+		<label name="accountingPeriod.accountingMonth" value="Accounting Period Month"/>
+		
+		<!--label name="organization.name" value="Name" />
+		<label name="organization.code" value="Code" />
+		<label name="organization.description" value="Description"/>
+		<label name="organization.deleteFlag" value="Disabled?" /-->
+		
+		<!--label name="paymentTerm.tbdString1" value="Not Used" />
+		<label name="paymentTerm.tbdString2" value="Not Used" />
+		<label name="paymentTerm.tbdString3" value="Not Used" />
+		<label name="paymentTerm.tbdString4" value="Not Used" />
+		<label name="paymentTerm.tbdDate1" value="Not Used" />
+		<label name="paymentTerm.tbdDate2" value="Not Used" />
+		<label name="paymentTerm.tbdNumber1" value="Not Used" />
+		<label name="paymentTerm.tbdNumber2" value="Not Used" />
+		<label name="paymentTerm.tbdCurrency1" value="Not Used" />
+		<label name="paymentTerm.tbdCurrency2" value="Not Used" />
+		<label name="paymentTerm.tbdQuantity1" value="Not Used" />
+		<label name="paymentTerm.tbdQuantity2" value="Not Used" /-->
+		
+		<!--label name="paymentType.tbdString2" value="Not Used" />
+		<label name="paymentType.tbdString3" value="Not Used" />
+		<label name="paymentType.tbdString4" value="Not Used" />
+		<label name="paymentType.tbdDate1" value="Not Used" />
+		<label name="paymentType.tbdDate2" value="Not Used" />
+		<label name="paymentType.tbdNumber1" value="Not Used" />
+		<label name="paymentType.tbdNumber2" value="Not Used" />
+		<label name="paymentType.tbdCurrency1" value="Not Used" />
+		<label name="paymentType.tbdCurrency2" value="Not Used" />
+		<label name="paymentType.tbdQuantity1" value="Not Used" />
+		<label name="paymentType.tbdQuantity2" value="Not Used" /-->
+		
+		<!--label name="costObject.tbdString2" value="Approver" />  
+		<label name="costObject.deleteFlag" value="Deleted?" />  
+		<label name="costObject.tbdNumber2" value="Not Used" />  
+		<label name="costObject.tbdCurrency1" value="Not Used" />
+		<label name="costObject.tbdCurrency2" value="Not Used" />  
+		<label name="costObject.tbdQuantity1" value="Not Used" />  
+		<label name="costObject.tbdQuantity2" value="Not Used" />  
+		<label name="costObject.tbdString1" value="Not Used" />  
+		<label name="costObject.tbdString3" value="Not Used" />  
+		<label name="costObject.tbdString4" value="Not Used" />  
+		<label name="costObject.tbdString5" value="Not Used" />  
+		<label name="costObject.tbdString6" value="Not Used" />  
+		<label name="costObject.tbdString7" value="Not Used" />  
+		<label name="costObject.tbdString8" value="Not Used" />  
+		<label name="costObject.tbdString9" value="Not Used" />  
+		<label name="costObject.tbdString10" value="Not Used" />  
+		<label name="costObject.tbdString11" value="Not Used" />  
+		<label name="costObject.tbdString12" value="Not Used" /-->
+
+		<!--label name="user.tbdCurrency1" value="Not Used" />
+		<label name="user.tbdCurrency2" value="Not Used" />
+		<label name="user.tbdDate1" value="Not Used" />
+		<label name="user.tbdDate2" value="Not Used" />
+		<label name="user.tbdNumber1" value="Not Used" />
+		<label name="user.tbdNumber2" value="Not Used" />
+		<label name="user.tbdString1" value="Not Used" />
+		<label name="user.tbdString2" value="Not Used" />
+		<label name="user.tbdString3" value="Not Used" />
+		<label name="user.tbdString4" value="Not Used" />
+		<label name="user.tbdQuantity1" value="Not Used" />
+		<label name="user.tbdQuantity2" value="Not Used" /-->
+
+		<label name="queue.stats.total" value="Total number of items in queues"/>
+		<label name="queue.stats.name" value="Name of queue"/>
+		<label name="queue.stats.itemCount" value="Number of items"/>
+
+        <!-- SimSap and Accounting Left Navigation -->
+		<label name="section.admin.erp.tables" value="ERP System"/>
+
+			
+		<label name="section.admin.erp.transactions" value="ERP Tables" />
+	
+		<label name="action.admin.errorcodetranslations" value="ERP Error Codes"/>
+		<label name="section.admin.simsap.config" value="Demo ERP Configuration" />
+		<label name="action.simsap.systemoriginator" value="ERP Systems" />
+		<label name="section.admin.simsap.data" value="Demo ERP Tables" />
+		<label name="section.asmin.simsap.transaction" value="Demo ERP Transactions" />
+		<label name="action.accounts" value="Accounts"/>
+		<label name="action.erperrorcodes" value="ERP Error Codes"/>
+		<label name="section.erpconfiguration" value="ERP Configuration"/>
+	
+		<label name="action.apheaders" value="AP Header Items"/>
+		<label name="action.company" value="Business Units"/>
+		<label name="action.costobjects" value="Cost Objects"/>
+		<label name="action.admin.accountingperiod" value="Accounting Periods"/>
+		<label name="action.costobjecttypes" value="Cost Object Types"/>
+		<label name="action.approvalexception" value="Approval Exception"/>
+		<label name="action.approvalexception" value="Approval Exception Types"/>
+		<label name="action.countries" value="Countries"/>
+		<label name="action.currencies" value="Currencies"/>
+		<label name="action.documentsreadyforposting" value="Documents for Posting"/>
+	
+		<label name="action.paymentterms" value="Payment Terms"/>
+		<label name="action.paymenttypes" value="Payment Types"/>
+		<label name="action.poheaders" value="Purchase Orders"/>
+		<label name="action.posteddocuments" value="Posted Documents"/>
+		<label name="action.receivables" value="Receivables"/>
+		<label name="action.systemoriginator" value="ERP Systems"/>
+		<label name="action.taxcodes" value="Tax Codes"/>
+		<label name="action.vendors" value="Vendors"/>
+        <label name="action.pohistory" value="PO History"/>
+
+		<label name="section.masterdata" value="Master Data"/>
+		<label name="section.simsapmain" value="ERP Database"/>
+		<label name="section.transactionaldata" value="Transactional Data"/>
+		<label name="action.simsap.posteddocuments" value="Posted Docs"/>
+		<label name="action.simsap.vendors" value="Vendors"/>
+		<label name="action.simsap.documentsreadyforposting" value="Posting Docs"/>
+		<label name="action.simsap.poheaders" value="Purchase Orders"/>
+		<label name="action.simsap.accounts" value="GL Accounts" />
+		<label name="section.admin.erp.simsap" value="Tools" />
+		
+		
+		
+        <!-- Vendor Portal -->
+        <label name="action.vendorPortal.invite" value="Invite a Vendor"/>
+		<label name="action.portal1" value="Invoice Inquiry"/>
+		<label name="action.portal2" value="Submit Invoice"/>
+		<label name="action.portal3" value="Change of Address"/>
+		<label name="action.portal4" value="Message Center"/>
+		<label name="section.portal" value="Vendor Portal"/>
+        <label name="action.admin.mcccodes" value="MCC Maintenance"/>
+		<label name="mccCode" value="Mcc Codes"/>
+		<label name="ccCardIndicator" value="Card Indicator"/>
+		
+		<!-- Labels for admin improvement MIR-355-->
+		<label name="lastLogon" value="Last Logon"/>
+		<label name="default" value="Default"/>
+		<label name="site" value="Site"/>
+		<label name="sensitivity.level" value="Sensitivity Level"/>
+		
+		
+		<!-- LABELS FOR SIMSAP SCREEN IN ADMIN MIR-526/814-->
+		<label name="managedPayCode" value="Error Code"/>
+		<label name="erpCode" value="ERP Code"/>
+		<label name="erpErrorMessage" value="ERP ERROR Message"/>
+		<label name="systemOriginator" value="System Originator"/>
+		<label name="erpErrorCode" value="ERP Error Code"/>
+		
+		<!--
+		<label name="vendor" value="Vendor"/>
+		<label name="deleteFlag" value="deleteFlag"/>
+		<label name="postBlock" value="postBlock"/>
+		<label name="payBlock" value="payBlock"/>
+		<label name="company" value="Company"/>
+		<label name="contact" value="Contact"/>
+		<label name="email" value="Email"/>
+		<label name="phone" value="Phone"/>
+		<label name="fax" value="Fax"/>
+		<label name="country" value="Country"/>
+		<label name="postalCode" value="Zip"/>
+		<label name="state" value="State"/>
+		<label name="city" value="City"/>
+		<label name="address2" value="Address 2"/>
+		<label name="address1" value="Address 1"/>
+		<label name="address3" value="Address 3"/>
+		<label name="address4" value="Address 4"/>
+		<label name="payBlock" value="Pay Block"/>
+		<label name="postBlock" value="Post Block"/>
+		<label name="status" value="Status"/>
+		<label name="name2" value="Name 2"/>
+		<label name="name" value="Name"/>
+		<label name="code" value="Code"/>
+		<label name="approvalCode" value="Approval Code"/>
+		<label name="taxId" value="Tax ID"/>
+		<label name="bankName" value="Bank Name"/>
+		<label name="bankAccountNumber" value="Bank Account Number"/>
+		<label name="payToCode" value="Pay to"/>
+		<label name="paymentType" value="Payment Type"/>
+		<label name="paymentTerm" value="Payment Term"/>
+		<label name="currency" value="Currency"/>
+		<label name="tbdDate1" value="tbdDate1"/>
+		<label name="tbdDate2" value="tbdDate2"/>
+		<label name="tbdString1" value="tbdString1"/>
+		<label name="tbdString2" value="tbdString2"/>
+		<label name="tbdString3" value="tbdString3"/>
+		<label name="tbdString4" value="tbdString4"/>
+		<label name="tbdNumber1" value="tbdNumber1"/>
+		<label name="tbdNumber2" value="tbdNumber2"/>
+		<label name="tbdCurrency1" value="tbdCurrency1"/>
+		<label name="tbdCurrency2" value="tbdCurrency2"/>
+		<label name="tbdQuantity1" value="tbdQuantity1"/>
+		<label name="tbdQuantity2" value="tbdQuantity2"/>
+		<label name="description" value="Description"/>
+		<label name="companyCode" value="Company Code"/>
+		<label name="erpId" value="ERP ID"/>
+		<label name="vendorName" value="Vendor Name"/>
+		<label name="vendorCode" value="Vendor Code"/>
+		-->
+		<label name="erpId" value="ERP ID"/>
+		<label name="receivableDetails" value="Receivable Details"/>
+		<!--
+		<label name="poNumber" value="PO Number"/>
+		<label name="vendorCode" value="PO Line Number"/>
+		<label name="quantityReceived" value="Quantity Received"/>
+		<label name="uom" value="UOM"/>
+		<label name="shippingDocumentId" value="Shipping Doc ID"/>
+		<label name="systemOriginator" value="System Originator"/>
+		<label name="tbdNumber1" value="tbdNumber1"/>
+		<label name="tbdNumber2" value="tbdNumber2"/>
+		<label name="tbdString1" value="tbdString1"/>
+		<label name="tbdString2" value="tbdString2"/>
+		<label name="tbdString3" value="tbdString3"/>
+		<label name="tbdString4" value="tbdString4"/>
+		<label name="tbdCurrency1" value="tbdCurrency1"/>
+		<label name="tbdCurrency2" value="tbdCurrency2"/>
+		<label name="tbdQuantity1" value="tbdQuantity1"/>
+		<label name="tbdQuantity2" value="tbdQuantity2"/>
+		<label name="receivable" value="Receivable"/>
+		-->
+		<!--
+		<label name="type" value="Type"/>
+		<label name="code1" value="Code 1"/>
+		<label name="code2" value="Code 2 "/>
+		<label name="code3" value="Code 3"/>
+		<label name="code4" value="Code 4"/>
+		<label name="code5" value="Code 5"/>
+		<label name="code6" value="Code 6"/>
+		<label name="code7" value="Code 7"/>
+		<label name="code8" value="Code 8"/>
+		<label name="code9" value="Code 9"/>
+		<label name="code10" value="Code 10"/>
+		<label name="currencyList" value="Currencies"/>
+		<label name="autoPosting" value="Auto Posting"/>
+		<label name="postingBlock" value="Posting Block"/>
+		<label name="deletionFlag" value="deletionFlag"/>
+		<label name="tbdBoolean1" value="tbdBoolean1"/>
+		<label name="tbdBoolean2" value="tbdBoolean2"/>
+		<label name="tbdBoolean3" value="tbdBoolean3"/>
+		<label name="tbdBoolean4" value="tbdBoolean4"/>
+		<label name="tbdBoolean5" value="tbdBoolean5"/>
+		<label name="tbdBoolean6" value="tbdBoolean6"/>
+		<label name="accountDescription" value="Account Description"/>
+		
+		<label name="number" value="Number"/>
+		<label name="date" value="Date"/>
+		<label name="validityStart" value="Valid From"/>
+		<label name="validityEnd" value="Valid To"/>
+		<label name="amount" value="Amount"/>
+		<label name="billedAmount" value="Billed Amount"/>
+		<label name="taxCode" value="Tax Code"/>
+		<label name="buyerId" value="Buyer ID"/>
+		<label name="requesterId" value="Requester ID"/>
+		<label name="businessUnit" value="Business Unit"/>
+		<label name="vendor" value="Vendor"/>
+		<label name="isReceivable" value="Is Receivable"/>
+		<label name="blockFlag" value="Blocked"/>
+		<label name="deleteFlag" value="Deleted"/>
+		<label name="paymentTerm" value="Payment Term"/>
+		<label name="statusCode" value="Status Code"/>
+		<label name="shippingDocumentId" value="Bill of Lading"/>
+		<label name="poLineNumber" value="PO Line Number"/>
+		<label name="companyCode" value="Company Code"/>
+		<label name="vendorName" value="Vendor Name"/>-->
+		<label name="pOrder" value="Purchase Order"/>
+		<!--
+		<label name="company" value="Company"/>
+		<label name="createDate" value="Create Date"/>
+		<label name="quantityReceived" value="Quantity Received"/>
+		<label name="lastModifiedDate" value="Last Modified Date"/>
+		<label name="currencyId" value="Currency"/>
+		<label name="taxCode" value="Tax Code"/>
+		<label name="billedAmount" value="Billed Amount"/>
+		<label name="entryDate" value="Entry Date"/>
+		<label name="quantityReceived" value="History Type"/>
+		<label name="isDeleted" value="Is Deleted"/>
+		<label name="isBlocked" value="Is Blocked"/>
+		<label name="tbdString4" value="TBD String 4"/>
+		<label name="tbdString3" value="TBD String 3"/>
+		<label name="tbdString2" value="TBD String 2"/>
+		<label name="tbdString1" value="TBD String 1"/>
+		<label name="tbdQuantity2" value="TBD Quantity 2"/>
+		<label name="tbdQuantity1" value="TBD Quantity 1"/>
+		<label name="tbdCurrency2" value="TBD Currency 2"/>
+		<label name="tbdCurrency1" value="TBD Currency 1"/>
+		<label name="tbdNumber2" value="TBD Number 2"/>
+		<label name="tbdNumber1" value="TBD Number 1"/>
+		<label name="tbdDate2" value="TBD Date 2"/>
+		<label name="tbdDate1" value="TBD Date 1"/>
+		<label name="materialId" value="Material Id"/>
+		<label name="statusCode" value="Status Code"/>
+		<label name="mpartNumber" value="Manf. Part Number"/>
+		<label name="partNumber" value="Part Number"/>
+		<label name="itemCode" value="Item Code"/>
+		<label name="itemDescription" value="Item Description"/>
+		<label name="billedQuantity" value="Billed Quantity"/>
+		<label name="billedAmount" value="Billed Amount"/>
+		<label name="receivedQuantity" value="Received Quantity"/>
+		<label name="costObject2" value="Cost Object 2"/>
+		<label name="costObject1" value="Cost Object 1"/>
+		<label name="accountCode" value="Account Code"/>
+		<label name="orderedUom" value="Ordered UOM"/>
+		<label name="orderedUnitPrice" value="Ordered Unit Price"/>
+		<label name="orderedQuantity" value="Ordered Quantity"/>
+		<label name="companyId" value="Company ID"/>
+		-->
+		
+		<label name="addvendor" value="Add Vendor"/>
+		<label name="vendor.details" value="Vendor Details" /> 
+		<label name="addpohistory" value="Add PO History"/>
+		<label name="addpoheader" value="Add PO Header"/>
+		<label name="addaccounts" value="Add Accounts"/>
+		<label name="filter" value="Filter"/>
+		<label name="clear" value="Clear"/>
+		<label name="details" value="Details"/>
+		<label name="status" value="Status"/>
+		<label name="costobjectsforvendor" value="Cost Objects For Vendor"/>
+		<label name="paymenttermsforvendor" value="Payment Terms For Vendor"/>
+		<label name="accountsforvendor" value="Accounts for Vendor"/>
+		<label name="detailsforvendor" value="Details For Vendor"/>
+		<label name="vendorAddress" value="Vendor Address"/>
+		<label name="paymentTerms" value="Payment Terms"/>
+		<label name="accounts" value="Accounts"/>
+		<label name="costobjects" value="Cost Objects"/>
+		<label name="detailsforaccounts" value="Details For Account"/>
+		<label name="vendorforaccounts" value="Vendors For Accounts"/>
+		<label name="costobjectsforaccounts" value="Cost Objects For Accounts"/>
+		<label name="blocked" value="Blocked"/>
+		<label name="purchaseorderdetails" value="Purchase Order Details"/>
+		<label name="purcahseorderhistory" value="Purchase Order History"/>
+		<label name="purchaseorderhistorydetails" value="Purchase Order History Details"/>
+		<label name="addreceivables" value="Add Receivables"/>
+		<label name="adderperrorcodes" value="Add ERP Error Codes"/>
+		<label name="costObjectdetails" value="Cost Object Details"/>
+		<label name="lastModified" value="Last Modified Date"/>
+		
+		<label name="group.code" value="Group Id"/>
+		<label name="group.tbdString1" value="User Name"/>
+		<label name="group.tbdString2" value="Company Code"/>
+		<label name="group.tbdString3" value="Forwarded From Email"/>
+		<label name="group.tbdString4" value="System Originator"/>
+		
+		<label name="account.currencyList" value="Currency List"/>
+		<label name="account.details" value="Account Details"/>
+		<label name="company.details" value="Company Details"/>
+		<label name="systemOriginator.details" value="System Originator Details"/>
+		<!-- END OF SIMSAP LABELS -->
+		
+		<label name="queue.retryAll" value="Retry All"/>
+		<label name="queue.queues" value="queues"/>
+		<label name="queue.items" value="Items in the"/>
+		<label name="queue.showAllQueues" value="Show all queues"/>
+		<label name="queue.showNonEmptyQueues" value="Show non-empty queues"/>
+		<label name="queue.stats" value="Queue Statistics"/>
+		<label name="queue.stats.total" value="Total number of items in queues"/>
+		<label name="queue.stats.name" value="Name of queue"/>
+		<label name="queue.stats.itemCount" value="Number of items"/>
+		<label name="queue.terminateAll" value="Terminate All"/>
+		
+		<label name="userApproval.deleteMessage" value="Are you sure you want to delete this User Approval?"/>
+		
+<!-- report * subcategory * category  admin screens -->
+		<label name="reports" value="Reports"/>
+		<label name="report.refreshlist" value="Refresh List"/>
+		<label name="report.filter" value="Filter"/>
+		<label name="report.filters" value="Filters"/>
+		<label name="report.clear" value="Clear"/>
+		<label name="report.cancel" value="Cancel"/>
+		<label name="report.submit" value="Submit"/>
+		<label name="report.name" value="Name"/>
+		<label name="report.displayName" value="Display Name"/>
+		<label name="report.idOnServer" value="ID on Server"/>
+		<label name="report.guid" value="GUID"/>
+		<label name="report.category" value="Category"/>
+		<label name="report.subCategory" value="SubCategory"/>
+		<label name="report.displayOrder" value="Display Order"/>
+		<label name="report.deleteFlag" value="Disabled?"/>
+		<label name="report.disabled" value="Disabled"/>
+		<label name="report.enabled" value="Enabled"/>
+		<label name="report.roles" value="Roles"/>
+		<label name="report.details" value="Report Details"/>
+		<label name="report.info" value="Report Information"/>
+		<label name="report.add" value="Add Report"/>
+		<label name="report.add.info" value="Reports on Server"/>
+		<label name="report.delete" value="Delete Report"/>
+		<label name="report.delete.info" value="Reports not on Server"/>
+		<label name="report.back" value="Back"/>
+		<label name="report.edit" value="Edit"/>
+		<label name="report.info.edit" value="Edit"/>
+		<label name="report.includeDeleted" value="Only Disabled"/>
+		<label name="action.admin.report" value="Reports"/>
+		<label name="section.admin.reports" value="Report Settings"/>
+		
+		<label name="reportSubCategorys" value="Report SubCategories"/>
+		<label name="reportSubCategory.filter" value="Filter"/>
+		<label name="reportSubCategory.filters" value="Filters"/>
+		<label name="reportSubCategory.clear" value="Clear"/>
+		<label name="reportSubCategory.cancel" value="Cancel"/>
+		<label name="reportSubCategory.submit" value="Submit"/>
+		<label name="action.admin.report.subCategory" value="Report SubCategories"/>
+		<label name="reportSubCategory.details" value="SubCategory Details"/>
+		<label name="reportSubCategory.info" value="SubCategory Information"/>
+		<label name="reportSubCategory.add" value="Add SubCategory"/>
+		<label name="reportSubCategory.delete" value="Delete SubCategory"/>
+		<label name="reportSubCategory.back" value="Back"/>
+		<label name="reportSubCategory.edit" value="Edit"/>
+		<label name="reportSubCategory.info.edit" value="Edit"/>
+		<label name="reportSubCategory.subCategoryName" value="SubCategory Name"/>
+		<label name="reportSubCategory.category" value="Category"/>
+		<label name="reportSubCategory.displayOrder" value="Display Order"/>
+		<label name="reportSubCategory.displayName" value="Display Name"/>
+		
+		<label name="reportCategorys" value="Report Categories"/>
+		<label name="reportCategory.filter" value="Filter"/>
+		<label name="reportCategory.filters" value="Filters"/>
+		<label name="reportCategory.clear" value="Clear"/>
+		<label name="reportCategory.cancel" value="Cancel"/>
+		<label name="reportCategory.submit" value="Submit"/>
+		<label name="action.admin.report.category" value="Report Categories"/>
+		<label name="reportCategory.details" value="Category Details"/>
+		<label name="reportCategory.info" value="Category Information"/>
+		<label name="reportCategory.add" value="Add Category"/>
+		<label name="reportCategory.delete" value="Delete Category"/>
+		<label name="reportCategory.back" value="Back"/>
+		<label name="reportCategory.edit" value="Edit"/>
+		<label name="reportCategory.info.edit" value="Edit"/>
+		<label name="reportCategory.categoryName" value="Category Name"/>
+		<label name="reportCategory.displayOrder" value="Display Order"/>
+		<label name="reportCategory.displayName" value="Display Name"/>
+
+		<!-- end of report admin screen -->
+		
+    </locale>
+</labels>
