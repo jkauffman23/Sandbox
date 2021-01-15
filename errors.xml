@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <errors default="en" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.managedpay.net/schemas/errors.xsd">
 	<locale name="en">
+	     <error name="test.message" message="Tom Test."/>
 	     <error name="customeridvalidation.message" message="Please select a valid customer using the customer look-up before proceeding."/>
 		<error name="accountstatus.invalid" message="Invalid Account on line ${line}."/>
 		<error name="accountValidator.companyCodeMismatch" message="The account ${account} on line ${line} has a company code mismatch."/>
