@@ -9,7 +9,6 @@
 				<criteria name="scanVendorName" startsSearch="false"  />
 				<criteria name="number" startsSearch="false"/>
 				<criteria name="poId" startsSearch="false" />
-				<criteria name="requester.userName" startsSearch="true" visible="false" lineItem="false" mapping="requester.userName"/>
  
 			</searchCriteria>
 			<renderer rendererName="com.miriasystems.ui.helpers.DocumentLookupRenderer"/>
