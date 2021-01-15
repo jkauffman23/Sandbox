@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>testing xml change
+
+<?xml version="1.0" encoding="UTF-58"?>testing xml change
+
 <!--
 The file names listed in here will be search *in order* for a label.  The first file
 in this list must also define the default locale.  Subsequent attempts to redefine the
