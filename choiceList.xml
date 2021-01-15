@@ -2,7 +2,7 @@
 <choiceLists xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<!-- Note that the values will normally be numbers, but they are not
-		necessarily numbered  add comment-->
+		necessarily numbered  add comment more updates here blah-->
 		
 		<list name="choice.invoiceTypes">
 			<!-- This choicelist is mandatory for use in the advanced search. The name of this list must not be changed.
